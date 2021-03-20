@@ -15,8 +15,6 @@
     "0 0 * * * https://qxzy.top/rules/QuantumultX/js/jd_speed_redpocke.js, tag=京东极速版红包, img-url=https://qxzy.top/rules/QuantumultX/img/jd_speed_sign.png, enabled=true",
     "0 7 * * * https://qxzy.top/rules/QuantumultX/js/jd_speed_sign.js, tag=京东极速版, img-url=https://qxzy.top/rules/QuantumultX/img/jd_speed_sign.png, enabled=true",
     "5 0 * * * https://qxzy.top/rules/QuantumultX/js/lxk0301/jx_sign.js, tag=京喜签到, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
-    "2 9 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
-    "0 9 * * * https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, tag=微博超话, img-url=https://qxzy.top/rules/QuantumultX/img/weibo.png, enabled=true",
-    "0 11 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, tag=微博签到, img-url=https://qxzy.top/rules/QuantumultX/img/weibo.png, enabled=true"
+    "2 9 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png"
   ]
 }
