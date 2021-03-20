@@ -1,9 +1,9 @@
 {
   "id": "guan.test.app.sub",
-  "name": "guan 脚本订阅",
+  "name": "guan_test 脚本订阅",
   "description": "该订阅兼容BoxJs以及QX Gallery",
-  "author": "guan",
-  "icon": "https://avatars.githubusercontent.com/u/30943064",
+  "author": "guan_test",
+  "icon": "https://avatars.githubusercontent.com/u/39831773",
   "repo": "https://github.com/jianglin521/QuantumultX",
   "apps": [
     {
