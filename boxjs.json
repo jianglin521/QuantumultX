@@ -4,7 +4,7 @@
   "description": "该订阅兼容BoxJs以及QX Gallery",
   "author": "guan",
   "icon": "https://avatars.githubusercontent.com/u/30943064",
-  "repo": "https://github.com/NobyDa/Script/tree/master",
+  "repo": "https://github.com/jianglin521/QuantumultX",
   "apps": [{
     "id": "多合一签到",
     "name": "京东",
