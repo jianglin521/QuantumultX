@@ -2,7 +2,6 @@
   "name": "guan_test task",
   "description": "https://github.com/jianglin521/QuantumultX",
   "task": [
-    "5,35 8-23 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, img-url=https://qxzy.top/rules/QuantumultX/img/jrtt.png, enabled=true",
     " 0 * * * * https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.js, tag=书旗, img-url=https://gitee.com/ydj0602/hym/raw/img/SQ.PNG, enabled=false",
     " 0 * * * * https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqireadtime.js, tag=书旗时长, img-url=https://gitee.com/ydj0602/hym/raw/img/SQJS.PNG, enabled=false",
     " 20 12 * * * https://raw.githubusercontent.com/age174/-/main/xyzd.js, tag=幸运赚点, img-url=https://ae01.alicdn.com/kf/U1680ecdfa17544669c71e00400c542e31.jpg, enabled=true",
