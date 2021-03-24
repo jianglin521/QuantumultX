@@ -15,6 +15,7 @@
     "5 0 * * * https://qxzy.top/rules/QuantumultX/js/lxk0301/jx_sign.js, tag=京喜签到, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
     "2 9 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
     "0 9,12,20,21 * * * https://qxzy.top/rules/QuantumultX/js/jd_global_mh.js, tag=京东国际盲盒, img-url=https://qxzy.top/rules/QuantumultX/img/jd_global_mh.png, enabled=true",
-    "1 1 * * * https://qxzy.top/rules/QuantumultX/js/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true"
+    "1 1 * * * https://qxzy.top/rules/QuantumultX/js/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true",
+    "15 12,14,16,20,22 * * * https://raw.githubusercontent.com/age174/-/main/ysm.js, tag=云扫码, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Yunsaoma.png, enabled=true"
   ]
 }
