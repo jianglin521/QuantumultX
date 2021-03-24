@@ -2,7 +2,8 @@
   "name": "guan task",
   "description": "https://github.com/jianglin521/QuantumultX",
   "task": [
-    "1 */5 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, tag=中青看点, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Youth.png, enabled=true",
+    "10 */1 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, tag=中青看点签到, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/youth.png",
+    "10 */2 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/Youth_Read.js, tag=中青看点阅读, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/youth.png",
     "11 12 17-30 3 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_oneplus.js, tag=一加盲盒, img-url=https://qxzy.top/rules/QuantumultX/img/sgmh.png, enabled=true",
     "5 1,6,11,16,21 * 3-4 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_super5g.js, tag=5G超级盲盒, img-url=https://qxzy.top/rules/QuantumultX/img/sgmh.png, enabled=true",
     "5 8,14,20 17-25 3 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_mother_jump.js, tag=母婴-跳一跳, img-url=https://qxzy.top/rules/QuantumultX/img/jd_jump-jump.png, enabled=true",

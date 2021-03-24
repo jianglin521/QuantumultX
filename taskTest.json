@@ -2,27 +2,6 @@
   "name": "guan_test task",
   "description": "https://github.com/jianglin521/QuantumultX",
   "task": [
-    " 20 12 * * * https://raw.githubusercontent.com/age174/-/main/xyzd.js, tag=幸运赚点, img-url=https://ae01.alicdn.com/kf/U1680ecdfa17544669c71e00400c542e31.jpg, enabled=true",
-    {
-      "config": "35 5 0 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js, tag=快手极速版, img-url=https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/kuaishou.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/kuaishou.txt, tag=快手极速版Cookie获取"
-    },
-    {
-      "config": "2 0 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, tag=微博, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/weibo.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/weibo.txt, tag=微博Cookie获取"
-    },
-    {
-      "config": "5 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js, tag=AcFun, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/acfun.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/acfun.txt, tag=AcFun Cookie获取"
-    },
-    {
-      "config": "4 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东签到, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/jd.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/JD_DailyBonus.txt, tag=京东签到Cookie获取"
-    },
-    {
-      "config": "3 0 * * * https://qxzy.top/rules/QuantumultX/js/jd_cash.js, tag=签到领现金, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/JD_DailyBonus.txt, tag=签到领现金Cookie获取"
-    },
     {
       "config": "6 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=哔哩哔哩, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/bilibili.png",
       "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/bilibili.txt, tag=哔哩哔哩Cookie获取"
@@ -30,14 +9,6 @@
     {
       "config": "8 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/tieba.png",
       "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/tieba.txt, tag=百度贴吧签到Cookie获取"
-    },
-    {
-      "config": "10 */1 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, tag=中青看点签到&开转盘宝箱&阅读时长, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/youth.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/youth_cookie.txt, tag=中青看点签到&开转盘宝箱&阅读时长Cookie获取"
-    },
-    {
-      "config": "10 */2 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/Youth_Read.js, tag=中青看点自动阅读, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/youth.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/youth_read.txt, tag=中青看点自动阅读Cookie获取"
     },
     {
       "config": "30 6 * * * https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js, tag=中青看点看看赚&浏览赚, img-url=https://raw.githubusercontent.com/HuiDoY/Icon/main/mini/Color/youth.png",
@@ -70,11 +41,7 @@
     {
       "config": "20 12 * * * https://raw.githubusercontent.com/age174/-/main/xyzd.js, tag=幸运赚点, img-url=https://ae01.alicdn.com/kf/U1680ecdfa17544669c71e00400c542e31.jpg",
       "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/xingyunzhuandian.txt, tag=幸运赚点Cookie获取"
-    },
-    {
-      "config": "15 10 * * * https://raw.githubusercontent.com/age174/-/main/ymz.js, tag=羊毛赚, img-url=https://s3.ax1x.com/2021/02/06/yYzYWR.png",
-      "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/ymz.txt, tag=羊毛赚Cookie获取"
-    },
+    },0
     {
       "config": "15 10 * * * https://raw.githubusercontent.com/age174/-/main/mhdsp.js, tag=陌嗨短视频, img-url= https://gitee.com/ydj0602/hym/raw/img/MHDSP.png",
       "addons": "https://raw.githubusercontent.com/HuiDoY/QX_Task/Cookie/mhdsp.txt, tag=陌嗨短视频Cookie获取"
