@@ -14,6 +14,10 @@
     "5 0 * * * https://qxzy.top/rules/QuantumultX/js/lxk0301/jx_sign.js, tag=京喜签到, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
     "2 9 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
     "0 9,12,20,21 * * * https://qxzy.top/rules/QuantumultX/js/jd_global_mh.js, tag=京东国际盲盒, img-url=https://qxzy.top/rules/QuantumultX/img/jd_global_mh.png, enabled=true",
-    "1 1 * * * https://qxzy.top/rules/QuantumultX/js/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true"
+    "1 1 * * * https://qxzy.top/rules/QuantumultX/js/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true",
+    "5 1 * * * https://raw.githubusercontent.com/age174/-/main/bigfun.js, tag=bigfun签到, img-url=https://raw.githubusercontent.com/shoujiqiyuan/PokemonGOforQuanX/master/IconSet/Z003.png, enabled=true",
+    "5,35 9-22 * * * https://raw.githubusercontent.com/age174/-/main/66yd.js, tag=66阅读, img-url=https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg, enabled=true",
+    "15,45 10-21 * * * https://raw.githubusercontent.com/age174/-/main/cfz.js, tag=春风转, img-url=https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg, enabled=true",
+    "5 1 23-25 3 * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_grassy.js, tag=答题赢京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=false"
   ]
 }
