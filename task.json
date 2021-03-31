@@ -25,6 +25,7 @@
     "5,35 9-22 * * * https://raw.githubusercontent.com/age174/-/main/66yd.js, tag=66阅读, img-url=https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg, enabled=true",
     "20 9 * * * https://raw.githubusercontent.com/age174/-/main/ximei.js, tag=西梅, img-url=https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg, enabled=true",
     "10-15 9 * * * https://raw.githubusercontent.com/age174/-/main/lgyy.js, tag=朗果英语, img-url=https://ae01.alicdn.com/kf/Uc3c35e1796624a7ca6a23c89c7f0dff2H.jpg, enabled=true",
-    "10 8 * * * https://raw.githubusercontent.com/age174/-/main/zqwn.js, tag=最强蜗牛, img-url=https://ae01.alicdn.com/kf/U1748aeaa81a54cdf8797ed3fc54d76ef3.jpg, enabled=true"
+    "10 8 * * * https://raw.githubusercontent.com/age174/-/main/zqwn.js, tag=最强蜗牛, img-url=https://ae01.alicdn.com/kf/U1748aeaa81a54cdf8797ed3fc54d76ef3.jpg, enabled=true",
+    "0,30 8-23 * * * https://raw.githubusercontent.com/age174/-/main/hlyy.js, tag=葫芦音乐, img-url=https://ae01.alicdn.com/kf/U49d941738c0c41569f7db55825943375f.jpg, enabled=true"
   ]
 }
