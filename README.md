@@ -4,8 +4,6 @@ https://raw.githubusercontent.com/sngxpro/QuanX/master/task/AllinOne.json
 https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf
 
 ## rewrite
-https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/IP.js
-
 https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/TikTok.conf
 
 https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/YouTube.conf
