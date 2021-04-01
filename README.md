@@ -11,7 +11,9 @@ https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/TikTok.conf
 https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/YouTube.conf
 
 ## 全网各大佬boxjs地址查询对照 2021.3.22
-https://jdsharedresourcescdn.azureedge.net/jdresource/lxk0301.boxjs.json
+<!-- https://jdsharedresourcescdn.azureedge.net/jdresource/lxk0301.boxjs.json -->
+<!-- lxk0301代替 -->
+https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
 
 https://raw.githubusercontent.com/toulanboy/scripts/master/toulanboy.boxjs.json
 
