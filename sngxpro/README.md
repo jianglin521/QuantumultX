@@ -50,10 +50,3 @@ docker container ls
 # 删除镜像
 docker image rm hello-world
 ```
-### 查看容器id
-docker ps
-### 进入容器
-docker exec -it [CONTAINER ID] bash
-winpty docker exec -it e75a9fae2475  bash
-
-docker cp 43934eb50ffc:/scripts  .
