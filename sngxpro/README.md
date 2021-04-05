@@ -35,3 +35,25 @@ https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/
 https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/evilbutcher.boxjs.json
 
 https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
+
+
+## 安装hello-world
+```sh
+# 安装
+docker pull hello-world
+# 查看版本、大小
+docker image ls
+# 运行
+docker run hello-world
+# 查看运行服务
+docker container ls
+# 删除镜像
+docker image rm hello-world
+```
+### 查看容器id
+docker ps
+### 进入容器
+docker exec -it [CONTAINER ID] bash
+winpty docker exec -it e75a9fae2475  bash
+
+docker cp 43934eb50ffc:/scripts  .
