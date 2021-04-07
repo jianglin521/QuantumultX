@@ -2052,6 +2052,50 @@
         "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"
       ],
       "script": "https://raw.githubusercontent.com/age174/-/main/cfz.js"
+    },
+    {
+      "id": "vsh",
+      "name": "V生活",
+      "keys": [
+        "vshurl",
+        "vshhd",
+        "vshbody",
+        "vsh1body",
+        "vsh2body",
+        "vshdspbody",
+        "vshspbody",
+        "vshqdbody"
+      ],
+      "author": "@feizao",
+      "settings": [
+        {
+          "id": "vshstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        },
+        {
+          "id": "vshcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "需要几个账号，数字为几"
+        },
+        {
+          "id": "vshsp",
+          "name": "短视频开关",
+          "val": "0",
+          "type": "number",
+          "desc": "填写0为关闭,1为开启,默认关闭,需要开启的建议先做完日常任务再开始"
+        }
+      ],
+      "repo": "https://github.com/age174/-/blob/main/vsh.js",
+      "icons": [
+        "https://ae01.alicdn.com/kf/Uf0da879c7acd4c7bad91f0e5a97667e1O.jpg",
+        "https://ae01.alicdn.com/kf/Uf0da879c7acd4c7bad91f0e5a97667e1O.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/age174/-/main/vsh.js"
     }
   ]
 }
