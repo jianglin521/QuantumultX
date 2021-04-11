@@ -17,3 +17,6 @@ https://github.com/luyunsheng666/jddouzi
 
 ## 获取账号cooick
 https://gitee.com/danwangshimoluo/jdTools/blob/JdScripts/backUp/GetJdCookie.md
+
+## elecV2P安装
+https://github.com/elecV2/elecV2P/tree/master/Docker
