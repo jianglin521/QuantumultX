@@ -15,11 +15,46 @@
     "20 9 * * * https://raw.githubusercontent.com/age174/-/main/ximei.js, tag=西梅, img-url=https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg, enabled=true",
     "10-15 9 * * * https://raw.githubusercontent.com/age174/-/main/lgyy.js, tag=朗果英语, img-url=https://ae01.alicdn.com/kf/Uc3c35e1796624a7ca6a23c89c7f0dff2H.jpg, enabled=true",
     "10 8 * * * https://raw.githubusercontent.com/age174/-/main/zqwn.js, tag=最强蜗牛, img-url=https://ae01.alicdn.com/kf/U1748aeaa81a54cdf8797ed3fc54d76ef3.jpg, enabled=true",
-    "0,30 8-23 * * * https://raw.githubusercontent.com/age174/-/main/hlyy.js, tag=葫芦音乐, img-url=https://ae01.alicdn.com/kf/U49d941738c0c41569f7db55825943375f.jpg, enabled=true",
-    "7 0-23 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/shuqi.js, tag=书旗小说ziye版, img-url=https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.png, enabled=true",
-    "*/30 10-20 * * * https://raw.githubusercontent.com/age174/-/main/cfz.js, tag=春风转, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Chunfengzhuan.png, enabled=true",
     "15 9, * * * https://raw.githubusercontent.com/age174/-/main/vsh.js, tag=V生活, img-url=https://ae01.alicdn.com/kf/Uf0da879c7acd4c7bad91f0e5a97667e1O.jpg, enabled=true",
-    "0 0 1 1 * https://raw.githubusercontent.com/age174/-/main/mmdzz.js, tag=萌喵大作战, img-url=https://ae01.alicdn.com/kf/U13a7be18e87942118e4402e22652fd70H.jpg, enabled=true",
-    "35 9-22 * * * https://raw.githubusercontent.com/age174/-/main/qhyd.js, tag=千禾阅读, img-url=https://ae01.alicdn.com/kf/U413ab7460abb4a28b11deac3c5034243N.jpg, enabled=true"
+    "7 7 7-20 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/yqnb.js, tag=易趣牛帮, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/lisha.png, enabled=true",
+    "35 9 * * * https://raw.githubusercontent.com/age174/-/main/zzsy.js, tag=招招试药, img-url=https://ae01.alicdn.com/kf/Ub0056a0721e94c9a85a8bbeb2f2aed6fn.jpg, enabled=true",
+    {
+      "config": "6 6 0-23 * * * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/jdtq.js, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/jdtq.png, tag=简单天气, enabled=false",
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body1.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/jdtq.png, tag=简单天气获取日常任务body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body1.txt, tag=简单天气获取日常任务body, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body2.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/jdtq.png, tag=简单天气获取抽奖body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body2.txt, tag=简单天气获取抽奖body, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body3.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/jdtq.png, tag=简单天气获取吃饭-竞猜body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-jdtq-body3.txt, tag=简单天气获取吃饭-竞猜body, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "6 6 * * * * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/shuqi.js, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说, enabled=false",
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-header1.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说获取header, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-header1.txt, tag=书旗小说获取header, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-header2.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说获取极速版书城header, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-header2.txt, tag=书旗小说获取极速版书城header, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body1.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说获取body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body1.txt, tag=书旗小说获取body, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body2.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说获取任务-收益body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body2.txt, tag=书旗小说获取任务-收益body, update-interval=86400, opt-parser=false, enabled=false"
+    },
+    {
+      "config": "0 0 0 1 1 * https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body3.txt, img-url=https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@master\/Task\/shuqi.png, tag=书旗小说获取时长body, enabled=false",
+      "addons": "https:\/\/cdn.jsdelivr.net\/gh\/ziye888\/JavaScript@main\/Task\/ziye-shuqi-body3.txt, tag=书旗小说获取时长body, update-interval=86400, opt-parser=false, enabled=false"
+    }
   ]
 }
