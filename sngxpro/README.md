@@ -36,6 +36,10 @@ https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/evilbutcher.bo
 
 https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
 
+#京东会员卡
+https://raw.githubusercontent.com/anker1209/Scriptable/main/Jd_unbindCard.conf
+
+
 
 ## 安装hello-world
 ```sh
