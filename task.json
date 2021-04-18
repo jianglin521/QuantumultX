@@ -15,6 +15,7 @@
     "20 9 * * * https://raw.githubusercontent.com/age174/-/main/ximei.js, tag=西梅, img-url=https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg, enabled=true",
     "10-15 9 * * * https://raw.githubusercontent.com/age174/-/main/lgyy.js, tag=朗果英语, img-url=https://ae01.alicdn.com/kf/Uc3c35e1796624a7ca6a23c89c7f0dff2H.jpg, enabled=true",
     "10 8 * * * https://raw.githubusercontent.com/age174/-/main/zqwn.js, tag=最强蜗牛, img-url=https://ae01.alicdn.com/kf/U1748aeaa81a54cdf8797ed3fc54d76ef3.jpg, enabled=true",
-    "7 7 7-20 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/yqnb.js, tag=易趣牛帮, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/lisha.png, enabled=true"
+    "7 7 7-20 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/yqnb.js, tag=易趣牛帮, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/lisha.png, enabled=true",
+    "20,50 0-23 * * * https://raw.githubusercontent.com/age174/-/main/jjrm.js, tag=久金人脉, img-url=https://ae01.alicdn.com/kf/Uf3f262fb6d81492a8e350a0bb97a04a0g.jpg, enabled=true"
   ]
 }
