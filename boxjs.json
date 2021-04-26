@@ -373,7 +373,7 @@
     },
     {
       "id": "smyj",
-      "name": "圣牧有机",
+      "name": "圣牧有机0",
       "keys": [
         "smyjurl",
         "smyjhd",
@@ -406,6 +406,7 @@
       "repo": "https://raw.githubusercontent.com/xl2101200/-/main/smyj.js",
       "icons": [
         "https://raw.githubusercontent.com/sngxpro/icons/main/genshin/mona.png"
+        "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png"
       ],
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/smyj.js"
     },
