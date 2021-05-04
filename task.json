@@ -18,12 +18,7 @@
 		"35 9-22 * * * https://raw.githubusercontent.com/age174/-/main/qhyd.js, tag=千禾阅读, img-url=https://ae01.alicdn.com/kf/U413ab7460abb4a28b11deac3c5034243N.jpg, enabled=true",
     "10,20,30 0-23 * * * https://raw.githubusercontent.com/age174/-/main/xfyjc.js, tag=幸福养鸡场, img-url=https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg, enabled=true",
     "0 9 * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/cglm.js, tag=猜歌联盟游戏, enabled=true",
-    "25 3 * * 2 https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js, tag=京东超级无线组队分奖品, img-url=https://raw.githubusercontent.com/sngxpro/AutoSyncScript/i-chenzhe/img/icon.png, enabled=true",
 		"10 0-23 * * * https://raw.githubusercontent.com/age174/-/main/qlp.js, tag=考状元娶老婆, img-url=https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg, enabled=true",
-		"*/15 * * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js, tag=如意花园, img-url=https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy.png, enabled=true",
-		"9 8 * * * https://raw.githubusercontent.com/age174/-/main/dgh.js, tag=大公会(查看脚本学用法), img-url=https://ae01.alicdn.com/kf/U48ac7674ccc7422dac2bb266d8c9a17b2.jpg, enabled=true",
-		"*/60 * * * * http://nm66.top/dydhb.js, tag=抖音抖一抖红包, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
-		"*/1 * * * * http://nm66.top/dyd.js, tag=抖音抖一抖, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
-		"*/10 * * * * http://nm66.top/kxdfs.js, tag=开心大丰收, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
+		"*/10 * * * * http://nm66.top/kxdfs.js, tag=开心大丰收, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true"
   ]
 }
