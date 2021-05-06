@@ -21,6 +21,7 @@
 		"10 0-23 * * * https://raw.githubusercontent.com/age174/-/main/qlp.js, tag=考状元娶老婆, img-url=https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg, enabled=true",
     "*/10 * * * * http://nm66.top/kxdfs.js, tag=开心大丰收, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
     "*/15 * * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js, tag=如意花园, img-url=https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy.png, enabled=true",
-    "*/30 * * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js, tag=开心花园, img-url=https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy.png, enabled=true"
+    "*/30 * * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js, tag=开心花园, img-url=https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy.png, enabled=true",
+    "*/10 * * * * http://nm66.top/fhxz.js, tag=柠檬富豪小镇, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true"
   ]
 }
