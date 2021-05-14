@@ -54,3 +54,7 @@ docker container ls
 # 删除镜像
 docker image rm hello-world
 ```
+## 动物研究院
+动物研究院这个游戏，appstore搜索不到，请点击下方链接跳转https://apps.apple.com/cn/app/%E5%8A%A8%E7%89%A9%E7%A0%94%E7%A9%B6%E9%99%A2/id1566693411
+
+https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/dwyjy.conf, tag=动物研究院获取ck（与获取cookie、超市达人规则冲突）, update-interval=86400, opt-parser=false, enabled=true
