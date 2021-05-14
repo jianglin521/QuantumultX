@@ -40,7 +40,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/scdcg.js"
       }
     },
-       {
+    {
       "name": "全民来找茬",
       "type": "cron",
       "time": "*/10 * * * *",
@@ -49,7 +49,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmlzc.js"
       }
     },
-       {
+    {
       "name": "全民大丰收",
       "type": "cron",
       "time": "*/10 * * * *",
@@ -93,7 +93,7 @@
         "type": "runjs",
         "target": "http://nm66.top/fhxz.js"
       }
-    }, 
+    },
     {
       "name": "开心花园",
       "type": "cron",
@@ -102,7 +102,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js"
       }
-    },   
+    },
     {
       "name": "幸福养鸡场",
       "type": "cron",
@@ -111,7 +111,16 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
       }
-    }, 
+    },
+    {
+      "name": "朗果英语",
+      "type": "cron",
+      "time": "10-15 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/lgyy.js"
+      }
+    },
     {
       "name": "西梅",
       "type": "cron",
@@ -120,6 +129,6 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/ximei.js"
       }
-    },
+    }
   ]
 }
