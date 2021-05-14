@@ -3,6 +3,8 @@ https://raw.githubusercontent.com/sngxpro/QuanX/master/task/AllinOne.json
 
 https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf
 
+https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
+
 ## 全网各大佬boxjs地址查询对照 2021.3.22
 https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
 
