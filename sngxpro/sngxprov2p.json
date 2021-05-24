@@ -2,9 +2,216 @@
   "name": "公众号少年歌行pro v2p 专用定时任务订阅",
   "author": "由公众号少年歌行pro维护 https://t.me/sngxpro",
   "desc": "自用。该订阅仅适用于 elecV2P，与其他软件并不兼容。转载请注明维护者少年歌行pro",
-  "date": "2021-05-13 14:30:02",
+  "date": "2021-05-25 1:0:02",
   "list": [
-     {
+    {
+      "name": "京东一次性入会领豆9",
+      "type": "cron",
+      "time": "0 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_09.js"
+      }
+    },
+    {
+      "name": "京东手机狂欢城新一期",
+      "type": "cron",
+      "time": "2 0-18/6 * 5 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_carnivalcity.js"
+      }
+    },
+    {
+      "name": "京东注销会员链接生成墨鱼版",
+      "type": "cron",
+      "time": "0 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cardId_export.js"
+      }
+    },
+    {
+      "name": "京东注销会员修复版",
+      "type": "cron",
+      "time": "0 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/jd_unbind.js"
+      }
+    },
+    {
+      "name": "京东跳跳乐瓜分京豆",
+      "type": "cron",
+      "time": "1 0,11,21 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jump.js"
+      }
+    },
+    {
+      "name": "京东一次性入会领豆8",
+      "type": "cron",
+      "time": "0 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_08.js"
+      }
+    },
+    {
+      "name": "京东坐等更新",
+      "type": "cron",
+      "time": "28 9 18-26 5 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_urge.js"
+      }
+    },
+    {
+      "name": "京东金榜创造营",
+      "type": "cron",
+      "time": "0 8 21-31 5-12 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/qqsdff/script/main/jd/jd_jbczy.js"
+      }
+    },
+    {
+      "name": "薪时光",
+      "type": "cron",
+      "time": "0 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/xsg.js"
+      }
+    },
+    {
+      "name": "柠檬彩虹消消消",
+      "type": "cron",
+      "time": "*/5 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "http://nm66.top/chxx.js"
+      }
+    },
+    {
+      "name": "京东Redmi合成小金刚",
+      "type": "cron",
+      "time": "20 9 21-27 5 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_mi.js"
+      }
+    },
+    {
+      "name": "双色球",
+      "type": "cron",
+      "time": "0 30 21 * * 2,4,7",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/ssq/ssq.js"
+      }
+    },
+    {
+      "name": "柠檬看看集自动阅读",
+      "type": "cron",
+      "time": "0 */60 6-23 * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/kjj.js"
+      }
+    },
+    {
+      "name": "京东人头马x博朗",
+      "type": "cron",
+      "time": "20 9 20-31 5 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js"
+      }
+    },
+    {
+      "name": "京东飞利浦电视成长记",
+      "type": "cron",
+      "time": "15 9 * 5,6 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js"
+      }
+    },
+    {
+      "name": "京东赢一加新品手机",
+      "type": "cron",
+      "time": "25 9 * 5,6 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js"
+      }
+    },
+    {
+      "name": "京东京享值PK",
+      "type": "cron",
+      "time": "15 8,13,18 17-31 5 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js"
+      }
+    },
+    {
+      "name": "京东金融领豆（不共用京东ck另抓）",
+      "type": "cron",
+      "time": "0 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_sign.js"
+      }
+    },
+    {
+      "name": "京东一次性入会领豆5",
+      "type": "cron",
+      "time": "0 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_05.js"
+      }
+    },
+    {
+      "name": "京东一次性入会领豆2",
+      "type": "cron",
+      "time": "0 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_02.js"
+      }
+    },
+    {
+      "name": "京东一次性入会领豆3",
+      "type": "cron",
+      "time": "0 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_03.js"
+      }
+    },
+    {
+      "name": "我的网红店",
+      "type": "cron",
+      "time": "0-59 9-14 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/age174/-/main/wdwhd.js"
+      }
+    },
+    {
+      "name": "柠檬咕咚步数红包",
+      "type": "cron",
+      "time": "0 30 7,10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/gd.js"
+      }
+    },
+    {
       "name": "京喜财富岛提现并发修改版ztxtop",
       "type": "cron",
       "time": "0 0 * * *",
@@ -13,7 +220,43 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ztxtop/x/aa4ddeca813fbf5c231dd4adaec68a7632cb292c/jx_cfdtx.js"
       }
     },
-   {
+    {
+      "name": "京东半点京豆雨龙猪猪",
+      "type": "cron",
+      "time": "30 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
+      }
+    },
+    {
+      "name": "京东整点京豆雨",
+      "type": "cron",
+      "time": "0 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
+      }
+    },
+    {
+      "name": "动物研究院",
+      "type": "cron",
+      "time": "10 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/dwyjy.js"
+      }
+    },
+    {
+      "name": "笑谱Arisey新版",
+      "type": "cron",
+      "time": "20 10 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xpread.js"
+      }
+    },
+    {
       "name": "京东探秘无限星空",
       "type": "cron",
       "time": "15 8 9-13 5 *",
@@ -22,7 +265,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
       }
     },
-	 {
+    {
       "name": "京东海尔_欢乐大逃亡",
       "type": "cron",
       "time": "15 8 7-31 5 *",
@@ -31,7 +274,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
       }
     },
-	 {
+    {
       "name": "京东加购有礼",
       "type": "cron",
       "time": "15 12 * * *",
@@ -40,7 +283,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
       }
     },
-	 {
+    {
       "name": "京东粉丝互动",
       "type": "cron",
       "time": "3 10 * * *",
@@ -49,7 +292,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
       }
     },
-	 {
+    {
       "name": "京东健康社区藏经阁版",
       "type": "cron",
       "time": "25 10-22/3 * * *",
@@ -58,7 +301,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_health_community.js"
       }
     },
-	 {
+    {
       "name": "京东健康社区-收能量",
       "type": "cron",
       "time": "25 * * * *",
@@ -67,7 +310,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_health_energy.js"
       }
     },
-	 {
+    {
       "name": "京东京东超市-大转盘",
       "type": "cron",
       "time": "3 10 * * *",
@@ -76,7 +319,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_marketLottery.js"
       }
     },
-	 {
+    {
       "name": "京东母婴-跳一跳",
       "type": "cron",
       "time": "5 8,14,20 11-17 5 *",
@@ -85,7 +328,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js"
       }
     },
-	 {
+    {
       "name": "京东摇一摇",
       "type": "cron",
       "time": "3 20 * * *",
@@ -94,7 +337,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shake.js"
       }
     },
-	 {
+    {
       "name": "京东超级无线组队分奖品",
       "type": "cron",
       "time": "25 3 * * 2",
@@ -103,7 +346,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
       }
     },
-	 {
+    {
       "name": "京东众筹许愿池",
       "type": "cron",
       "time": "10 10,15 8-9 5 *",
@@ -112,7 +355,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
       }
     },
-	 {
+    {
       "name": "京东小魔方",
       "type": "cron",
       "time": "10 10 * 4 *",
@@ -121,7 +364,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_xmf.js"
       }
     },
-	 {
+    {
       "name": "京东有机牧场",
       "type": "cron",
       "time": "0 0,1-22/2 1-31 4-7 *",
@@ -130,7 +373,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
       }
     },
-	 {
+    {
       "name": "京东刺客567之寻宝",
       "type": "cron",
       "time": "25 8,12 6-11 5 *",
@@ -139,7 +382,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
       }
     },
-	 {
+    {
       "name": "京东关注有礼",
       "type": "cron",
       "time": "15 15 * * *",
@@ -148,7 +391,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
       }
     },
-	 {
+    {
       "name": "京东店铺大转盘",
       "type": "cron",
       "time": "3 0,10,23 * * *",
@@ -156,7 +399,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
       }
-    }, 
+    },
     {
       "name": "搜狐资讯",
       "type": "cron",
@@ -166,7 +409,7 @@
         "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/shzx.js"
       }
     },
-     {
+    {
       "name": "小芒",
       "type": "cron",
       "time": "8 8 8 * * *",
@@ -229,7 +472,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/ipxz.js"
       }
     },
-     {
+    {
       "name": "EC挖矿",
       "type": "cron",
       "time": "5 0 * * *",
@@ -238,7 +481,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/ecwk.js"
       }
     },
-     {
+    {
       "name": "京东每日抽奖",
       "type": "cron",
       "time": "13 1,22,23 * * *",
@@ -256,7 +499,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/fksl.js"
       }
     },
-       {
+    {
       "name": "食材大冲关",
       "type": "cron",
       "time": "10 9 * * *",
@@ -265,7 +508,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/scdcg.js"
       }
     },
-       {
+    {
       "name": "全民来找茬",
       "type": "cron",
       "time": "*/10 * * * *",
@@ -274,7 +517,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmlzc.js"
       }
     },
-       {
+    {
       "name": "全民大丰收",
       "type": "cron",
       "time": "*/10 * * * *",
@@ -283,7 +526,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmdff.js"
       }
     },
-     {
+    {
       "name": "WGC",
       "type": "cron",
       "time": "0 0 0/3 * * *",
@@ -355,7 +598,7 @@
         "target": "http://nm66.top/dydhb.js"
       }
     },
-     {
+    {
       "name": "抖音抖一抖",
       "type": "cron",
       "time": "*/1 * * * *",
@@ -391,7 +634,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/qlp.js"
       }
     },
-  {
+    {
       "name": "淘优购",
       "type": "cron",
       "time": "10 9 * * *",
@@ -399,7 +642,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/tyg.js"
       }
-    },  
+    },
     {
       "name": "滴滴喝水赚钱zZPiglet",
       "type": "cron",
@@ -408,7 +651,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_drink.js"
       }
-    },  
+    },
     {
       "name": "京东到家鲜豆庄园领水滴",
       "type": "cron",
@@ -417,8 +660,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getPoints.js"
       }
-    },  
-     {
+    },
+    {
       "name": "京东到家鲜豆庄园",
       "type": "cron",
       "time": "0 9 * * *",
@@ -426,8 +669,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_plantBeans.js"
       }
-    },  
-     {
+    },
+    {
       "name": "京东到家鲜豆任务",
       "type": "cron",
       "time": "0 8 * * *",
@@ -435,8 +678,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js"
       }
-    },  
-     {
+    },
+    {
       "name": "京东到家果园收水滴",
       "type": "cron",
       "time": "5 */2 * * *",
@@ -444,8 +687,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit_collectWater.js"
       }
-    },  
-      {
+    },
+    {
       "name": "京东到家果园任务",
       "type": "cron",
       "time": "10 0,8,11,17 * * *",
@@ -453,7 +696,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit.js"
       }
-    },  
+    },
     {
       "name": "食客江湖",
       "type": "cron",
@@ -462,7 +705,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/skjh.js"
       }
-    },  
+    },
     {
       "name": "柠檬富豪小镇",
       "type": "cron",
@@ -471,7 +714,7 @@
         "type": "runjs",
         "target": "http://nm66.top/fhxz.js"
       }
-    },  
+    },
     {
       "name": "DOGEDA",
       "type": "cron",
@@ -480,7 +723,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/dogeda.js"
       }
-    },  
+    },
     {
       "name": "千禾阅读修复版",
       "type": "cron",
@@ -489,7 +732,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/qhyd.js"
       }
-    },  
+    },
     {
       "name": "66阅读修复版",
       "type": "cron",
@@ -498,7 +741,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/66yd.js"
       }
-    }, 
+    },
     {
       "name": "火狐看看",
       "type": "cron",
@@ -507,7 +750,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/hhkk.js"
       }
-    },   
+    },
     {
       "name": "开心花园",
       "type": "cron",
@@ -516,7 +759,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js"
       }
-    },   
+    },
     {
       "name": "幸福养鸡场",
       "type": "cron",
@@ -525,7 +768,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
       }
-    },   
+    },
     {
       "name": "京东领金贴",
       "type": "cron",
@@ -534,7 +777,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js"
       }
-    },   
+    },
     {
       "name": "百事乐元",
       "type": "cron",
@@ -543,8 +786,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/bsly.js"
       }
-    },   
-     {
+    },
+    {
       "name": "特仑苏小程序",
       "type": "cron",
       "time": "24,47 12 * * *",
@@ -552,8 +795,8 @@
         "type": "runjs",
         "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js"
       }
-    },   
-   {
+    },
+    {
       "name": "猜歌王者改进度",
       "type": "cron",
       "time": "0 0 1 1 *",
@@ -561,7 +804,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/cgwz.js"
       }
-    },   
+    },
     {
       "name": "京东幸运大转盘0301版",
       "type": "cron",
@@ -570,8 +813,8 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_market_lottery.js"
       }
-    },  
-      {
+    },
+    {
       "name": "京东健康社区0301版",
       "type": "cron",
       "time": "10 0-23/4 * * *",
@@ -579,7 +822,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_health.js"
       }
-    }, 
+    },
     {
       "name": "京东健康社区收能量0301版",
       "type": "cron",
@@ -589,7 +832,7 @@
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_health_collect.js"
       }
     },
-     {
+    {
       "name": "京东健康社区收能量藏经阁版",
       "type": "cron",
       "time": "25 * * * *",
@@ -597,8 +840,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro2/self/main/delete/gone/z_health_energy.js"
       }
-    }, 
-     {
+    },
+    {
       "name": "圣牧有机",
       "type": "cron",
       "time": "0 6 * * *",
@@ -606,7 +849,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/smyj.js"
       }
-    }, 
+    },
     {
       "name": "新亚链",
       "type": "cron",
@@ -615,7 +858,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/xyl.js"
       }
-    }, 
+    },
     {
       "name": "讯播广告",
       "type": "cron",
@@ -624,7 +867,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/xbgg.js"
       }
-    }, 
+    },
     {
       "name": "视频号互助",
       "type": "cron",
@@ -633,7 +876,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/sphz.js"
       }
-    }, 
+    },
     {
       "name": "太平洋汽车网",
       "type": "cron",
@@ -642,16 +885,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/tpyqc.js"
       }
-    }, 
-    {
-      "name": "京东整点京豆雨",
-      "type": "cron",
-      "time": "0 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
-      }
-    }, 
+    },
     {
       "name": "左边",
       "type": "cron",
@@ -660,7 +894,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/zb.js"
       }
-    }, 
+    },
     {
       "name": "京东美丽研究院",
       "type": "cron",
@@ -669,7 +903,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/jd_beauty.js"
       }
-    }, 
+    },
     {
       "name": "久金人脉",
       "type": "cron",
@@ -678,7 +912,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/jjrm.js"
       }
-    }, 
+    },
     {
       "name": "interCenter渠道店铺签到",
       "type": "cron",
@@ -687,7 +921,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro2/self/main/delete/gone/monk_inter_shop_sign.js"
       }
-    }, 
+    },
     {
       "name": "招招试药",
       "type": "cron",
@@ -696,7 +930,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/zzsy.js"
       }
-    }, 
+    },
     {
       "name": "酸奶机场签到",
       "type": "cron",
@@ -705,7 +939,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/scripts/main/snjc/snjc.js"
       }
-    }, 
+    },
     {
       "name": "易趣牛帮",
       "type": "cron",
@@ -714,7 +948,7 @@
         "type": "runjs",
         "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/yqnb.js"
       }
-    }, 
+    },
     {
       "name": "部落农场",
       "type": "cron",
@@ -723,7 +957,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/blnc.js"
       }
-    }, 
+    },
     {
       "name": "兴盛优选小程序",
       "type": "cron",
@@ -732,7 +966,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/qqsdff/script/main/xsyx.js"
       }
-    }, 
+    },
     {
       "name": "钢镚赚乐步达人二合一",
       "type": "cron",
@@ -741,7 +975,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/ehy.js"
       }
-    }, 
+    },
     {
       "name": "萌喵大作战无限刷",
       "type": "cron",
@@ -750,7 +984,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/mmdzz.js"
       }
-    }, 
+    },
     {
       "name": "keep小程序打卡偷能量",
       "type": "cron",
@@ -759,7 +993,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/keepdk.js"
       }
-    }, 
+    },
     {
       "name": "keep小程序浇水",
       "type": "cron",
@@ -768,8 +1002,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/keepjs.js"
       }
-    }, 
-     {
+    },
+    {
       "name": "生活圈",
       "type": "cron",
       "time": "0-59 9,12,22 * * *",
@@ -778,7 +1012,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/shq.js"
       }
     },
-     {
+    {
       "name": "京东每日红包雨（由我代管随缘维护）",
       "type": "cron",
       "time": "1 8-23 * * *",
@@ -822,8 +1056,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/wcxcx.js"
       }
-    },  
-     {
+    },
+    {
       "name": "文创阅读",
       "type": "cron",
       "time": "0-59 9-22 * * *",
@@ -831,7 +1065,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/wcyd.js"
       }
-    }, 
+    },
     {
       "name": "京东女装盲盒",
       "type": "cron",
@@ -840,8 +1074,8 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_nzmh.js"
       }
-    }, 
-     {
+    },
+    {
       "name": "葫芦音乐",
       "type": "cron",
       "time": "0,30 8-23 * * *",
@@ -849,7 +1083,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/hlyy.js"
       }
-    }, 
+    },
     {
       "name": "悦趣阅读",
       "type": "cron",
@@ -858,7 +1092,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/yqzh.js"
       }
-    }, 
+    },
     {
       "name": "简单天气",
       "type": "cron",
@@ -867,7 +1101,7 @@
         "type": "runjs",
         "target": "https://github.com/ziye888/JavaScript/raw/main/Task/jdtq.js"
       }
-    }, 
+    },
     {
       "name": "睡眠赚无限刷",
       "type": "cron",
@@ -876,7 +1110,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/smz.js"
       }
-    }, 
+    },
     {
       "name": "最强蜗牛",
       "type": "cron",
@@ -885,7 +1119,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/zqwn.js"
       }
-    }, 
+    },
     {
       "name": "朗果英语",
       "type": "cron",
@@ -894,7 +1128,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/lgyy.js"
       }
-    }, 
+    },
     {
       "name": "西梅",
       "type": "cron",
@@ -903,7 +1137,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/ximei.js"
       }
-    }, 
+    },
     {
       "name": "58同城(查看脚本学用法)",
       "type": "cron",
@@ -912,7 +1146,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/photonmang/quantumultX/master/58/58.js"
       }
-    }, 
+    },
     {
       "name": "京东奇瑞新能源抽奖",
       "type": "cron",
@@ -921,8 +1155,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/qqsdff/script/main/cart.js"
       }
-    }, 
-     {
+    },
+    {
       "name": "阳光矿场",
       "type": "cron",
       "time": "0 7 * * *",
@@ -930,7 +1164,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/ygkc.js"
       }
-    }, 
+    },
     {
       "name": "京喜农场whyour版",
       "type": "cron",
@@ -939,7 +1173,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js"
       }
-    },   
+    },
     {
       "name": "京东手机尚学季",
       "type": "cron",
@@ -948,7 +1182,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js"
       }
-    },   
+    },
     {
       "name": "京东直播",
       "type": "cron",
@@ -957,7 +1191,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_live.js"
       }
-    },   
+    },
     {
       "name": "京东国际盲盒",
       "type": "cron",
@@ -966,7 +1200,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global_mh.js"
       }
-    },   
+    },
     {
       "name": "微客众智",
       "type": "cron",
@@ -975,7 +1209,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/wkzz.js"
       }
-    },  
+    },
     {
       "name": "书旗小说姐姐版刷时长",
       "type": "cron",
@@ -984,7 +1218,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqireadtime.js"
       }
-    },  
+    },
     {
       "name": "书旗小说姐姐版",
       "type": "cron",
@@ -993,7 +1227,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.js"
       }
-    },  
+    },
     {
       "name": "书旗小说ziye版",
       "type": "cron",
@@ -1002,7 +1236,7 @@
         "type": "runjs",
         "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/shuqi.js"
       }
-    },  
+    },
     {
       "name": "喵喵记账",
       "type": "cron",
@@ -1011,7 +1245,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/mmjz.js"
       }
-    },  
+    },
     {
       "name": "番茄小说",
       "type": "cron",
@@ -1020,7 +1254,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/fqxs.js"
       }
-    },  
+    },
     {
       "name": "春风转",
       "type": "cron",
@@ -1029,7 +1263,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/cfz.js"
       }
-    },  
+    },
     {
       "name": "哈喽短视频",
       "type": "cron",
@@ -1038,8 +1272,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/hldsp.js"
       }
-    },  
-     {
+    },
+    {
       "name": "幸运赚点",
       "type": "cron",
       "time": "20 12 * * *",
@@ -1047,7 +1281,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/xyzd.js"
       }
-    },  
+    },
     {
       "name": "京东直播间红包雨9日临时恢复",
       "type": "cron",
@@ -1056,7 +1290,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_live_redrain.js"
       }
-    },  
+    },
     {
       "name": "火山小视频极速版",
       "type": "cron",
@@ -1065,7 +1299,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/hotsoon_old.js"
       }
-    },  
+    },
     {
       "name": "京东国际-环球挑战赛",
       "type": "cron",
@@ -1074,7 +1308,7 @@
         "type": "runjs",
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js"
       }
-    },  
+    },
     {
       "name": "京东极速版红包",
       "type": "cron",
@@ -1083,7 +1317,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/wuzhi03/MyActions/main/jd_speed_redpocke.js"
       }
-    },  
+    },
     {
       "name": "评友圈",
       "type": "cron",
@@ -1092,7 +1326,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/pyq.js"
       }
-    },  
+    },
     {
       "name": "腾讯自选股",
       "type": "cron",
@@ -1101,7 +1335,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js"
       }
-    },  
+    },
     {
       "name": "自选股长牛来了",
       "type": "cron",
@@ -1110,7 +1344,7 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockcow.js"
       }
-    },  
+    },
     {
       "name": "阳光果园(需实名)",
       "type": "cron",
@@ -1119,8 +1353,8 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/yggy.js"
       }
-    },  
-     {
+    },
+    {
       "name": "返利网",
       "type": "cron",
       "time": "0 10,16,22 * * *",
@@ -1273,7 +1507,7 @@
         "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/zhima.js"
       }
     },
-     {
+    {
       "name": "悦动族",
       "type": "cron",
       "time": "0,30 0-23 * * *",
@@ -1291,7 +1525,7 @@
         "target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js"
       }
     },
-     {
+    {
       "name": "笑谱ziye版",
       "type": "cron",
       "time": "*/30 * * * *",
@@ -1424,15 +1658,6 @@
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/klcw/klcw-app.js"
-      }
-    },
-    {
-      "name": "笑谱执意版",
-      "type": "cron",
-      "time": "0 9 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/xp.js"
       }
     },
     {
@@ -2632,7 +2857,7 @@
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/youth.js"
       }
     },
-   {
+    {
       "name": "微博&钱包",
       "type": "cron",
       "time": "0 11 8 * * *",
