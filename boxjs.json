@@ -609,6 +609,85 @@
       "script": "https://raw.githubusercontent.com/age174/-/main/dwyjy.js"
     },
     {
+      "id": "ximei",
+      "name": "西梅",
+      "keys": [
+        "ximeiurl",
+        "ximeihd",
+        "ximeiurl2",
+        "ximeihd2",
+        "ximeiurl3",
+        "ximeihd3",
+        "ximeiurl4",
+        "ximeihd4",
+        "ximeiurl5",
+        "ximeihd5",
+        "ximeiurl6",
+        "ximeihd6",
+        "ximeiurl7",
+        "ximeihd7",
+        "ximeiurl8",
+        "ximeihd8",
+        "ximeiurl9",
+        "ximeihd9",
+        "ximeiurl10",
+        "ximeihd10",
+        "ximeiurl11",
+        "ximeihd11",
+        "ximeiurl12",
+        "ximeihd12"
+      ],
+      "author": "@feizao",
+      "settings": [
+        {
+          "id": "ximeistatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        },
+        {
+          "id": "ximeicount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "需要几个账号，数字为几"
+        }
+      ],
+      "repo": "https://github.com/age174/-/blob/main/ximei.js",
+      "icons": [
+        "https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg",
+        "https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/age174/-/main/ximei.js"
+    },
+    {
+      "id": "elongcash",
+      "name": "同程小猪",
+      "keys": [
+        "elongcash",
+        "elongcashkey"
+      ],
+      "settings": [
+        {
+          "id": "elongcash",
+          "name": "Cookie数据",
+          "val": "",
+          "type": "textarea",
+          "desc": "JSON 格式"
+        }
+      ],
+      "author": "@cenbomin",
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/nio"
+      ],
+      "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELONGCASH/elongcash.js",
+      "icons": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELONGCASH/120.png",
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELONGCASH/120.png"
+      ]
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [
