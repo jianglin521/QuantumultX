@@ -5,6 +5,25 @@
   "date": "2021-05-13 14:30:02",
   "list": [
     {
+      "name": "软更新",
+      "type": "cron",
+      "time": "30 18 23 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/softupdate.js"
+      }
+    },
+    {
+      "name": "清空日志",
+      "type": "cron",
+      "time": "30 58 23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/deletelog.js"
+      }
+    },
+    {
       "name": "中青看点签到&开转盘宝箱&阅读时长",
       "type": "cron",
       "time": "10 */1 * * *",
@@ -101,15 +120,6 @@
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js"
-      }
-    },
-    {
-      "name": "幸福养鸡场",
-      "type": "cron",
-      "time": "10,20,30 0-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
       }
     },
     {

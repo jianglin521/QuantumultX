@@ -5,6 +5,11 @@ https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf
 
 https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
 
+#v2p
+https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
+
+https://raw.githubusercontent.com/ziye888/JavaScript/main/elev2p.json
+
 ## 全网各大佬boxjs地址查询对照 2021.3.22
 https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
 
