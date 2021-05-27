@@ -8,7 +8,7 @@
       "name": "软更新",
       "type": "cron",
       "time": "30 18 23 * * *",
-      "running": true,
+      "running": false,
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/softupdate.js"
