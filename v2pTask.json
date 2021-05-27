@@ -24,7 +24,7 @@
       }
     },
     {
-      "name": "中青看点签到&开转盘宝箱&阅读时长",
+      "name": "中青看点签到",
       "type": "cron",
       "time": "10 */1 * * *",
       "job": {
@@ -35,91 +35,10 @@
     {
       "name": "中青看点自动阅读",
       "type": "cron",
-      "time": "10 */2 * * *",
+      "time": "10 */6 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/Youth_Read.js"
-      }
-    },
-    {
-      "name": "中青看点看看赚&浏览赚(需配合专用重写获取cookie)",
-      "type": "cron",
-      "time": "30 6 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
-      }
-    },
-    {
-      "name": "食材大冲关",
-      "type": "cron",
-      "time": "10 9 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/scdcg.js"
-      }
-    },
-    {
-      "name": "全民来找茬",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmlzc.js"
-      }
-    },
-    {
-      "name": "全民大丰收",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmdff.js"
-      }
-    },
-    {
-      "name": "开心大丰收",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "http://nm66.top/kxdfs.js"
-      }
-    },
-    {
-      "name": "如意花园",
-      "type": "cron",
-      "time": "*/15 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js"
-      }
-    },
-    {
-      "name": "考状元娶老婆",
-      "type": "cron",
-      "time": "*/5 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/qlp.js"
-      }
-    },
-    {
-      "name": "柠檬富豪小镇",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "http://nm66.top/fhxz.js"
-      }
-    },
-    {
-      "name": "开心花园",
-      "type": "cron",
-      "time": "*/30 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kxhy.js"
+        "target": "Youth_Read.js"
       }
     },
     {
@@ -139,6 +58,36 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/ximei.js"
       }
+    },
+    {
+      "name": "食材大冲关",
+      "type": "schedule",
+      "time": "3",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/scdcg.js"
+      },
+      "running": false
+    },
+    {
+      "name": "超市小达人",
+      "type": "schedule",
+      "time": "3",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/csxdr.js"
+      },
+      "running": false
+    },
+    {
+      "name": "动物研究院",
+      "type": "schedule",
+      "time": "3",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/dwyjy.js"
+      },
+      "running": false
     }
   ]
 }
