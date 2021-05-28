@@ -64,5 +64,5 @@ docker image rm hello-world
 
 https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/dwyjy.conf, tag=动物研究院, update-interval=86400, opt-parser=false, enabled=true
 
-## 我的网红店
-https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/wdwhd.conf, tag=我的网红店, update-interval=86400, opt-parser=false, enabled=true
+## 云云赚呗
+https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false

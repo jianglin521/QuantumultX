@@ -60,6 +60,15 @@
       }
     },
     {
+      "name": "云云赚呗",
+      "type": "cron",
+      "time": "0 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/yyzb.js"
+      }
+    },
+    {
       "name": "食材大冲关",
       "type": "schedule",
       "time": "3",
