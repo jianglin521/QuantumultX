@@ -823,8 +823,8 @@
       ],
       "repo": "https://github.com/age174/-/blob/main/qmxx.js",
       "icons": [
-        "https://i0.hdslb.com/bfs/album/5d117c3f2a1a15fe692e50282b3e7beeebf96422.png",
-        "https://i0.hdslb.com/bfs/album/5d117c3f2a1a15fe692e50282b3e7beeebf96422.png"
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/rewrite/icons/qmxx.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/rewrite/icons/qmxx.png"
       ],
       "script": "https://raw.githubusercontent.com/age174/-/main/qmxx.js"
     },
