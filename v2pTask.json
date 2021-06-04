@@ -67,36 +67,6 @@
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/yyzb.js"
       }
-    },
-    {
-      "name": "食材大冲关",
-      "type": "schedule",
-      "time": "3",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/scdcg.js"
-      },
-      "running": false
-    },
-    {
-      "name": "超市小达人",
-      "type": "schedule",
-      "time": "3",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/csxdr.js"
-      },
-      "running": false
-    },
-    {
-      "name": "动物研究院",
-      "type": "schedule",
-      "time": "3",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/dwyjy.js"
-      },
-      "running": false
     }
   ]
 }
