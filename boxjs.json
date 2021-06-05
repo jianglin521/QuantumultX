@@ -580,6 +580,76 @@
       "script": "https://raw.githubusercontent.com/age174/-/main/qmxx.js"
     },
     {
+      "id": "cgsd",
+      "name": "草根时代",
+      "keys": [
+        "cgsdurl",
+        "cgsdhd",
+        "cgsdbody",
+        "cgsdurl2",
+        "cgsdhd2",
+        "cgsdbody2"
+      ],
+      "author": "@tom",
+      "settings": [
+        {
+          "id": "cgsdstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+        {
+          "id": "cgsdcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tz",
+          "name": "通知",
+          "val": "1",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        },
+        {
+          "id": "ckck",
+          "name": "你的ck",
+          "val": "",
+          "type": "String",
+          "desc": "把抓到的ck放加来即可运行脚本"
+        },
+        {
+          "id": "sp1",
+          "name": "视频通道1",
+          "val": "",
+          "type": "String",
+          "desc": "视频body"
+        },
+        {
+          "id": "sp2",
+          "name": "视频通道2",
+          "val": "",
+          "type": "String",
+          "desc": "视频body"
+        },
+        {
+          "id": "sp3",
+          "name": "视频通道3",
+          "val": "",
+          "type": "String",
+          "desc": "视频body"
+        }
+      ],
+      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js",
+      "icons": [
+        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg",
+        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [
