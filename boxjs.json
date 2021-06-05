@@ -485,52 +485,6 @@
       "script": "https://raw.githubusercontent.com/age174/-/main/ximei.js"
     },
     {
-      "id": "yyzb",
-      "name": "云云赚呗",
-      "keys": [
-        "yyzbhd",
-        "yyzbhd2",
-        "yyzbhd3",
-        "yyzbhd4",
-        "yyzbhd5",
-        "yyzbhd6",
-        "yyzbhb7",
-        "yyzbhd8",
-        "yyzbhd9",
-        "yyzbhd10"
-      ],
-      "author": "@tom",
-      "settings": [
-        {
-          "id": "yyzbstatus",
-          "name": "当前账号",
-          "val": "1",
-          "type": "number",
-          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
-        },
-        {
-          "id": "yyzbcount",
-          "name": "账号个数",
-          "val": "1",
-          "type": "number",
-          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-        },
-        {
-          "id": "tz",
-          "name": "通知",
-          "val": "1",
-          "type": "number",
-          "desc": "0关闭，1打开"
-        }
-      ],
-      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/yyzb.js",
-      "icons": [
-        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg",
-        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg"
-      ],
-      "script": "https://raw.githubusercontent.com/xl2101200/-/main/yyzb.js"
-    },
-    {
       "id": "qmxx",
       "name": "全免小说",
       "keys": [

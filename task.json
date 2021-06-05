@@ -13,7 +13,6 @@
     "0 7 * * * https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushBoxjsCookie_elecV2p.js, tag=Cookie上传V2p, img-url=https://cdn.jsdelivr.net/gh/sngxpro/QuanX@master/pic/jiejie.png, enabled=true ",
     "*/5 * * * * http://nm66.top/chxx.js, tag=柠檬彩虹消消消, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
     "20 9 * * * https://raw.githubusercontent.com/age174/-/main/ximei.js, tag=西梅, img-url=https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg, enabled=true",
-    "0 8 * * * https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/yyzb.js, tag=云云赚呗, img-url=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
     "10 0-23 * * * https://raw.githubusercontent.com/age174/-/main/qmxx.js, tag=全免小说, img-url=https://i0.hdslb.com/bfs/album/5d117c3f2a1a15fe692e50282b3e7beeebf96422.png, enabled=true"
   ]
 }
