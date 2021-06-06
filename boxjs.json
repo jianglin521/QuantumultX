@@ -709,6 +709,75 @@
       ]
     },
     {
+      "id": "chonghauapp",
+      "name": "葱花视频",
+      "keys": [
+        "uid",
+        "chgetbody_video",
+        "chgetbody_share",
+        "chgetbody_timered",
+        "chgetbody_taskcenter",
+        "chgetbody_sharereward",
+        "logbutton",
+        "tzbutton",
+        "chgetbody_video_index",
+        "cashbody",
+        "cashkey",
+        "callbackkey",
+        "callbackurl"
+      ],
+      "settings": [
+        {
+          "id": "chgetbody_video",
+          "name": "请求body",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "看视频，倒计时转一圈显示金币到账。。建议看5篇视频,获取请求包"
+        },
+        {
+          "id": "uid",
+          "name": "自己的邀请码",
+          "val": "",
+          "type": "text",
+          "desc": "输入才可查看账户金币明细"
+        },
+        {
+          "id": "chgetbody_video_index",
+          "name": "上次执行位置",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "记录上次执行的位置，可以控制从第几个body开始执行"
+        },
+        {
+          "id": "logbutton",
+          "name": "日志开关",
+          "val": "",
+          "type": "number",
+          "desc": "0为关闭日志，1为开启，默认为关闭日志"
+        },
+        {
+          "id": "tzbutton",
+          "name": "安静开关",
+          "val": "",
+          "type": "number",
+          "desc": "0为关闭通知，1为所有通知，默认为关闭通知"
+        }
+      ],
+      "author": "@cenbomin",
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync"
+      ],
+      "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/chonghua.js",
+      "icons": [
+        "https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
+      ]
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [
