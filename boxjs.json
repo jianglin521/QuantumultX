@@ -650,6 +650,65 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js"
     },
     {
+      "id": "jukan",
+      "name": "聚看点",
+      "author": "@sunert",
+      "keys": [
+        "jukan_body",
+        "jukan_name"
+      ],
+      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/jukan.js",
+      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jukan.js",
+      "settings": [
+        {
+          "id": "jukan_out",
+          "val": false,
+          "name": "自动提现",
+          "type": "boolean",
+          "desc": "自动提现开关，请填入提现金额及微信绑定实名，默认关闭"
+        },
+        {
+          "id": "jukan_cash",
+          "val": "",
+          "name": "提现金额",
+          "type": "radios",
+          "items": [
+            {
+              "key": "3",
+              "label": "3元(邀请专享)"
+            },
+            {
+              "key": "10",
+              "label": "10元(阅读/邀请)"
+            },
+            {
+              "key": "30",
+              "label": "30元(无条件)"
+            },
+            {
+              "key": "50",
+              "label": "50元(无条件)"
+            },
+            {
+              "key": "100",
+              "label": "100元(无条件)"
+            }
+          ]
+        },
+        {
+          "id": "jukan_name",
+          "placeholder": "填入微信真实姓名",
+          "val": "",
+          "name": "微信真实姓名",
+          "type": "text"
+        }
+      ],
+      "icons": [
+        "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/jukan_mini.png",
+        "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/jukan.png"
+      ]
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [
