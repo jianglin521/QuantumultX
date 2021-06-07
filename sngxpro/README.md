@@ -5,10 +5,15 @@ https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf
 
 https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
 
-#v2p
+## v2p-ios
 https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
 
 https://raw.githubusercontent.com/ziye888/JavaScript/main/elev2p.json
+
+## v2p-安卓
+https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/v2pAndroid.json
+
+https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/Android/rewrite/getcookie.conf
 
 ## 全网各大佬boxjs地址查询对照 2021.3.22
 https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
@@ -59,10 +64,6 @@ docker container ls
 # 删除镜像
 docker image rm hello-world
 ```
-## 动物研究院
-动物研究院这个游戏，appstore搜索不到，请点击下方链接跳转https://apps.apple.com/cn/app/%E5%8A%A8%E7%89%A9%E7%A0%94%E7%A9%B6%E9%99%A2/id1566693411
-
-https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/dwyjy.conf, tag=动物研究院, update-interval=86400, opt-parser=false, enabled=true
 
 ## 云云赚呗
 https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false
