@@ -809,6 +809,48 @@
         "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png",
         "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"
       ]
+    },
+    {
+      "id": "ql",
+      "name": "青龙Cookie同步",
+      "keys": [
+        "@ql.ip",
+        "@ql.username",
+        "@ql.password"
+      ],
+      "settings": [
+        {
+          "id": "@ql.ip",
+          "name": "青龙登陆的域名或IP:端口号",
+          "val": "",
+          "type": "text",
+          "placeholder": "111.21.0.32:5700"
+        },
+        {
+          "id": "@ql.username",
+          "name": "账号",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ql.password",
+          "name": "密码",
+          "val": "",
+          "type": "text"
+        }
+      ],
+      "icons": [
+        "https://qinglong.whyour.cn/qinglong.png",
+        "https://qinglong.whyour.cn/qinglong.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script/blob/master/jd/ql_cookie_sync.js",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/ql_cookie_sync.js",
+      "descs_html": [
+        "青龙 docker 的安装方式请移步 tg 频道",
+        "青龙 docker 作者仓库：【<a href=\"https://github.com/whyour\">github</a>】",
+        "青龙 docker 频道：【<a href=\"https://t.me/qiongqiya\">电报频道</a>】"
+      ]
     }
   ]
 }
