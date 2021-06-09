@@ -67,3 +67,103 @@ docker image rm hello-world
 
 ## 云云赚呗
 https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false
+
+## 青龙常用环境变量备份表，方便随时查询
+https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
+
+### 环境变量
+#自定义
+#ServerChan
+export PUSH_KEY=""
+
+#每日签到提供3种通知方式,默认2
+NotifyBeanSign="1"
+
+##东东萌宠关闭推送。填写false为不关闭推送，true为关闭推送
+export PET_NOTIFY_CONTROL="true"
+
+##京东农场关闭推送。填写false为不关闭推送，true为关闭推送
+export FRUIT_NOTIFY_CONTROL="true"
+
+##京东领现金关闭推送。填写false为不关闭推送，true为关闭推送
+export CASH_NOTIFY_CONTROL="true"
+
+##京东摇钱树关闭推送。填写false为不关闭推送，true为关闭推送
+export MONEYTREE_NOTIFY_CONTROL="true"
+
+##京东点点券关闭推送。填写false为不关闭推送，true为关闭推送
+export DDQ_NOTIFY_CONTROL="true"
+
+##宠汪汪兑换京豆关闭推送。填写false为不关闭推送，true为关闭推送
+export JDZZ_NOTIFY_CONTROL="true"
+
+##宠汪汪赛跑获胜后是否推送通知。填false为不推送通知消息,true为推送通知消息
+export JOY_RUN_NOTIFY="false"
+
+##京东领现金红包兑换京豆开关。false为不换,true为换(花费2元红包兑换200京豆，一周可换四次)，默认为false
+export CASH_EXCHANGE="true"
+
+##宠汪汪喂食数量。可以填的数字0,10,20,40,80,其他数字不可.
+export JOY_FEED_COUNT="40"
+
+##宠汪汪赛跑自己账号内部互助。输入true为开启内部互助
+export JOY_RUN_HELP_MYSELF="true"
+
+##宠汪汪积分兑换多少京豆。目前可填值为20或者500,脚本默认0,0表示不兑换京豆
+export JD_JOY_REWARD_NAME="500"
+
+##东东超市兑换京豆数量。目前可输入值为20或者1000，或者其他商品的名称,例如碧浪洗衣凝珠
+export MARKET_COIN_TO_BEANS="1000"
+
+##疯狂的JOY循环助力开关。true表示循环助力,false表示不循环助力，默认不开启循环助力。
+export JDJOY_HELPSELF="true"
+
+##疯狂的JOY京豆兑换。0表示不换,其他按可兑换数填写。目前最小2000。
+export JDJOY_APPLYJDBEAN="2000"
+
+### 账号互助
+name_js=(
+  chinnkarahoi_jd_scripts_jd_fruit
+  chinnkarahoi_jd_scripts_jd_pet
+  chinnkarahoi_jd_scripts_jd_plantBean
+  chinnkarahoi_jd_scripts_jd_dreamFactory
+  chinnkarahoi_jd_scripts_jd_jdfactory
+  chinnkarahoi_jd_scripts_jd_jdzz
+  chinnkarahoi_jd_scripts_jd_crazy_joy
+  chinnkarahoi_jd_scripts_jd_jxnc
+  chinnkarahoi_jd_scripts_jd_bookshop
+  chinnkarahoi_jd_scripts_jd_cash
+  chinnkarahoi_jd_scripts_jd_sgmh
+  chinnkarahoi_jd_scripts_jd_cfd
+  chinnkarahoi_jd_scripts_jd_health
+)
+
+##自动按顺序进行账号间互助（选填） 设置为 true 时，将直接导入code最新日志来进行互助
+AutoHelpOther="true"
+
+##定义 jcode 脚本导出的互助码模板样式（选填）
+HelpType="1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
