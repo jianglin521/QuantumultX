@@ -138,6 +138,22 @@ name_js=(
   chinnkarahoi_jd_scripts_jd_health
 )
 
+<!-- name_js=(
+  jd_fruit
+  jd_pet
+  jd_plantBean
+  jd_dreamFactory
+  jd_jdfactory
+  jd_jdzz
+  jd_crazy_joy
+  jd_jxnc
+  jd_bookshop
+  jd_cash
+  jd_sgmh
+  jd_cfd
+  jd_health
+) -->
+
 ##自动按顺序进行账号间互助（选填） 设置为 true 时，将直接导入code最新日志来进行互助
 AutoHelpOther="true"
 
