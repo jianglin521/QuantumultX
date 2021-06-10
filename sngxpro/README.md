@@ -73,8 +73,12 @@ https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
 
 ### 环境变量
 #自定义
-#ServerChan
-export PUSH_KEY=""
+#server酱
+#export PUSH_KEY=""
+
+#Telegram
+export TG_BOT_TOKEN=""
+export TG_USER_ID=""
 
 #每日签到提供3种通知方式,默认2
 NotifyBeanSign="1"
