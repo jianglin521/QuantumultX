@@ -181,7 +181,8 @@ ql repo https://github.com/whyour/hundun.git "quanx" "tokens|caiyun|didi|donate|
 ql repo https://github.com/passerby-b/JDDJ.git "jddj_" "scf_test_event" "jddj_cookie"
 
 【温某某】
-ql repo https://github.com/Wenmoux/scripts.git "jd"
+~~ql repo https://github.com/Wenmoux/scripts.git "jd"~~
+ql repo https://github.com/Wenmoux/scripts.git "jd" "" "" "wen"
 
 【柠檬（胖虎）】
 ql repo https://github.com/panghu999/panghu.git "jd_"
