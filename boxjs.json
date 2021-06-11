@@ -778,6 +778,467 @@
       ]
     },
     {
+      "id": "tls",
+      "name": "特仑苏小程序",
+      "keys": [
+        "tlsurl",
+        "tlsheader",
+        "tlsurl2",
+        "tlsheader2",
+        "tlsurl3",
+        "tlsheader3",
+        "tlsurl4",
+        "tlsheader4",
+        "tlsurl5",
+        "tlsheader5",
+        "tlsurl6",
+        "tlsheader6",
+        "tlsurl7",
+        "tlsheader7",
+        "tlsurl8",
+        "tlsheader8",
+        "tlsurl9",
+        "tlsheader9",
+        "tlsurl10",
+        "tlsheader10",
+        "tlsurl11",
+        "tlsheader11",
+        "tlsurl12",
+        "tlsheader12",
+        "tlsurl13",
+        "tlsheader13",
+        "tlsurl14",
+        "tlsheader14",
+        "tlsurl15",
+        "tlsheader15",
+        "tlsurl16",
+        "tlsheader16",
+        "tlsurl17",
+        "tlsheader17",
+        "tlsurl18",
+        "tlsheader18",
+        "tlsurl19",
+        "tlsheader19",
+        "tlsurl20",
+        "tlsheader20"
+      ],
+      "author": "@ziye",
+      "settings": [
+        {
+          "id": "tlsSuffix",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+        },
+        {
+          "id": "tlsCount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tlshyidA",
+          "name": "好友A",
+          "val": "64926",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidB",
+          "name": "好友B",
+          "val": "70405",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidC",
+          "name": "好友C",
+          "val": "73261",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidD",
+          "name": "好友D",
+          "val": "98692",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidE",
+          "name": "好友E",
+          "val": "98825",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidF",
+          "name": "好友F",
+          "val": "98860",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidG",
+          "name": "好友G",
+          "val": "98910",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidH",
+          "name": "好友H",
+          "val": "114043",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidI",
+          "name": "好友I",
+          "val": "114736",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidJ",
+          "name": "好友J",
+          "val": "112833",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidK",
+          "name": "好友K",
+          "val": "113329",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidL",
+          "name": "好友L",
+          "val": "109172",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidM",
+          "name": "好友M",
+          "val": "364156",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidN",
+          "name": "好友N",
+          "val": "147562",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidO",
+          "name": "好友O",
+          "val": "161866",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidP",
+          "name": "好友P",
+          "val": "109012",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidQ",
+          "name": "好友Q",
+          "val": "109377",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidR",
+          "name": "好友R",
+          "val": "397595",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidS",
+          "name": "好友S",
+          "val": "114992",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidT",
+          "name": "好友T",
+          "val": "117104",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidU",
+          "name": "好友U",
+          "val": "122263",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidV",
+          "name": "好友V",
+          "val": "141969",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidW",
+          "name": "好友W",
+          "val": "327211",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidX",
+          "name": "好友X",
+          "val": "117972",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidY",
+          "name": "好友Y",
+          "val": "161684",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidZ",
+          "name": "好友Z",
+          "val": "109566",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidA2",
+          "name": "好友A2",
+          "val": "137291",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidB2",
+          "name": "好友B2",
+          "val": "326900",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidC2",
+          "name": "好友C2",
+          "val": "1502164",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidD2",
+          "name": "好友D2",
+          "val": "109954",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidE2",
+          "name": "好友E2",
+          "val": "1949333",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidF2",
+          "name": "好友F2",
+          "val": "134164",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidG2",
+          "name": "好友G2",
+          "val": "108969",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidH2",
+          "name": "好友H2",
+          "val": "119966",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidI2",
+          "name": "好友I2",
+          "val": "1073782",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidJ2",
+          "name": "好友J2",
+          "val": "8538",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidK2",
+          "name": "好友K2",
+          "val": "1152548",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidL2",
+          "name": "好友L2",
+          "val": "1401176",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidM2",
+          "name": "好友M2",
+          "val": "112736",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidN2",
+          "name": "好友N2",
+          "val": "108931",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidO2",
+          "name": "好友O2",
+          "val": "157140",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidP2",
+          "name": "好友P2",
+          "val": "109584",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidQ2",
+          "name": "好友Q2",
+          "val": "110198",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidR2",
+          "name": "好友R2",
+          "val": "1391232",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidS2",
+          "name": "好友S2",
+          "val": "244904",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidT2",
+          "name": "好友T2",
+          "val": "1502143",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidU2",
+          "name": "好友U2",
+          "val": "114055",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidV2",
+          "name": "好友V2",
+          "val": "108955",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidW2",
+          "name": "好友W2",
+          "val": "109132",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidX2",
+          "name": "好友X2",
+          "val": "131274",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidY2",
+          "name": "好友Y2",
+          "val": "124551",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlshyidZ2",
+          "name": "好友Z2",
+          "val": "216461",
+          "type": "number",
+          "desc": "默认内置，自行修改"
+        },
+        {
+          "id": "tlsXYZ",
+          "name": "执行概率",
+          "val": "100",
+          "type": "number",
+          "desc": "0不执行 可设置0-100,默认百分百"
+        },
+        {
+          "id": "tlsnotifyttt",
+          "name": "推送控制",
+          "val": "1",
+          "type": "number",
+          "desc": "0关闭，1推送,默认12点以及23点推送"
+        },
+        {
+          "id": "tlsnotifyInterval",
+          "name": "通知控制",
+          "val": "2",
+          "type": "number",
+          "desc": "0关闭，1为 所有通知，2为 12，23 点通知，3为 6，12，18，23 点通知 "
+        },
+        {
+          "id": "tlsMinutes",
+          "name": "推送-通知 分钟控制",
+          "val": "10",
+          "type": "number",
+          "desc": "推送以及通知控制在什么分钟段，可设置0-59,默认0到10"
+        }
+      ],
+      "repo": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js",
+      "icons": [
+        "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png",
+        "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png"
+      ],
+      "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [

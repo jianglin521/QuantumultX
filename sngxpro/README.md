@@ -164,6 +164,42 @@ AutoHelpOther="true"
 ##定义 jcode 脚本导出的互助码模板样式（选填）
 HelpType="1"
 
+## 青龙拉取常用京东脚本库，公众号少年歌行pro整理
+6月6日新增了 【Ariszy（Zhiyi-N）】库
+
+【lxk0301】
+
+ql repo https://github.com/chinnkarahoi/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"
+
+【龙珠】
+ql repo https://github.com/longzhuzhu/nianyu.git "qx" “main”
+
+【混沌】
+ql repo https://github.com/whyour/hundun.git "quanx" "tokens|caiyun|didi|donate|fold|Env"
+
+【passerby-b】（需要配合专用ck文件）
+ql repo https://github.com/passerby-b/JDDJ.git "jddj_" "scf_test_event" "jddj_cookie"
+
+【温某某】
+ql repo https://github.com/Wenmoux/scripts.git "jd"
+
+【柠檬（胖虎）】
+ql repo https://github.com/panghu999/panghu.git "jd_"
+
+【zoopanda（动物园）】
+ql repo https://github.com/zooPanda/zoo.git "zoo"
+
+【Ariszy（Zhiyi-N）】
+
+ql repo https://github.com/Ariszy/Private-Script.git "JD"
+
+【ddo（hyzaw）】
+
+ql repo https://github.com/hyzaw/scripts.git "ddo_"
+
+【翻翻乐提现单文件】
+ql raw https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_ffl.js
+
 
 
 
