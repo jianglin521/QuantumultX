@@ -66,8 +66,7 @@
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/qmxx.js"
-      },
-      "running": false
+      }
     },
     {
       "name": "聚看点",
