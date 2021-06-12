@@ -66,7 +66,7 @@ docker image rm hello-world
 ```
 
 ## 云云赚呗
-https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false
+~~https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false~~
 
 ## 青龙常用环境变量备份表，方便随时查询
 https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
