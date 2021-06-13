@@ -767,12 +767,24 @@
       "id": "cgsd",
       "name": "草根时代",
       "keys": [
-        "cgsdurl",
-        "cgsdhd",
         "cgsdbody",
-        "cgsdurl2",
+        "cgsdhd",
+        "sphd",
+        "sp1body",
+        "sp2body",
+        "sp3body",
+        "cgsdbody2",
         "cgsdhd2",
-        "cgsdbody2"
+        "sphd2",
+        "sp1body2",
+        "sp2body2",
+        "sp3body2",
+        "cgsdbody3",
+        "cgsdhd3",
+        "sphd3",
+        "sp1body3",
+        "sp2body3",
+        "sp3body3"
       ],
       "author": "@tom",
       "settings": [
@@ -799,31 +811,31 @@
         },
         {
           "id": "ckck",
-          "name": "你的ck",
+          "name": "ck",
           "val": "",
           "type": "String",
-          "desc": "把抓到的ck放加来即可运行脚本"
+          "desc": ""
         },
         {
           "id": "sp1",
-          "name": "视频通道1",
+          "name": "视频1",
           "val": "",
           "type": "String",
-          "desc": "视频body"
+          "desc": ""
         },
         {
           "id": "sp2",
-          "name": "视频通道2",
+          "name": "视频2",
           "val": "",
           "type": "String",
-          "desc": "视频body"
+          "desc": ""
         },
         {
           "id": "sp3",
-          "name": "视频通道3",
+          "name": "视频3",
           "val": "",
           "type": "String",
-          "desc": "视频body"
+          "desc": ""
         }
       ],
       "repo": "https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js",
