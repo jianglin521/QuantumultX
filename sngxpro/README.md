@@ -73,6 +73,9 @@ https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
 
 ### 环境变量
 #自定义
+#ql repo命令拉取脚本时需要拉取的文件后缀，直接写文件后缀名即可
+RepoFileExtensions="js"
+
 #server酱
 #export PUSH_KEY=""
 
