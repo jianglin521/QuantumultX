@@ -103,6 +103,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbdd.js"
       }
+    },
+    {
+      "name": "美音新品",
+      "type": "cron",
+      "time": "0 11 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbdd.js"
+      }
     }
   ]
 }
