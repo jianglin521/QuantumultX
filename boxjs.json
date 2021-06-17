@@ -1022,6 +1022,72 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/ppz.js"
     },
     {
+      "id": "dkdvideo",
+      "name": "想看多看点",
+      "keys": [
+        "dkdtokenbody",
+        "dkdtokenkey",
+        "getawardbody",
+        "getawardbody_index",
+        "dkdcashkey",
+        "dkdlottokey"
+      ],
+      "settings": [
+        {
+          "id": "getawardbody",
+          "name": "视频请求",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "看视频，倒计时转一圈显示金币到账。"
+        },
+        {
+          "id": "getawardbody_index",
+          "name": "上次执行位置",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "记录上次执行的位置，可以控制从第几个视频请求开始执行"
+        },
+        {
+          "id": "myselfcash",
+          "name": "自定义未满50元的提现金额,1,3,5,15",
+          "val": "",
+          "type": "text",
+          "desc": "默认1,即未满50提现1元。"
+        }
+      ],
+      "author": "@cenbomin",
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync"
+      ],
+      "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkdvideo.js",
+      "icons": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png",
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png"
+      ]
+    },
+    {
+      "id": "hzh",
+      "name": "华住会",
+      "descs_html": [
+        "点此直达【<a href=\"https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js\">脚本地址</a>】"
+      ],
+      "keys": [
+        "@hzh.evil_hzhfp",
+        "@hzh.evil_hzhBody"
+      ],
+      "author": "@evilbutcher",
+      "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master/check_in/hzh",
+      "icons": [
+        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/hzh_tran.png",
+        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/hzh.png"
+      ],
+      "script": "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [

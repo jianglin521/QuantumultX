@@ -68,6 +68,42 @@ docker image rm hello-world
 ## 云云赚呗
 ~~https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/yyzb.conf, tag=云云赚呗（与其他规则冲突）, update-interval=86400, opt-parser=false, enabled=false~~
 
+## 10s阅读
+微信打开
+立即参与 -> http://h5.jrkuaixun.xyz/j/h?upuid=136513&ch=xmy&type=1
+备用链接 -> http://h5.njchenyue.xyz/j/h?upuid=136513&ch=xmy&type=1
+
+## 多看点
+1.目前想要拿到100%阶段红包奖励(1600金币),需要手动做三个部分任务,任务达成脚本会自动领取,自己手动领取也可以
+[高额游戏赚]：游戏中心下载游戏,并完成试玩条件,就可以领取...建议达到领取条件即可,不要做的太多后面越来越难（完成试玩条件,有现金奖励直接打款微信）
+[分享赚]：分享一篇文章到微信,自己点击文章...打开观看拉到底，有个'查看更多',点击就完成任务条件
+[小说赚]：广告任务做一次就可领取。(点击后,根据提示往下滑动到底让广告阴影消失,遇到文章到底后会加载新文章...这时候会卡一下,等一下就可以继续滑了。然后点击广告,根据提示操作...最后会看到右上角金币的圈圈滑动会绕圈,滑动到绕满就有奖励了)
+
+2.脚本每执行一次,刷视频才执行一次,会自行判定领取视频奖励还是红包
+
+3.定时cron设置12min循环一次,一个小时执行5次刷视频,这样一天会执行120次,由于一个视频请求一天只能用两次,所以至少抓取50个body,如果担心12min循环视频跑不满,可以自行调整缩短时间（后期视频奖励变得很少...大家自己斟酌考虑）
+
+4.目前大约一天收益是1.2元左右...其他部分自己可以考虑手做（小说广告,看小说,小游戏,小游戏时段奖励...）
+
+【BOXJS】: https://raw.githubusercontent.com/CenBoMin/GithubSync/main/cenbomin.box.json
+【ME邀请码】: 13192689，13152063(肥皂)
+https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkdvideo.js
+https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkdvideo.conf
+
+//食用方法
+
+到[重写]-[引用],！！！添加并启动重写引用conf！！！
+
+【一般任务】：进入APP,直接获取一般任务请求cookie(会一直弹出,不需要管他)
+
+【转盘任务】：点击下面分类-我的,右下角有个转盘图标,点击进去转盘页面即可获取
+
+【提现任务】：满足提现条件之后,提现1元即可获取提现请求
+
+【视频body请求】：看视频到获取金币奖励,通知提示“添加视频body请求: 成功🎉,当前共有?个”,获取50个body请求左右
+
+获取完cookie,务必关闭重写引用conf!
+
 ## 青龙常用环境变量备份表，方便随时查询
 https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
 
