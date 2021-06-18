@@ -60,30 +60,12 @@
       }
     },
     {
-      "name": "全免小说",
-      "type": "cron",
-      "time": "10 0-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/qmxx.js"
-      }
-    },
-    {
       "name": "聚看点",
       "type": "cron",
       "time": "*/20 */5 * * *",
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/jukan.js"
-      }
-    },
-    {
-      "name": "【安卓】赚多多",
-      "type": "cron",
-      "time": "0 7 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/zdd.js"
       }
     },
     {
@@ -96,21 +78,12 @@
       }
     },
     {
-      "name": "【安卓】红包多多",
+      "name": "【安卓】开心点点消",
       "type": "cron",
-      "time": "45 7 * * *",
+      "time": "45 12 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbdd.js"
-      }
-    },
-    {
-      "name": "美音新品",
-      "type": "cron",
-      "time": "0 11 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbdd.js"
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
       }
     }
   ]
