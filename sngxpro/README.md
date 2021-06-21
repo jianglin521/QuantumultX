@@ -207,8 +207,8 @@ HelpType="1"
 6月6日新增了 【Ariszy（Zhiyi-N）】库
 
 【lxk0301】
-
-ql repo https://github.com/chinnkarahoi/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"
+~~ql repo https://github.com/chinnkarahoi/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"~~
+ql repo https://ghproxy.com/https://github.com/panghu999/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"
 
 【龙珠】
 ql repo https://github.com/longzhuzhu/nianyu.git "qx" “main”
