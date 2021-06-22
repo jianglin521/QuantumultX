@@ -845,6 +845,21 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
     },
     {
+      "id": "10sread",
+      "name": "10s阅读",
+      "keys": [
+        "read10sck",
+        "read10surl"
+      ],
+      "author": "@wenmoux",
+      "repo": "https://ghproxy.com/https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js",
+      "icons": [
+        "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/wen.png",
+        "https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/wen.png"
+      ],
+      "script": "https://ghproxy.com/https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "elecV2p推送Cookie",
       "keys": [
