@@ -243,6 +243,8 @@ ql repo https://github.com/hyzaw/scripts.git "ddo_"
 【翻翻乐提现单文件】
 ql raw https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_ffl.js
 
+【star261】
+ql repo https://github.com/star261/jd.git "scripts" "code" 
 
 
 
