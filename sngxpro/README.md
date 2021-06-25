@@ -210,6 +210,9 @@ HelpType="1"
 ~~ql repo https://github.com/chinnkarahoi/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"~~
 ql repo https://ghproxy.com/https://github.com/panghu999/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"
 
+【大佬修复脚本仓库】
+ql repo https://github.com/photonmang/quantumultX.git "JDscripts"
+
 【龙珠】
 ql repo https://github.com/longzhuzhu/nianyu.git "qx" “main”
 
