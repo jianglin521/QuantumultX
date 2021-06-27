@@ -85,6 +85,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/lxgg.js"
       }
+    },
+    {
+      "name": "【安卓】蛋咖",
+      "type": "cron",
+      "time": "45 11 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js"
+      }
     }
   ]
 }
