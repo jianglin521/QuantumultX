@@ -76,6 +76,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
       }
+    },
+    {
+      "name": "【安卓】乐享广告",
+      "type": "cron",
+      "time": "45 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/lxgg.js"
+      }
     }
   ]
 }
