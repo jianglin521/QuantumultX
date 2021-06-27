@@ -715,115 +715,130 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
     },
     {
-      "id": "lxgg",
-      "name": "乐享广告(安卓)",
+      "id": "dk",
+      "name": "蛋咖(安卓)",
       "keys": [
-        "lxgghd",
-        "lqhd",
-        "lw2body",
-        "lwhd2",
-        "lwbody2",
-        "lw2body2",
-        "lwhd3",
-        "lwbody3",
-        "lw2body3",
-        "lwhd4",
-        "lwbody4",
-        "lw2body4",
-        "lwhd5",
-        "lwbody5",
-        "lw2body5"
+        "dkhd",
+        "dkbody",
+        "dk2body",
+        "dkhd2",
+        "dkbody2",
+        "dk2body2",
+        "dkhd3",
+        "dkbody3",
+        "dk2body3",
+        "dkhd4",
+        "dkbody4",
+        "dk2body4",
+        "dkhd5",
+        "dkbody5",
+        "dk2body5"
       ],
       "author": "@tom",
       "settings": [
         {
-          "id": "lxggstatus",
+          "id": "dkstatus",
           "name": "当前账号",
           "val": "1",
           "type": "number",
           "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
         },
         {
-          "id": "lxggcount",
+          "id": "dkcount",
           "name": "账号个数",
           "val": "1",
           "type": "number",
           "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
         },
         {
-          "id": "PushBoxjsCookie",
-          "name": "elecV2p推送Cookie",
-          "keys": [
-            "v2purl",
-            "v2token"
-          ],
-          "settings": [
-            {
-              "id": "v2purl",
-              "name": "主页地址",
-              "val": "",
-              "type": "text",
-              "desc": "请到设置查询,例子:http://192.168.1.102:12521"
-            },
-            {
-              "id": "v2token",
-              "name": "WEBHOOK TOKEN",
-              "val": "",
-              "type": "text",
-              "desc": "请到设置查询,例子:a8c259b2-67fe-D-7bfdf1f55cb3"
-            }
-          ],
-          "author": "@cenbomin",
-          "repo": [
-            "https://raw.githubusercontent.com/CenBoMin/GithubSync"
-          ],
-          "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushBoxjsCookie_elecV2p.js",
-          "icons": [
-            "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png",
-            "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"
-          ]
+          "id": "tz",
+          "name": "通知",
+          "val": "1",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        }
+      ],
+      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js",
+      "icons": [
+        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg",
+        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js"
+    },
+    {
+      "id": "PushBoxjsCookie",
+      "name": "elecV2p推送Cookie",
+      "keys": [
+        "v2purl",
+        "v2token"
+      ],
+      "settings": [
+        {
+          "id": "v2purl",
+          "name": "主页地址",
+          "val": "",
+          "type": "text",
+          "desc": "请到设置查询,例子:http://192.168.1.102:12521"
         },
         {
-          "id": "ql",
-          "name": "青龙Cookie同步",
-          "keys": [
-            "@ql.ip",
-            "@ql.username",
-            "@ql.password"
-          ],
-          "settings": [
-            {
-              "id": "@ql.ip",
-              "name": "青龙登陆的域名或IP:端口号",
-              "val": "",
-              "type": "text",
-              "placeholder": "111.21.0.32:5700"
-            },
-            {
-              "id": "@ql.username",
-              "name": "账号",
-              "val": "",
-              "type": "text"
-            },
-            {
-              "id": "@ql.password",
-              "name": "密码",
-              "val": "",
-              "type": "text"
-            }
-          ],
-          "icons": [
-            "https://qinglong.whyour.cn/qinglong.png",
-            "https://qinglong.whyour.cn/qinglong.png"
-          ],
-          "author": "@dompling",
-          "repo": "https://github.com/dompling/Script/blob/master/jd/ql_cookie_sync.js",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/ql_cookie_sync.js",
-          "descs_html": [
-            "青龙 docker 的安装方式请移步 tg 频道",
-            "青龙 docker 作者仓库：【<a href=\"https://github.com/whyour\">github</a>】",
-            "青龙 docker 频道：【<a href=\"https://t.me/qiongqiya\">电报频道</a>】"
-          ]
+          "id": "v2token",
+          "name": "WEBHOOK TOKEN",
+          "val": "",
+          "type": "text",
+          "desc": "请到设置查询,例子:a8c259b2-67fe-D-7bfdf1f55cb3"
         }
+      ],
+      "author": "@cenbomin",
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync"
+      ],
+      "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushBoxjsCookie_elecV2p.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png",
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"
+      ]
+    },
+    {
+      "id": "ql",
+      "name": "青龙Cookie同步",
+      "keys": [
+        "@ql.ip",
+        "@ql.username",
+        "@ql.password"
+      ],
+      "settings": [
+        {
+          "id": "@ql.ip",
+          "name": "青龙登陆的域名或IP:端口号",
+          "val": "",
+          "type": "text",
+          "placeholder": "111.21.0.32:5700"
+        },
+        {
+          "id": "@ql.username",
+          "name": "账号",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ql.password",
+          "name": "密码",
+          "val": "",
+          "type": "text"
+        }
+      ],
+      "icons": [
+        "https://qinglong.whyour.cn/qinglong.png",
+        "https://qinglong.whyour.cn/qinglong.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script/blob/master/jd/ql_cookie_sync.js",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/ql_cookie_sync.js",
+      "descs_html": [
+        "青龙 docker 的安装方式请移步 tg 频道",
+        "青龙 docker 作者仓库：【<a href=\"https://github.com/whyour\">github</a>】",
+        "青龙 docker 频道：【<a href=\"https://t.me/qiongqiya\">电报频道</a>】"
       ]
     }
+  ]
+}

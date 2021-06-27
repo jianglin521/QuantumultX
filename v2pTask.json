@@ -69,6 +69,15 @@
       }
     },
     {
+      "name": "【安卓】草根时代",
+      "type": "cron",
+      "time": "30 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js"
+      }
+    },
+    {
       "name": "【安卓】开心点点消",
       "type": "cron",
       "time": "45 12 * * *",
