@@ -103,6 +103,14 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js"
       }
-    }
-  ]
+    },
+    {
+      "name": "【安卓】王者猜成语",
+      "type": "cron",
+      "time": "45 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/wzccy.js"
+      }
+    }]
 }
