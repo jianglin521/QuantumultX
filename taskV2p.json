@@ -42,24 +42,6 @@
       }
     },
     {
-      "name": "朗果英语",
-      "type": "cron",
-      "time": "10-15 9 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/lgyy.js"
-      }
-    },
-    {
-      "name": "西梅",
-      "type": "cron",
-      "time": "20 9 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/ximei.js"
-      }
-    },
-    {
       "name": "聚看点",
       "type": "cron",
       "time": "*/20 */5 * * *",
@@ -69,39 +51,12 @@
       }
     },
     {
-      "name": "【安卓】草根时代",
-      "type": "cron",
-      "time": "30 8 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/xl2101200/-/main/cgsd.js"
-      }
-    },
-    {
       "name": "【安卓】开心点点消",
       "type": "cron",
       "time": "45 12 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
-      }
-    },
-    {
-      "name": "【安卓】乐享广告",
-      "type": "cron",
-      "time": "45 10 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/lxgg.js"
-      }
-    },
-    {
-      "name": "【安卓】蛋咖",
-      "type": "cron",
-      "time": "45 11 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js"
       }
     },
     {
