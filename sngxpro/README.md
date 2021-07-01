@@ -1,19 +1,18 @@
 ## 少年歌行
-https://raw.githubusercontent.com/sngxpro/QuanX/master/task/AllinOne.json
+~~https://raw.githubusercontent.com/sngxpro/QuanX/master/task/AllinOne.json~~
+https://raw.githubusercontent.com/Youthsongs/QuanX/master/task/AllinOne.json
 
-https://raw.githubusercontent.com/sngxpro/QuanX/master/rewrite/cookie.conf
-
-https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
+https://raw.githubusercontent.com/Youthsongs/QuanX/master/sngx2021.conf
 
 ## v2p-ios
-https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/sngxprov2p.json
+https://raw.githubusercontent.com/Youthsongs/QuanX/master/V2pTaskSub/sngxprov2p.json
 
 https://raw.githubusercontent.com/ziye888/JavaScript/main/elev2p.json
 
 ## v2p-安卓
-https://raw.githubusercontent.com/sngxpro/QuanX/master/V2pTaskSub/v2pAndroid.json
+https://ghproxy.com/https://raw.githubusercontent.com/Youthsongs/QuanX/master/V2pTaskSub/v2pAndroid.json
 
-https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/Android/rewrite/getcookie.conf
+https://ghproxy.com/https://raw.githubusercontent.com/Youthsongs/QuanX/master/Android/rewrite/getcookie.conf
 
 ## 全网各大佬boxjs地址查询对照 2021.3.22
 https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
