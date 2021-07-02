@@ -6,13 +6,13 @@
   "list": [
     {
       "name": "软更新",
-      "type": "cron",
-      "time": "30 18 23 * * *",
-      "running": false,
+      "type": "schedule",
+      "time": "3",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/elecV2/elecV2P/master/script/JSFile/softupdate.js"
-      }
+      },
+      "running": false
     },
     {
       "name": "清空日志",
