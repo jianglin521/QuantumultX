@@ -715,55 +715,55 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
     },
     {
-      "id": "dk",
-      "name": "蛋咖(安卓)",
+      "id": "llyd",
+      "name": "66阅读",
       "keys": [
-        "dkhd",
-        "dkbody",
-        "dk2body",
-        "dkhd2",
-        "dkbody2",
-        "dk2body2",
-        "dkhd3",
-        "dkbody3",
-        "dk2body3",
-        "dkhd4",
-        "dkbody4",
-        "dk2body4",
-        "dkhd5",
-        "dkbody5",
-        "dk2body5"
+        "llydurl",
+        "llydhd",
+        "llydurl2",
+        "llydhd2",
+        "llydurl3",
+        "llydhd3",
+        "llydurl4",
+        "llydhd4",
+        "llydurl5",
+        "llydhd5",
+        "llydurl6",
+        "llydhd6",
+        "llydurl7",
+        "llydhd7",
+        "llydurl8",
+        "llydhd8",
+        "llydurl9",
+        "llydhd9",
+        "llydurl10",
+        "llydhd10",
+        "llydurl11",
+        "llydhd11"
       ],
-      "author": "@tom",
+      "author": "@feizao",
       "settings": [
         {
-          "id": "dkstatus",
+          "id": "llydstatus",
           "name": "当前账号",
           "val": "1",
           "type": "number",
-          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+          "desc": "当前账号对应"
         },
         {
-          "id": "dkcount",
+          "id": "llydcount",
           "name": "账号个数",
           "val": "1",
           "type": "number",
-          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-        },
-        {
-          "id": "tz",
-          "name": "通知",
-          "val": "1",
-          "type": "number",
-          "desc": "0关闭通知，1打开通知"
+          "desc": "需要几个账号，数字为几"
         }
       ],
-      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js",
+      "repo": "https://github.com/age174/-/blob/main/66yd.js",
       "icons": [
-        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg",
-        "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg"
+        "https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg",
+        "https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg"
       ],
-      "script": "https://raw.githubusercontent.com/xl2101200/-/main/dk.js"
+      "script": "https://raw.githubusercontent.com/age174/-/main/66yd.js"
     },
     {
       "id": "wzccy",

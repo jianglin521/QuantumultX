@@ -69,12 +69,12 @@
       }
     },
     {
-      "name": "百度极速版",
+      "name": "66阅读修复版",
       "type": "cron",
-      "time": "*/30 * * * *",
+      "time": "5,35 9-22 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/baidu_speed.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/66yd.js"
       }
     }
   ]
