@@ -715,87 +715,31 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
     },
     {
-      "id": "llyd",
-      "name": "66阅读",
+      "id": "mlxxl",
+      "name": "魔力消消乐",
       "keys": [
-        "llydurl",
-        "llydhd",
-        "llydurl2",
-        "llydhd2",
-        "llydurl3",
-        "llydhd3",
-        "llydurl4",
-        "llydhd4",
-        "llydurl5",
-        "llydhd5",
-        "llydurl6",
-        "llydhd6",
-        "llydurl7",
-        "llydhd7",
-        "llydurl8",
-        "llydhd8",
-        "llydurl9",
-        "llydhd9",
-        "llydurl10",
-        "llydhd10",
-        "llydurl11",
-        "llydhd11"
-      ],
-      "author": "@feizao",
-      "settings": [
-        {
-          "id": "llydstatus",
-          "name": "当前账号",
-          "val": "1",
-          "type": "number",
-          "desc": "当前账号对应"
-        },
-        {
-          "id": "llydcount",
-          "name": "账号个数",
-          "val": "1",
-          "type": "number",
-          "desc": "需要几个账号，数字为几"
-        }
-      ],
-      "repo": "https://github.com/age174/-/blob/main/66yd.js",
-      "icons": [
-        "https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg",
-        "https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg"
-      ],
-      "script": "https://raw.githubusercontent.com/age174/-/main/66yd.js"
-    },
-    {
-      "id": "wzccy",
-      "name": "王者猜成语(安卓)",
-      "keys": [
-        "wzccyhd",
-        "wzccybody",
-        "wzccy2body",
-        "wzccyhd2",
-        "wzccybody2",
-        "wzccy2body2",
-        "wzccyhd3",
-        "wzccybody3",
-        "wzccy2body3",
-        "wzccyhd4",
-        "wzccybody4",
-        "wzccy2body4",
-        "wzccyhd5",
-        "wzccybody5",
-        "wzccy2body5"
+        "mlxxlhd",
+        "mlxxlbody",
+        "mlxxlhd2",
+        "mlxxlbody2",
+        "mlxxlhd3",
+        "mlxxlbody3",
+        "mlxxlhd4",
+        "mlxxlbody4",
+        "mlxxlhd5",
+        "mlxxlbody5"
       ],
       "author": "@tom",
       "settings": [
         {
-          "id": "wzccystatus",
+          "id": "mlxxlstatus",
           "name": "当前账号",
           "val": "1",
           "type": "number",
           "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
         },
         {
-          "id": "wzccycount",
+          "id": "mlxxlcount",
           "name": "账号个数",
           "val": "1",
           "type": "number",
@@ -809,12 +753,12 @@
           "desc": "0关闭通知，1打开通知"
         }
       ],
-      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/wzccy.js",
+      "repo": "https://raw.githubusercontent.com/xl2101200/-/main/mlxxl.js",
       "icons": [
         "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg",
         "https://raw.githubusercontent.com/xl2101200/-/main/tom/tom.jpg"
       ],
-      "script": "https://raw.githubusercontent.com/xl2101200/-/main/wzccy.js"
+      "script": "https://raw.githubusercontent.com/xl2101200/-/main/mlxxl.js"
     },
     {
       "id": "PushBoxjsCookie",

@@ -69,12 +69,12 @@
       }
     },
     {
-      "name": "66阅读修复版",
+      "name": "魔力消消乐",
       "type": "cron",
-      "time": "5,35 9-22 * * *",
+      "time": "10 4 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/age174/-/main/66yd.js"
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/mlxxl.js"
       }
     }
   ]
