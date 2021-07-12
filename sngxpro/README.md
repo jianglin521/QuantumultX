@@ -50,6 +50,24 @@ https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
 #京东会员卡
 https://raw.githubusercontent.com/anker1209/Scriptable/main/Jd_unbindCard.conf
 
+## 永晨宝
+2021.7.12 跑完收益1.2元，手动提现，秒到支付宝 
+ 软件名：永晨宝（安卓）  
+ 手机号注册 绑定支付宝提现 
+ 下载地址：http://www.yongchenbao.com/home/index?uucode=TR00EFTL00 
+ 获取CK ： 主界面点随机奖励获取CK 
+ ///////////////////////////////////////////////////////////////////////////// 
+ 撸了不一定有，不撸肯定没有！ 
+TG频道 https://t.me/tom_ww  
+ ///////////////////////////////////////////////////////////////////////////// 
+ CRON自行设置 
+v2p配置如下： 
+【REWRITE】 
+匹配链接（正则表达式） http://api.yongchenbao.com/api//Member 
+对应重写目标 https://raw.githubusercontent.com/xl2101200/-/main/ycb.js 
+【MITM】  
+api.yongchenbao.com
+
 ## 安装hello-world
 ```sh
 # 安装
@@ -63,7 +81,6 @@ docker container ls
 # 删除镜像
 docker image rm hello-world
 ```
-
 
 ## 青龙常用环境变量备份表，方便随时查询
 https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg

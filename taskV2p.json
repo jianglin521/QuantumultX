@@ -76,6 +76,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/mlxxl.js"
       }
+    },
+    {
+      "name": "【安卓】永晨宝",
+      "type": "cron",
+      "time": "20 6 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/ycb.js "
+      }
     }
   ]
 }
