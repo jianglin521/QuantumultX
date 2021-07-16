@@ -50,23 +50,27 @@ https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
 #京东会员卡
 https://raw.githubusercontent.com/anker1209/Scriptable/main/Jd_unbindCard.conf
 
-## 永晨宝
-2021.7.12 跑完收益1.2元，手动提现，秒到支付宝 
- 软件名：永晨宝（安卓）  
- 手机号注册 绑定支付宝提现 
- 下载地址：http://www.yongchenbao.com/home/index?uucode=TR00EFTL00 
- 获取CK ： 主界面点随机奖励获取CK 
- ///////////////////////////////////////////////////////////////////////////// 
- 撸了不一定有，不撸肯定没有！ 
-TG频道 https://t.me/tom_ww  
- ///////////////////////////////////////////////////////////////////////////// 
- CRON自行设置 
-v2p配置如下： 
-【REWRITE】 
-匹配链接（正则表达式） http://api.yongchenbao.com/api//Member 
-对应重写目标 https://raw.githubusercontent.com/xl2101200/-/main/ycb.js 
+## 红包 
+
+软件名：红包     一天3~5元   cron设置每10分钟一次
+
+食用方法：首页看一个视频，等待获取红包即可  
+
+签到没有写，就写了看视频，想要提现1元需要签到5天
+/////////////////////////////////////////////////////////////////////////////
+撸了不一定有，不撸肯定没有！
+TG频道 https://t.me/tom_ww     
+
+boxjs地址 ： https://raw.githubusercontent.com/xl2101200/-/main/tom.box.json  
+/////////////////////////////////////////////////////////////////////////////
+v2p配置
+
+【REWRITE】
+匹配链接（正则表达式） https://hbapi.qudianyue.com/video
+对应重写目标   https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js
 【MITM】  
-api.yongchenbao.com
+hbapi.qudianyue.com
+
 
 ## 安装hello-world
 ```sh
