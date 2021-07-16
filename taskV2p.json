@@ -83,8 +83,17 @@
       "time": "20 6 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/ycb.js "
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/ycb.js"
       }
-    }
+    },
+    {
+      "name": "【安卓】红包视频",
+      "type": "cron",
+      "time": "*/10 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
+      }
+    } 
   ]
 }
