@@ -50,27 +50,26 @@ https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
 #京东会员卡
 https://raw.githubusercontent.com/anker1209/Scriptable/main/Jd_unbindCard.conf
 
-## 红包 
+## 臻浓星球
+>>点击  https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/znxq.png  扫码进入    谢谢支持
 
-软件名：红包     一天3~5元   cron设置每10分钟一次
+建议每天运行1次即可  建议 运行2次  时间随意
 
-食用方法：首页看一个视频，等待获取红包即可  
+⚠️一共  1个ck  👉 1条 Secrets
 
-签到没有写，就写了看视频，想要提现1元需要签到5天
-/////////////////////////////////////////////////////////////////////////////
-撸了不一定有，不撸肯定没有！
-TG频道 https://t.me/tom_ww     
+⚠️关于助力，一天只能助力3次，每个人一天助力得分最多160分，脚本默认助力作者，后面看情况内置随机助力
 
-boxjs地址 ： https://raw.githubusercontent.com/xl2101200/-/main/tom.box.json  
-/////////////////////////////////////////////////////////////////////////////
-v2p配置
+手机端默认使用boxjs👉 node请复制boxjs会话粘贴至znxqCOOKIE.js中 或者 填写环境变量(多账号请换行)
 
-【REWRITE】
-匹配链接（正则表达式） https://hbapi.qudianyue.com/video
-对应重写目标   https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js
-【MITM】  
-hbapi.qudianyue.com
+第一步⚠️添加 hostname =znapi.yili.com,
 
+👉进入小程序点击 我的 获取ck
+znxqheaderVal👉ZNXQ_znxqHEADER👉header
+ 
+hostname =znapi.yili.com,
+//////////////////////////// 圈x
+//臻浓星球获取ck
+https://znapi.yili.com/api/user/getUser url script-request-header https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/znxq.js
 
 ## 安装hello-world
 ```sh
