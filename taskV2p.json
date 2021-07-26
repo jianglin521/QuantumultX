@@ -42,15 +42,6 @@
       }
     },
     {
-      "name": "聚看点",
-      "type": "cron",
-      "time": "*/20 */5 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/jukan.js"
-      }
-    },
-    {
       "name": "【安卓】开心点点消",
       "type": "cron",
       "time": "45 12 * * *",
@@ -93,15 +84,6 @@
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
-      }
-    },
-    {
-      "name": "宠旺旺换500豆",
-      "type": "cron",
-      "time": "54-59,0-3 0,59 7,8,15,16,23,0 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/jd/jd_joy_reward.js"
       }
     }
   ]
