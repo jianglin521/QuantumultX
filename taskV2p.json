@@ -85,6 +85,33 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
       }
+    },
+    {
+      "name": "【安卓】晶彩看点1",
+      "type": "cron",
+      "time": "10 5 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
+      }
+    },
+    {
+      "name": "【安卓】晶彩看点2",
+      "type": "cron",
+      "time": "10 6-8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
+      }
+    },
+    {
+      "name": "【安卓】晶彩看点3",
+      "type": "cron",
+      "time": "10 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
+      }
     }
   ]
 }
