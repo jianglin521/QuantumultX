@@ -87,25 +87,25 @@
       }
     },
     {
-      "name": "【安卓】晶彩看点1",
+      "name": "【安卓】晶彩看点阅读文章",
       "type": "cron",
-      "time": "10 6-8 * * *",
+      "time": "10 5-7 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
       }
     },
     {
-      "name": "【安卓】晶彩看点2",
+      "name": "【安卓】晶彩看点看看赚",
       "type": "cron",
-      "time": "10 5 * * *",
+      "time": "10 8 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
       }
     },
     {
-      "name": "【安卓】晶彩看点3",
+      "name": "【安卓】晶彩看点签到",
       "type": "cron",
       "time": "10 9 * * *",
       "job": {
@@ -114,7 +114,7 @@
       }
     },
     {
-      "name": "【安卓】晶彩看点4",
+      "name": "【安卓】晶彩看点宝箱",
       "type": "cron",
       "time": "10 10 * * *",
       "job": {
