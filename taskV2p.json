@@ -89,19 +89,19 @@
     {
       "name": "【安卓】晶彩看点1",
       "type": "cron",
-      "time": "10 5 * * *",
+      "time": "10 6-8 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
       }
     },
     {
       "name": "【安卓】晶彩看点2",
       "type": "cron",
-      "time": "10 6-8 * * *",
+      "time": "10 5 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
       }
     },
     {
@@ -111,6 +111,15 @@
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
+      }
+    },
+    {
+      "name": "【安卓】晶彩看点4",
+      "type": "cron",
+      "time": "10 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js"
       }
     }
   ]
