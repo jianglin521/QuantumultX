@@ -89,7 +89,7 @@
     {
       "name": "晶彩看点-阅读文章",
       "type": "cron",
-      "time": "20 */6 * * *",
+      "time": "30 */6 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
@@ -98,7 +98,7 @@
     {
       "name": "晶彩看点-看看赚",
       "type": "cron",
-      "time": "20 8 * * *",
+      "time": "30 8 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
@@ -107,7 +107,7 @@
     {
       "name": "晶彩看点-签到",
       "type": "cron",
-      "time": "20 9 * * *",
+      "time": "30 9 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
@@ -116,7 +116,7 @@
     {
       "name": "晶彩看点-宝箱",
       "type": "cron",
-      "time": "18 20 * * *",
+      "time": "30 18 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js"
