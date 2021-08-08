@@ -87,39 +87,62 @@
       }
     },
     {
-      "name": "晶彩看点-阅读文章",
+      "name": "晶彩签到",
       "type": "cron",
-      "time": "30 */6 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
-      }
-    },
-    {
-      "name": "晶彩看点-看看赚",
-      "type": "cron",
-      "time": "30 8 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
-      }
-    },
-    {
-      "name": "晶彩看点-签到",
-      "type": "cron",
-      "time": "30 9 * * *",
+      "time": "30 1 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
       }
     },
     {
-      "name": "晶彩看点-宝箱",
+      "name": "晶彩文章",
       "type": "cron",
-      "time": "30 18 * * *",
+      "time": "30 6,12,18 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
+      }
+    },
+    {
+     "name": "晶彩看看赚",
+      "type": "cron",
+      "time": "30 9 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
+      }
+    },
+    {
+      "name": "晶彩火爆转发",
+      "type": "cron",
+      "time": "15 6,12,18 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_share.js"
+      }
+    },
+    {
+      "name": "晶彩宝箱领取",
+      "type": "cron",
+      "time": "15 22 * * *",
+      "running": true,
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js"
+      }
+    },
+    {
+      "name": "晶彩收益统计",
+      "type": "cron",
+      "time": "15 23 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_today_score.js"
       }
     }
   ]
