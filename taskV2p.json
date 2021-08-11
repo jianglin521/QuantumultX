@@ -144,6 +144,19 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_today_score.js"
       }
+    },
+    {
+      "name": "电视家",
+      "type": "cron",
+      "time": "15 8 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/dsj.js"
+      }
     }
   ]
 }
+
+
+
