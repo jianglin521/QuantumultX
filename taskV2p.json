@@ -148,7 +148,7 @@
     {
       "name": "电视家",
       "type": "cron",
-      "time": "15 8 * * *",
+      "time": "15 */3 * * *",
       "running": true,
       "job": {
         "type": "runjs",
