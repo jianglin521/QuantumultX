@@ -154,6 +154,16 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/dsj.js"
       }
+    },
+    {
+      "name": "金银手指",
+      "type": "cron",
+      "time": "*/10 * * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jsz.js"
+      }
     }
   ]
 }
