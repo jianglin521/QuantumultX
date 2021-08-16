@@ -168,7 +168,7 @@
     {
       "name": "柠檬推粉宝",
       "type": "cron",
-      "time": "*/5 1-5 * * *",
+      "time": "*/3 14-23 * * *",
       "running": true,
       "job": {
         "type": "runjs",
