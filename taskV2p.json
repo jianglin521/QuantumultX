@@ -174,11 +174,15 @@
         "type": "runjs",
         "target": "http://nm66.top/qltfb.js"
       }
+    },
+    {
+      "name": "10s阅读",
+      "type": "cron",
+      "time": "0 8-14/1 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js"
+      }
     }
   ]
 }
-
-
-
-
-
