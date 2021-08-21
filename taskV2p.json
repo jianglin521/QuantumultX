@@ -136,6 +136,16 @@
       }
     },
     {
+      "name": "晶彩自动提现",
+      "type": "cron",
+      "time": "30 20 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_withdraw.js"
+      }
+    },
+    {
       "name": "晶彩收益统计",
       "type": "cron",
       "time": "15 23 * * *",
