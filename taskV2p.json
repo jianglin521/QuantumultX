@@ -193,6 +193,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js"
       }
+    },
+    {
+      "name": "九章头条",
+      "type": "cron",
+      "time": "0 8-23/1 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/jztt.js"
+      }
     }
   ]
 }
