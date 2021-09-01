@@ -4,6 +4,9 @@ https://raw.githubusercontent.com/Youthsongs/QuanX/master/task/AllinOne.json
 
 https://raw.githubusercontent.com/Youthsongs/QuanX/master/sngx2021.conf
 
+## faker
+https://ghproxy.com/https://raw.githubusercontent.com/shufflewzc/faker/main/qx.json
+
 ## v2p-ios
 https://raw.githubusercontent.com/Youthsongs/QuanX/master/V2pTaskSub/sngxprov2p.json
 
