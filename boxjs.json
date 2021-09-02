@@ -835,6 +835,118 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
     },
     {
+      "id": "qmdff",
+      "name": "全民大丰收",
+      "keys": [
+        "qmdffurl",
+        "qmdffheader",
+        "qmdffurl2",
+        "qmdffheader2",
+        "qmdffurl3",
+        "qmdffheader3",
+        "qmdffurl4",
+        "qmdffheader4",
+        "qmdffurl5",
+        "qmdffheader5",
+        "qmdffurl6",
+        "qmdffheader6",
+        "qmdffurl7",
+        "qmdffheader7",
+        "qmdffurl8",
+        "qmdffheader8",
+        "qmdffurl9",
+        "qmdffheader9",
+        "qmdffurl10",
+        "qmdffheader10",
+        "qmdffurl11",
+        "qmdffheader11",
+        "qmdffurl12",
+        "qmdffheader12",
+        "qmdffurl13",
+        "qmdffheader13",
+        "qmdffurl14",
+        "qmdffheader14",
+        "qmdffurl15",
+        "qmdffheader15",
+        "qmdffurl16",
+        "qmdffheader16",
+        "qmdffurl17",
+        "qmdffheader17",
+        "qmdffurl18",
+        "qmdffheader18",
+        "qmdffurl19",
+        "qmdffheader19",
+        "qmdffurl20",
+        "qmdffheader20",
+        "qmdffurl21",
+        "qmdffheader21",
+        "qmdffurl22",
+        "qmdffheader22",
+        "qmdffurl23",
+        "qmdffheader23",
+        "qmdffurl24",
+        "qmdffheader24",
+        "qmdffurl25",
+        "qmdffheader25"
+      ],
+      "author": "@ningmeng",
+      "settings": [
+        {
+          "id": "qmdffstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        },
+        {
+          "id": "qmdffcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "需要几个账号，数字为几"
+        }
+      ],
+      "repo": "http://nm66.top/qmdff.js",
+      "icons": [
+        "http://nm66.top/1.jpg",
+        "https://raw.githubusercontent.com/dawangLM/linainai/main/linainai.png"
+      ],
+      "script": "http://nm66.top/qmdff.js"
+    },
+    {
+      "id": "jsz",
+      "name": "金银手指阅读",
+      "keys": [
+        "jszhd",
+        "jszhd2",
+        "jszhd3",
+        "jszhd4",
+        "jszhd5"
+      ],
+      "settings": [
+        {
+          "id": "jszstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4等"
+        },
+        {
+          "id": "jszcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }
+      ],
+      "repo": "https://github.com/shaolin-kongfu/js_scripts/blob/main/jsz.js",
+      "script": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jsz.js",
+      "icons": [
+        "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/kongfu.jpg",
+        "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/kongfu.jpg"
+      ]
+    },
+    {
       "id": "jztt",
       "name": "九章头条",
       "keys": [
@@ -913,14 +1025,19 @@
     {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
-      "keys": ["v2purl", "v2token"],
-      "settings": [{
+      "keys": [
+        "v2purl",
+        "v2token"
+      ],
+      "settings": [
+        {
           "id": "v2pcookieupdate",
           "name": "V2P上传任务",
           "val": false,
           "type": "boolean",
           "desc": "打开才会上传cookie,用来刚开始使用的时候。"
-        }, {
+        },
+        {
           "id": "v2purl",
           "name": "主页地址",
           "val": "",
@@ -936,9 +1053,14 @@
         }
       ],
       "author": "@cenbomin",
-      "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync"
+      ],
       "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushBoxjsCookie_elecV2p.js",
-      "icons": ["https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png", "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"]
+      "icons": [
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png",
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"
+      ]
     }
   ]
 }
