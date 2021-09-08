@@ -233,6 +233,17 @@ ql repo https://github.com/hyzaw/scripts.git "ddo_"
 【star261】
 ql repo https://github.com/star261/jd.git "scripts" "code" 
 
+## 参数含义
+```shell
+  #拉取一个库
+  ql repo <repourl> <path> <blacklist> <dependence> <branch>
+  #“库地址”“拉哪些”“不拉哪些”“依赖文件”“分支”
+
+  #拉取单个文键
+  ql raw <fileurl>
+```
+
+
 
 
 
