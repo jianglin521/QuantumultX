@@ -245,6 +245,9 @@ ql repo https://github.com/star261/jd.git "scripts" "code"
 
 ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 
+# 每日自动签到
+https://github.com/caixukun112/js/blob/353c3e5832481dcbe9fea78f317e5276dd613b48/Task/checkin.js#L200
+
 
 
 

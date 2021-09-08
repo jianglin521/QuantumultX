@@ -15,10 +15,6 @@
     "*/10 * * * * https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmdff.js, tag=全民大丰收, img-url=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
     "0 0 1 1 * https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/cgwz.js, tag=猜歌王者, img-url=https://ae01.alicdn.com/kf/Uaade4566dd3744299956aa883f225386u.jpg, enabled=true",
     "*/10 * * * * https://raw.githubusercontent.com/ThingsWhy/js_cx_cron/af243ce79a9689bf3c76a8a297fc84ac59513583/ningmeng/yydxny.js, tag=柠檬爷爷的小农院, enabled=true",
-    "0 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js, tag=汽车用品, enabled=true"
-   ]
-
-
-
-   
+    "0 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js, tag=广汽三菱, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true"
+   ] 
 }
