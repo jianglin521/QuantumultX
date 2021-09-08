@@ -243,7 +243,7 @@ ql repo https://github.com/star261/jd.git "scripts" "code"
   ql raw <fileurl>
 ```
 
-
+ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 
 
 
