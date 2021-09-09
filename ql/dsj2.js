@@ -1,5 +1,5 @@
 
-const $ = new Env("电视家测试");
+const $ = new Env("功夫电视家");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
 let dsj_header= $.isNode() ? (process.env.dsj_header ? process.env.dsj_header : "") : ($.getdata('dsj_header') ? $.getdata('dsj_header') : "")
