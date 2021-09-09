@@ -156,26 +156,6 @@
       }
     },
     {
-      "name": "电视家",
-      "type": "cron",
-      "time": "15 */3 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/dsj.js"
-      }
-    },
-    {
-      "name": "金银手指",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jsz.js"
-      }
-    },
-    {
       "name": "柠檬推粉宝",
       "type": "cron",
       "time": "*/3 14-23 * * *",
