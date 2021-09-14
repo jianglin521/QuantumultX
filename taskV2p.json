@@ -182,6 +182,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/jztt.js"
       }
-    }
+    },
+    {
+      "name": "云阅读",
+      "type": "cron",
+      "time": "10 8-23/1 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/yyd.js"
+      }
+    }  
   ]
 }
