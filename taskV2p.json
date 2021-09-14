@@ -191,6 +191,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/yyd.js"
       }
+    }, 
+    {
+      "name": "广汽三菱",
+      "type": "cron",
+      "time": "0 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
+      }
     }  
   ]
 }
