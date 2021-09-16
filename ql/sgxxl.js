@@ -26,7 +26,7 @@ let sgxxlhd = $.getdata('sgxxlhd')
 let sgxxlbody = `game_type=2&package_code=com.yile.jianxianll2&platform_code=lt&time=1613879667&version=1&os=1&sign=267276958a5dd7e807ed8078b67ef865`
 
 //在这里填写你的token
-let token = ``
+let token= process.env.sgxxl_token ? process.env.sgxxl_token : ""
 
 !(async () => {
     if (token != 0) {
