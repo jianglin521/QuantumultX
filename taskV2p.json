@@ -106,7 +106,7 @@
       }
     },
     {
-     "name": "晶彩看看赚",
+      "name": "晶彩看看赚",
       "type": "cron",
       "time": "30 9 * * *",
       "running": true,
@@ -191,7 +191,7 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/yyd.js"
       }
-    }, 
+    },
     {
       "name": "广汽三菱",
       "type": "cron",
@@ -200,6 +200,16 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
       }
-    }  
+    },
+    {
+      "name": "小米运动改步",
+      "type": "cron",
+      "time": "30 17 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/Oreomeow/VIP/main/Scripts/js/mimotion.js"
+      },
+      "running": true
+    }
   ]
 }
