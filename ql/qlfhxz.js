@@ -35,7 +35,7 @@ http://nm66.top/nm.boxjs.json
 
 // [task_local]
 //#柠檬富豪小镇
-// */10 * * * * http://nm66.top/qlfhxz.js, tag=柠檬富豪小镇, enabled=true
+// */10 8-23 * * * http://nm66.top/qlfhxz.js, tag=柠檬富豪小镇, enabled=true
 const $ = new Env('柠檬富豪小镇');
 let status;
 status = (status = ($.getval("tfbstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符

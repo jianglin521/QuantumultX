@@ -28,7 +28,7 @@ hostname = *.lw0591.com
 */
 
 // [task_local]
-// */5 * * * * http://nm66.top/qmdff.js, tag=柠檬全民大丰收, img-url=http://nm66.top/1.jpg, enabled=true
+// */10 8-23 * * * http://nm66.top/qmdff.js, tag=柠檬全民大丰收, img-url=http://nm66.top/1.jpg, enabled=true
 
 const $ = new Env('柠檬全民大丰收');
 let status;

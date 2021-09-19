@@ -31,7 +31,7 @@ http://nm66.top/nm.boxjs.json
 
 // [task_local]
 //#柠檬爷爷的小农院
-// */20 * * * * http://nm66.top/yydxny.js, tag=柠檬爷爷的小农院, enabled=true
+// */20 8-23 * * * http://nm66.top/yydxny.js, tag=柠檬爷爷的小农院, enabled=true
 const $ = new Env('柠檬爷爷的小农院');
 let status;
 status = (status = ($.getval("yyxnystatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符

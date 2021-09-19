@@ -28,7 +28,7 @@ http://apponlie.sahaj.cn/user/myInfo 重写目标 https://raw.githubusercontent.
 每满4000金币（4毛）微信自动提现
 
 */
-// */10 * * * * https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jsz.js
+// */10 8-23 * * * https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jsz.js
 
 
 // @grant    require

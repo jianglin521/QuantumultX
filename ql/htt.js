@@ -16,7 +16,7 @@ export htthd='{"loginId":"替换的","userId":替换的}'
 多账号用@隔开
 */
 // [task_local]
-// */60 * * * * http://47.101.146.160/scripts/htt.js, tag=惠头条, img-url=circles.hexagongrid.fill.system, enabled=true
+// * 8-23/1 * * * http://47.101.146.160/scripts/htt.js, tag=惠头条, img-url=circles.hexagongrid.fill.system, enabled=true
 
 const $ = new Env('惠头条');
 let status;
