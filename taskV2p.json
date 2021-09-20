@@ -51,127 +51,12 @@
       }
     },
     {
-      "name": "【安卓】王者猜成语",
-      "type": "cron",
-      "time": "10 */1 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/wzccy.js"
-      }
-    },
-    {
-      "name": "【安卓】魔力消消乐",
-      "type": "cron",
-      "time": "10 4 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/mlxxl.js"
-      }
-    },
-    {
-      "name": "【安卓】永晨宝",
-      "type": "cron",
-      "time": "20 6 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/ycb.js"
-      }
-    },
-    {
       "name": "【安卓】红包视频",
       "type": "cron",
       "time": "*/10 * * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
-      }
-    },
-    {
-      "name": "晶彩签到",
-      "type": "cron",
-      "time": "30 1 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
-      }
-    },
-    {
-      "name": "晶彩文章",
-      "type": "cron",
-      "time": "30 6,12,18 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
-      }
-    },
-    {
-      "name": "晶彩看看赚",
-      "type": "cron",
-      "time": "30 9 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
-      }
-    },
-    {
-      "name": "晶彩火爆转发",
-      "type": "cron",
-      "time": "15 6,12,18 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_share.js"
-      }
-    },
-    {
-      "name": "晶彩宝箱领取",
-      "type": "cron",
-      "time": "15 22 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js"
-      }
-    },
-    {
-      "name": "晶彩自动提现",
-      "type": "cron",
-      "time": "30 20 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_withdraw.js"
-      }
-    },
-    {
-      "name": "晶彩收益统计",
-      "type": "cron",
-      "time": "15 23 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_today_score.js"
-      }
-    },
-    {
-      "name": "柠檬推粉宝",
-      "type": "cron",
-      "time": "*/3 14-23 * * *",
-      "running": true,
-      "job": {
-        "type": "runjs",
-        "target": "http://nm66.top/qltfb.js"
-      }
-    },
-    {
-      "name": "10s阅读",
-      "type": "cron",
-      "time": "0 8-14/1 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js"
       }
     },
     {
@@ -200,16 +85,6 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
       }
-    },
-    {
-      "name": "小米运动改步",
-      "type": "cron",
-      "time": "30 17 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/Oreomeow/VIP/main/Scripts/js/mimotion.js"
-      },
-      "running": true
     }
   ]
 }
