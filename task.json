@@ -17,6 +17,7 @@
     "*/10 * * * * https://raw.githubusercontent.com/ThingsWhy/js_cx_cron/af243ce79a9689bf3c76a8a297fc84ac59513583/ningmeng/yydxny.js, tag=柠檬爷爷的小农院, enabled=true",
     "20 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js, tag=广汽三菱, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
     "0 9 * * * https://raw.githubusercontent.com/xl2101200/-/main/qhs.js, tag=轻换算, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
-    "0 5 */1 * * * https://raw.githubusercontent.com/xl2101200/-/main/yyd.js, tag=云阅读, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true"
+    "10 11,14,17,20,22 * * * https://gitee.com/soy-tool/app-script/raw/master/wx_yyd.js, tag=云阅读, enabled=true",
+    "*/10 * * * * https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js, tag=成语极速版, enabled=true"
    ] 
 }
