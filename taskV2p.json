@@ -85,6 +85,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
       }
+    },
+    {
+      "name": "成语极速版",
+      "type": "cron",
+      "time": "*/10 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
+      }
     }
   ]
 }
