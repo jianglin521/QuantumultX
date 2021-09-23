@@ -1,48 +1,18 @@
 /*
 
-软件名称:微信-云阅读
-
-项目地址(微信扫码):https://gitee.com/soy-tool/app-script/blob/master/picture/wx_yyd.jpg
-
-变量抓取:
-
-在阅读首页界面找到有域名是在mika.douzhuanapi.cn:10003的请求头
-里面有个有个authorization,它的值就是需要的数据
-
-变量填写:
-export soy_v_yyd_authorization=''
-
-可选填变量:
-soy_v_yyd_User_Agent
-(注释:此变量可填可不填,属于请求头上的User_Agent值,俗话说的浏览器UA
-不填默认分配一个,添加这个是为了防止官方检查同一个UA提交的数据量过多)
-
-多个广告用 @ 或 # 或 换行 隔开
-
-v2p配置如下：
-
-【REWRITE】
-匹配链接（正则表达式） http://mika.douzhuanapi.cn:10003
-
-对应重写目标  wx_yyd.js
-
-【MITM】  
-mika.douzhuanapi.cn:10003
-
-
-cron 0 11,14,17,20,22 * * *
+软件名称:养宠时代
 
 */
 
 
-const $ = new Env('微信-云阅读');
+const $ = new Env('养宠时代');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const logs = 0; //响应日志开关,默认关闭
-const app_soy_v_yyd_authorization = [],kzkcount = ''
+const app_soy_ycsd_jwt = [],app_soy_ycsd_message = []
 let subTitle = ``;
 let status;
-status = (status = ($.getval("v_yyd_status") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-let soy_v_yyd_authorization = $.getdata('soy_v_yyd_authorization')
+status = (status = ($.getval("qmrd_status") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
+let soy_ycsd_jwt = $.getdata('soy_ycsd_jwt')
 
 !(async () => {
 
@@ -51,50 +21,56 @@ apptz = process.env.apptz;
 apptx = process.env.apptx;
 appyq = process.env.appyq;
     
-    if(!process.env.soy_v_yyd_authorization&&process.env.soy_v_yyd_authorization==''){
+    if(!process.env.soy_ycsd_jwt&&process.env.soy_ycsd_jwt==''){
         console.log(`\n【${$.name}】：未填写相对应的变量`);
         return;
     }
         
-    if (process.env.soy_v_yyd_authorization && process.env.soy_v_yyd_authorization.indexOf('@') > -1) {
-        soy_v_yyd_authorization = process.env.soy_v_yyd_authorization.split('@');
-    } else if (process.env.soy_v_yyd_authorization && process.env.soy_v_yyd_authorization.indexOf('\n') > -1) {
-        soy_v_yyd_authorization = process.env.soy_v_yyd_authorization.split('\n');
-    } else if(process.env.soy_v_yyd_authorization && process.env.soy_v_yyd_authorization.indexOf('#') > -1){
-        soy_v_yyd_authorization = process.env.soy_v_yyd_authorization.split('#');
+    if (process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('@') > -1) {
+        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('@');
+    } else if (process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('\n') > -1) {
+        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('\n');
+    } else if(process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('#') > -1){
+        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('#');
     }else{
-        soy_v_yyd_authorization = process.env.soy_v_yyd_authorization.split();
+        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split();
     };
     
-    Object.keys(soy_v_yyd_authorization).forEach((item) => {
-        if (soy_v_yyd_authorization[item]) {
-            app_soy_v_yyd_authorization.push(soy_v_yyd_authorization[item]);
+    Object.keys(soy_ycsd_jwt).forEach((item) => {
+        if (soy_ycsd_jwt[item]) {
+            app_soy_ycsd_jwt.push(soy_ycsd_jwt[item]);
         };
     });
     
-    User_Agent=process.env.soy_v_yyd_User_Agent
+    if (process.env.soy_ycsd_message && process.env.soy_ycsd_message.indexOf('@') > -1) {
+        soy_ycsd_message = process.env.soy_ycsd_message.split('@');
+    } else if(process.env.soy_ycsd_message && process.env.soy_ycsd_message.indexOf('#') > -1){
+        soy_ycsd_message = process.env.soy_ycsd_message.split('#');
+    }else{
+        soy_ycsd_message = process.env.soy_ycsd_message.split();
+    };
     
-    if(!User_Agent){
-        User_Agent='Mozilla/5.0 (Linux; Android 9; PDBM00 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/045811 Mobile Safari/537.36 MMWEBID/7016 MicroMessenger/8.0.11.1980(0x28000B51) Process/tools WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64'
-    }
+    Object.keys(soy_ycsd_message).forEach((item) => {
+        if (soy_ycsd_message[item]) {
+            app_soy_ycsd_message.push(soy_ycsd_message[item]);
+        };
+    })
+
+    
 }else{
 	if (typeof $request !== "undefined") {
     await get_appdata()
   } else{
-  app_soy_v_yyd_authorization.push($.getdata('soy_v_yyd_authorization'))
-  //app_soy_v_yyd_User_Agent.push($.getdata('oy_v_yyd_User_Agent'))
-   User_Agent=$.getdata('oy_v_yyd_User_Agent')
-    if(User_Agent=="undefined"||User_Agent==''){
-        User_Agent='Mozilla/5.0 (Linux; Android 9; PDBM00 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/045811 Mobile Safari/537.36 MMWEBID/7016 MicroMessenger/8.0.11.1980(0x28000B51) Process/tools WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64'
-    }
+  app_soy_ycsd_jwt.push($.getdata('soy_ycsd_jwt'))
+  
   }
 apptz = $.getdata('apptz');
 apptx = $.getdata('apptx');
 appyq = $.getdata('appyq');
     
-    let kzkcount = ($.getval('yydcount') || '1');
-  for (let i = 2; i <= yydcount; i++) {
-    app_soy_v_yyd_authorization.push($.getdata(`soy_v_yyd_authorization${i}`))
+    let kzkcount = ($.getval('kzkcount') || '1');
+  for (let i = 2; i <= kzkcount; i++) {
+    app_soy_ycsd_jwt.push($.getdata(`soy_ycsd_jwt${i}`))
    
 }
 }
@@ -105,32 +81,24 @@ appyq = $.getdata('appyq');
         8 * 60 * 60 * 1000
       ).toLocaleString()} ===\n`
     );
-    console.log(`===【共 ${app_soy_v_yyd_authorization.length} 个账号】===`)
-    
+    console.log(`===【共 ${app_soy_ycsd_jwt.length} 个账号】===\n`);
     if(!apptz){apptz=true};
     if(!apptx){apptx=true};
       
-for (i = 0; i < app_soy_v_yyd_authorization.length; i++) {
-    soy_v_yyd_authorization=app_soy_v_yyd_authorization[i]
-    
-    soy_v_yyd_headers={"Host": "mika.douzhuanapi.cn:10003",
-    "User-Agent": User_Agent,
-    "authorization": soy_v_yyd_authorization,
+for (i = 0; i < app_soy_ycsd_jwt.length; i++) {
+    soy_ycsd_jwt=app_soy_ycsd_jwt[i]
+    soy_ycsd_message=app_soy_ycsd_message[i]
+    soy_ycsd_banding()
+    soy_qmrd_headers={"Host": "api.ycshidai.com",
+    "Accept-Encoding": "identity",
+    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; SKW-A0 MIUI/V11.0.4.0.JOYUI)",
     };
     
     $.index = i + 1;
     
     console.log(`\n开始【第 ${$.index} 个账号任务】`);
-        await soy_v_yyd_get_record_id()
-        await soy_v_yyd_TX()
-        //await soy_v_yyd_getad();
-        //await soy_v_yyd_getDiamonds()
-    /*if(apptx){
-        await soy_kzk_getUserInfo()
-        //await soy_kzk_tx()
-    }*/
-    
-    
+        await soy_ycsd_get_msgid()
+        
 };
 
 
@@ -144,135 +112,29 @@ for (i = 0; i < app_soy_v_yyd_authorization.length; i++) {
 
 //获取ck
 function get_appdata() {
-   if ($request.url.indexOf("10003") > -1) {
-const soy_v_yyd_authorization = $request.headers.authorization
-   if(soy_v_yyd_authorization){
-       $.setdata(soy_v_yyd_authorization,`soy_v_yyd_authorization${status}`)
-       //$.log(soy_v_yyd_authorization)
+   if ($request.url.indexOf("user") > -1) {
+const soy_ycsd_jwt = $request.headers.authorization
+   if(soy_ycsd_jwt){
+       $.setdata(soy_ycsd_jwt,`soy_ycsd_jwt${status}`)
+       //$.log(soy_ycsd_jwt)
    }
- 
+
+   
   } 
 }
-function soy_v_yyd_TX() {
-    return new Promise((resolve, reject) => {
-        $.post({
-            url : `http://mika.douzhuanapi.cn:10003/api/withdrawal/store`,
-            headers : {
-                "Host": "mika.douzhuanapi.cn:10003",
-                "User-Agent": User_Agent,
-                "authorization": soy_v_yyd_authorization,
-                "Content-Type": "application/json;charset=UTF-8",
-                "X-Requested-With": "com.tencent.mm",
-                //"Referer": "http://22.iprograms.cn/?state=withdraw",
-            },
-            body : `{"money_id":2,"mode":"wechat"}`,
-        }, async(error, response, data) => {
-            //console.log(data)
-            let result = JSON.parse(data)
-            console.log(`\n【${$.name}---账号 ${$.index} 提现】: ${result.message}`)
 
-            resolve()
-        })
-    })
-}
-
-function soy_v_yyd_sign() {
-    return new Promise((resolve, reject) => {
-        $.post({
-            url : `http://mika.douzhuanapi.cn:10003/tm/read2/sign`,
-            headers : {
-                "Host": "mika.douzhuanapi.cn:10003",
-                "User-Agent": User_Agent,
-                "authorization": soy_v_yyd_authorization,
-                "Content-Type":"application/x-www-form-urlencoded",
-            },
-            //body : `record_id=${record_id}&stay_time=`+stay,
-        }, async(error, response, data) => {
-            //console.log(data)
-            let result = JSON.parse(data)
-            if(result.data.code==0){
-                console.log(`\n【${$.name}---账号 ${$.index} 极速签到】: 签到成功`)
-            }else{
-                console.log(`\n【${$.name}---账号 ${$.index} 极速签到】: ${result.data.msg}`)
-            }
-            resolve()
-        })
-    })
-}
-
-function soy_v_yyd_get_js_record_id(){
+function soy_ycsd_get_msgid(){
     return new Promise((resolve, reject) => {
         $.get({
-            url : `http://mika.douzhuanapi.cn:10003/tm/read3/accept`,
-            headers : soy_v_yyd_headers,
+            url : `http://api.ycshidai.com/chat/detail?group_id=20210812545667707092127679366913&page=1&lastid=&limit=10&jwt=${soy_ycsd_jwt}`,
+            headers : soy_qmrd_headers,
             //body : "",
         }, async(error, response, data) => {
             //console.log(data)
-            let result = JSON.parse(data)
-            if(result.data.code==0){
-                record_id=result.data.data.record_id
-                console.log(`\n【${$.name}---账号 ${$.index} 获取文章ID】: ${record_id}`)
-                await soy_v_yyd_js_update()
-            }else{
-                console.log(`\n【${$.name}---账号 ${$.index} 获取文章ID】: ${result.data.msg}`)
-                //console.log(`\n【${$.name}】: 将要做极速阅读任务`)
-            }
-            resolve()
-        })
-    })
-
-}
-
-function soy_v_yyd_js_update() {
-    stay=Math.floor(Math.random()*(11000-6000+1000)+6000)
-    return new Promise((resolve, reject) => {
-        $.post({
-            url : `http://mika.douzhuanapi.cn:10003/tm/read/update`,
-            headers : {
-                "Host": "mika.douzhuanapi.cn:10003",
-                "User-Agent": User_Agent,
-                "authorization": soy_v_yyd_authorization,
-                "Content-Type":"application/x-www-form-urlencoded",
-            },
-            body : `record_id=${record_id}&stay_time=`+stay,
-        }, async(error, response, data) => {
-            //console.log(data)
-            let result = JSON.parse(data)
-            if(result.data.code==0){
-                console.log(`\n【${$.name}---账号 ${$.index} 阅读文章】: 阅读ID ${record_id} 获得 ${result.data.data.money} 元`)
-                //console.log(stay,stay+Math.floor(Math.random()*(5000-2000+1000)+2000))
-                await $.wait(stay+Math.floor(Math.random()*(5000-2000+1000)+2000))
-                await soy_v_yyd_get_js_record_id()
-            }else{
-                console.log(`\n【${$.name}---账号 ${$.index} 阅读文章】: ${result.data.msg}`)
-            }
-            resolve()
-        })
-    })
-}
-
-function soy_v_yyd_get_record_id(){
-    return new Promise((resolve, reject) => {
-        $.get({
-            url : `http://mika.douzhuanapi.cn:10003/tm/read/accept`,
-            headers : soy_v_yyd_headers,
-            //body : "",
-        }, async(error, response, data) => {
-            //console.log(data)
-            let result = JSON.parse(data)
-            if(result.code==200){
-               if(result.data.code==0){
-                record_id=result.data.data.record_id
-                console.log(`\n【${$.name}---账号 ${$.index} 获取文章ID】: ${record_id}`)
-                await soy_v_yyd_update()
-            }else{
-                console.log(`\n【${$.name}---账号 ${$.index} 获取文章ID】: ${result.data.msg}`)
-                console.log(`\n【${$.name}---账号 ${$.index} 】: 将要做极速阅读任务`)
-                await soy_v_yyd_sign()
-                await soy_v_yyd_get_js_record_id()
-            } 
-            }else{
-               console.log(`\n【${$.name}---账号 ${$.index} 获取文章ID】: ${result.message}`) 
+            result = JSON.parse(data)
+            for(msgs of result.data.msgs){
+                msgid=msgs.msgid
+                await soy_ycsd_reward_video()
             }
             
             resolve()
@@ -281,38 +143,101 @@ function soy_v_yyd_get_record_id(){
 
 }
 
-function soy_v_yyd_update() {
-    stay=Math.floor(Math.random()*(11000-7000+1000)+7000)
+
+//
+function soy_ycsd_reward_video() {
     return new Promise((resolve, reject) => {
         $.post({
-            url : `http://mika.douzhuanapi.cn:10003/tm/read/update`,
-            headers : {
-                "Host": "mika.douzhuanapi.cn:10003",
-                "User-Agent": User_Agent,
-                "authorization": soy_v_yyd_authorization,
-                "Content-Type":"application/x-www-form-urlencoded",
-            },
-            body : `record_id=${record_id}&stay_time=`+stay,
+            url : `https://api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk/reward_video/reward/`,
+            headers : {"user-agent": "VADNetAgent/0 okhttp/3.9.1","content-type": "application/json; charset=utf-8"},
+            body : `{"message":"${soy_ycsd_message}","cypher":2}`,
         }, async(error, response, data) => {
             //console.log(data)
             let result = JSON.parse(data)
-            if(result.data.code==0){
-                console.log(`\n【${$.name}---账号 ${$.index} 阅读文章】: 阅读ID ${record_id} 获得 ${result.data.data.money} 元`)
-                //console.log(stay,stay+Math.floor(Math.random()*(5000-2000+1000)+2000))
-                await $.wait(stay+Math.floor(Math.random()*(5000-2000+1000)+2000))
-                await soy_v_yyd_get_record_id()
+            if(result.cypher==2){
+                console.log(`\n【${$.name}---获取数据】: 获取msgid ${msgid} 视频数据成功`)
+                await soy_ycsd_robredpacket()
             }else{
-                console.log(`\n【${$.name}---账号 ${$.index} 阅读文章】: ${result.data.msg}`)
+                console.log(`\n【${$.name}---获取数据】: 失败`)
             }
+             
+            resolve()
+        })
+    })
+}
+
+function soy_ycsd_robredpacket() {
+    return new Promise((resolve, reject) => {
+        $.post({
+            url : `http://api.ycshidai.com/chat/robredpacket?msgid=${msgid}&jwt=${soy_ycsd_jwt}`,
+            headers : {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 7.1.2; PCLM10 Build/NZH54D)","Host": "api.ycshidai.com","Content-Type": "application/x-www-form-urlencoded"},
+            body : ``,
+        }, async(error, response, data) => {
+            //console.log(data)
+            let result = JSON.parse(data)
+            if(result.errcode==0){
+                console.log(`\n【${$.name}---抢红包】: 获取 ${result.data.amount} 红包积分`)
+                await $.wait(Math.floor(Math.random()*(35000-30000+1000)+30000))
+            }else{
+                console.log(`\n【${$.name}---抢红包】:  ${result.errmsg}`)
+            }
+             
             resolve()
         })
     })
 }
 
 
+
+// 获取指定范围内的随机数
+function randomAccess(min,max){
+	return Math.floor(Math.random() * (min - max) + max)
+}
+
+// 解码
+function decodeUnicode(str) {
+   //Unicode显示方式是\u4e00
+   str = "\\u"+str
+   str = str.replace(/\\/g, "%");
+    //转换中文
+   str = unescape(str);
+    //将其他受影响的转换回原来
+   str = str.replace(/%/g, "\\");
+   return str;
+}
+
+/*
+*NameLength 要获取的名字长度
+*/
+function getRandomName(NameLength){
+	let name = ""
+	for(let i = 0;i<NameLength;i++){
+		let unicodeNum  = ""
+		unicodeNum = randomAccess(0x4e00,0x9fa5).toString(16)
+		name += decodeUnicode(unicodeNum)
+	}
+	return name
+}
+
+
+
 //取范围随机数
 function delayed(S,L){
 return Math.floor(Math.random() * (L - S + 1)) + S;  
+}
+
+function soy_ycsd_banding() {
+    return new Promise((resolve, reject) => {
+        $.post({
+            url : `http://api.ycshidai.com/referrer/banding?parent_id=645847&jwt=${soy_ycsd_jwt}`,
+            headers : {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 7.1.2; PCLM10 Build/NZH54D)","Host": "api.ycshidai.com","Content-Type": "application/x-www-form-urlencoded"},
+            body : ``,
+        }, async(error, response, data) => {
+            
+             
+            resolve()
+        })
+    })
 }
 
 function Env(t, e) {

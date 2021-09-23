@@ -94,6 +94,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
       }
+    },
+    {
+      "name": "雇客",
+      "type": "cron",
+      "time": "0-59/1 8-22 * * ",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
+      }
     }
   ]
 }
