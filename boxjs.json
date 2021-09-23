@@ -950,6 +950,54 @@
       "script": "https://raw.githubusercontent.com/xl2101200/-/main/yyd.js"
     },
     {
+      "id": "chyu",
+      "name": "成语极速版",
+      "keys": [
+        "chyubody",
+        "chyutoken",
+        "chyubody2",
+        "chyutoken2",
+        "chyubody3",
+        "chyutoken3",
+        "chyubody4",
+        "chyutoken4",
+        "chyubody5",
+        "chyutoken5",
+        "chyubody6",
+        "chyutoken6"
+      ],
+      "author": "@laoguilin",
+      "settings": [
+        {
+          "id": "chyustatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+        {
+          "id": "chyucount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tz",
+          "name": "通知",
+          "val": "0",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        }
+      ],
+      "repo": "https://github.com/laoguilin/JS-/blob/main/chyu/chyu.js",
+      "icons": [
+        "https://raw.githubusercontent.com/laoguilin/JS-/main/img/chyu.png",
+        "https://raw.githubusercontent.com/laoguilin/JS-/main/img/chyu.png"
+      ],
+      "script": "https://raw.githubusercontent.com/laoguilin/JS-/main/chyu/chyu.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
