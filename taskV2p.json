@@ -103,6 +103,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
       }
+    },
+    {
+      "name": "微信-云阅读",
+      "type": "cron",
+      "time": "0 11,14,17,20,22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/jianglin521/backup/soy-tool/wx_yyd.js"
+      }
     }
   ]
 }
