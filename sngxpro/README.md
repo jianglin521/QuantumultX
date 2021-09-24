@@ -245,8 +245,15 @@ ql repo https://github.com/star261/jd.git "scripts" "code"
 
 ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 
-# 每日自动签到
-https://github.com/caixukun112/js/blob/353c3e5832481dcbe9fea78f317e5276dd613b48/Task/checkin.js#L200
+# 依赖安装
+则说明ql面板缺少依赖'form-data'
+
+可以链接服务器后，输入以下命令
+```sh
+  docker exec -it qinglong bash
+  cd scripts
+  npm install form-data
+```
 
 
 
