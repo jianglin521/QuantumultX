@@ -1,26 +1,43 @@
 /*
 
-软件名称:养宠时代
-需要变量
+软件名称:脑王1+1
 
-soy_ycsd_jwt
-(在链接http://api.ycshidai.com/chat/robredpacket?msgid=中就有)
+项目注册地址:https://gitee.com/soy-tool/app-script/raw/master/picture/nw.jpg
 
-soy_ycsd_message
-(在链接https://api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk/reward_video/reward/请求体全部复制)
+变量抓取:
 
-没有v2p重写功能,都需要自行抓包
+打开小黄鸟 打开app,首页界面 在请求头会有个authorization 复制他的值就可以
+如果找不到就随便抓包app界面,找有http://nw.xuancollege.com/的连接里面的请求头会有个authorization
+
+变量填写:
+soy_nw_authorization=''
+
+多个authorization用 @ 或 # 或 换行 隔开
+
+v2p配置如下：
+
+【REWRITE】
+匹配链接（正则表达式） http://nw.xuancollege.com/red/getRredlist
+
+对应重写目标   app_nw.js
+
+【MITM】  
+nw.xuancollege.com
+
+
+cron 0 11 18 22 * * *
 
 */
 
 
-const $ = new Env('养宠时代');
+const $ = new Env('脑王1+1');
 const notify = $.isNode() ? require('./sendNotify') : '';
-const app_soy_ycsd_jwt = [],app_soy_ycsd_message = []
+const axios = require("axios");
+const app_soy_nw_authorization = [],nwcount = ''
 let subTitle = ``;
 let status;
-status = (status = ($.getval("qmrd_status") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-let soy_ycsd_jwt = $.getdata('soy_ycsd_jwt')
+status = (status = ($.getval("nw_status") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
+let soy_nw_authorization = $.getdata('soy_nw_authorization')
 
 !(async () => {
 
@@ -29,69 +46,44 @@ apptz = process.env.apptz;
 apptx = process.env.apptx;
 appyq = process.env.appyq;
     
-    if(!process.env.soy_ycsd_jwt&&process.env.soy_ycsd_jwt==''){
+    if(!process.env.soy_nw_authorization&&process.env.soy_nw_authorization==''){
         console.log(`\n【${$.name}】：未填写相对应的变量`);
         return;
     }
         
-    if (process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('@') > -1) {
-        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('@');
-    } else if (process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('\n') > -1) {
-        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('\n');
-    } else if(process.env.soy_ycsd_jwt && process.env.soy_ycsd_jwt.indexOf('#') > -1){
-        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split('#');
+    if (process.env.soy_nw_authorization && process.env.soy_nw_authorization.indexOf('@') > -1) {
+        soy_nw_authorization = process.env.soy_nw_authorization.split('@');
+    } else if (process.env.soy_nw_authorization && process.env.soy_nw_authorization.indexOf('\n') > -1) {
+        soy_nw_authorization = process.env.soy_nw_authorization.split('\n');
+    } else if(process.env.soy_nw_authorization && process.env.soy_nw_authorization.indexOf('#') > -1){
+        soy_nw_authorization = process.env.soy_nw_authorization.split('#');
     }else{
-        soy_ycsd_jwt = process.env.soy_ycsd_jwt.split();
+        soy_nw_authorization = process.env.soy_nw_authorization.split();
     };
     
-    Object.keys(soy_ycsd_jwt).forEach((item) => {
-        if (soy_ycsd_jwt[item]) {
-            app_soy_ycsd_jwt.push(soy_ycsd_jwt[item]);
-        };
-    });
-    
-    if (process.env.soy_ycsd_message && process.env.soy_ycsd_message.indexOf('@') > -1) {
-        soy_ycsd_message = process.env.soy_ycsd_message.split('@');
-    }else{
-        soy_ycsd_message = process.env.soy_ycsd_message.split();
-    };
-    
-    Object.keys(soy_ycsd_message).forEach((item) => {
-        if (soy_ycsd_message[item]) {
-            app_soy_ycsd_message.push(soy_ycsd_message[item]);
-        };
-    })
 
     
 }else{
 	if (typeof $request !== "undefined") {
     await get_appdata()
   } else{
-  app_soy_ycsd_jwt.push($.getdata('soy_ycsd_jwt'))
-  app_soy_ycsd_message.push($.getdata('soy_ycsd_message'))
+  app_soy_nw_authorization.push($.getdata('soy_nw_authorization'))
   
   }
 apptz = $.getdata('apptz');
 apptx = $.getdata('apptx');
 appyq = $.getdata('appyq');
     
-    let ycsdcount = ($.getval('ycsdcount') || '1');
-  for (let i = 2; i <= ycsdcount; i++) {
-    app_soy_ycsd_jwt.push($.getdata(`soy_ycsd_jwt${i}`))
-    app_soy_ycsd_message.push($.getdata(`soy_ycsd_message${i}`))
+    let nwcount = ($.getval('nwcount') || '1');
+  for (let i = 2; i <= nwcount; i++) {
+    app_soy_nw_authorization.push($.getdata(`soy_nw_authorization${i}`))
    
 }
 }
 
-Object.keys(soy_ycsd_message).forEach((item) => {
-        if (soy_ycsd_message[item]) {
-            app_soy_ycsd_message.push(soy_ycsd_message[item]);
-        };
-    })
-
-Object.keys(soy_ycsd_jwt).forEach((item) => {
-        if (soy_ycsd_jwt[item]) {
-            app_soy_ycsd_jwt.push(soy_ycsd_jwt[item]);
+Object.keys(soy_nw_authorization).forEach((item) => {
+        if (soy_nw_authorization[item]) {
+            app_soy_nw_authorization.push(soy_nw_authorization[item]);
         };
     });
     
@@ -102,25 +94,26 @@ Object.keys(soy_ycsd_jwt).forEach((item) => {
         8 * 60 * 60 * 1000
       ).toLocaleString()} ===\n`
     );
-    console.log(`===【共 ${app_soy_ycsd_jwt.length} 个账号】===\n`);
+    console.log(`===【共 ${app_soy_nw_authorization.length} 个账号】===\n`);
     if(!apptz){apptz=true};
     if(!apptx){apptx=true};
       
-for (i = 0; i < app_soy_ycsd_jwt.length; i++) {
-    soy_ycsd_jwt=app_soy_ycsd_jwt[i]
-    //soy_ycsd_message=app_soy_ycsd_message[i]
-    soy_ycsd_message=app_soy_ycsd_message[i].replace(/\n/, "")
+for (i = 0; i < app_soy_nw_authorization.length; i++) {
+    soy_nw_authorization=app_soy_nw_authorization[i]
     
-    soy_qmrd_headers={"Host": "api.ycshidai.com",
-    "Accept-Encoding": "identity",
-    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; SKW-A0 MIUI/V11.0.4.0.JOYUI)",
+    soy_nw_headers={"Host": "nw.xuancollege.com",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "authorization": soy_nw_authorization,
     };
     
     $.index = i + 1;
     
     console.log(`\n开始【第 ${$.index} 个账号任务】`);
-    
-        await soy_ycsd_get_msgid()
+        
+        await soy_nw_sign()
+        await soy_nw_everydaylist()
+        await soy_nw_red_pack()
+        
         
 };
 
@@ -135,90 +128,178 @@ for (i = 0; i < app_soy_ycsd_jwt.length; i++) {
 
 //获取ck
 function get_appdata() {
-   if ($request.url.indexOf("jwt") > -1) {
-       let str = $request.url
-       soy_ycsd_jwt=str.substring(str.indexOf('jwt=')+4, str.length)
-       
-       if(soy_ycsd_jwt){
-           $.setdata(soy_ycsd_jwt,`soy_ycsd_jwt${status}`)
-       }
-   } 
+    //http://nw.xuancollege.com/red/getRredlist?type=all
+   if ($request.url.indexOf("red") > -1) {
+const soy_nw_authorization = $request.headers.authorization
+   if(soy_nw_authorization){
+       $.setdata(soy_nw_authorization,`soy_nw_authorization${status}`)
+       //$.log(soy_nw_authorization)
+   }
+
    
-   if ($request.url.indexOf("reward_video") > -1) {
-       const soy_ycsd_message = $request.headers.body
-       if(soy_ycsd_message){
-           $.setdata(soy_ycsd_message,`soy_ycsd_message${status}`)
-       }
-   } 
-  
+  } 
 }
 
-function soy_ycsd_get_msgid(){
+async function soy_nw_sign() {
+    data = await axios({
+        url:'http://nw.xuancollege.com/sign/add_sign',
+        headers:soy_nw_headers,
+        method:"put",
+        data:'',
+        }).catch(function (error) {
+            //return error
+            console.log(error)
+        }).then(function (result) {
+        //console.log(result.data)
+        //{ code: 1, message: '今日已签到', data: { list: 'error' }, sign: '' }
+        if(result.data.code=1){
+            console.log(`\n【${$.name}---签到】: ${result.data.message}`)
+        }else{
+            console.log(`\n【${$.name}---签到】: ${result.data.message}`)
+        }
+        
+    })
+}
+
+//任务广告
+async function soy_nw_adv_id_4() {
+    data = await axios({
+        url:'http://nw.xuancollege.com/game/add_adv?money=20&adv_id=4',
+        headers:soy_nw_headers,
+        method:"put",
+        data:'',
+        }).catch(function (error) {
+            //return error
+            console.log(error)
+        }).then(function (result) {
+        //console.log(result.data)
+        if(result.data.code=1){
+            console.log(`\n【${$.name}---任务广告】: ${result.data.message}`)
+        }else{
+            console.log(`\n【${$.name}---任务广告】: ${result.data.message}`)
+        }
+        
+    })
+}
+
+//来赚钱广告
+async function soy_nw_adv_id_5() {
+    data = await axios({
+        url:'http://nw.xuancollege.com/add_adv_money?money=20&adv_id=5',
+        headers:soy_nw_headers,
+        method:"put",
+        data:'',
+        }).catch(function (error) {
+            //return error
+            console.log(error)
+        }).then(function (result) {
+        //console.log(result.data)
+        if(result.data.code=1){
+            console.log(`\n【${$.name}---赚钱广告】: ${result.data.message}`)
+        }else{
+            console.log(`\n【${$.name}---赚钱广告】: ${result.data.message}`)
+        }
+        
+    })
+}
+
+//红包列表
+function soy_nw_red_pack() {
     return new Promise((resolve, reject) => {
         $.get({
-            url : `http://api.ycshidai.com/chat/detail?group_id=20210812545667707092127679366913&page=1&lastid=&limit=10&jwt=${soy_ycsd_jwt}`,
-            headers : soy_qmrd_headers,
+            url : `http://nw.xuancollege.com/game/red_pack`,
+            headers : soy_nw_headers,
             //body : "",
         }, async(error, response, data) => {
             //console.log(data)
-            result = JSON.parse(data)
-            if(result.errcode==0){
-               for(msgs of result.data.msgs){
-                msgid=msgs.msgid
-                await soy_ycsd_reward_video()
-               } 
+            let result = JSON.parse(data)
+            if(result.code==1){
+                if(result.data.list.length==0){
+                    console.log(`\n【${$.name}---获取红包列表】: 没有可以领取的红包`)
+                }else{
+                    
+                   for(pack_list of result.data.data.list){
+                       packid=pack_list.red_id
+                       await soy_nw_up_pack()
+                   } 
+                }
             }else{
-               console.log(`\n【${$.name}---获取msgid】: ${result.errmsg} 请重新提交 jwt`) 
+                console.log(`\n【${$.name}---红包列表】: ${result.message}`) 
             }
             
-            resolve()
-        })
-    })
-
-}
-
-
-//
-function soy_ycsd_reward_video() {
-    return new Promise((resolve, reject) => {
-        $.post({
-            url : `https://api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk/reward_video/reward/`,
-            headers : {"user-agent": "VADNetAgent/0 okhttp/3.9.1","content-type": "application/json; charset=utf-8"},
-            body : `${soy_ycsd_message}`,
-        }, async(error, response, data) => {
-            //console.log(data)
-            let result = JSON.parse(data)
-            if(result.cypher==2){
-                console.log(`\n【${$.name}---获取数据】: 获取msgid ${msgid} 视频数据成功`)
-                await soy_ycsd_robredpacket()
-            }else{
-                console.log(`\n【${$.name}---获取数据】: 失败,视频请求体 message 有问题`)
-            }
+            
              
             resolve()
         })
     })
 }
 
-function soy_ycsd_robredpacket() {
+//领取红包
+async function soy_nw_up_pack() {
+    data = await axios({
+        url:`http://nw.xuancollege.com/game/red_pack?red_id=${packid}`,
+        headers:soy_nw_headers,
+        method:"put",
+        data:'',
+        }).catch(function (error) {
+            //return error
+            console.log(error)
+        }).then(function (result) {
+        //console.log(result.data)
+        if(result.data.code=1){
+            console.log(`\n【${$.name}---领取红包】: 红包 ${packid} ${result.data.message}`)
+            
+        }else{
+            console.log(`\n【${$.name}---领取红包】: ${result.data.message}`)
+        }
+        
+    })
+}
+
+async function soy_nw_everydaylist() {
     return new Promise((resolve, reject) => {
-        $.post({
-            url : `http://api.ycshidai.com/chat/robredpacket?msgid=${msgid}&jwt=${soy_ycsd_jwt}`,
-            headers : {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 7.1.2; PCLM10 Build/NZH54D)","Host": "api.ycshidai.com","Content-Type": "application/x-www-form-urlencoded"},
-            body : ``,
+        $.get({
+            url : `http://nw.xuancollege.com/task/everydaylist`,
+            headers : soy_nw_headers,
+            //body : "",
         }, async(error, response, data) => {
             //console.log(data)
             let result = JSON.parse(data)
-            if(result.errcode==0){
-                console.log(`\n【${$.name}---抢红包】: 获取 ${result.data.amount} 红包积分`)
-                await $.wait(Math.floor(Math.random()*(35000-30000+1000)+30000))
+            if(result.code==1){
+                if(result.data[0].complete_percent=='100%'){
+                    console.log(`\n【${$.name}---任务列表】: ${result.data[0].title} 已完成`)
+                }else{
+                    for(let cs=0;cs<10;cs++){
+                        await soy_nw_adv_id_4()
+                        await $.wait(Math.floor(Math.random()*(40000-35000+1000)+35000))
+                    }
+                }
+                
+                if(result.data[1].complete_percent=='100%'){
+                    console.log(`\n【${$.name}---任务列表】: ${result.data[1].title} 已完成`)
+                }else{
+                    for(let cs=0;cs<10;cs++){
+                        await soy_nw_adv_id_4()
+                        await $.wait(Math.floor(Math.random()*(40000-35000+1000)+35000))
+                    }
+                }
+                
+                for(let cs=0;cs<20;cs++){
+                    await soy_nw_adv_id_5()
+                    await $.wait(Math.floor(Math.random()*(40000-35000+1000)+35000))
+                }
+                
+                
             }else{
-                console.log(`\n【${$.name}---抢红包】:  ${result.errmsg}`)
+               console.log(`\n【${$.name}---任务列表】: ${result.message}`)  
             }
+            
              
             resolve()
         })
     })
+    
+    
 }
 
 

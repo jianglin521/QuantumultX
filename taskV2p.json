@@ -112,6 +112,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/jianglin521/backup/soy-tool/wx_yyd.js"
       }
+    },
+    {
+      "name": "商拓",
+      "type": "cron",
+      "time": "30 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://gitee.com/rcfan1/js/raw/master/stuo.js"
+      }
     }
   ]
 }
