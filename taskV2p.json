@@ -114,12 +114,12 @@
       }
     },
     {
-      "name": "商拓",
+      "name": "趣红包短视频",
       "type": "cron",
       "time": "30 10 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://gitee.com/rcfan1/js/raw/master/stuo.js"
+        "target": "https://raw.fastgit.org/byxiaopeng/myscripts/main/qhbdsp.js"
       }
     }
   ]
