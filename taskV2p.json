@@ -121,6 +121,15 @@
         "type": "runjs",
         "target": "https://raw.fastgit.org/byxiaopeng/myscripts/main/qhbdsp.js"
       }
+    },
+    {
+      "name": "动物王国",
+      "type": "cron",
+      "time": "10 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js"
+      }
     }
   ]
 }

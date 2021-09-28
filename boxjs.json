@@ -998,6 +998,74 @@
       "script": "https://raw.githubusercontent.com/laoguilin/JS-/main/chyu/chyu.js"
     },
     {
+      "id": "dwwg",
+      "name": "动物王国",
+      "keys": [
+        "dwwgurl",
+        "dwwghd",
+        "dwwgurl2",
+        "dwwghd2",
+        "dwwgurl3",
+        "dwwghd3",
+        "dwwgurl4",
+        "dwwghd4",
+        "dwwgurl5",
+        "dwwghd5",
+        "dwwgurl6",
+        "dwwghd6",
+        "dwwgurl7",
+        "dwwghd7",
+        "dwwgurl8",
+        "dwwghd8",
+        "dwwgurl9",
+        "dwwghd9",
+        "dwwgur10",
+        "dwwghd10",
+        "dwwgur11",
+        "dwwghd11",
+        "dwwgur12",
+        "dwwghd12",
+        "dwwgurl13",
+        "dwwghd13",
+        "dwwgurl14",
+        "dwwghd14",
+        "dwwgurl15",
+        "dwwghd15",
+        "dwwgurl16",
+        "dwwghd16"
+      ],
+      "author": "@laoguilin",
+      "settings": [
+        {
+          "id": "dwwgstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+        {
+          "id": "dwwgcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tz",
+          "name": "通知",
+          "val": "0",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        }
+      ],
+      "repo": "https://github.com/laoguilin/JS-/blob/main/dwwg/dwwg.js",
+      "icons": [
+        "https://raw.githubusercontent.com/laoguilin/JS-/main/img/dwwg.png",
+        "https://raw.githubusercontent.com/laoguilin/JS-/main/img/dwwg.png"
+      ],
+      "script": "https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
