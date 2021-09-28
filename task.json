@@ -20,6 +20,7 @@
     "10 11,14,17,20,22 * * * https://gitee.com/soy-tool/app-script/raw/master/wx_yyd.js, tag=云阅读, enabled=true",
     "*/10 * * * * https://raw.githubusercontent.com/laoguilin/JS-/main/chyu/chyu.js, tag=成语极速版, enabled=true",
     "0 8-14/1 * * * https://raw.githubusercontent.com/jianglin521/backup/soy-tool/10sRead.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
-    "0 5 * * * https://gitee.com/soy-tool/app-script/raw/master/app_ycsd.js , tag=养宠时代, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
+    "0 5 * * * https://gitee.com/soy-tool/app-script/raw/master/app_ycsd.js , tag=养宠时代, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
+    "10 10 * * * https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js , tag=动物王国, enabled=true"
    ] 
 }
