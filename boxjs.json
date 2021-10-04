@@ -1066,6 +1066,45 @@
       "script": "https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js"
     },
     {
+      "id": "qjp",
+      "name": "趣键盘极速版",
+      "keys": [
+        "qjphd",
+        "qjphd2",
+        "qjphd3",
+        "qjphd4",
+        "qjphd5",
+        "qjphd6",
+        "qjphd7",
+        "qjphd8",
+        "qjphd9",
+        "qjphd10"
+      ],
+      "author": "@YaphetS0903",
+      "settings": [
+        {
+          "id": "qjpstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        },
+        {
+          "id": "qjpcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "需要几个账号，数字为几"
+        }
+      ],
+      "repo": "https://github.com/YaphetS0903/JStest/blob/main/qjp.js",
+      "icons": [
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg",
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qjp.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
