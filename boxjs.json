@@ -1105,6 +1105,62 @@
       "script": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qjp.js"
     },
     {
+      "id": "qxq",
+      "name": "趣星球",
+      "keys": [
+        "qxqurl",
+        "qxqhd",
+        "qxqurl2",
+        "qxqhd2",
+        "qxqur3",
+        "qxqhd3",
+        "qxqurl4",
+        "qxqhd4",
+        "qxqurl5",
+        "qxqhd5",
+        "qxqur6",
+        "qxqhd6",
+        "qxqurl7",
+        "qxqhd7",
+        "qxqurl8",
+        "qxqhd8",
+        "qxqurl9",
+        "qxqhd9",
+        "qxqurl10",
+        "qxqhd10"
+      ],
+      "author": "@YaphetS0903",
+      "settings": [
+        {
+          "id": "qxqstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+        {
+          "id": "qxqcount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tz",
+          "name": "通知",
+          "val": "1",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        }
+      ],
+      "repo": "https://github.com/YaphetS0903/JStest/blob/main/qxq.js",
+      "icons": [
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg",
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [

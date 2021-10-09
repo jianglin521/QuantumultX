@@ -23,6 +23,7 @@
     "0 5 * * * https://gitee.com/soy-tool/app-script/raw/master/app_ycsd.js , tag=养宠时代, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
     "10 10 * * * https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js , tag=动物王国, enabled=true",
     "10 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/qjp.js, tag=趣键盘极速版, enabled=true",
-    "0 0 8 * * * https://gitee.com/tom210120/tom/raw/master/jscfz.js, tag=嘉实宠粉钻, enabled=true"
+    "0 0 8 * * * https://gitee.com/tom210120/tom/raw/master/jscfz.js, tag=嘉实宠粉钻, enabled=true",
+    "0 8-18/2 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js, tag=趣星球, enabled=true"
    ] 
 }
