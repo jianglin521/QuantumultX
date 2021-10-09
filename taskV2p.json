@@ -123,12 +123,12 @@
       }
     },
     {
-      "name": "动物王国",
+      "name": "趣星球",
       "type": "cron",
-      "time": "10 10 * * *",
+      "time": "20 8-18/2 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/laoguilin/JS-/main/dwwg/dwwg.js"
+        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js"
       }
     }
   ]
