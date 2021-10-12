@@ -130,6 +130,24 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js"
       }
+    },
+    {
+      "name": "自选股日常任务",
+      "type": "cron",
+      "time": "0 16 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js"
+      }
+    },
+    {
+      "name": "自选股长牛任务",
+      "type": "cron",
+      "time": "0 16 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockcow.js"
+      }
     }
   ]
 }
