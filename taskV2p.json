@@ -69,66 +69,12 @@
       }
     },
     {
-      "name": "云阅读",
-      "type": "cron",
-      "time": "10 8-23/1 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/yyd.js"
-      }
-    },
-    {
       "name": "广汽三菱",
       "type": "cron",
       "time": "0 8 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
-      }
-    },
-    {
-      "name": "成语极速版",
-      "type": "cron",
-      "time": "*/10 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
-      }
-    },
-    {
-      "name": "雇客",
-      "type": "cron",
-      "time": "0-59/1 8-22 * * ",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/hqw233/Script/main/cyjsb.js"
-      }
-    },
-    {
-      "name": "微信-云阅读",
-      "type": "cron",
-      "time": "0 11,14,17,20,22 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/jianglin521/backup/soy-tool/wx_yyd.js"
-      }
-    },
-    {
-      "name": "趣红包短视频",
-      "type": "cron",
-      "time": "30 10 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.fastgit.org/byxiaopeng/myscripts/main/qhbdsp.js"
-      }
-    },
-    {
-      "name": "趣星球",
-      "type": "cron",
-      "time": "20 8-18/2 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js"
       }
     },
     {
