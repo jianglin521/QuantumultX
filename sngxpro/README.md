@@ -253,8 +253,8 @@ ql repo https://github.com/jianglin521/QuantumultX.git "ql"
   docker exec -it qinglong bash
   cd scripts
   npm install form-data
+  pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-
 ## 测试
 
 
