@@ -107,7 +107,7 @@
     {
       "name": "嘉实宠粉站",
       "type": "cron",
-      "time": "15 6-23 * * *",
+      "time": "0 14 * * *",
       "job": {
         "type": "runjs",
         "target": "https://gitee.com/tom210120/tom/raw/master/jscfz.js"
