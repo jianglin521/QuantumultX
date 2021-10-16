@@ -103,6 +103,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js"
       }
+    },
+    {
+      "name": "嘉实宠粉站",
+      "type": "cron",
+      "time": "15 6-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://gitee.com/tom210120/tom/raw/master/jscfz.js"
+      }
     }
   ]
 }
