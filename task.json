@@ -13,13 +13,10 @@
     "*/10 * * * * https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/qmdff.js, tag=全民大丰收, img-url=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/pic/ningmeng.png, enabled=true",
     "*/10 * * * * https://raw.githubusercontent.com/ThingsWhy/js_cx_cron/af243ce79a9689bf3c76a8a297fc84ac59513583/ningmeng/yydxny.js, tag=柠檬爷爷的小农院, enabled=true",
     "20 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js, tag=广汽三菱, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
-    "10 11,14,17,20,22 * * * https://gitee.com/soy-tool/app-script/raw/master/wx_yyd.js, tag=云阅读, enabled=true",
-    "0 5 * * * https://gitee.com/soy-tool/app-script/raw/master/app_ycsd.js , tag=养宠时代, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
-    "0 0 8 * * * https://gitee.com/tom210120/tom/raw/master/jscfz.js, tag=嘉实宠粉钻, enabled=true",
     "0 8-18/2 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js, tag=趣星球, enabled=true",
     "0 8-18/1 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.js, tag=电视家, enabled=true",
     "0 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js, tag=萤石云, enabled=true",
-    "0 14 * * * https://gitee.com/tom210120/tom/raw/master/jscfz.js, tag=嘉实宠粉站, enabled=true"
+    "0 14 * * * https://gitee.com/tom210120/tom/raw/master/jscfz.js, tag=嘉实宠粉钻, enabled=true"
    ] 
 }
 
