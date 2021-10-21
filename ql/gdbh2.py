@@ -15,8 +15,8 @@
 # export appid='2102202714'
 #脚本地址https://raw.githubusercontent.com/wx13069/JD/master/gdbh.py
 # #以上需要添加的变量都可以在header里面找到，添加完之后，添加任务每天运行一次就行
-# cron: 0 9 * * *
-# new Env('果冻宝盒1');
+# cron: 0 10 * * *
+# new Env('果冻宝盒2');
 
 import requests
 import time
@@ -35,17 +35,17 @@ import hashlib
 # if "appid" in os.environ and os.environ["appid"]:
 #     appid = os.environ["appid"]
 
-userid='5809578'
-devid='No-dev'
-gdbhtoken='f2c972d67577c2888e70ae32a8c0bd6d'
-UA='okhttp/3.14.9'
-appid='2102202714'
-
-# userid='5812959'
+# userid='5809578'
 # devid='No-dev'
-# gdbhtoken='2bc40ce814a150bde19a9bfe2e1622b2'
+# gdbhtoken='f2c972d67577c2888e70ae32a8c0bd6d'
 # UA='okhttp/3.14.9'
 # appid='2102202714'
+
+userid='5812959'
+devid='No-dev'
+gdbhtoken='2bc40ce814a150bde19a9bfe2e1622b2'
+UA='okhttp/3.14.9'
+appid='2102202714'
 
 data = {"Host":"proxy.guodongbaohe.com","x-userid":userid,"x-appid":appid,"x-devid":devid,"x-nettype":"WIFI","x-agent":'JellyBox/3.8.4 (Android, Redmi K20 Pro, 11)',"x-platform":'android',"x-devtype":"no","x-token":gdbhtoken,"accept-encoding":"gzip","user-agent":"okhttp/3.14.9"}
 print(data)
