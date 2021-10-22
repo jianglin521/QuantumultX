@@ -8,11 +8,11 @@
 # 感谢TOM大佬的sign算法支持，新人第一次写毛，水平有限，日志输出还没优化，有时间在去优化一下，脚本有不足的地方望大佬指导
 # 青龙使用方法，小黄鸟抓包搜索关键字coins
 # 找到以下相关参数添加环境变量
-# export userid='5809578'
-# export devid='No-dev'
-# export gdbhtoken='f2c972d67577c2888e70ae32a8c0bd6d'
-# export UA='okhttp/3.14.9'
-# export appid='2102202714'
+# export userid=''
+# export devid=''
+# export gdbhtoken=''
+# export UA=''
+# export appid=''
 #脚本地址https://raw.githubusercontent.com/wx13069/JD/master/gdbh.py
 # #以上需要添加的变量都可以在header里面找到，添加完之后，添加任务每天运行一次就行
 # cron: 0 9 * * *
@@ -22,7 +22,6 @@ import requests
 import time
 import os
 import hashlib
-
 
 # if "gdbhtoken" in os.environ and os.environ["gdbhtoken"]:
 #     gdbhtoken = os.environ["gdbhtoken"]
@@ -34,13 +33,13 @@ import hashlib
 #     UA = os.environ["UA"]
 # if "appid" in os.environ and os.environ["appid"]:
 #     appid = os.environ["appid"]
-
+#账号三
 userid='5809578'
 devid='No-dev'
 gdbhtoken='f2c972d67577c2888e70ae32a8c0bd6d'
 UA='okhttp/3.14.9'
 appid='2102202714'
-
+#账号四
 # userid='5812959'
 # devid='No-dev'
 # gdbhtoken='2bc40ce814a150bde19a9bfe2e1622b2'
@@ -65,8 +64,6 @@ sign = hashlib.md5(sign.encode(encoding='UTF-8')).hexdigest()
 # print('累计收入',mx.get('month'), flush=True)
 # print('今日预估收入',mx.get('today'), flush=True)
 # print('本月预估收入',mx.get('total'), flush=True)
-
-
 
 #签到
 r = requests.get(url='https://proxy.guodongbaohe.com/coins/checkin?member_id='+userid+'&platform=android&timestamp='+a+'&signature='+sign+'&',headers=data)
@@ -116,9 +113,50 @@ else:
             print('每个视频30秒，等待93秒', flush=True)
             time.sleep(93)
             b = b+1
+            i = i+1
     else:
-        i = i+1
+        
         print(dic.get('result'))
+
+##提现
+timestamp = int(time.time())
+a = timestamp
+a = str(a)
+sign = 'member_id='+userid+'&platform=android&timestamp=' + a + '&faf78c39388faeaa49c305804bbc1119'
+sign = hashlib.md5(sign.encode(encoding='UTF-8')).hexdigest()
+
+r = requests.get(url='https://proxy.guodongbaohe.com/coins/info?member_id='+userid+'&platform=android&timestamp='+a+'&signature='+sign+'&',headers=data)
+info = r.json()
+info = info.get('result')
+day = info.get('checkin')
+day = day.get('total_day')
+credits = info.get('credits')
+print('已连续签到第'+day+'天',flush=True)
+print('可提现'+credits+'金币')
+print('需手动进app提现一下')
+#timestamp = int(time.time())
+#a = timestamp
+#a = str(a)
+#sign = 'member_id='+userid+'&platform=android&timestamp=' + a + '&faf78c39388faeaa49c305804bbc1119'
+#sign = hashlib.md5(sign.encode(encoding='UTF-8')).hexdigest()
+#
+#r = requests.get(url='https://proxy.guodongbaohe.com/coins/exchange_info?credits='+credits+'&member_id='+userid+'&platform=android&timestamp='+a+'&signature='+sign+'&',headers=data)
+#a = int(a)+3
+#a = str(a)
+#sign = 'member_id='+userid+'&platform=android&timestamp=' + a + '&faf78c39388faeaa49c305804bbc1119'
+#sign = hashlib.md5(sign.encode(encoding='UTF-8')).hexdigest()
+#r = requests.get(url='https://proxy.guodongbaohe.com/coins/exchange?credits='+credits+'&member_id='+userid+'&platform=android&timestamp='+a+'&signature='+sign+'&',headers=data)
+#
+#r = r.json()
+#r1 = r.get('status')
+#if r==0:
+#    print(''+credits+'金币提现成功',flush=True)
+#else:
+#    print(r,flush=True)
+
+
+##收益统计
+
 
 r = requests.get(url='https://proxy.guodongbaohe.com/income/mymoney?member_id='+userid+'&platform=android&timestamp='+a+'&signature='+sign+'&',headers=data)
 zc = r.json()
