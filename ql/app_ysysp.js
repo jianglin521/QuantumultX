@@ -57,7 +57,7 @@ cron 0 9,13,17,21 * * *
 const $ = new Env('莹石云视频');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const axios = $.isNode() ? require("axios") : '';
-const md5 = $.isNode() ? require("md5") : '';
+const md5 = $.isNode() ? require("./md5") : '';
 let status;
 status = (status = ($.getval("ysysp_status") || "1")) > 1 ? `${status}` : "";
 let ysysp_count = '',app_soy_ysysp_username=[],app_soy_ysysp_password=[],app_soy_ysysp_Code=[],statue=''
