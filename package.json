@@ -2,9 +2,8 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "node -r dotenv/config ./sngxpro/djxs.js",
+    "dev": "node -r dotenv/config ./sngxpro/app_ysysp.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +19,9 @@
   "homepage": "https://github.com/jianglin521/QuantumultX#readme",
   "dependencies": {
     "axios": "^0.24.0",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "got": "^11.8.2",
+    "md5": "^2.3.0",
+    "tough-cookie": "^4.0.0"
   }
 }
