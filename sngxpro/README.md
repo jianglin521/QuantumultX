@@ -249,13 +249,19 @@ ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 则说明ql面板缺少依赖'form-data'
 
 可以链接服务器后，输入以下命令
-```sh
+```shell
   docker exec -it qinglong bash
   cd scripts
   npm install form-data
   pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-## 测试
+## 添加环境变量
+```shell
+npm install dotenv --save
+```
+```js
+require('dotenv').config()
+```
 
 
 
