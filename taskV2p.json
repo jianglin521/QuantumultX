@@ -121,6 +121,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/ttdz.js"
       }
+    },
+    {
+      "name": "得间小说",
+      "type": "cron",
+      "time": "40 6-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/djxs.js"
+      }
     }
   ]
 }

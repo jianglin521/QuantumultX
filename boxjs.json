@@ -1103,18 +1103,81 @@
     {
       "id": "txstockapp",
       "name": "自选羊毛股",
-      "keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey", "cash", "cashheader"],
-      "settings": [{
-        "id": "cash",
-        "name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
-        "val": "",
-        "type": "number",
-        "desc": "默认为0,不自动提现"
-      }],
+      "keys": [
+        "signheader",
+        "signkey",
+        "taskheader",
+        "taskkey",
+        "userheader",
+        "userkey",
+        "wxtaskkey",
+        "cash",
+        "cashheader"
+      ],
+      "settings": [
+        {
+          "id": "cash",
+          "name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
+          "val": "",
+          "type": "number",
+          "desc": "默认为0,不自动提现"
+        }
+      ],
       "author": "@cenbomin",
-      "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+      "repo": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync"
+      ],
       "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
-      "icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"]
+      "icons": [
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png",
+        "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
+      ]
+    },
+    {
+      "id": "djxs",
+      "name": "得间小说",
+      "keys": [
+        "djxsCookie",
+        "djxsReferer",
+        "djxsCookie2",
+        "djxsReferer2",
+        "djxsCookie3",
+        "djxsReferer3",
+        "djxsCookie4",
+        "djxsReferer4",
+        "djxsCookie5",
+        "djxsReferer5"
+      ],
+      "author": "@YaphetS0903",
+      "settings": [
+        {
+          "id": "djxsstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+        {
+          "id": "djxscount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        },
+        {
+          "id": "tz",
+          "name": "通知",
+          "val": "1",
+          "type": "number",
+          "desc": "0关闭通知，1打开通知"
+        }
+      ],
+      "repo": "https://github.com/YaphetS0903/JStest/blob/main/djxs.js",
+      "icons": [
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg",
+        "https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/YaphetS.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/djxs.js"
     },
     {
       "id": "PushBoxjsCookie",
