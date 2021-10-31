@@ -20,7 +20,8 @@
     "10 13 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/txwzq.js, tag=微证券, enabled=true",
     "10 8 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/ttdz.js, tag=图图点赞, enabled=true",
     "40 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/djxs.js, tag=得间小说, enabled=true",
-    "15 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/zfxs.js, tag=追疯小说, enabled=true"
+    "15 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/zfxs.js, tag=追疯小说, enabled=true",
+    "45 10 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js, tag=返利购, enabled=true"
    ] 
 }
 
