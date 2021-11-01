@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node -r dotenv/config ./sngxpro/flg.js dotenv_config_path=./.env.local",
+    "dev": "node -r dotenv/config ./sngxpro/app_yhxq.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
