@@ -4,12 +4,12 @@
 脚本说明：返利购。。。下载地址带邀请https://raw.githubusercontent.com/YaphetS0903/JStest/main/image/flg.png
 保存到相册微信扫码下载
 邀请码AN4717
-和以前的返利网很像，签到0.05-0.2现金，任务一天390金币(3毛9)，打卡也有金币分成，1000金币兑换1元现金到钱包，钱包2元提现
-还有两个任务暂时没抓到包，后续慢慢更新
+和以前的返利网很像，签到0.05-0.2现金，任务一天390金币(3毛9)，打卡也有金币分成，1000金币兑换1元现金到钱包
+钱包10元提现，签到7天有4元红包，可以再其他平台购买东西返现到返利购现金余额。
 
 10.30更新，只需要抓一个referer, 删掉抓cookie，解决"&"出错问题，感谢@Tom大佬建议和群友提供的任务包，增加浏览任务和每日首单任务
 10.31更新，加入报名打卡，早起打卡任务，使用app5分钟任务，兑换金币成现金，请务必在早上7-9点之间运行脚本
-
+11.2更新，加入自动提现10元，2元是新人提现只能提一次就不写了。
 请更新脚本和boxjs。
 本脚本以学习为主
 获取数据： 进入软件，点击我的，点击金币获得数据
@@ -26,7 +26,7 @@ export flgReferer='抓取的Referer1@抓取的Referer2'
 请务必在早上7-9点之间运行脚本
 [task_local]
 #返利购
-10,40 7 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js, tag=返利购, enabled=true
+0,30 8 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js, tag=返利购, enabled=true
 [rewrite_local]
 #返利购
 https://api.flgflg.com/htmmall/api/gold/finishedVideoNum url script-request-body https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js
@@ -391,6 +391,15 @@ function flgsigninfo(timeout = 0) {
                         }else{
                             console.log(`【金币不足，继续努力】\n`)
                         }
+
+                        
+                        console.log(`【开始判断是否能提现】\n`)
+                        if(result.data.asset.remainIncomeString >=10){
+                        await $.wait(5000)
+                        await flgtx()
+                        }else{
+                            console.log(`【现金不足，继续努力】\n`)
+                        }
                         $.message += `【签到已完成】：${result.msg}\n`
                         $.message += `【剩余金币】：${result.data.asset.remainIncomeGold}\n`
                         $.message += `【剩余现金】：${result.data.asset.remainIncomeString}\n`
@@ -401,6 +410,31 @@ function flgsigninfo(timeout = 0) {
                         console.log(`【开始签到】\n`)
                         await $.wait(2000)
                         await flgsign()
+                        console.log(`【签到已完成】：${result.msg}\n`)
+                        console.log(`【剩余金币】：${result.data.asset.remainIncomeGold}\n`)
+                        console.log(`【剩余现金】：${result.data.asset.remainIncomeString}\n`)
+                        console.log(`【总金币收入】：${result.data.asset.totalIncomeGold}\n`)
+                        console.log(`【总现金收入】：${result.data.asset.totalIncomeString}\n`)
+                        console.log(`【开始判断是否能兑换现金】\n`)
+                        if(result.data.asset.remainIncomeGold >=1000){
+                        await $.wait(5000)
+                        await flgcoin()
+                        }else{
+                            console.log(`【金币不足，继续努力】\n`)
+                        }
+
+                        console.log(`【开始判断是否能提现】\n`)
+                        if(result.data.asset.remainIncomeString >=10){
+                        await $.wait(5000)
+                        await flgtx()
+                        }else{
+                            console.log(`【现金不足，继续努力】\n`)
+                        }
+                        $.message += `【签到已完成】：${result.msg}\n`
+                        $.message += `【剩余金币】：${result.data.asset.remainIncomeGold}\n`
+                        $.message += `【剩余现金】：${result.data.asset.remainIncomeString}\n`
+                        $.message += `【总金币收入】：${result.data.asset.totalIncomeGold}\n`
+                        $.message += `【总现金收入】：${result.data.asset.totalIncomeString}\n`
                     }
 
 
@@ -691,6 +725,48 @@ function flgcoin(timeout = 0) {
 
                 } else {
                     console.log(`【兑换现金失败】：${result.msg}\n`)
+
+                }
+            } catch (e) {
+
+            } finally {
+
+                resolve()
+            }
+        }, timeout)
+    })
+}
+
+
+
+
+//提现
+function flgtx(timeout = 0) {
+    return new Promise((resolve) => {
+
+        let times = new Date().getTime()
+
+        let url = {
+            url: `https://api.flgflg.com/htmmall/api/trade/widthdraw/apply`,
+            headers: {"Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "zh-Hans-CN;q=1",
+            "Connection": "keep-alive",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Host": "api.flgflg.com","User-Agent": "Litaoyouxuan/2.0.4 (iPhone; iOS 14.4.1; Scale/3.00)"},
+            body: `agrtver=8.2&amount=10&channel=${flgchannel}&ct=1&token=${flgtoken}&ts=${times}&ver=2.0.4`,
+        }
+        $.post(url, async (err, resp, data) => {
+            try {
+
+                const result = JSON.parse(data)
+
+                if (result.code == 0) {
+                    console.log(`【提现】：${result.data}\n`)
+                    $.message += `【提现】：${result.data}\n`
+
+                } else {
+                    console.log(`【提现失败】：${result.msg}\n`)
 
                 }
             } catch (e) {
