@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#author:fugui
-
+'''
+cron: 0 11,17,21 * * *
+new Env('天天神劵');
+'''
 from typing import Counter, Text
 import urllib.request
 import ssl
@@ -9,7 +11,7 @@ import json
 import os
 import sys
 import datetime
-from environs import Env
+# from environs import Env
 
 #定义11点  用于开启server 酱推送
 global d_time0,d_time1,d_time2,n_time
@@ -63,10 +65,8 @@ webhook = os.environ.get("webhook")
 
 #定义全局变量并初始化 以下初始化赋值的变量不要改！！！！
 global propIdforuse,token,batchId,propId,a
-env = Env()
-env.read_env(path='.env.local')
-token = env.str('meituan_token')
-serverkey = env.str('serverkey')
+token = os.environ.get('meituan_token')
+serverkey = os.environ.get('serverkey')
 
 showPriceNumber = "1"
 propIdforuse =2
