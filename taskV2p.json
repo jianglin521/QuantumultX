@@ -114,12 +114,12 @@
       }
     },
     {
-      "name": "图图点赞",
+      "name": "都爱玩",
       "type": "cron",
-      "time": "10 9 * * *",
+      "time": "10 8,13 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/ttdz.js"
+        "target": "https://cdn.jsdelivr.net/gh/bluesmallpig/scripts/daw.js"
       }
     }
   ]
