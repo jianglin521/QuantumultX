@@ -121,6 +121,15 @@
         "type": "runjs",
         "target": "https://cdn.jsdelivr.net/gh/bluesmallpig/scripts/daw.js"
       }
+    },
+    {
+      "name": "多福盒子",
+      "type": "cron",
+      "time": "32 8-18 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/dfhz.js"
+      }
     }
   ]
 }
