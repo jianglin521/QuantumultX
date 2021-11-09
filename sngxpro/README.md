@@ -264,11 +264,19 @@ require('dotenv').config()
 ```
 
 ## 添加定时任务
+### 用户级任务
 ```shell
 crontab -e
-10 20 * * *  bash /home/projects/JD-Script/run.sh OpenCard "root" > /home/projects/log/log1.txt 2>&1 &
-0 11,17,21 * * *  python /home/projects/meituan/meituan.py "root" > /home/projects/log/log2.txt 2>&1 &
+10 20 * * * bash /home/projects/JD-Script/run.sh OpenCard > /home/projects/log/log1.txt 2>&1 &
+0 11,17,21 * * *  python /home/projects/meituan/meituan.py > /home/projects/log/log2.txt 2>&1 &
 ```
+### 系统级任务
+```shell
+vim /etc/crontab
+10 20 * * * root bash /home/projects/JD-Script/run.sh OpenCard > /home/projects/log/log1.txt 2>&1 &
+```
+
+
 
 
 
