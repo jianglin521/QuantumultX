@@ -101,8 +101,8 @@ $.message = '';
         };
         
         
-      if (process.env.soy_wyyx_token && process.env.soy_wyyx_token.indexOf('\n') > -1) {
-        soy_wyyx_token = process.env.soy_wyyx_token.split('\n');
+      if (process.env.soy_wyyx_token && process.env.soy_wyyx_token.indexOf('##') > -1) {
+        soy_wyyx_token = process.env.soy_wyyx_token.split('##');
       } else {
         soy_wyyx_token = process.env.soy_wyyx_token.split();
       };
@@ -112,8 +112,8 @@ $.message = '';
         };
       });
       
-      if (process.env.soy_wyyx_INFO && process.env.soy_wyyx_INFO.indexOf('\n') > -1) {
-        soy_wyyx_INFO = process.env.soy_wyyx_INFO.split('\n');
+      if (process.env.soy_wyyx_INFO && process.env.soy_wyyx_INFO.indexOf("##") > -1) {
+        soy_wyyx_INFO = process.env.soy_wyyx_INFO.split("##");
       } else {
         soy_wyyx_INFO = process.env.soy_wyyx_INFO.split();
       };
@@ -123,8 +123,8 @@ $.message = '';
         };
       });
       
-      if (process.env.soy_wyyx_SESS && process.env.soy_wyyx_SESS.indexOf('\n') > -1) {
-        soy_wyyx_SESS = process.env.soy_wyyx_SESS.split('\n');
+      if (process.env.soy_wyyx_SESS && process.env.soy_wyyx_SESS.indexOf("##") > -1) {
+        soy_wyyx_SESS = process.env.soy_wyyx_SESS.split("##");
       } else {
         soy_wyyx_SESS = process.env.soy_wyyx_SESS.split();
       };
