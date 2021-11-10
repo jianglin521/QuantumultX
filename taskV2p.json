@@ -130,6 +130,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/dfhz.js"
       }
+    },
+    {
+      "name": "返利好省",
+      "type": "cron",
+      "time": "20 8-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js"
+      }
     }
   ]
 }
