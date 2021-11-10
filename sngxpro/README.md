@@ -255,6 +255,13 @@ ql repo https://github.com/jianglin521/QuantumultX.git "ql"
   npm install form-data
   pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+## find查找文件
+> 将当前目录及其子目录下所有文件后缀为 `test.md` 的文件列出来:
+```shell
+find . -name "test.md"
+```
+
 ## 添加环境变量
 ```shell
 npm install dotenv --save
