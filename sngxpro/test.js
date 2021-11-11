@@ -10,10 +10,14 @@ const notify = $.isNode() ? require('./sendNotify') : '';
   if (notify) {
     await notify.sendNotify('标题', '内容区域')
   }
-
+  message()
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
+
+function message() {
+  $.msg($.name, "", $.message)
+}
 
 function Env(t, e) {
   class s {
