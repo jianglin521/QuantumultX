@@ -11,11 +11,11 @@ const axios = require("axios");
 const DD_BOT_TOKEN = "";
 const DD_BOT_SECRET = "";
 const timeout = 15000; //超时时间(单位毫秒)
+const container_name = '容器1'
 
 if ($env.title && $env.body) {
   console.log('脚本获取到的通知内容:', $env.title, $env.body, $env.url)
-  ddBotNotify($env.title, $env.body)
-
+  ddBotNotify($env.title, $env.body, $env.url)
   // 简单过滤
   if (/重要/.test($env.title)) {
     // 使用 $enable$ 强制发送通知 
@@ -30,13 +30,14 @@ if ($env.title && $env.body) {
     // 对通知内容进行修改
     $env.body = $env.body.replace('elecV2P', 'https://github.com/elecV2/elecV2P')
     // 然后通过自定义通知发送
-    ddBotNotify($env.title, $env.body)
+    ddBotNotify($env.title, $env.body, $env.url)
   }
 } else {
   console.log('没有 $env.title', '该 JS 应该由通知自动触发执行')
 }
 
-function ddBotNotify(text, desp) {
+function ddBotNotify(title, body, url, num) {
+  console.log(title, body, url, num, '---------------')
   return new Promise(async (resolve) => {
     const options = {
       method: 'post',
@@ -44,7 +45,7 @@ function ddBotNotify(text, desp) {
       data: {
         "msgtype": "text",
         "text": {
-          "content": `${text}\n\n${desp}`
+          "content": `${container_name}-${title}\n${body}\n${url}`
         }
       },
       headers: {
