@@ -209,6 +209,10 @@ ql repo https://github.com/jianglin521/QuantumultX.git "ql"
   npm install form-data
   pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+## 苹果降级插件
+AppStore++ 和 AppAdmin 是 2 款应用降级插件，可以在 App Store 中把应用降级到自己想要的版本。在 iOS 11 或者更早的系统上，我们使用 AppAdmin，在 iOS 12 上使用 AppStore++，该插件支持 A12 设备。
+
 ## 中青阅读
 https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth
 
