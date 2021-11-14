@@ -831,9 +831,7 @@
         "dsjheader3",
         "dsjtx3",
         "dsjheader4",
-        "dsjtx4",
-        "dsjheader5",
-        "dsjtx5"
+        "dsjtx4"
       ],
       "author": "@ziye",
       "settings": [
@@ -903,8 +901,8 @@
       ],
       "repo": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.js",
       "icons": [
-        "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.png",
-        "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.png"
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/dsj.jpg",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/dsj.jpg"
       ],
       "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.js"
     },
