@@ -42,7 +42,7 @@
       }
     },
     {
-      "name": "【安卓】开心点点消",
+      "name": "开心点点消",
       "type": "cron",
       "time": "45 12 * * *",
       "job": {
@@ -51,7 +51,7 @@
       }
     },
     {
-      "name": "【安卓】红包视频",
+      "name": "红包视频",
       "type": "cron",
       "time": "*/10 * * * *",
       "job": {
@@ -66,15 +66,6 @@
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/xl2101200/-/main/jztt.js"
-      }
-    },
-    {
-      "name": "广汽三菱",
-      "type": "cron",
-      "time": "0 8 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/gqsl.js"
       }
     },
     {
@@ -93,15 +84,6 @@
       "job": {
         "type": "runjs",
         "target": "https://gitee.com/tom210120/tom/raw/master/jscfz.js"
-      }
-    },
-    {
-      "name": "汤师爷",
-      "type": "cron",
-      "time": "0 15 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/wx13069/JD/master/gdbh.js"
       }
     },
     {
