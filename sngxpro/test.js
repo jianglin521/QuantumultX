@@ -7,12 +7,21 @@ const $ = new Env('测试');
 const notify = $.isNode() ? require('./sendNotify') : '';
 
 !(async () => {
-  if (notify) {
-    await notify.sendNotify('标题', '内容区域')
-  }
+  getCooick()
+  // if (notify) {
+  //   await notify.sendNotify('标题', '内容区域')
+  // }
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
+
+// 获取cooick
+function getCooick() {
+  const testData = '我是获取到的ck'
+  if (notify) {
+    notify.sendNotify('标题', testData)
+  }
+}
 
 function Env(t, e) {
   class s {
