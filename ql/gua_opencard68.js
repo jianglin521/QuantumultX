@@ -46,8 +46,8 @@ let guaopenwait = "0"
 let guaopencard_draw = "0"
 
 const $ = new Env('11.15~11.20 联合开卡-68');
-const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const notify = $.isNode() ? require('./sendNotify') : '';
+const jdCookieNode = $.isNode() ? require('../jdCookie.js') : '';
+const notify = $.isNode() ? require('../sendNotify') : '';
 let cleanCart = ''
 if($.isNode()){
   try{
@@ -56,6 +56,7 @@ if($.isNode()){
       cleanCart = require('./cleancart_activity');
     }
   }catch(e){
+    console.log(e)
   }
 }
 //IOS等用户直接用NobyDa的jd cookie
