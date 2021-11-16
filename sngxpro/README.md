@@ -199,20 +199,10 @@ HelpType="1"
 
 ```shell
 #smiek2121
-ql repo https://github.com/smiek2121/scripts.git "gua_opencard" "" "jdCookie.js|sendNotify.js"
+ql repo https://github.com/smiek2121/scripts.git "gua_opencard"
 
 ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 ```
-
-财富大陆互助 -> 添加成功1
-清空购物车 -> 添加成功1
-11.15~11.20 联合开卡-68 -> 添加成功
-东东世界 -> 添加成功
-11.09~11.17 大牌联合 11.11狂欢购 -> 添加成功
-MM领京豆 -> 添加成功
-财富大陆 -> 添加成功1
-寻找内容鉴赏官 -> 添加成功
-钉钉发送通知消息成功🎉
 
 # 依赖安装
 则说明ql面板缺少依赖'form-data'
