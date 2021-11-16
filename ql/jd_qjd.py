@@ -16,7 +16,7 @@ update: 2021.7.6 00:34
 
 #ck 优先读取【JDCookies.txt】 文件内的ck  再到 ENV的 变量 JD_COOKIE='ck1&ck2' 最后才到脚本内 cookies=ck
 cookies = ''
-qjd_zlzh = ['账号1', '账号2']
+qjd_zlzh = ['Your JD_User', '买买买']
 
 # Env环境设置 通知服务
 # export BARK=''                   # bark服务,苹果商店自行搜索;
@@ -58,8 +58,6 @@ t = time.time()
 aNum = 0
 beanCount = 0
 userCount = {}
-
-print(os.environ, '00000000')
 
 ######## 获取通知模块
 message_info = ''''''
@@ -324,11 +322,9 @@ def start():
             ckNum = userNameList.index(ckname)
         except Exception as e:
             try:
-                print(pinNameList, '11111')
                 ckNum = pinNameList.index(ckname)
             except:
-                print(pinNameList, '2222')
-                # print(f"请检查被助力账号【{ckname}】名称是否正确？提示：助力名字可填pt_pin的值、也可以填账号名。")
+                print(f"请检查被助力账号【{ckname}】名称是否正确？提示：助力名字可填pt_pin的值、也可以填账号名。")
                 continue
 
         print(f"### 开始助力账号【{userNameList[int(ckNum)]}】###")
