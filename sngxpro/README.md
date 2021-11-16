@@ -244,6 +244,16 @@ crontab -e
 0 20 * * *  cd /home/projects/QuantumultX && git pull > /home/projects/log/log3.txt 2>&1 &
 ```
 
+##sillyGirl
+```shell
+#停止
+ps -A|grep sillyGirl ## 显示进程号
+kill -9 xxxxxx ## 杀掉进程
+#运行
+nohup ./sillyGirl
+```
+
+
 
 
 
