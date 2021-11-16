@@ -7,7 +7,6 @@ api_hash = '2471695704b01a28cf32e2d8ce5555'	#输入api_hash
 path = r'./telegram.log'
 client = TelegramClient('telegram', api_id, api_hash)
 client.connect()
-
 #发送消息
 def sendMessage(message):
   try:
