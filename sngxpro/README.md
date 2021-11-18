@@ -253,6 +253,14 @@ kill -9 xxxxxx ## 杀掉进程
 nohup ./sillyGirl
 ```
 
+##shellClash
+[教程地址](https://juewuy.github.io/zai-linux-xi-tong-an-zhuang-ji-shi-yong-shellclash-de-jiao-cheng/
+)
+```shell
+export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+```
+
+
 
 
 
