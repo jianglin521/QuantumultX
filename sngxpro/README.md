@@ -260,13 +260,8 @@ nohup ./sillyGirl
 export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
 ```
 
-守护进程重启   sudo systemctl daemon-reload
-重启docker服务  systemctl restart  docker
-重启docker服务  sudo service docker restart
-
 sudo systemctl daemon-reload
-systemctl restart  docker
-sudo service docker restart
+sudo systemctl restart docker
 
 docker stop qinglong && docker rm qinglong
 
