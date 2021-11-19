@@ -260,7 +260,44 @@ nohup ./sillyGirl
 export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
 ```
 
+守护进程重启   sudo systemctl daemon-reload
+重启docker服务  systemctl restart  docker
+重启docker服务  sudo service docker restart
 
+sudo systemctl daemon-reload
+systemctl restart  docker
+sudo service docker restart
+
+docker stop qinglong && docker rm qinglong
+
+docker run -dit \
+  -v /docker/ql/config:/ql/config \
+  -v /docker/ql/log:/ql/log \
+  -v /docker/ql/db:/ql/db \
+  -v /docker/ql/scripts:/ql/scripts \
+  -p 5757:5700 \
+  --name qinglong \
+  --hostname qinglong \
+  --restart always \
+  hushunxu/qinglong_base:2.10.2
+
+curl cip.cc
+
+vim ~/.docker/config.json
+
+http://172.17.0.1:7890
+
+{
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "http://jianglin521.top:7890",
+     "httpsProxy": "http://jianglin521.top:7890",
+     "noProxy": "localhost,127.0.0.1,.daocloud.io"
+   }
+ }
+}
 
 
 
