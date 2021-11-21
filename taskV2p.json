@@ -98,10 +98,10 @@
     {
       "name": "都爱玩",
       "type": "cron",
-      "time": "10 8,13 * * *",
+      "time": "25 0,1,8,15,20",
       "job": {
         "type": "runjs",
-        "target": "https://cdn.jsdelivr.net/gh/bluesmallpig/scripts/daw.js"
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/daw.js"
       }
     },
     {
