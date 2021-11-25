@@ -251,6 +251,9 @@ ps -A|grep sillyGirl ## 显示进程号
 kill -9 xxxxxx ## 杀掉进程
 #运行
 nohup ./sillyGirl
+
+#一键安装脚本
+s=sillyGirl;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/cdle/${s}/releases/download/main/${s}_linux_$a -O $s && chmod 777 $s;pkill -9 $s;$(pwd)/$s
 ```
 
 ##shellClash
