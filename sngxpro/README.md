@@ -260,7 +260,10 @@ s=sillyGirl;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;
 [教程地址](https://juewuy.github.io/zai-linux-xi-tong-an-zhuang-ji-shi-yong-shellclash-de-jiao-cheng/
 )
 ```shell
+#By github
 export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+#By jsdelivrCDN
+export url='https://cdn.jsdelivr.net/gh/juewuy/ShellClash@master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
 ```
 
 ##重启docker服务
@@ -268,7 +271,6 @@ export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
-
 
 
 
