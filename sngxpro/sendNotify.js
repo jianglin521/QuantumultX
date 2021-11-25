@@ -10,7 +10,7 @@
 
 const querystring = require('querystring');
 const $ = new Env();
-const timeout = 15000; //超时时间(单位毫秒)
+const timeout = 30000; //超时时间(单位毫秒)
 // =======================================go-cqhttp通知设置区域===========================================
 //gobot_url 填写请求地址http://127.0.0.1/send_private_msg
 //gobot_token 填写在go-cqhttp文件设置的访问密钥
@@ -180,8 +180,8 @@ async function sendNotify(text, desp, params = {TG交流群:'https://t.me/jd_zer
   text = text.match(/.*?(?=\s?-)/g) ? text.match(/.*?(?=\s?-)/g)[0] : text;
   await Promise.all([
     // BarkNotify(text, desp, params), //iOS Bark APP
-    // tgBotNotify(text, desp), //telegram 机器人
-    ddBotNotify(text, desp), //钉钉机器人
+    tgBotNotify(text, desp), //telegram 机器人
+    // ddBotNotify(text, desp), //钉钉机器人
     // qywxBotNotify(text, desp), //企业微信机器人
     // qywxamNotify(text, desp), //企业微信应用消息推送
     // iGotNotify(text, desp, params), //iGot
