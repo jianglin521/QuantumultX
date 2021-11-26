@@ -132,12 +132,21 @@
       }
     },
     {
-      "name": "电视直播",
+      "name": "成语大学士",
       "type": "cron",
-      "time": "*/30 8-23 * * *",
+      "time": "*/20 8-23 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/bluesmallpig/scripts/main/dszb.js"
+        "target": "https://raw.githubusercontent.com/bluesmallpig/scripts/main/cydxsgame.js"
+      }
+    },
+    {
+      "name": "答题王者",
+      "type": "cron",
+      "time": "*/20 8-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/bluesmallpig/scripts/main/dtwzgame.js"
       }
     }
   ]
