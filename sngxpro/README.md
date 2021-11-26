@@ -1,96 +1,3 @@
-## 少年歌行
-~~https://raw.githubusercontent.com/sngxpro/QuanX/master/task/AllinOne.json~~
-https://raw.githubusercontent.com/Youthsongs/QuanX/master/task/AllinOne.json
-
-https://raw.githubusercontent.com/Youthsongs/QuanX/master/sngx2021.conf
-
-## faker
-https://ghproxy.com/https://raw.githubusercontent.com/shufflewzc/faker/main/qx.json
-
-## v2p-ios
-https://raw.githubusercontent.com/Youthsongs/QuanX/master/V2pTaskSub/sngxprov2p.json
-
-https://raw.githubusercontent.com/ziye888/JavaScript/main/elev2p.json
-
-## v2p-安卓
-https://ghproxy.com/https://raw.githubusercontent.com/Youthsongs/QuanX/master/V2pTaskSub/v2pAndroid.json
-
-https://ghproxy.com/https://raw.githubusercontent.com/Youthsongs/QuanX/master/Android/rewrite/getcookie.conf
-
-## 全网各大佬boxjs地址查询对照 2021.3.22
-https://raw.githubusercontent.com/baibaikk/lxk0301/main/lxk0301.boxjs.json
-
-https://raw.githubusercontent.com/toulanboy/scripts/master/toulanboy.boxjs.json
-
-https://raw.githubusercontent.com/Sunert/Scripts/master/Task/sunert.boxjs.json
-
-https://raw.githubusercontent.com/zZPiglet/Task/master/zZPiglet.boxjs.json
-
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
-
-https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json
-
-https://raw.githubusercontent.com/NobyDa/Script/master/NobyDa_BoxJs.json
-
-https://raw.githubusercontent.com/whyour/hundun/master/quanx/whyour.boxjs.json
-
-https://raw.githubusercontent.com/photonmang/quantumultX/master/photonmang.boxjs.json
-
-https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
-
-https://raw.githubusercontent.com/CenBoMin/GithubSync/main/cenbomin.box.json
-
-https://raw.githubusercontent.com/DD-D1/2020scripts/master/box/dd.signboxjs.js
-
-https://raw.githubusercontent.com/age174/-/main/feizao.box.json
-
-https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/ziye.boxjs.json
-
-https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/evilbutcher.boxjs.json
-
-https://raw.githubusercontent.com/ztxtop/x/main/ztxtop.boxjs.json
-
-#京东会员卡
-https://raw.githubusercontent.com/anker1209/Scriptable/main/Jd_unbindCard.conf
-
-## 臻浓星球
->>点击  https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/znxq.png  扫码进入    谢谢支持
-
-建议每天运行1次即可  建议 运行2次  时间随意
-
-⚠️一共  1个ck  👉 1条 Secrets
-
-⚠️关于助力，一天只能助力3次，每个人一天助力得分最多160分，脚本默认助力作者，后面看情况内置随机助力
-
-手机端默认使用boxjs👉 node请复制boxjs会话粘贴至znxqCOOKIE.js中 或者 填写环境变量(多账号请换行)
-
-第一步⚠️添加 hostname =znapi.yili.com,
-
-👉进入小程序点击 我的 获取ck
-znxqheaderVal👉ZNXQ_znxqHEADER👉header
- 
-hostname =znapi.yili.com,
-//////////////////////////// 圈x
-//臻浓星球获取ck
-https://znapi.yili.com/api/user/getUser url script-request-header https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/znxq.js
-
-## 安装hello-world
-```sh
-# 安装
-docker pull hello-world
-# 查看版本、大小
-docker image ls
-# 运行
-docker run hello-world
-# 查看运行服务
-docker container ls
-# 删除镜像
-docker image rm hello-world
-```
-
-## 青龙常用环境变量备份表，方便随时查询
-https://mp.weixin.qq.com/s/rti_XyXzwaxrm0uqed68Jg
-
 ### 环境变量
 #自定义
 #ql repo命令拉取脚本时需要拉取的文件后缀，直接写文件后缀名即可
@@ -271,6 +178,8 @@ export url='https://cdn.jsdelivr.net/gh/juewuy/ShellClash@master' && sh -c "$(cu
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+
+
 
 
 

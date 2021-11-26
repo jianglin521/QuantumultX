@@ -1267,14 +1267,14 @@
       "script": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js"
     },
     {
-      "id": "dszbapp",
-      "name": "电视直播",
+      "id": "cydxsgame",
+      "name": "成语大学士",
       "keys": [
-        "dszbapp"
+        "cydxsgame"
       ],
       "settings": [
         {
-          "id": "dszbuserck",
+          "id": "cydxsuserck",
           "name": "当前账号",
           "val": "1",
           "type": "number",
@@ -1284,8 +1284,31 @@
       "author": "@David",
       "repo": "https://github.com/bluesmallpig/scripts",
       "icons": [
-        "https://github.com/bluesmallpig/scripts/blob/main/img/dszb-mini.png?raw=true",
-        "https://github.com/bluesmallpig/scripts/blob/main/img/dszb.png?raw=true"
+        "https://github.com/bluesmallpig/scripts/blob/main/img/cydxs-mini.png?raw=true",
+        "https://github.com/bluesmallpig/scripts/blob/main/img/cydxs.png?raw=true"
+      ],
+      "script": "https://github.com/"
+    },
+    {
+      "id": "dtwzgame",
+      "name": "答题王者",
+      "keys": [
+        "dtwzgame"
+      ],
+      "settings": [
+        {
+          "id": "dtwzuserck",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        }
+      ],
+      "author": "@David",
+      "repo": "https://github.com/bluesmallpig/scripts",
+      "icons": [
+        "https://github.com/bluesmallpig/scripts/blob/main/img/wzdt-mini.png?raw=true",
+        "https://github.com/bluesmallpig/scripts/blob/main/img/wzdt.png?raw=true"
       ],
       "script": "https://github.com/"
     },
