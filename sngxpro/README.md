@@ -128,6 +128,9 @@ AppStore++ 和 AppAdmin 是 2 款应用降级插件，可以在 App Store 中把
 ## 中青阅读
 https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth
 
+## 青龙自动化
+https://github.com/spiritLHL/qinglong_auto_tools.git
+
 ## find查找文件
 > 将当前目录及其子目录下所有文件后缀为 `test.md` 的文件列出来:
 ```shell
@@ -178,8 +181,6 @@ export url='https://cdn.jsdelivr.net/gh/juewuy/ShellClash@master' && sh -c "$(cu
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
-
-https://github.com/spiritLHL/qinglong_auto_tools.git
 
 
 
