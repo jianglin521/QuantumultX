@@ -179,6 +179,8 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+https://github.com/spiritLHL/qinglong_auto_tools.git
+
 
 
 

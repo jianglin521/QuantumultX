@@ -8,6 +8,7 @@ yarn-error.log*
 *.local
 *.session
 *.log
+ck.txt
 
 # Editor directories and files
 .idea
