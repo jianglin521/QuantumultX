@@ -4,15 +4,19 @@ import time
 import random
 import re
 import sys
+import os
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from dotenv import load_dotenv
 
+# 加载环境变量
+load_dotenv(dotenv_path='.env.local', verbose=True)
 # 加启动配置
 chrome_options = webdriver.ChromeOptions()
 # 打开chrome浏览器
 # 此步骤很重要，设置为开发者模式，防止被各大网站识别出来使用了Selenium
-#chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])#禁止打印日志
+# chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])#禁止打印日志
 chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])#跟上面只能选一个
 # chrome_options.add_argument('--start-maximized')#最大化
 chrome_options.add_argument('--incognito')#无痕隐身模式
@@ -30,13 +34,13 @@ try:
 except:
     print('报错了!请检查你的环境是否安装谷歌Chrome浏览器！或者驱动【chromedriver.exe】版本是否和Chrome浏览器版本一致！\n驱动更新链接：http://npm.taobao.org/mirrors/chromedriver/')
 
-username = '' #用户名
-password = '' #密码
-address = '' #青龙2.8登陆地址：https：//xxxx：xxxx/
+username = os.environ['ql_username'] #用户名
+password = os.environ['ql_password'] #密码
+address = os.environ['ql_address'] #登陆地址：https：//xxxx：xxxx/
 #ck形式，默认是形式一，有需要的自己注释掉形式一使用形式二
 
 ##形式一：ck.txt文件中一行一个ck
-with open('ck.txt','rb') as fp:
+with open('./rewrite/ck.txt','rb') as fp:
     temp = fp.read().splitlines()
 ck = []
 for i in temp:
@@ -49,13 +53,13 @@ ck = data.split('&')
 '''
 
 driver.get(address)
-time.sleep(3)
+time.sleep(1)
 driver.find_element_by_xpath('//*[@id="username"]').send_keys(f'{username}\n')
 time.sleep(0.3)
 driver.find_element_by_xpath('//*[@id="password"]').send_keys(f'{password}')
 time.sleep(0.3)
 driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/form/div[3]/button').click()
-time.sleep(1)
+time.sleep(0.3)
 driver.get(f'{address}env')
 time.sleep(1)
 
