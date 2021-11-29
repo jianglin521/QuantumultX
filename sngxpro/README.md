@@ -182,6 +182,12 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+##clash自定义规则
+- DOMAIN-SUFFIX,google.com.hk,🚀 节点选择
+- DOMAIN-SUFFIX,google.com,🚀 节点选择
+- DOMAIN-SUFFIX,youtube.com,🚀 节点选择
+- DOMAIN-SUFFIX,paoluz.link,🚀 节点选择
+
 
 
 
