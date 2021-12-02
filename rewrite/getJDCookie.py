@@ -86,13 +86,13 @@ def get_cookie():
             try:
                 pt_key
                 pt_pin
-                result = pt_key + pt_pin
+                result = pt_key + pt_pin + '\n'
             except:
                 pass
         print(result)
-        with open('JDCookies.txt','w+') as fp:
+        with open('./rewrite/ck.txt','a+') as fp:
             fp.write(result)
-            print('获取到cookie,已保存在文件[JDCookies.txt]')
+            print('获取到cookie,已保存在文件[ck.txt]')
             os.remove('cookies_tmp.txt')
     except:
        print('读取cookie失败！')
@@ -105,5 +105,5 @@ if __name__ == '__main__':
         get_cookie()
     except:
         pass
-    finally:
-        exitWait()
+    # finally:
+    #     exitWait()
