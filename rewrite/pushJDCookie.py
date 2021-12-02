@@ -40,7 +40,7 @@ address = os.environ['ql_address'] #登陆地址：https：//xxxx：xxxx/
 #ck形式，默认是形式一，有需要的自己注释掉形式一使用形式二
 
 ##形式一：ck.txt文件中一行一个ck
-with open('./rewrite/JDCookies.txt','rb') as fp:
+with open('./rewrite/ck.txt', encoding='utf-8', mode = 'r') as fp:
     temp = fp.read().splitlines()
 ck = []
 for i in temp:
