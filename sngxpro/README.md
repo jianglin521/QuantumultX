@@ -151,7 +151,7 @@ require('dotenv').config()
 crontab -e
 10 18 * * 1-5 bash /home/projects/JD-Script/run.sh OpenCard > /home/projects/log/log1.txt 2>&1 &
 0 20 * * *  cd /home/projects/QuantumultX && git pull > /home/projects/log/log2.txt 2>&1 &
-0 16 * * *  bash /docker/backup/backup.sh > /home/projects/log/log3.txt 2>&1 &
+30 0 * * *  bash /docker/backup/backup.sh > /home/projects/log/log3.txt 2>&1 &
 ```
 
 ##sillyGirl
