@@ -1,48 +1,38 @@
 /*
-微信公众号 柠檬玩机交流
+微信公众号：柠檬玩机交流
 柠檬富豪小镇
 下载地址：https://hyskgame.com/apps/fuhaoxiaozhen/wxshare/index.html?createAt=1619750062&senderUserId=152420&senderInviteCode=HG7X&entryPointData=eyJzZW5kZXJVc2VySWQiOiIxNTI0MjAifQ
 
+TG电报群: https://t.me/ningmeng666
+微信公众号：柠檬玩机交流
+圈X
 使用说明
 去除生产 只保留每天签到和抽奖
 如果遇到提现出错正常
 等跑完广告任务可以提现了
 脚本自动提现 此时可以关了定时
-天天稳定3毛钱
--------------圈X运行-------------
+
 [rewrite_local]
 #柠檬富豪小镇
-https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions url script-request-body http://nm66.top/qlfhxz.js
+https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions url script-request-body https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/fhxz.js
 [MITM]
 hostname = sunnytown.hyskgame.com
 #loon
-https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions url script-request-body http://nm66.top/qlfhxz.js, requires-body=true, timeout=10, tag=柠檬富豪小镇
+https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions url script-request-body https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/fhxz.js, requires-body=true, timeout=10, tag=柠檬富豪小镇
 #surge
-柠檬富豪小镇 = type=https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions,requires-body=1,max-size=0,script-path=http://nm66.top/qlfhxz.js,script-update-interval=0
-
--------------青龙或者其他容器运行-------------
--------------青龙拉取-------------
-ql raw http://nm66.top/qlfhxz.js
-放配置里 定时如下面
-export fhxzurl='https://sunnytown.hyskgame.com/api/messages?accessToken=你抓包的TOKEN&msgtype=system_getGpvGameOptions'
-手动抓包替换上面2个 放在配置里面 多账号用@隔开
--------------V2P运行-------------
-直接订阅BOXJX 
-http://nm66.top/nm.boxjs.json
-下载脚本 设置变量fhxzurl多账号@隔开或者fhxzurl2...
-定时如下面
+柠檬富豪小镇 = type=https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getGpvGameOptions,requires-body=1,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/fhxz.js,script-update-interval=0
 */
 
 // [task_local]
 //#柠檬富豪小镇
-// */10 8-23 * * * http://nm66.top/qlfhxz.js, tag=柠檬富豪小镇, enabled=true
-const $ = new Env('柠檬富豪小镇');
-let status;
-status = (status = ($.getval("tfbstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-let fhxzurlArr = [],tfbcount = ''
-let fhxzurl= $.isNode() ? (process.env.fhxzurl ? process.env.fhxzurl : "") : ($.getdata('fhxzurl') ? $.getdata('fhxzurl') : "")
-let fhxzurls = ""
-const logs =0;
+// */10 * * * * https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/fhxz.js, tag=柠檬富豪小镇, enabled=true
+const $ = new Env('富豪小镇'); 
+ let status; 
+ status = (status = ($.getval("fhxzstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符 
+ const fhxzurlArr = [], fhxzhdArr = [],fhxzcount = '' 
+ let times = Math.round(Date.now() / 1000) 
+ let fhxzurl = $.getdata('fhxzurl') 
+ let fhxzhd = $.getdata('fhxzhd') 
  let sjs = 1 
 let cj = '[{"type":"lottery_draw","data":{"priceType":3001}}]'
 let gj = '[{"type":"pet_buyPet","data":{}}]'
@@ -91,91 +81,176 @@ let ptjs7 = '[{"type":"farmland_speedUp","data":{"farmlandDefId":7,"priceType":2
 let ptjs8 = '[{"type":"farmland_speedUp","data":{"farmlandDefId":8,"priceType":2002}}]'
 let ptjs9 = '[{"type":"farmland_speedUp","data":{"farmlandDefId":9,"priceType":2002}}]'
 let rw1 = '[{"type":"dailyQuest_receiveReward","data":{"questDefId":2001,"questType":2}}]'
-var timestamp = Math.round(new Date().getTime()/1000).toString();
-!(async () => {
-  if (typeof $request !== "undefined") {
-        await tfbck()
-  } else {
-      if(!$.isNode()){
-          fhxzurlArr.push($.getdata('fhxzurl'))
-          let tfbcount = ($.getval('tfbcount') || '1');
-          for (let i = 2; i <= tfbcount; i++) {
-            fhxzurlArr.push($.getdata(`fhxzurl${i}`))
-            }
-    console.log(`------------- 共${fhxzurlArr.length}个账号-------------\n`)
-      for (let i = 0; i < fhxzurlArr.length; i++) {
-        if (fhxzurlArr[i]) {
-          fhxzurl = fhxzurlArr[i];
-          $.index = i + 1;
-        
-          console.log(`\n开始【富豪小镇阅读${$.index}】`)
-  await  quantijs(); //全体加速
- await $.wait(1000);
-  
-  await jqgj(); //机器管家
-    await $.wait(15000);
-await gjcd();//管家充电
-    await $.wait(7000);
-await zdcj();//自动抽奖
-    await $.wait(7000);
-await krqq();//热气球/汽车
-  await $.wait(1000);
-     await txlb();//提现列表
-  
-
-  }
-}
-      }else  {
-          if (process.env.fhxzurl && process.env.fhxzurl.indexOf('@') > -1) {
-            fhxzurlArr = process.env.fhxzurl.split('@');
-            console.log(`您选择的是用"@"隔开\n`)
-        } else {
-            fhxzurls = [process.env.fhxzurl]
-        };
-        Object.keys(fhxzurls).forEach((item) => {
-        if (fhxzurls[item]) {
-            fhxzurlArr.push(fhxzurls[item])
-        }
-    })
-          console.log(`共${fhxzurlArr.length}个cookie`)
-	        for (let k = 0; k < fhxzurlArr.length; k++) {
-                $.message = ""
-                fhxzurl = fhxzurlArr[k]
-                $.index = k + 1;
-          console.log(`\n开始【富豪小镇${$.index}】`)
-  await  quantijs(); //全体加速
- await $.wait(1000);
-  
-  await jqgj(); //机器管家
-    await $.wait(15000);
-await gjcd();//管家充电
-    await $.wait(7000);
-await zdcj();//自动抽奖
-    await $.wait(7000);
-await krqq();//热气球/汽车
-  await $.wait(1000);
-     await txlb();//提现列表
-  
-	        }
-      }
-  }
-})()
-  .catch((e) => $.logErr(e))
-  .finally(() => $.done())
-
-
-     function fhxzck() { 
- if ($request.url.indexOf("system_getGpvGameOptions") > -1) { 
- const fhxzurl = $request.url 
-id = fhxzurl.match(/token=(\S+)/)
-$.log(id)
- if(fhxzurl) $.setdata(fhxzurl,`fhxzurl${status}`) 
- $.log(fhxzurl) 
-
- $.msg($.name,"",'富豪小镇'+`${status}` +'数据获取成功！') 
+ !(async () => { 
+ if (typeof $request !== "undefined") { 
+ await fhxzck() 
+   } else {fhxzurlArr.push($.getdata('fhxzurl')) 
+ fhxzhdArr.push($.getdata('fhxzhd')) 
+ let fhxzcount = ($.getval('fhxzcount') || '1'); 
+ for (let i = 2; i <= fhxzcount; i++) { 
+ fhxzurlArr.push($.getdata(`fhxzurl${i}`)) 
+ fhxzhdArr.push($.getdata(`fhxzhd${i}`)) 
  } 
- }
- function fhxzck() { 
+ console.log(`------------- 共${fhxzhdArr.length}个账号-------------\n`) 
+ for (let i = 0; i < fhxzhdArr.length; i++) { 
+ if (fhxzhdArr[i]) { 
+   fhxzurl = fhxzurlArr[i]; 
+ fhxzhd = fhxzhdArr[i]; 
+ $.index = i + 1; 
+ console.log(`\n开始【富豪小镇${$.index}】`) 
+  await  quantijs(); //全体加速
+ await $.wait(1000);
+  
+  await jqgj(); //机器管家
+    await $.wait(15000);
+await gjcd();//管家充电
+    await $.wait(7000);
+await zdcj();//自动抽奖
+    await $.wait(7000);
+await krqq();//热气球/汽车
+  await $.wait(1000);
+     await txlb();//提现列表
+   await $.wait(1000);
+   await tx3mao();//提现3毛
+  // await $.wait(10000);
+   // await sqd1();
+//await $.wait(10000);
+ //await scd1();
+  //await $.wait(1000);
+  
+  // await ptjsd2();
+   //await $.wait(10000);
+  // await xld2();
+  // await $.wait(10000);
+  //  await sqd2();
+//await $.wait(10000);
+// await scd2();
+ // await $.wait(1000);
+  
+ //  await ptjsd3();
+ //  await $.wait(10000);
+ //  await xld3();
+//   await $.wait(10000);
+//    await sqd3();
+//await $.wait(10000);
+ //await scd3();
+ // await $.wait(1000);
+  
+   //await ptjsd4();
+  // await $.wait(10000);
+   //await xld4();
+  // await $.wait(10000);
+    //await sqd4();
+//await $.wait(10000);
+// await scd4();
+//  await $.wait(1000);
+  
+   //await ptjsd5();
+  // await $.wait(10000);
+  // await xld5();
+  // await $.wait(10000);
+  //  await sqd5();
+//await $.wait(10000);
+// await scd5();
+ // await $.wait(1000);
+  
+  // await ptjsd6();
+   //await $.wait(10000);
+  //// await xld6();
+  // await $.wait(10000);
+   // await sqd6();
+//await $.wait(10000);
+// await scd6();
+  //await $.wait(1000);
+  
+ //  await ptjsd7();
+ //  await $.wait(10000);
+ //  await xld7();
+ //  await $.wait(10000);
+  //  await sqd7();
+//await $.wait(10000);
+// await scd7();
+  //await $.wait(1000);
+  
+  //await ptjsd8();
+   //await $.wait(10000);
+   //await xld8();
+   //await $.wait(10000);
+   // await sqd8();
+//await $.wait(10000);
+ //await scd8();
+ // await $.wait(1000);
+ // await ptjsd9();
+  // await $.wait(10000);
+  // await xld9();
+  // await $.wait(10000);
+  //  await sqd9();
+//await $.wait(10000);
+ //await scd9();
+  //await $.wait(1000);
+  
+ // await xld1();
+ //await $.wait(10000);
+ //await sqd1();
+//await $.wait(10000);
+// await scd1();
+//await $.wait(1000);
+//  await xld2();
+ //await $.wait(10000);
+// await sqd2();
+//await $.wait(10000);
+ //await scd2();
+//await $.wait(1000);
+//  await xld3();
+// await $.wait(10000);
+ ////await sqd3();
+//await $.wait(10000);
+ //await scd3();
+//await $.wait(1000);
+//  await xld4();
+// await $.wait(10000);
+// await sqd4();
+//await $.wait(10000);
+// await scd4();
+//await $.wait(1000);
+ // await xld5();
+ //await $.wait(10000);
+ //await sqd5();
+//await $.wait(10000);
+ //await scd5();
+//await $.wait(1000);
+//  await xld6();
+// await $.wait(10000);
+// await sqd6();
+//await $.wait(10000);
+// await scd6();
+//await $.wait(1000);
+  //await xld7();
+// await $.wait(10000);
+// await sqd7();
+//await $.wait(10000);
+// await scd7();
+//await $.wait(1000);
+ //await quantijs();
+  //await xld8();
+// await $.wait(10000);
+// await sqd8();
+//await $.wait(10000);
+// await scd8();
+//await $.wait(1000);
+ // await xld9();
+// await $.wait(10000);
+ //await sqd9();
+//await $.wait(10000);
+ //await scd9();
+//await $.wait(1000);
+   } 
+ }} 
+   })() 
+ .catch((e) => $.logErr(e)) 
+ .finally(() => $.done()) 
+ //数据获取 
+     function fhxzck() { 
  if ($request.url.indexOf("system_getGpvGameOptions") > -1) { 
  const fhxzurl = $request.url 
 id = fhxzurl.match(/token=(\S+)/)
@@ -203,15 +278,12 @@ body : cj,
  $.post(url, async (err, resp, data) => { 
 
    try { 
- 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
+if(data.match(/lottery_draw/) == 'lottery_draw'){ 
+ $.log(`抽奖成功 剩余次数:`+data.match(/remainingTimes":(\d+),/)[1])
 
-$.log(`抽奖次数不足`) 
  } else { 
+ $.log(`抽奖次数不足`) 
  
-  $.log(`抽奖成功 `)
 
  } 
    } catch (e) { 
@@ -235,16 +307,16 @@ id = fhxzurl.match(/Token=\S+&/)
 body : gj,
    } 
  $.post(url, async (err, resp, data) => { 
- 
-   try { 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
 
-  $.log("机器管家开启今日任务已完成")    
- } else { 
+   try { 
+
+if(data.match(/pet_buyPet/) == 'pet_buyPet'){ 
  $.log(`机器管家开启成功:`)
 await gjcd();
+    
+ } else { 
+ $.log("机器管家开启失败或已经开启") 
+//await gjcd();
  } 
    } catch (e) { 
  $.logErr(e, resp); 
@@ -267,17 +339,16 @@ id = fhxzurl.match(/Token=\S+&/)
 body : cd,
    } 
  $.post(url, async (err, resp, data) => { 
-//$.log('充电'+data) 
+
    try { 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
+
+if(data.match(/pet_feedPetFood/) == 'pet_feedPetFood'){ 
+ $.log(`充电成功 剩余次数:`+data.match(/remainingFeedTimes":(\d+),/)[1])
 
 
-$.log(`机器管家充电今日任务已完成`) 
  } else { 
- 
- $.log(`充电成功 剩余次数:`+lb[0].data.petHouse.remainingFeedTimes)
+ $.log(`机器管家充电失败次数不足`) 
+
  } 
    } catch (e) { 
  $.logErr(e, resp); 
@@ -302,14 +373,13 @@ body : rqq,
  $.post(url, async (err, resp, data) => { 
 
    try { 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
 
- $.log(`热气球/小车今日任务已完成`) 
+if(data.match(/carBox_receiveBoxReward/) == 'carBox_receiveBoxReward'){ 
+ $.log(`热气球/小车开启成功 剩余次数:`+data.match(/boxRemainingTimes":(\d+),/)[1])
+
 
  } else { 
- $.log(`热气球/小车开启成功 剩余次数:`+lb[1].data.carBoxInfo.boxRemainingTimes)
+ $.log(`热气球/小车开启失败次数不足或速度太快`) 
  
  } 
    } catch (e) { 
@@ -335,21 +405,14 @@ body : tx1,
  $.post(url, async (err, resp, data) => { 
 
    try { 
-       //$.log(data) 
-        data = JSON.parse(data);
-var lb = data 
 
-if(lb[0].data.marketItemList[0].funcParam == 3001){ 
+if(data.match(/market_getItemList/) == 'market_getItemList'){ 
+ $.log(`提现列表获取成功 提现id:`+data.match(/"itemDefId":(\d{5}),/)[1]) 
+txid1 = data.match(/"itemDefId":(\d{5}),/)[1]
 
-  $.log(`提现列表获取成功 \n提现id:`+lb[0].data.marketItemList[0].itemDefId+"\n满足将会自动提现") 
-txid1 = lb[0].data.marketItemList[0].itemDefId
- await $.wait(1000);
-   await tx3mao();//提现3毛
  } else { 
+ $.log(`提现列表获取失败或广告任务未刷完请骚等\n或今日已经提现`) 
  
- 
-$.log(`3毛今日已提现或广告不足`) 
-
  } 
    } catch (e) { 
  $.logErr(e, resp); 
@@ -372,14 +435,349 @@ body : '[{"type":"market_exchange","data":{"itemDefId":'+txid1+'}}]',
  $.post(url, async (err, resp, data) => { 
 
    try { 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
+
+if(data.match(/market_exchange/) == 'market_exchange'){ 
+ $.log(`3毛提现成功`)
 
 
-$.log(`3毛今日已提现`) 
  } else { 
-  $.log(`3毛提现成功`)
+ $.log(`3毛提现失败或广告任务未刷完\n或今日已经提现了`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function xld3(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+ //$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl3,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`3号田修理成功`)
+
+
+ } else { 
+ $.log(`3号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function xld4(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl4,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`4号田修理成功`)
+
+
+ } else { 
+ $.log(`4号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function xld5(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl5,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`5号田修理成功`)
+
+
+ } else { 
+ $.log(`5号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function xld6(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl6,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`6号田修理成功`)
+
+
+ } else { 
+ $.log(`6号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function xld7(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl7,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`7号田修理成功`)
+
+
+ } else { 
+ $.log(`7号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function xld8(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl8,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`8号田修理成功`)
+
+
+ } else { 
+ $.log(`8号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function xld9(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_repair', 
+
+body : xl9,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_repair/) == 'farmland_repair'){ 
+ $.log(`9号田修理成功`)
+
+
+ } else { 
+ $.log(`9号田无需修理`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+//收取
+function sqd1(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq1,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){ 
+ $.log(`1号田收取成功`)
+
+
+ } else { 
+ $.log(`1号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function sqd2(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq2,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){ 
+ $.log(`2号田收取成功`)
+
+
+ } else { 
+ $.log(`2号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function sqd3(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq3,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){ 
+ $.log(`3号田收取成功`)
+
+
+ } else { 
+ $.log(`3号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function sqd4(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq4,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){ 
+ $.log(`4号田收取成功`)
+
+
+ } else { 
+ $.log(`4号田收取失败或还没熟`) 
  
  } 
    } catch (e) { 
@@ -392,6 +790,437 @@ $.log(`3毛今日已提现`)
  } 
 
 
+
+function sqd5(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq5,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){ 
+ $.log(`5号田收取成功`)
+
+
+ } else { 
+ $.log(`5号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function sqd6(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq6,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){  
+ $.log(`6号田收取成功`)
+
+
+ } else { 
+ $.log(`6号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function sqd7(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq7,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){  
+ $.log(`7号田收取成功`)
+
+
+ } else { 
+ $.log(`7号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function sqd8(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq8,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){  
+ $.log(`8号田收取成功`)
+
+
+ } else { 
+ $.log(`8号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function sqd9(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_harvest', 
+
+body : sq9,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_harvest/) == 'farmland_harvest'){  
+ $.log(`9号田收取成功`)
+
+
+ } else { 
+ $.log(`9号田收取失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+//生产
+function scd1(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+ //$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc1,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`1号田生产成功`)
+
+
+ } else { 
+ $.log(`1号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function scd2(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc2,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`2号田生产成功`)
+
+
+ } else { 
+ $.log(`2号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function scd3(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc3,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`3号田生产成功`)
+
+
+ } else { 
+ $.log(`3号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function scd4(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc4,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`4号田生产成功`)
+
+
+ } else { 
+ $.log(`4号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function scd5(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+ //$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc5,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+$.log(`5号田生产成功`)
+
+
+ } else { 
+ $.log(`5号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+function scd6(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id) 
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc6,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`6号田生产成功`)
+
+
+ } else { 
+ $.log(`6号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+
+
+function scd7(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc7,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`7号田生产成功`)
+
+
+ } else { 
+ $.log(`7号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function scd8(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc8,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`8号田生产成功`)
+
+
+ } else { 
+ $.log(`8号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
+function scd9(timeout = 0) { 
+ return new Promise((resolve) => { 
+   
+id = fhxzurl.match(/Token=\S+&/)
+//$.log(id)  
+   let url = { 
+ url : 'https://sunnytown.hyskgame.com/api/messages?access'+id+'msgtype=farmland_plant', 
+
+body : sc9,
+   } 
+ $.post(url, async (err, resp, data) => { 
+
+   try { 
+
+if(data.match(/farmland_plant/) == 'farmland_plant'){ 
+ $.log(`9号田生产成功`)
+
+
+ } else { 
+ $.log(`9号田生产失败或还没熟`) 
+ 
+ } 
+   } catch (e) { 
+ $.logErr(e, resp); 
+ } finally { 
+ resolve() 
+ } 
+ },timeout) 
+ }) 
+ } 
 //全体加速
 function quantijs(timeout = 0) { 
  return new Promise((resolve) => { 
@@ -404,18 +1233,69 @@ id = fhxzurl.match(/Token=\S+&/)
 body : qtjs,
    } 
  $.post(url, async (err, resp, data) => { 
-//$.log(data) 
+
    try { 
-  data = JSON.parse(data);
-var lb = data 
-if(lb[0].type == 'system_error'){ 
+
+if(data.match(/farmland_speedUpAll/) == 'farmland_speedUpAll'){ 
   
+$.log(`全体加速成功 剩余次数：`+data.match(/remainingAllTimes":(\d+),/)[1])
 
-
-$.log(`今日签到任务已完成`) 
+// await xld1();
+// await $.wait(10000);
+// await sqd1();
+//await $.wait(10000);
+// await scd1();
+//await $.wait(1000);
+ // await xld2();
+// await $.wait(10000);
+// await sqd2();
+//await $.wait(10000);
+// await scd2();
+//await $.wait(1000);
+ // await xld3();
+ //await $.wait(10000);
+// await sqd3();
+//await $.wait(10000);
+// await scd3();
+//await $.wait(1000);
+ // await xld4();
+ //await $.wait(10000);
+// await sqd4();
+//await $.wait(10000);
+ //await scd4();
+//await $.wait(1000);
+ // await xld5();
+ //await $.wait(10000);
+ //await sqd5();
+//await $.wait(10000);
+// await scd5();
+//await $.wait(1000);
+ // await xld6();
+// await $.wait(10000);
+// await sqd6();
+//await $.wait(10000);
+ //await scd6();
+//await $.wait(1000);
+ // await xld7();
+// await $.wait(10000);
+// await sqd7();
+//await $.wait(10000);
+ //await scd7();
+//await $.wait(1000);
+ //await xld8();
+// await $.wait(10000);
+// await sqd8();
+//await $.wait(10000);
+// await scd8();
+// await $.wait(1000);
+// await xld9();
+// await $.wait(10000);
+// await sqd9();
+//await $.wait(10000);
+// await scd9();
  } else { 
+ $.log(`今日签到任务已完成\n全体加速失败或次数不够`) 
  
- $.log(`全体加速成功 剩余次数：`+lb[0].data.speedUpInfo.remainingAllTimes)
  } 
    } catch (e) { 
  $.logErr(e, resp); 
