@@ -132,21 +132,12 @@
       }
     },
     {
-      "name": "成语大学士",
+      "name": "小鸡爱消除",
       "type": "cron",
-      "time": "*/15 8-23 * * *",
+      "time": "* 15-17 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/bluesmallpig/scripts/main/cydxsgame.js"
-      }
-    },
-    {
-      "name": "答题王者",
-      "type": "cron",
-      "time": "*/15 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/bluesmallpig/scripts/main/dtwzgame.js"
+        "target": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xjaxc.js"
       }
     }
   ]
