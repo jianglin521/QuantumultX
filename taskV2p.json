@@ -139,6 +139,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xjaxc.js"
       }
+    },
+    {
+      "name": "多多花园",
+      "type": "cron",
+      "time": "*/30 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/backup/ddhy.js"
+      }
     }
   ]
 }
