@@ -78,15 +78,6 @@
       }
     },
     {
-      "name": "嘉实宠粉站",
-      "type": "cron",
-      "time": "0 14 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://gitee.com/tom210120/tom/raw/master/jscfz.js"
-      }
-    },
-    {
       "name": "微证券",
       "type": "cron",
       "time": "10 13 * * *",
@@ -105,24 +96,6 @@
       }
     },
     {
-      "name": "多福盒子",
-      "type": "cron",
-      "time": "32 8-18 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/dfhz.js"
-      }
-    },
-    {
-      "name": "返利好省",
-      "type": "cron",
-      "time": "20 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js"
-      }
-    },
-    {
       "name": "电视家",
       "type": "cron",
       "time": "0 8-23 * * *",
@@ -132,21 +105,21 @@
       }
     },
     {
-      "name": "小鸡爱消除",
-      "type": "cron",
-      "time": "* 15-17 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xjaxc.js"
-      }
-    },
-    {
       "name": "多多花园",
       "type": "cron",
       "time": "*/30 * * * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/backup/ddhy.js"
+      }
+    },
+    {
+      "name": "阅多多",
+      "type": "cron",
+      "time": "*/15 8-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ydd.js"
       }
     }
   ]
