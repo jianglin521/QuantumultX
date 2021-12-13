@@ -154,7 +154,7 @@ crontab -e
 30 0 * * *  bash /docker/backup/backup.sh > /home/projects/log/log3.txt 2>&1 &
 ```
 
-##sillyGirl
+## sillyGirl
 ```shell
 #停止
 ps -A|grep sillyGirl ## 显示进程号
@@ -166,7 +166,7 @@ nohup ./sillyGirl
 s=sillyGirl;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/cdle/${s}/releases/download/main/${s}_linux_$a -O $s && chmod 777 $s;pkill -9 $s;$(pwd)/$s
 ```
 
-##shellClash
+## shellClash
 [教程地址](https://juewuy.github.io/zai-linux-xi-tong-an-zhuang-ji-shi-yong-shellclash-de-jiao-cheng/
 )
 ```shell
@@ -176,17 +176,28 @@ export url='https://raw.githubusercontent.com/juewuy/ShellClash/master' && sh -c
 export url='https://cdn.jsdelivr.net/gh/juewuy/ShellClash@master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
 ```
 
-##重启docker服务
+## 重启docker服务
 ```shell
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-##clash自定义规则
+## clash自定义规则
 - DOMAIN-SUFFIX,google.com.hk,🚀 节点选择
 - DOMAIN-SUFFIX,google.com,🚀 节点选择
 - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
 - DOMAIN-SUFFIX,paoluz.link,🚀 节点选择
+
+## linux安装node
+[教程地址](https://skyao.gitbooks.io/learning-gitbook/content/installation/nodejs.html)
+
+```shell
+tar xvf node-v16.13.1-linux-x64.tar.xz
+```
+
+
+
+
 
 
 
