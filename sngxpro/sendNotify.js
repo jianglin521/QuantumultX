@@ -169,7 +169,7 @@ if (process.env.PUSH_PLUS_USER) {
  * @param author 作者仓库等信息  例：`本脚本免费使用 By：xxxx`
  * @returns {Promise<unknown>}
  */
-async function sendNotify(text, desp, params = {TG交流群:'https://t.me/jd_zero_205'}, author = 'zero205') {
+async function sendNotify(text, desp, params = { TG交流群: 'https://t.me/jd_zero_205' }, author = 'zero205') {
   //提供6种通知
   // desp += '\n\n助力池提交方法请加入TG群组：\nhttps://t.me/jd_zero_205';//增加作者信息，防止被贩卖等
   // await Promise.all([
@@ -194,13 +194,13 @@ function gobotNotify(text, desp, time = 2100) {
     if (GOBOT_URL) {
       const options = {
         url: `${GOBOT_URL}`,
-        json: { 
-			message: `${text}\n${desp}` ,
-			user_id:`${GOBOT_QQ}`
-		},
+        json: {
+          message: `${text}\n${desp}`,
+          user_id: `${GOBOT_QQ}`
+        },
         headers: {
           'Content-Type': 'application/json',
-		  'Authorization': `Bearer ${GOBOT_TOKEN}`
+          'Authorization': `Bearer ${GOBOT_TOKEN}`
         },
         timeout,
       };
@@ -359,20 +359,20 @@ function BarkNotify(text, desp, params = {}) {
   return new Promise(resolve => {
     if (BARK_PUSH) {
       const index = BARK_PUSH.lastIndexOf('/') + 1
-      const url = BARK_PUSH.substr(0,index)+"push"
+      const url = BARK_PUSH.substr(0, index) + "push"
       const device_key = BARK_PUSH.substr(index)
       params['Group'] = `${BARK_GROUP}`;
       const options = {
         url,
-        json:{
-        device_key,
-        title: text,
-        body:desp,
-        sound:BARK_SOUND,
-        group:BARK_GROUP,
-        ext_params:params
+        json: {
+          device_key,
+          title: text,
+          body: desp,
+          sound: BARK_SOUND,
+          group: BARK_GROUP,
+          ext_params: params
         },
-         headers: {
+        headers: {
           'Content-Type': 'application/json; charset=utf-8'
         },
         timeout
