@@ -112,15 +112,6 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/backup/ddhy.js"
       }
-    },
-    {
-      "name": "阅多多",
-      "type": "cron",
-      "time": "*/15 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ydd.js"
-      }
     }
   ]
 }

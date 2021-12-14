@@ -11,6 +11,6 @@
     "10 8-23/1 * * * https://raw.githubusercontent.com/xl2101200/-/main/jztt.js, tag=九章头条, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png,enabled=true",
     "0 8-18/1 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.js, tag=电视家, enabled=true",
     "0 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js, tag=萤石云, enabled=true",
-    "* 15-17 * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xjaxc.js, tag=小鸡爱消除, enabled=true"
+    "26 6-22/2 * * * https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js, tag=快手, enabled=true"
    ] 
 }
