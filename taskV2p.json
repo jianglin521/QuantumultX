@@ -105,12 +105,12 @@
       }
     },
     {
-      "name": "多多花园",
+      "name": "快手极速版",
       "type": "cron",
-      "time": "*/30 * * * * *",
+      "time": "42 6-22/2 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/backup/ddhy.js"
+        "target": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js"
       }
     }
   ]
