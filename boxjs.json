@@ -720,7 +720,11 @@
         "ysyhd4",
         "ysybody4",
         "cookie4",
-        "txbody4"
+        "txbody4",
+        "ysyhd5",
+        "ysybody5",
+        "cookie5",
+        "txbody5"
       ],
       "author": "@YaphetS0903",
       "settings": [
@@ -1044,8 +1048,8 @@
       "repo": "https://github.com/liuqi6968/-/blob/main/ks_js.js",
       "script": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js",
       "icons": [
-        "https://github.com/liuqi6968/-/blob/main/Js.png",
-        "https://github.com/liuqi6968/-/blob/main/Js.png"
+        "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png",
+        "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png"
       ]
     },
     {
