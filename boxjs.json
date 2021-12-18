@@ -791,7 +791,7 @@
       ],
       "settings": [
         {
-          "id": "yddCookie",
+          "id": "yddCount",
           "name": "当前账号",
           "val": "1",
           "type": "number",
