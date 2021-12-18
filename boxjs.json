@@ -784,6 +784,29 @@
       "script": "https://github.com/"
     },
     {
+      "id": "ydd",
+      "name": "阅多多",
+      "keys": [
+        "yddCookie"
+      ],
+      "settings": [
+        {
+          "id": "yddCookie",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前账号对应"
+        }
+      ],
+      "author": "@David",
+      "repo": "https://github.com/bluesmallpig/scripts",
+      "icons": [
+        "https://github.com/bluesmallpig/scripts/blob/main/img/daw-mini.png?raw=true",
+        "https://github.com/bluesmallpig/scripts/blob/main/img/daw.png?raw=true"
+      ],
+      "script": "https://github.com/"
+    },
+    {
       "id": "flhs",
       "name": "返利好省",
       "keys": [
