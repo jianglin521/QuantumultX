@@ -1077,6 +1077,43 @@
       "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tcdb.js"
     },
     {
+      "id": "fqxsapp",
+      "name": "番茄小说",
+      "keys": [
+        "fqxsapp"
+      ],
+      "settings": [
+        {
+          "id": "fqxsuserck",
+          "name": "当前账号序号",
+          "val": "1",
+          "type": "number",
+          "desc": "你要抓取第几个账号，就填几。"
+        },
+        {
+          "id": "tguserid",
+          "name": "用户编号",
+          "val": "1",
+          "type": "number",
+          "desc": "从机器人获得"
+        },
+        {
+          "id": "fqxsactivecode",
+          "name": "授权码",
+          "val": "",
+          "type": "text",
+          "desc": "从机器人获得"
+        }
+      ],
+      "author": "@David",
+      "repo": "https://github.com/bluesmallpig/scripts",
+      "icons": [
+        "https://github.com/bluesmallpig/scripts/blob/main/img/fqxs-mini.png?raw=true",
+        "https://github.com/bluesmallpig/scripts/blob/main/img/fqxs.png?raw=true"
+      ],
+      "script": "https://github.com/"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
