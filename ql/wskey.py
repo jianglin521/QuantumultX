@@ -91,13 +91,12 @@ def ql_login():
 # 返回值 list[wskey]
 def get_wskey():
     if "JD_WSCK" in os.environ:
-        print(os.environ['JD_WSCK'], '1111111111111111111111')
         wskey_list = os.environ['JD_WSCK'].split('&')
-        # if len(wskey_list) > 0:
-        #     return wskey_list
-        # else:
-        #     logger.info("JD_WSCK变量未启用")
-        #     sys.exit(1)
+        if len(wskey_list) > 0:
+            return wskey_list
+        else:
+            logger.info("JD_WSCK变量未启用")
+            sys.exit(1)
     else:
         logger.info("未添加JD_WSCK变量")
         sys.exit(0)
