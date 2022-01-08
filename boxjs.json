@@ -1077,41 +1077,59 @@
       "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tcdb.js"
     },
     {
-      "id": "fqxsapp",
+      "id": "fqxs",
       "name": "番茄小说",
       "keys": [
-        "fqxsapp"
+        "fqxsurl",
+        "fqxs",
+        "fqxsurl2",
+        "fqxs2",
+        "fqxsurl3",
+        "fqxs3",
+        "fqxsurl4",
+        "fqxs4",
+        "fqxsurl5",
+        "fqxs5",
+        "fqxsurl6",
+        "fqxs6"
       ],
+      "author": "@Ariszy",
       "settings": [
         {
-          "id": "fqxsuserck",
-          "name": "当前账号序号",
+          "id": "tz",
+          "name": "静默运行",
           "val": "1",
           "type": "number",
-          "desc": "你要抓取第几个账号，就填几。"
+          "desc": "0为不通知，1为全部通知"
         },
         {
-          "id": "tguserid",
-          "name": "用户编号",
+          "id": "fqxsstatus",
+          "name": "当前账号",
           "val": "1",
           "type": "number",
-          "desc": "从机器人获得"
+          "desc": "当前账号对应"
         },
         {
-          "id": "fqxsactivecode",
-          "name": "授权码",
-          "val": "",
-          "type": "text",
-          "desc": "从机器人获得"
+          "id": "fqxscount",
+          "name": "账号个数",
+          "val": "1",
+          "type": "number",
+          "desc": "需要几个账号，数字为几"
+        },
+        {
+          "id": "host",
+          "name": "host",
+          "val": "ib.snssdk.com",
+          "type": "string",
+          "desc": "当前版本host"
         }
       ],
-      "author": "@David",
-      "repo": "https://github.com/bluesmallpig/scripts",
+      "repo": "https://github.com/Ariszy/Private-Script/blob/master/Scripts/fqxs.js",
       "icons": [
-        "https://github.com/bluesmallpig/scripts/blob/main/img/fqxs-mini.png?raw=true",
-        "https://github.com/bluesmallpig/scripts/blob/main/img/fqxs.png?raw=true"
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/fqxs-mini.png",
+        "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/fqxs.png"
       ],
-      "script": "https://github.com/"
+      "script": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/fqxs.js"
     },
     {
       "id": "PushBoxjsCookie",
