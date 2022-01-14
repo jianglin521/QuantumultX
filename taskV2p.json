@@ -60,15 +60,6 @@
       }
     },
     {
-      "name": "九章头条",
-      "type": "cron",
-      "time": "10 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/jztt.js"
-      }
-    },
-    {
       "name": "萤石云",
       "type": "cron",
       "time": "15 6-23 * * *",
