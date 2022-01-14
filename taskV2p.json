@@ -130,6 +130,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ydd.js"
       }
+    },
+    {
+      "name": "九章头条",
+      "type": "cron",
+      "time": "20 0,6-23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
+      }
     }
   ]
 }
