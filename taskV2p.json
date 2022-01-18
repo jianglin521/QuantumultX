@@ -130,6 +130,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
       }
+    },
+    {
+      "name": "走财运",
+      "type": "cron",
+      "time": "5,35 9-20 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zcy.js"
+      }
     }
   ]
 }

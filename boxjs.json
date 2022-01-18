@@ -476,6 +476,20 @@
       "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
     },
     {
+      "id": "zcy",
+      "name": "走财运",
+      "keys": [
+        "zcyCookie"
+      ],
+      "author": "@tom",
+      "repo": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zcy.js",
+      "icons": [
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
+      ],
+      "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
+    },
+    {
       "id": "dsj",
       "name": "电视家APP",
       "keys": [
