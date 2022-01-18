@@ -137,7 +137,7 @@
       "time": "5,35 9-20 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zcy.js"
+        "target": "https://raw.githubusercontent.com/jianglin521/backup/leafxcy/zcy.js"
       }
     }
   ]
