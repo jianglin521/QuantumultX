@@ -476,6 +476,28 @@
       "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
     },
     {
+      "id": "ksfcys",
+      "name": "康师傅畅饮社",
+      "keys": [
+        "ksfcysToken"
+      ],
+      "settings": [
+        {
+          "id": "ksfcysToken",
+          "name": "自动抽奖",
+          "val": "true",
+          "type": "boolean"
+        }
+      ],
+      "author": "@tom",
+      "repo": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js",
+      "icons": [
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
+      ],
+      "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
+    },
+    {
       "id": "zcy",
       "name": "走财运",
       "keys": [
