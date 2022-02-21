@@ -483,7 +483,7 @@
       ],
       "settings": [
         {
-          "id": "ksfcysToken",
+          "id": "ksfcysDraw",
           "name": "自动抽奖",
           "val": "true",
           "type": "boolean"
