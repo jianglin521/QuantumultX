@@ -139,6 +139,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/jianglin521/backup/leafxcy/zcy.js"
       }
+    },
+    {
+      "name": "康师傅畅饮社",
+      "type": "cron",
+      "time": "32 9,18 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
+      }
     }
   ]
 }
