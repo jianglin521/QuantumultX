@@ -13,6 +13,7 @@
     "0 6-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js, tag=萤石云, enabled=true",
     "26 6-22/2 * * * https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js, tag=快手, enabled=true",
     "15 0,6-23 * * * https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js, tag=九章头条, enabled=true",
-    "22 8-23 * * * https://raw.githubusercontent.com/leafxcy/JavaScript/main/58tc.js, tag=58同城, enabled=true"
+    "22 8-23 * * * https://raw.githubusercontent.com/leafxcy/JavaScript/main/58tc.js, tag=58同城, enabled=true",
+    "42 9,18 * * * https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js, tag=康师傅畅饮社, enabled=true"
    ] 
 }
