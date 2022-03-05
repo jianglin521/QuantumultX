@@ -148,6 +148,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
       }
+    },
+    {
+      "name": "快手极速版",
+      "type": "cron",
+      "time": "22 8-22 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksjsb.js"
+      }
     }
   ]
 }
