@@ -108,6 +108,9 @@ HelpType="1"
 #smiek2121
 ql repo https://github.com/smiek2121/scripts.git "gua_opencard"
 
+
+ql repo https://api.mtr.pub/smiek2121/scripts.git "jd_|gua_" "" "ZooFaker_Necklace.js|JDJRValidator_Pure.js|sign_graphics_validate.js|cleancart_activity.js|jdCookie.js|sendNotify.js"
+
 ql repo https://github.com/jianglin521/QuantumultX.git "ql"
 ```
 
@@ -121,6 +124,12 @@ ql repo https://github.com/jianglin521/QuantumultX.git "ql"
   npm install form-data
   pip3 install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+```shell
+## 一键安装依赖
+docker exec -it qinglong2 bash
+
+curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shufflewzc/QLDependency/main/Shell/QLOneKeyDependency.sh | sh
+```
 
 ## 苹果降级插件
 AppStore++ 和 AppAdmin 是 2 款应用降级插件，可以在 App Store 中把应用降级到自己想要的版本。在 iOS 11 或者更早的系统上，我们使用 AppAdmin，在 iOS 12 上使用 AppStore++，该插件支持 A12 设备。
@@ -130,6 +139,9 @@ https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth
 
 ## 青龙自动化
 https://github.com/spiritLHL/qinglong_auto_tools.git
+
+## 修改容器启动方式
+docker container update --restart=no qinglong
 
 ## find查找文件
 > 将当前目录及其子目录下所有文件后缀为 `test.md` 的文件列出来:
