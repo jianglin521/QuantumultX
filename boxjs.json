@@ -285,7 +285,9 @@
         "cashurl_zq",
         "cashbody_zq",
         "zqcash",
-        "zqcard"
+        "zqcard",
+        "youth_autoread",
+        "autotime_zq"
       ],
       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youth.js",
       "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js",
@@ -340,30 +342,6 @@
           ]
         }
       ],
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-      ]
-    },
-    {
-      "id": "youthRead",
-      "name": "中青自动阅读",
-      "author": "@sunert",
-      "keys": [
-        "youth_autoread",
-        "autotime_zq"
-      ],
-      "settings": [
-        {
-          "id": "youth_cut",
-          "val": false,
-          "name": "缩减请求",
-          "type": "boolean",
-          "desc": "自动删除收益为0或者错误的阅读请求，使用完后请立即关闭，避免清空阅读请求"
-        }
-      ],
-      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/Youth_Read.js",
-      "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/Youth_Read.js",
       "icons": [
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
