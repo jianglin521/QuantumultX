@@ -558,18 +558,6 @@
       ]
     },
     {
-      "id": "jrtt",
-      "name": "今日头条",
-      "keys": [
-        "jrttjsbHeader"
-      ],
-      "icons": [
-        "https://gitee.com/the-eldest-is-xu/color/raw/master/jrtt.png",
-        "https://gitee.com/the-eldest-is-xu/color/raw/master/jrtt.png"
-      ],
-      "script": "https://gitee.com"
-    },
-    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
