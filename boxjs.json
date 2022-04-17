@@ -251,42 +251,6 @@
       "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
     },
     {
-      "id": "ksfcys",
-      "name": "康师傅畅饮社",
-      "keys": [
-        "ksfcysToken"
-      ],
-      "settings": [
-        {
-          "id": "ksfcysDraw",
-          "name": "自动抽奖",
-          "val": "true",
-          "type": "boolean"
-        }
-      ],
-      "author": "@tom",
-      "repo": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js",
-      "icons": [
-        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
-        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
-      ],
-      "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
-    },
-    {
-      "id": "zcy",
-      "name": "走财运",
-      "keys": [
-        "zcyCookie"
-      ],
-      "author": "@tom",
-      "repo": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zcy.js",
-      "icons": [
-        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
-        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
-      ],
-      "script": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
-    },
-    {
       "id": "dsj",
       "name": "电视家APP",
       "keys": [
@@ -592,6 +556,18 @@
         "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png",
         "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png"
       ]
+    },
+    {
+      "id": "jrtt",
+      "name": "今日头条",
+      "keys": [
+        "jrttjsbHeader"
+      ],
+      "icons": [
+        "https://gitee.com/the-eldest-is-xu/color/raw/master/jrtt.png",
+        "https://gitee.com/the-eldest-is-xu/color/raw/master/jrtt.png"
+      ],
+      "script": "https://gitee.com"
     },
     {
       "id": "PushBoxjsCookie",
