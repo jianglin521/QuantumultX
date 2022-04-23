@@ -1,11 +1,15 @@
 /*
 IOS/安卓: 今日头条极速版
-邀请码： 1173836876
+邀请码： 1652953376
 
 老用户每天几毛，新用户可能收益高点
 普通版定时： 1-59/15 6-23 * * *
 激进版定时： 1-59/5 * * * *
 多用户跑的时间会久一点，自己看着改定时吧
+
+自定义UA：捉包拿到自己的UA，填到变量jrttjsbUA里，不填默认用安卓UA
+自定义每次运行阅读文章的数量：填到变量jrttjsbReadNum，不填默认10篇
+农场和种树任务：默认不做，需要做的，把变量jrttjsbFarm填为1
 
 V2P重写：
 [task_local]
@@ -32,21 +36,19 @@ let notifyStr = ''
 let rndtime = "" //毫秒
 let httpResult //global buffer
 
-let curTime = new Date()
-let curHour = curTime.getHours()
-
-let host = 'api3-normal-lq.toutiaoapi.com'
+let host = 'i.snssdk.com'
 let hostname = 'https://' + host
 
-let userAgent = ($.isNode() ? process.env.jrttjsbUA : $.getdata('jrttjsbUA')) || 'NewsLite 8.5.2 rv:8.5.2.21 (iPhone; iOS 15.0; zh_CN) Cronet';
+let userAgent = ($.isNode() ? process.env.jrttjsbUA : $.getdata('jrttjsbUA')) || 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; VOG-AL10 Build/HUAWEIVOG-AL10) NewsArticle/8.2.8 tt-ok/3.10.0.2';
 let userAgentArr = []
 let userHeader = ($.isNode() ? process.env.jrttjsbHeader : $.getdata('jrttjsbHeader')) || '';
 let userHeaderArr = []
+let jrttjsbFarm = ($.isNode() ? process.env.jrttjsbFarm : $.getdata('jrttjsbFarm')) || 0;
 
 let userIdx = 0
 let UAcount = 0
 let userStatus = []
-let maxReadPerRun = 10
+let maxReadPerRun = ($.isNode() ? process.env.jrttjsbReadNum : $.getdata('jrttjsbReadNum')) || 10;
 let readList = []
 
 let validList = []
@@ -62,6 +64,8 @@ let adIdList = [26, 181, 186, 187, 188, 189, 190, 195, 210, 214, 216, 225, 308, 
     }
     else
     {
+        await showUpdateMsg()
+        
         if(!(await checkEnv())) {
             return
         }
@@ -74,6 +78,10 @@ let adIdList = [26, 181, 186, 187, 188, 189, 190, 195, 210, 214, 216, 225, 308, 
 })()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())
+
+function showUpdateMsg() {
+    console.log('\n2021.12.15 9:30 更新：增加推送奖励，修复一个UA的bug，更改默认UA为安卓\n')
+}
 
 //通知
 async function showmsg() {
@@ -148,31 +156,38 @@ async function RunMultiUser() {
             await QueryWalkInfo()
             await DoneEat()
             
-            //农场
-            //await EnterFarm()
-            //await $.wait(1500)
-            await QueryFarmInfo()
-            await QueryFarmLandStatus()
-            await QueryFarmSignStatus()
-            await QueryFarmTask()
-            
-            //种树
-            await QueryTreeChallenge()
-            await QueryTreeSignStatus()
-            await QueryTreeStatus()
-            
-            for(let adId of adIdList) await ExcitationAd(adId)
+            //for(let adId of adIdList) await ExcitationAd(adId)
             //console.log(validList)
             
         }
     }
     
-    userIdx = 0
-    await ListArts()
     await ReadArticles()
     
     for(userIdx=0; userIdx<userHeaderArr.length; userIdx++) {
         if(userStatus[userIdx]==true) await QueryUserInfo(0)
+    }
+    
+    if(jrttjsbFarm) {
+        for(userIdx=0; userIdx<userHeaderArr.length; userIdx++) {
+            if(userStatus[userIdx]==true) {
+                //农场
+                //await EnterFarm()
+                //await $.wait(1500)
+                await QueryFarmThreeGift()
+                await QueryFarmInfo()
+                await QueryFarmLandStatus()
+                await QueryFarmSignStatus()
+                await QueryFarmTask()
+                
+                //种树
+                await QueryTreeChallenge()
+                await QueryTreeSignStatus()
+                await QueryTreeThreeGift()
+                await QueryTreeWaterTask()
+                await QueryTreeStatus()
+            }
+        }
     }
     
 }
@@ -200,31 +215,35 @@ async function ListArts() {
 
 //阅读文章
 async function ReadArticles() {
+    console.log(`\n开始阅读，将会阅读${maxReadPerRun}篇文章`)
     for(userIdx=0; userIdx<userHeaderArr.length; userIdx++) {
-        if(userStatus[userIdx]==true) await ReadDouble()
+        if(userStatus[userIdx]==true) {
+            await ReadDouble()
+            await DailyArtsReward()
+            await DailyPushReward()
+        }
     }
-    let maxRead = getMin(maxReadPerRun,readList.length)
-    console.log(`\n开始阅读，将会阅读${maxRead}篇文章`)
-    for(let i=0; i<maxRead; i++) {
+    for(let i=0; i<maxReadPerRun; i++) {
         let readFlag = 0
         for(userIdx=0; userIdx<userHeaderArr.length; userIdx++) {
             if(userStatus[userIdx]==true) {
-                await ReadArtsReward(readList[i])
+                await ReadArtsReward()
                 readFlag = 1
             }
         }
-        if(readFlag ==1 && i<maxRead-1) {
+        if(readFlag ==1 && i<maxReadPerRun-1) {
             console.log('等待15秒阅读下一篇...')
             await $.wait(15100)
         }
     }
 }
 
-//阅读奖励
-async function ReadArtsReward(group_id) {
+//阅读文章奖励
+async function ReadArtsReward() {
     let caller = printCaller()
+    let rndGroupId = Math.floor(Math.random()*7000000000000000000)
     let url = `${hostname}/luckycat/lite/v1/activity/done_whole_scene_task/?aid=35&update_version_code=85221&os_version=15.0&device_platform=iphone`
-    let body = `{"is_golden_egg":false,"scene_key":"article_detail","group_id":"${group_id}"}`
+    let body = `{"is_golden_egg":false,"scene_key":"article_detail","group_id":"${rndGroupId}"}`
     let urlObject = populatePostUrl(url,body)
     await httpPost(urlObject,caller)
     let result = httpResult;
@@ -234,6 +253,41 @@ async function ReadArtsReward(group_id) {
         console.log(`用户${userIdx+1}阅读文章获得${result.data.score_amount}金币，今日阅读总收入：${result.data.total_score_amount}金币`)
     } else {
         console.log(`用户${userIdx+1}阅读文章失败：${result.err_tips}`)
+    }
+}
+
+//每日阅读奖励
+async function DailyArtsReward() {
+    let caller = printCaller()
+    let rndGroupId = Math.floor(Math.random()*7000000000000000000)
+    let url = `${hostname}/score_task/v1/task/get_read_bonus/?aid=35&update_version_code=85221&os_version=15.0&device_platform=iphone&group_id=${rndGroupId}`
+    let urlObject = populatePostUrl(url)
+    await httpPost(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.err_no==0) {
+        console.log(`用户${userIdx+1}领取每日阅读奖励获得${result.data.score_amount}金币`)
+    } else {
+        console.log(`用户${userIdx+1}领取每日阅读奖励失败：${result.err_tips}`)
+    }
+}
+
+//每日推送奖励
+async function DailyPushReward() {
+    let caller = printCaller()
+    let timeInMS = Math.round(new Date().getTime())
+    let rndGroupId = Math.floor(Math.random()*7000000000000000000)
+    let url = `${hostname}/score_task/v1/task/get_read_bonus/?aid=35&update_version_code=85221&os_version=15.0&device_platform=iphone&group_id=${rndGroupId}&impression_type=push`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.err_no==0) {
+        console.log(`用户${userIdx+1}领取每日推送奖励获得${result.data.score_amount}金币`)
+    } else {
+        console.log(`用户${userIdx+1}领取每日推送奖励失败：${result.err_tips}`)
     }
 }
 
@@ -281,6 +335,22 @@ async function PostInviteCode() {
     let result = httpResult;
     if(!result) return
     //console.log(result)
+}
+
+//金币收入
+async function QueryCoinInfo() {
+    let caller = printCaller()
+    let url = `${hostname}/luckycat/lite/v1/user/profit_detail/?offset=0&num=100&income_type=2&aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.err_no == 0) {
+        console.log(result.data.score_income_list)
+    } else {
+        console.log(`用户${userIdx+1}查询金币收入失败：${result.err_tips}`)
+    }
 }
 
 //查询用户信息,任务状态
@@ -339,8 +409,10 @@ async function SignIn() {
 //开宝箱
 async function OpenTreasureBox() {
     let caller = printCaller()
-    let url = `${hostname}/score_task/v1/task/open_treasure_box/?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
-    let urlObject = populatePostUrl(url)
+    let timeInMS = Math.round(new Date().getTime())
+    let url = `${hostname}/score_task/v1/task/open_treasure_box/?os_api=25&device_type=VOG-AL10&ssmix=a&manifest_version_code=8280&dpi=240&abflag=3&pass_through=default&cookie_data=JS9ij2PS3AwsrLXtsMlBmg&use_ecpm=0&act_hash=33e5c7c6eceed48faa09bcb731f9cbfe&rom_version=25&rit=coin&app_name=news_article_lite&ab_client=a1%2Ce1%2Cf2%2Cg2%2Cf7&version_name=8.2.8&ab_version=1859936%2C668908%2C3491714%2C668907%2C3491710%2C668905%2C3491678%2C668906%2C3491686%2C668904%2C3491669%2C668903%2C3491704%2C3269751%2C3472846%2C3493942&plugin_state=7731332411413&sa_enable=0&ac=wifi&_request_from=web&update_version_code=82809&channel=lite2_tengxun&_rticket=${timeInMS}&status_bar_height=24&cookie_base=-1E_P8je5Sub5zWkBKiqODt2MECOGuxlsxp2J8N2wuHiAln1gxRIlq9T45zO7j1Y4RwJPfwnZaGcZ871TDjPVA&dq_param=0&device_platform=android&iid=1592553870724568&scm_build_version=1.0.0.1454&mac_address=88%3AB1%3A11%3A61%3A96%3A7B&version_code=828&polaris_version=1.0.5&tma_jssdk_version=1.95.0.28&cdid=19f86713-d4cf-49ea-81ab-541aa5cd7b44&is_pad=1&openudid=711ca30d9d3c10b7&device_id=809664500489800&resolution=720*1280&act_token=0WoqgcXrIdM-iXg179hjJOCBPav6mHf3Biw-ElFmYqvWQIsvoERPbrbEItIYJDJkjXW4NPai8DqYMlLQypO_eQ&os_version=7.1.2&language=zh&device_brand=HUAWEI&aid=35&ab_feature=z1&luckycat_version_name=4.2.0-rc.5&luckycat_version_code=420005`
+    let body = `{"open_treasure_box_enter_from":"","rit":"coin","use_ecpm":0}`
+    let urlObject = populatePostUrl(url,body)
     await httpPost(urlObject,caller)
     let result = httpResult;
     if(!result) return
@@ -355,7 +427,8 @@ async function OpenTreasureBox() {
 //宝箱视频奖励
 async function ExcitationAd(task_id) {
     let caller = printCaller()
-    let url = `${hostname}/luckycat/lite/v1/task/done/excitation_ad?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let timeInMS = Math.round(new Date().getTime())
+    let url = `${hostname}/luckycat/lite/v1/get_red_packet/video?red_packet_scene=1&iid=3101041650833964&device_id=2550462500321502&ac=wifi&channel=lite_huawei_64&aid=35&app_name=news_article_lite&version_code=870&version_name=8.7.0&device_platform=android&os=harmony&sub_os_api=6&ab_version=1859937%2C668908%2C3820899%2C668907%2C3820895%2C668905%2C3820859%2C668906%2C2958010%2C3820867%2C668904%2C3820838%2C668903%2C3820889%2C2220242%2C3540012%2C3596061%2C3700363&ab_client=a1%2Ce1%2Cf2%2Cg2%2Cf7&ab_group=z1&ab_feature=z1&abflag=3&ssmix=a&device_type=CDY-AN90&device_brand=HONOR&language=zh&os_api=29&os_version=10&manifest_version_code=8700&resolution=1080*2292&dpi=480&update_version_code=87007&_rticket=1645962902187&sa_enable=0&dq_param=2&plugin_state=280419485511709&isTTWebView=1&session_id=ebf6c214-4f7b-4ddf-b0b0-6cc188585ea2&host_abi=arm64-v8a&tma_jssdk_version=2.8.0.15&rom_version=emotionui_11.1.0_cdy-an90+2.0.0.220%28c00e210r4p5%29&cdid=beaa6b5c-2848-4cbc-96cb-52870406393b`
     let body = `{"ad_alias_position":"coin","task_key":"excitation_ad", "task_id" : "${task_id}"}`
     let urlObject = populatePostUrl(url,body)
     await httpPost(urlObject,caller)
@@ -424,6 +497,8 @@ async function DoneEat() {
 //睡觉状态
 async function QuerySleepStatus() {
     let caller = printCaller()
+    let curTime = new Date()
+    let curHour = curTime.getHours()
     let url = `${hostname}/luckycat/lite/v1/sleep/status/?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
     let urlObject = populateGetUrl(url)
     await httpGet(urlObject,caller)
@@ -437,7 +512,7 @@ async function QuerySleepStatus() {
                 await SleepStop()
             } else if(result.data.sleep_unexchanged_score==result.data.max_coin && curHour >= 7) {
                 let rnd = Math.random()
-                if(rnd>0.90) {
+                if(rnd>0.95) {
                     await SleepStop()
                 } else {
                     console.log(`用户${userIdx+1}随机醒来时间，本次不进行醒来，已经睡了${sleepHour}小时，可以获得${result.data.sleep_unexchanged_score}金币`)
@@ -453,7 +528,7 @@ async function QuerySleepStatus() {
                 await SleepStart()
             } else if(curHour >= 20) {
                 let rnd = Math.random()
-                if(rnd>0.90) {
+                if(rnd>0.95) {
                     await SleepStart()
                 } else {
                     console.log(`用户${userIdx+1}随机睡眠时间，本次不进行睡眠`)
@@ -488,8 +563,9 @@ async function SleepStop() {
 //睡觉收金币
 async function SleepDone(amount) {
     let caller = printCaller()
-    let url = `${hostname}/luckycat/lite/v1/sleep/done_task/?_request_from=web&scm_build_version=1.0.0.1437&version_code=8.5.2&tma_jssdk_version=2.25.0.11&app_name=news_article_lite&channel=App%20Store&resolution=1170*2532&aid=35&ab_version=668907,3485378,3491710,668905,3491678,668906,3491686,668904,3491669,668903,3491704,1859936,668908,3491714,3269751,3472847&ab_feature=794526&review_flag=0&ab_group=794526&subchannel=unknown&update_version_code=85221&ac=WIFI&os_version=15.0&ssmix=a&device_platform=iphone&ab_client=a1,f2,f7,e1&device_type=iPhone13,2`
-    let body = `{"score_amount" : ${amount}}`
+    let timeInMS = Math.round(new Date().getTime())
+    let url = `${hostname}/luckycat/lite/v1/sleep/done_task/?os_api=25&device_type=VOG-AL10&ssmix=a&manifest_version_code=8280&dpi=240&abflag=3&pass_through=default&use_ecpm=0&rom_version=25&rit=coin&app_name=news_article_lite&ab_client=a1%2Ce1%2Cf2%2Cg2%2Cf7&version_name=8.2.8&ab_version=668903%2C3491704%2C1859936%2C668908%2C3491714%2C668907%2C3491710%2C668905%2C3491678%2C668906%2C3491686%2C668904%2C3491669%2C3269751%2C3472846%2C3493942&plugin_state=7731332411413&sa_enable=0&ac=wifi&_request_from=web&update_version_code=82809&channel=lite2_tengxun&_rticket=${timeInMS}&status_bar_height=24&dq_param=0&device_platform=android&iid=1592553870724568&scm_build_version=1.0.0.1454&mac_address=88%3AB1%3A11%3A61%3A96%3A7B&version_code=828&polaris_version=1.0.5&tma_jssdk_version=1.95.0.28&is_pad=1&resolution=720*1280&os_version=7.1.2&language=zh&device_brand=HUAWEI&aid=35&ab_feature=z1&luckycat_version_name=4.2.0-rc.5&luckycat_version_code=420005`
+    let body = `{"score_amount":${amount},"enable_preload_exciting_video":0}`
     let urlObject = populatePostUrl(url,body)
     await httpPost(urlObject,caller)
     let result = httpResult;
@@ -572,6 +648,42 @@ async function FarmOfflineDouble() {
         console.log(`用户${userIdx+1}农场离线产量翻倍成功`)
     } else {
         console.log(`用户${userIdx+1}农场离线产量翻倍失败：${result.message}`)
+    }
+}
+
+//农场-领取三餐礼包
+async function RewardFarmThreeGift(gift_id) {
+    let caller = printCaller()
+    let url = `${hostname}/ttgame/game_farm/reward/gift?game_client_version_code=2&gift_id=${gift_id}&watch_ad=0&double=0&aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.status_code == 0) {
+        console.log(`用户${userIdx+1}领取农场三餐礼包获得${result.data.reward_num}水滴`)
+    } else {
+        console.log(`用户${userIdx+1}领取农场三餐礼包失败：${result.message}`)
+    }
+}
+
+//农场-三餐礼包状态
+async function QueryFarmThreeGift() {
+    let caller = printCaller()
+    let url = `${hostname}/ttgame/game_farm/gift/list?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.status_code == 0) {
+        for(let item of result.data) {
+            if(item.status==1) {
+                await RewardFarmThreeGift(item.gift_id)
+            }
+        }
+    } else {
+        console.log(`用户${userIdx+1}查询农场三餐礼包状态失败：${result.message}`)
     }
 }
 
@@ -841,7 +953,7 @@ async function TreeChallengeReward() {
     if(!result) return
     //console.log(result)
     if(result.status_code == 0) {
-        console.log(`用户${userIdx+1}领取浇水挑战奖励获得${result.data.reward_item.num}金币`)
+        console.log(`用户${userIdx+1}领取浇水挑战奖励获得${result.data.reward_item.num}水滴`)
     } else {
         console.log(`用户${userIdx+1}领取浇水挑战奖励失败：${result.message}`)
     }
@@ -867,6 +979,44 @@ async function TreeNutrientSign() {
     }
 }
 
+//种树-领取三餐礼包
+async function RewardTreeThreeGift(task_id) {
+    let caller = printCaller()
+    let url = `${hostname}/ttgame/game_orchard/three_gift/reward?task_id=${task_id}&watch_ad=0&extra_ad_num=0&aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.status_code == 0) {
+        console.log(`用户${userIdx+1}领取种树三餐礼包获得${result.data.reward_item.num}${result.data.reward_item.name}`)
+    } else {
+        console.log(`用户${userIdx+1}领取种树三餐礼包失败：${result.message}`)
+    }
+}
+
+//种树-三餐礼包状态
+async function QueryTreeThreeGift() {
+    let caller = printCaller()
+    let curTime = new Date()
+    let curHour = curTime.getHours()
+    let url = `${hostname}/ttgame/game_orchard/three_gift/list?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.status_code == 0) {
+        for(let item of result.data.gift_list) {
+            if(item.rounds==1 && curHour >= item.available_time.begin && curHour < item.available_time.end) {
+                await RewardTreeThreeGift(item.id)
+            }
+        }
+    } else {
+        console.log(`用户${userIdx+1}查询种树三餐礼包状态失败：${result.message}`)
+    }
+}
+
 //种树-水滴任务列表
 async function QueryTreeWaterTask() {
     let caller = printCaller()
@@ -878,9 +1028,10 @@ async function QueryTreeWaterTask() {
     //console.log(result)
     if(result.status_code == 0) {
         for(let item of result.data.tasks_v2) {
-            console.log(item)
-            await TreeWaterReward(item.id)
-            await $.wait(1500)
+            if(item.reward_item.state==4) {
+                await TreeWaterReward(item.id)
+                await $.wait(1500)
+            }
         }
     } else {
         console.log(`用户${userIdx+1}查询种树水滴任务列表失败：${result.message}`)
@@ -962,6 +1113,9 @@ async function QueryTreeStatus() {
         if(result.data.red_points.challenge && result.data.red_points.challenge.state==4) {
             await TreeChallengeReward()
         }
+        if(result.data.bottle.state==1) {
+            await RewardTreeWaterBottle()
+        }
         if(result.data.red_points.box && result.data.red_points.box.rounds>0 && result.data.red_points.box.state==4) {
             await TreeOpenBox()
         }
@@ -972,6 +1126,22 @@ async function QueryTreeStatus() {
         }
     } else {
         console.log(`用户${userIdx+1}查询种树信息失败：${result.message}`)
+    }
+}
+
+//种树-水瓶奖励
+async function RewardTreeWaterBottle() {
+    let caller = printCaller()
+    let url = `${hostname}/ttgame/game_orchard/water_bottle/reward?aid=35&update_version_code=85221&device_platform=iphone&&device_type=iPhone13,2`
+    let urlObject = populateGetUrl(url)
+    await httpGet(urlObject,caller)
+    let result = httpResult;
+    if(!result) return
+    //console.log(result)
+    if(result.status_code == 0) {
+        console.log(`用户${userIdx+1}领取种树水瓶奖励获得${result.data.reward_item.num}水滴`)
+    } else {
+        console.log(`用户${userIdx+1}领取种树水瓶奖励失败：${result.message}`)
     }
 }
 
@@ -997,15 +1167,17 @@ function populatePostUrl(url,reqBody=''){
     let urlObject = {
         url: url,
         headers: {
-            'Host' : host,
+            'Accept-Encoding' : 'gzip',
             'X-SS-REQ-TICKET' : timeInMS,
-            'X-Khronos': timeInSecond,
-            'Connection' : 'keep-alive',
-            'Accept' : 'application/json',
-            'Cookie' : userHeaderArr[userIdx],
-            'Content-Type' : 'application/json',
+            'passport-sdk-version' : '30',
+            'sdk-version' : '2',
+            'x-vc-bdturing-sdk-version' : '2.0.0',
             'User-Agent' : userAgentArr[userIdx%UAcount],
-            'Accept-Encoding' : 'gzip, deflate',
+            'Cookie' : userHeaderArr[userIdx],
+            'X-Khronos' : timeInSecond,
+            'Content-Type' : 'application/json; charset=utf-8',
+            'Host' : host,
+            'Connection' : 'Keep-Alive',
         },
         body: reqBody
     }
@@ -1018,15 +1190,17 @@ function populateGetUrl(url){
     let urlObject = {
         url: url,
         headers: {
-            'Host' : host,
+            'Accept-Encoding' : 'gzip',
             'X-SS-REQ-TICKET' : timeInMS,
-            'X-Khronos': timeInSecond,
-            'Connection' : 'keep-alive',
-            'Accept' : 'application/json',
-            'Cookie' : userHeaderArr[userIdx],
-            'Content-Type' : 'application/json',
+            'passport-sdk-version' : '30',
+            'sdk-version' : '2',
+            'x-vc-bdturing-sdk-version' : '2.0.0',
             'User-Agent' : userAgentArr[userIdx%UAcount],
-            'Accept-Encoding' : 'gzip, deflate',
+            'Cookie' : userHeaderArr[userIdx],
+            'X-Khronos' : timeInSecond,
+            'Content-Type' : 'application/json; charset=utf-8',
+            'Host' : host,
+            'Connection' : 'Keep-Alive',
         }
     }
     return urlObject;
