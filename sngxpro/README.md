@@ -112,6 +112,8 @@ ql repo https://github.com/smiek2121/scripts.git "gua_opencard"
 ql repo https://api.mtr.pub/smiek2121/scripts.git "jd_|gua_" "" "ZooFaker_Necklace.js|JDJRValidator_Pure.js|sign_graphics_validate.js|cleancart_activity.js|jdCookie.js|sendNotify.js"
 
 ql repo https://github.com/jianglin521/QuantumultX.git "ql"
+
+ql repo https://github.com/leafTheFish/DeathNote.git "zqkd_"
 ```
 
 # 依赖安装
