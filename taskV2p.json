@@ -148,15 +148,6 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
       }
-    },
-    {
-      "name": "中青极速版阅读",
-      "type": "cron",
-      "time": "22 22 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js"
-      }
     }
   ]
 }
