@@ -544,17 +544,14 @@
       "script": "http://47.101.146.160/scripts/kxdfs.js"
     },
     {
-      "id": "ksjsb",
-      "name": "快手极速版",
+      "id": "1024",
+      "name": "1024",
       "keys": [
-        "ksjsbCookie"
+        "usercookie"
       ],
-      "author": "@tom",
-      "repo": "https://github.com/liuqi6968/-/blob/main/ks_js.js",
-      "script": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js",
       "icons": [
-        "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png",
-        "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png"
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
       ]
     },
     {
