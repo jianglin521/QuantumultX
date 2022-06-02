@@ -42,111 +42,30 @@
       }
     },
     {
-      "name": "开心点点消",
+      "name": "饿了么",
       "type": "cron",
-      "time": "45 12 * * *",
+      "time": "50 8,20 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/kxddx.js"
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/elm.js"
       }
     },
     {
-      "name": "红包视频",
+      "name": "健走有礼",
       "type": "cron",
-      "time": "*/10 * * * *",
+      "time": "10 8,20 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/xl2101200/-/main/hbsp.js"
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/jzyl.js"
       }
     },
     {
-      "name": "萤石云",
+      "name": "长城炮",
       "type": "cron",
-      "time": "15 6-23 * * *",
+      "time": "10 0,9,16,21",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js"
-      }
-    },
-    {
-      "name": "微证券",
-      "type": "cron",
-      "time": "10 13 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/txwzq.js"
-      }
-    },
-    {
-      "name": "都爱玩",
-      "type": "cron",
-      "time": "25 0,1,8,15,20 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/daw.js"
-      }
-    },
-    {
-      "name": "电视家",
-      "type": "cron",
-      "time": "0 8-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/dsj.js"
-      }
-    },
-    {
-      "name": "快手极速版",
-      "type": "cron",
-      "time": "42 6-22/2 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js"
-      }
-    },
-    {
-      "name": "同城夺宝",
-      "type": "cron",
-      "time": "12 10-20 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tcdb.js"
-      }
-    },
-    {
-      "name": "看点宝",
-      "type": "cron",
-      "time": "20 9-21 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ydd.js"
-      }
-    },
-    {
-      "name": "九章头条",
-      "type": "cron",
-      "time": "20 0,6-23 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jztt.js"
-      }
-    },
-    {
-      "name": "走财运",
-      "type": "cron",
-      "time": "5,35 9-20 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/jianglin521/backup/leafxcy/zcy.js"
-      }
-    },
-    {
-      "name": "康师傅畅饮社",
-      "type": "cron",
-      "time": "32 9,18 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/ksfcys.js"
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ccp.js"
       }
     }
   ]
