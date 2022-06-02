@@ -566,6 +566,17 @@
       ]
     },
     {
+      "id": "elm",
+      "name": "饿了么",
+      "keys": [
+        "elmCookie"
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
+      ]
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
