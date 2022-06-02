@@ -62,7 +62,7 @@
     {
       "name": "长城炮",
       "type": "cron",
-      "time": "10 0,9,16,21",
+      "time": "10 0,9,16,21 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ccp.js"
