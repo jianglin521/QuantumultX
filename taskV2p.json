@@ -60,12 +60,12 @@
       }
     },
     {
-      "name": "长城炮",
+      "name": "快手极速版",
       "type": "cron",
-      "time": "10 0,9,16,21 * * *",
+      "time": "28 0,8-18 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ccp.js"
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ksjsb.js"
       }
     }
   ]
