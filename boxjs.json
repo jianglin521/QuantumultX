@@ -479,7 +479,8 @@
       "keys": [
         "jzylCookie",
         "elmCookie",
-        "usercookie"
+        "usercookie",
+        "txspCookie"
       ],
       "icons": [
         "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
