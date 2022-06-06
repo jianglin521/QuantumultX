@@ -146,9 +146,7 @@ async function GetRewrite() {
         const cookie = JSON.parse($request.body)
         const openId = cookie.OpenId
         if (openId) {
-            console.log(111111)
             if(userid) {
-                console.log(userid, '0000000000000')
                 if(userid.indexOf(openId) == -1) {
                     userid = userid + '@' + openId
                     $.setdata(userid, 'userid10');
@@ -156,7 +154,6 @@ async function GetRewrite() {
                     $.msg(`获取第${ckList.length}个ck成功: ${openId}`)
                 }
             } else {
-                console.log(222222)
                 $.setdata(openId, 'userid10');
                 $.msg(`获取第1个ck成功: ${openId}`)
             }
