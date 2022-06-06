@@ -130,27 +130,24 @@ async function CheckEnv() {
 }
 
 async function GetRewrite() {
+    console.log($request.url)
+    console.log('1111111111')
     if ($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
-        // const cookie = JSON.parse($request.body)
-        // if (cookie) $.setdata(cookie.OpenId, `userid1`)
-        // console.log(cookie.OpenId)
-        // $.msg(`userid1获取成功`)
-        const { OpenId: openId } = JSON.parse($request.body)
-        console.log(openId, 'openId')
-        console.log(userid, 'userid')
-        // if (openId) {
-            if(userid) {
-                if(userid.indexOf(openId) == -1) {
-                    userid = userid + '@' + openId
-                    $.setdata(userid, 'userid1');
-                    ckList = userid.split('@')
-                    $.msg(`获取第${ckList.length}个ck成功: ${openId}`)
-                }
-            } else {
-                $.setdata(openId, 'userid1');
-                $.msg(`获取第1个ck成功: ${openId}`)
+        const openId = JSON.parse($request.body.OpenId)
+        if(userid) {
+            if(userid.indexOf(openId) == -1) {
+                userid = userid + '@' + openId
+                $.setdata(userid, 'userid1');
+                ckList = userid.split('@')
+                $.msg(`获取第${ckList.length}个ck成功: ${openId}`)
+            } else{
+                $.msg(`当前ck已经存在: ${openId}`)
             }
-        // }
+        } else {
+            $.setdata(openId, 'userid1');
+            $.msg(`获取第1个ck成功: ${openId}`)
+        }
+      
     }
 }
 
