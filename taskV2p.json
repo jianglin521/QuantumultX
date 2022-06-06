@@ -76,6 +76,15 @@
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/txspfl.js"
       }
+    },
+    {
+      "name": "美团",
+      "type": "cron",
+      "time": "22 0,7-21/2 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://tg.leaf-x-dg.tk/meituan.js"
+      }
     }
   ]
 }
