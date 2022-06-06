@@ -135,9 +135,9 @@ async function GetRewrite() {
         // if (cookie) $.setdata(cookie.OpenId, `userid1`)
         // console.log(cookie.OpenId)
         // $.msg(`userid1获取成功`)
-
+        console.log($request.body)    
+        console.log($request.body, OpenId)    
         const cookie = JSON.parse($request.body)
-        console.log(cookie, cookie.OpenId)
         const openId = cookie.OpenId
         if (openId) {
             if(userid) {
