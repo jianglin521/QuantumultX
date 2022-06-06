@@ -137,11 +137,11 @@ if($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         //   if (cookie) $.setdata(cookie.OpenId, `userid1`)
         //   $.msg(`获取成功`)
           
-        if(userid1) {
-            if(userid1.indexOf(cookie.OpenId) == -1) {
-                userid1 = userid1 + '@' + cookie.OpenId
+        if(userid) {
+            if(userid.indexOf(cookie.OpenId) == -1) {
+                userid = userid + '@' + cookie.OpenId
                 $.setdata(userid1, 'jzylCookie');
-                ckList = userid1.split('@')
+                ckList = userid.split('@')
                 $.msg(`获取第${ckList.length}个ck成功: ${ck}`)
             }
         } else {
