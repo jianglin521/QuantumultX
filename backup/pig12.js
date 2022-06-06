@@ -27,7 +27,7 @@ let id=1
 
 
 
-let userid = ($.isNode() ? process.env.userid : $.getdata('userid'));
+let userid = ($.isNode() ? process.env.userid12 : $.getdata('userid12'));
 let useridArr = []
 
 
@@ -134,7 +134,7 @@ async function GetRewrite() {
 
 if($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         const cookie = JSON.parse($request.body)
-          if (cookie) $.setdata(cookie.OpenId, `userid`)
+          if (cookie) $.setdata(cookie.OpenId, `userid12`)
           $.msg(`获取成功`)  
 		
 	}

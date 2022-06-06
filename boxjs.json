@@ -481,7 +481,9 @@
         "elmCookie",
         "usercookie",
         "txspCookie",
-        "userid"
+        "userid1",
+        "userid10",
+        "userid12"
       ],
       "icons": [
         "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",

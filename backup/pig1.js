@@ -27,7 +27,7 @@ let id=1
 
 
 
-let userid = ($.isNode() ? process.env.userid : $.getdata('userid'));
+let userid = ($.isNode() ? process.env.userid1 : $.getdata('userid1'));
 let useridArr = []
 
 
@@ -134,8 +134,20 @@ async function GetRewrite() {
 
 if($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         const cookie = JSON.parse($request.body)
-          if (cookie) $.setdata(cookie.OpenId, `userid`)
-          $.msg(`获取成功`)  
+        //   if (cookie) $.setdata(cookie.OpenId, `userid1`)
+        //   $.msg(`获取成功`)
+          
+        if(userid1) {
+            if(userid1.indexOf(cookie.OpenId) == -1) {
+                userid1 = userid1 + '@' + cookie.OpenId
+                $.setdata(userid1, 'jzylCookie');
+                ckList = userid1.split('@')
+                $.msg(`获取第${ckList.length}个ck成功: ${ck}`)
+            }
+        } else {
+            $.setdata(cookie.OpenId, `userid1`);
+            $.msg(`获取第1个ck成功: ${ck}`)
+        }
 		
 	}
 }
