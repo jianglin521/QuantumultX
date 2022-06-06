@@ -135,11 +135,10 @@ async function GetRewrite() {
         // if (cookie) $.setdata(cookie.OpenId, `userid1`)
         // console.log(cookie.OpenId)
         // $.msg(`userid1获取成功`)
-        console.log($request.body)    
-        console.log($request.body, OpenId)    
-        const cookie = JSON.parse($request.body)
-        const openId = cookie.OpenId
-        if (openId) {
+        const { openId } = JSON.parse($request.body)
+        console.log(openId, 'openId')
+        console.log(userid, 'userid')
+        // if (openId) {
             if(userid) {
                 if(userid.indexOf(openId) == -1) {
                     userid = userid + '@' + openId
@@ -151,7 +150,7 @@ async function GetRewrite() {
                 $.setdata(openId, 'userid1');
                 $.msg(`获取第1个ck成功: ${openId}`)
             }
-        }
+        // }
     }
 }
 
