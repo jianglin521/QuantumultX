@@ -130,12 +130,12 @@ async function CheckEnv() {
 }
 
 async function GetRewrite() {
-    if ($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
-        const cookie = JSON.parse($request.body)
-        if (cookie) $.setdata(cookie.OpenId, `userid10`)
-        console.log(cookie.OpenId)
-        $.msg(`userid10获取成功`)
-    }
+    // if ($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
+    //     const cookie = JSON.parse($request.body)
+    //     if (cookie) $.setdata(cookie.OpenId, `userid10`)
+    //     console.log(cookie.OpenId)
+    //     $.msg(`userid10获取成功`)
+    // }
 
     if ($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         // const cookie = JSON.parse($request.body)
@@ -146,6 +146,7 @@ async function GetRewrite() {
         const cookie = JSON.parse($request.body)
         const openId = cookie.OpenId
         if (openId) {
+            console.log(111111)
             if(userid) {
                 console.log(userid, '0000000000000')
                 if(userid.indexOf(openId) == -1) {
@@ -155,6 +156,7 @@ async function GetRewrite() {
                     $.msg(`获取第${ckList.length}个ck成功: ${openId}`)
                 }
             } else {
+                console.log(222222)
                 $.setdata(openId, 'userid10');
                 $.msg(`获取第1个ck成功: ${openId}`)
             }
