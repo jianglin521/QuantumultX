@@ -130,29 +130,23 @@ async function CheckEnv() {
 }
 
 async function GetRewrite() {
-    console.log($request.url)
-    console.log('1111111111')
     if ($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
-        const openId = JSON.parse($request.body.OpenId)
-        if(userid) {
-            if(userid.indexOf(openId) == -1) {
+        const { OpenId: openId } = JSON.parse($request.body)
+        if (userid) {
+            if (userid.indexOf(openId) == -1) {
                 userid = userid + '@' + openId
                 $.setdata(userid, 'userid1');
                 ckList = userid.split('@')
                 $.msg(`获取第${ckList.length}个ck成功: ${openId}`)
-            } else{
+            } else {
                 $.msg(`当前ck已经存在: ${openId}`)
             }
         } else {
             $.setdata(openId, 'userid1');
             $.msg(`获取第1个ck成功: ${openId}`)
         }
-      
     }
 }
-
-
-
 
 //刷钱模块
 function addmoney(userid, key) {
