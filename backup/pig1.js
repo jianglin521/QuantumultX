@@ -150,28 +150,6 @@ async function GetRewrite() {
     }
 }
 
-async function GetRewrite() {
-    if ($request.url.indexOf(`api/v1/bbg/taskRecord/queryUserInfo`) > -1) {
-        let ck = $request.headers.token
-
-        if (userCookie) {
-            if (userCookie.indexOf(ck) == -1) {
-                userCookie = userCookie + '\n' + ck
-                $.setdata(userCookie, 'jzylCookie');
-                ckList = userCookie.split('\n')
-                $.msg(`获取第${ckList.length}个ck成功: ${ck}`)
-            }
-        } else {
-            $.setdata(ck, 'jzylCookie');
-            $.msg(`获取第1个ck成功: ${ck}`)
-        }
-    }
-}
-
-
-
-
-
 //刷钱模块
 function addmoney(userid, key) {
     return new Promise((resolve, reject) => {
