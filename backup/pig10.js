@@ -135,7 +135,8 @@ async function GetRewrite() {
 if($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         const cookie = JSON.parse($request.body)
           if (cookie) $.setdata(cookie.OpenId, `userid10`)
-          $.msg(`获取成功`)  
+          console.log(cookie.OpenId)
+          $.msg(`userid10获取成功`)  
 		
 	}
 }
