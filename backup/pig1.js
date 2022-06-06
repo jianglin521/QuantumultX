@@ -135,16 +135,17 @@ async function GetRewrite() {
 if($request.url.indexOf(`https://heisekeji.cn/game/`) > -1) {
         const cookie = JSON.parse($request.body)
         //   if (cookie) $.setdata(cookie.OpenId, `userid1`)
-        //   $.msg(`获取成功`)
           
         if(userid) {
+            $.msg(`获取成功111`)
             if(userid.indexOf(cookie.OpenId) == -1) {
                 userid = userid + '@' + cookie.OpenId
-                $.setdata(userid1, 'jzylCookie');
+                $.setdata(userid, 'userid1');
                 ckList = userid.split('@')
                 $.msg(`获取第${ckList.length}个ck成功: ${ck}`)
             }
         } else {
+            $.msg(`获取成功222`)
             $.setdata(cookie.OpenId, `userid1`);
             $.msg(`获取第1个ck成功: ${ck}`)
         }
