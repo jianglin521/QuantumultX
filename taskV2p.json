@@ -85,6 +85,15 @@
         "type": "runjs",
         "target": "https://tg.leaf-x-dg.tk/meituan.js"
       }
+    },
+    {
+      "name": "读特",
+      "type": "cron",
+      "time": "45 8,17 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/dt.js"
+      }
     }
   ]
 }
