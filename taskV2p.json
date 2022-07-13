@@ -69,15 +69,6 @@
       }
     },
     {
-      "name": "腾讯视频-福利中心",
-      "type": "cron",
-      "time": "20 0,8 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/txspfl.js"
-      }
-    },
-    {
       "name": "美团",
       "type": "cron",
       "time": "22 0,7-21/2 * * *",
