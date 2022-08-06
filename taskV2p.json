@@ -51,24 +51,6 @@
       }
     },
     {
-      "name": "健走有礼",
-      "type": "cron",
-      "time": "10 8,20 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/jzyl.js"
-      }
-    },
-    {
-      "name": "快手极速版",
-      "type": "cron",
-      "time": "28 0,8-18 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ksjsb.js"
-      }
-    },
-    {
       "name": "美团",
       "type": "cron",
       "time": "22 0,7-21/2 * * *",
@@ -84,6 +66,15 @@
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/dt.js"
+      }
+    },
+    {
+      "name": "广汽三菱",
+      "type": "cron",
+      "time": "10 8 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafTheFish/DeathNote/main/gqsl.js"
       }
     }
   ]
