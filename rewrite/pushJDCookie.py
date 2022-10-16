@@ -66,7 +66,7 @@ time.sleep(1)
 for item in ck:
     itemArr = item.split(' ')
     print(itemArr)
-    driver.find_element_by_xpath('//*[@id="root"]/div/section/div[2]/main/div/div[1]/div/div/span/button').click()
+    driver.find_element_by_xpath('//*[@id="root"]/div/section/div[2]/main/div/div[1]/div/div/span/div/div[2]/button').click()
     time.sleep(0.6)
     driver.find_element_by_xpath('//*[@id="env_modal_name"]').send_keys("JD_COOKIE")
     driver.find_element_by_xpath('//*[@id="env_modal_value"]').send_keys(f"{itemArr[1]}")
