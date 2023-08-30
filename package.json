@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node -r dotenv/config ./sngxpro/meituanV3.js dotenv_config_path=./.env.local",
+    "dev": "node -r dotenv/config ./sngxpro/opencard318.js dotenv_config_path=./.env.local",
     "elm": "node -r dotenv/config ./sngxpro/elmV3.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "crypto-js": "^4.1.1",
+    "date-fns": "^2.30.0",
     "dotenv": "^10.0.0",
     "got": "^11.8.2",
     "iconv-lite": "^0.6.3",

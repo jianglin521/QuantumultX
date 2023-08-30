@@ -18,3 +18,4 @@ ck.txt
 *.njsproj
 *.sln
 
+.env.local_back
