@@ -1,38 +1,10 @@
 ## 教程
-电视家一小时一次
 
-### 微证券 包含腾讯自选股app 和微证券小程序
-复制到微信打开  https: //zqact01.tenpay.com/activity/page/200814appInvite/#/new?stat_data=Oyw96p00pn019&invite_code=null&nick_name=ZIYE&head_url=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FQ0j4TwGTfTJIx5lQo0MyLtcdicl9U8VZzjn6QUotx0xXcgKboeuAdibyOK7pRSg8CoGInLd5Kq15LMH4CLxiacFdw%2F132%23%2Fnew
-
-⚠️建议每小时运行1次即可   时间随意      
-⚠️ 这软件是奇葩 是否有资格，自己测试,     尽管获取资格了，之后也有可能在黑白之间反复横跳，所以  多跑就行，
-⚠️ 已经在跑自选股的可以无视此脚本，可能这个收益没有自选股那个收益高
-⚠️一共  2个ck  
-手机端默认使用boxjs👉 node请复制boxjs会话粘贴至txwzqCOOKIE.js中 或者 填写环境变量(多账号请换行)
-👉进入小程序点击 我的 获取ck  进入腾讯自选股软件获取ck
-
-ck对应环境变量如下
-txwzqckVal 👉txwzq_txwzqck
-txzxgckVal 👉txzxg_txzxgck
-⚠️微证券 包含腾讯自选股app 和微证券小程序
-复制到微信打开  https: //zqact01.tenpay.com/activity/page/200814appInvite/#/new?stat_data=Oyw96p00pn019&invite_code=null&nick_name=ZIYE&head_url=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FQ0j4TwGTfTJIx5lQo0MyLtcdicl9U8VZzjn6QUotx0xXcgKboeuAdibyOK7pRSg8CoGInLd5Kq15LMH4CLxiacFdw%2F132%23%2Fnew
-
-⚠️建议每小时运行1次即可   时间随意      
-⚠️ 这软件是奇葩 是否有资格，自己测试,     尽管获取资格了，之后也有可能在黑白之间反复横跳，所以  多跑就行，
-⚠️ 已经在跑自选股的可以无视此脚本，可能这个收益没有自选股那个收益高
-⚠️一共  2个ck  
-手机端默认使用boxjs👉 node请复制boxjs会话粘贴至txwzqCOOKIE.js中 或者 填写环境变量(多账号请换行)
-👉进入小程序点击 我的 获取ck  进入腾讯自选股软件获取ck
-ck对应环境变量如下
-txwzqckVal 👉txwzq_txwzqck
-txzxgckVal 👉txzxg_txzxgck
-
-### 多看点
- dkdck可以进去app点“我的”，找请求下的body
- dkdheader大部分请求都有的header
- 多账号@分隔
- example:
- export dkdck='params=fTDrU1pt2u2nNuvL2xxxxx%2F%0A@params=fTDrU1pt2u2nNuvL2m0xxxxxE%2BgD%2F%0A'
- export dkdheaders='eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci@eyJvcyI6Ik9uZVBsdXMixxxxx6IuWkmueci'
-
- 
+活动入口,微信打开：<http://tg.1692693608.api.mengmorwpt2.cn/h5_share/ads/tg?user_id=115772>
+其他活动入口
+从零开始阅读：<https://entry-1318684421.cos.ap-nanjing.myqcloud.com/cos_b.html?openId=oiDdr54Nefy0xxsTr6SGgdSzpWj0>
+充值购买阅读：<http://2478987.iw1arj0.mami.r73n62xg0n.cloud/page?p=2478987>
+星空阅读阅读：<http://mr1692169663544.uznmvev.cn/ox/index.html?mid=XG7QUVEEH>
+元宝阅读：<http://mr1692766622670.kgtpecv.cn/coin/index.html?mid=RG5RC7LDU>
+花花阅读：<http://mr1692501126125.fgrtlkg.cn/user/index.html?mid=QS5PQAEZH>
+小阅阅阅读：<https://wda.fuhaicong.top:10257/yunonline/v1/auth/693f35a37d8da489478562a1feab678f?codeurl=wda.fuhaicong.top:10257&codeuserid=2&time=1692431129>

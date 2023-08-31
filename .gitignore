@@ -17,5 +17,3 @@ ck.txt
 *.ntvs*
 *.njsproj
 *.sln
-
-.env.local_back
