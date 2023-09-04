@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "node -r dotenv/config ./sngxpro/opencard318.js dotenv_config_path=./.env.local",
-    "elm": "node -r dotenv/config ./sngxpro/elmV3.js dotenv_config_path=./.env.local",
+    "dt": "node -r dotenv/config ./sngxpro/dt.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

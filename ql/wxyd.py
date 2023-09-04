@@ -126,7 +126,10 @@ else:
                             headers = {'Content-Type': 'application/json'}
                             response = requests.post(url, headers=headers, data=json.dumps(data))
                             print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
-                            time.sleep(60)
+                            # time.sleep(60)
+                            for item in range(60):
+                                print(f'等待过检测文章还剩-{59-item}秒')
+                                time.sleep(1)
                             url = "http://2477726.9o.10r8cvn6b1.cloud/read/finish"
                             headers = {
                                 "User-Agent": "Mozilla/5.0 (Linux; Android 9; V1923A Build/PQ3B.190801.06161913; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Safari/537.36 MMWEBID/5635 MicroMessenger/8.0.40.2420(0x28002837) WeChat/arm64 Weixin Android Tablet NetType/WIFI Language/zh_CN ABI/arm64",
@@ -176,6 +179,7 @@ else:
                 except KeyError:
                     print(f"获取文章失败,错误未知{response}")
                     break
+        
         print(f"============开始微信提现============")
         url = "http://2477726.84.8agakd6cqn.cloud/withdraw/wechat"
 
