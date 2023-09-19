@@ -1,6 +1,6 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
-小阅阅_V1.31
+小阅阅_V1.32
 入口：https://wi53263.nnju.top:10258/yunonline/v1/auth/a736aa79132badffc48e4b380f21c7ac?codeurl=wi53263.nnju.top:10258&codeuserid=2&time=1693450574
 抓包搜索关键词ysm_uid 取出ysm_uid的值即可
 
@@ -21,19 +21,18 @@ from multiprocessing import Pool
 from multiprocessing.pool import ThreadPool
 from urllib.parse import urlparse, parse_qs
 import requests
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 # 加载环境变量
 load_dotenv(dotenv_path='.env.local', verbose=True)
+
 key = os.getenv('wxkey') # 企业微信key
-
-
 lock = threading.Lock()
 
-def process_account(account, index):
+def process_account(account, i):
     values = account.split('@')
     xyy_uid = values[0]
-    print(f"\n=======开始执行账号{index}=======")
+    print(f"\n=======开始执行账号{i}=======")
     print(f"unionid:{xyy_uid}")
     current_timestamp = int(time.time() * 1000)
 
@@ -75,6 +74,8 @@ def process_account(account, index):
             ]
             url = "http://1693441346.pgvv.top/yunonline/v1/wtmpdomain"
             headers = {
+                "Host": "nsr.zsf2023e458.cloud",
+                "Origin": "https://b1694491023-1304258503.cos.ap-beijing.myqcloud.com",
                 "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
                 "Cookie": f"ejectCode=1; ysm_uid={xyy_uid}"
             }
@@ -106,7 +107,11 @@ def process_account(account, index):
                     response = requests.get(url, headers=headers, params=params, timeout=7).json()
                 if response['errcode'] == 0:
                     link = response['data']['link'] + "?/"
-                    response = requests.get(url=link, headers=headers).text
+                    headers_link = {
+                        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
+                        "Cookie": f"ejectCode=1; ysm_uid={xyy_uid}"
+                    }
+                    response = requests.get(url=link, headers=headers_link).text
                     pattern = r'<meta\s+property="og:url"\s+content="([^"]+)"\s*/>'
                     matches = re.search(pattern, response)
 
@@ -119,13 +124,12 @@ def process_account(account, index):
                         print(f"获取文章成功---{mid} 来源[{biz}]")
                         sleep = random.randint(8, 9)
                         if biz in checkDict:
-                            four_digit_number = random.randint(1000, 9999)
                             print(f"发现目标[{biz}] 疑似检测文章！！！")
                             link = og_url
                             url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
                             messages = [
-                                f"小阅阅 账号{index}-出现检测文章！！！{four_digit_number}\n{link}\n请在60s内点击链接完成阅读",
+                                f"小阅阅 出现检测文章！！！\n{link}\n请在60s内点击链接完成阅读",
                             ]
 
                             for message in messages:
@@ -135,13 +139,10 @@ def process_account(account, index):
                                         "content": message
                                     }
                                 }
-                                headers = {'Content-Type': 'application/json'}
-                                response = requests.post(url, headers=headers, data=json.dumps(data))
+                                headers_bot = {'Content-Type': 'application/json'}
+                                response = requests.post(url, headers=headers_bot, data=json.dumps(data))
                                 print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
-                                # time.sleep(60)
-                                for item in range(60):
-                                    print(f'等待过检测文章还剩-{59-item}秒')
-                                    time.sleep(1)
+                                time.sleep(60)
                                 url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
                                 params = {
                                     "uk": uk,
@@ -247,15 +248,12 @@ def process_account(account, index):
 
 if __name__ == "__main__":
     accounts = os.getenv('ysm_uid')
+    response = requests.get('https://gitee.com/shallow-a/qim9898/raw/master/label.txt').text
+    print(response)
     if accounts is None:
         print('你没有填入ysm_uid，咋运行？')
         exit()
     else:
-        response = requests.get('https://netcut.cn/p/e9a1ac26ab3e543b')
-        note_content_list = re.findall(r'"note_content":"(.*?)"', response.text)
-        formatted_note_content_list = [note.replace('\\n', '\n').replace('\\/', '/') for note in note_content_list]
-        for note in formatted_note_content_list:
-            print(note)
         accounts_list = os.environ.get('ysm_uid').split('====')
         num_of_accounts = len(accounts_list)
         print(f"获取到 {num_of_accounts} 个账号")

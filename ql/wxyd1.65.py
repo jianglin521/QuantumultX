@@ -1,26 +1,25 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
-钢镚阅读阅读_V1.63   入口：http://2477726.l6i.gbl.iytwlopoftyt.cloud/?p=2477726
+钢镚阅读阅读_V1.65   入口：http://2477726.ulbn.sgzzlb.81rblqe6rl.cloud/?p=2477726
 阅读文章抓出cookie（找不到搜索gfsessionid关键词）
 export ydtoken=cookie
 多账号用'===='隔开 例 账号1====账号2
-cron：23 7-23/3 * * *
+cron：23 7-23/2 * * *
 """
 
-max_concurrency = 1  # 并发线程数
 money_Withdrawal = 1  # 提现开关 1开启 0关闭
+max_concurrency = 2  # 并发线程数
 # key = ""        #key为企业微信webhook机器人后面的 key
 
-import re
 import hashlib
 import json
 import os
 import random
-
 import threading
 import time
 from multiprocessing import Pool
 from multiprocessing.pool import ThreadPool
+
 import requests
 
 from dotenv import load_dotenv
@@ -58,7 +57,15 @@ def process_account(account, i):
 
         url = "http://2477726.neavbkz.jweiyshi.r0ffky3twj.cloud/read/info"
 
-        response = requests.get(url, headers=headers, json=data).json()
+
+        try:
+            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+        except requests.Timeout:
+            print("请求超时，尝试重新发送请求...")
+            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+        except Exception as e:
+            print('设置状态异常')
+            print(e)
 
         if response['code'] == 0:
             remain = response['data']['remain']
@@ -71,7 +78,7 @@ def process_account(account, i):
 
     for j in range(30):
         biz_list = ['MzkyMzI5NjgxMA==', 'MzkzMzI5NjQ3MA==', 'Mzg5NTU4MzEyNQ==', 'Mzg3NzY5Nzg0NQ==',
-                    'MzU5OTgxNjg1Mg==', 'Mzg4OTY5Njg4Mw==', 'MzI1ODcwNTgzNA==','Mzg2NDY5NzU0Mw==']
+                    'MzU5OTgxNjg1Mg==', 'Mzg4OTY5Njg4Mw==', 'MzI1ODcwNTgzNA==', 'Mzg2NDY5NzU0Mw==']
         # 计算 sign
         sign_str = f'key=4fck9x4dqa6linkman3ho9b1quarto49x0yp706qi5185o&time={current_time}'
         sha256_hash = hashlib.sha256(sign_str.encode())
@@ -82,6 +89,10 @@ def process_account(account, i):
             response = requests.get(url, headers=headers, json=data, timeout=7).json()
         except requests.Timeout:
             print("请求超时，尝试重新发送请求...")
+            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+        except Exception as e:
+            print(e)
+            print("状态异常，尝试重新发送请求...")
             response = requests.get(url, headers=headers, json=data, timeout=7).json()
         if response['code'] == 1:
             print(response['message'])
@@ -131,6 +142,9 @@ def process_account(account, i):
                         except requests.Timeout:
                             print("请求超时，尝试重新发送请求...")
                             response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                        except Exception as e:
+                            print('设置状态异常')
+                            print(e)
                         if response['code'] == 0:
                             gain = response['data']['gain']
                             print(f"第{j + 1}次阅读检测文章成功---获得钢镚[{gain}]")
@@ -156,13 +170,15 @@ def process_account(account, i):
                     except requests.Timeout:
                         print("请求超时，尝试重新发送请求...")
                         response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                    except Exception as e:
+                        print('设置状态异常')
+                        print(e)
                     if response['code'] == 0:
                         gain = response['data']['gain']
                         print(f"第{j + 1}次阅读文章成功---获得钢镚[{gain}]")
                         print(f"--------------------------------")
                     else:
                         print(f"阅读文章失败{response}")
-                        break
             except KeyError:
                 print(f"获取文章失败,错误未知{response}")
                 break
@@ -183,14 +199,11 @@ def process_account(account, i):
 
 if __name__ == "__main__":
     accounts = os.getenv('ydtoken')
+    # response = requests.get('https://gitee.com/shallow-a/qim9898/raw/master/label.txt').text
+    # print(response)
     if accounts is None:
         print('你没有填入ydtoken，咋运行？')
     else:
-        response = requests.get('https://netcut.cn/p/e9a1ac26ab3e543b')
-        note_content_list = re.findall(r'"note_content":"(.*?)"', response.text)
-        formatted_note_content_list = [note.replace('\\n', '\n').replace('\\/', '/') for note in note_content_list]
-        for note in formatted_note_content_list:
-            print(note)
         accounts_list = os.environ.get('ydtoken').split('====')
         num_of_accounts = len(accounts_list)
         print(f"获取到 {num_of_accounts} 个账号")

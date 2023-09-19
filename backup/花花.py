@@ -1,14 +1,16 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
-星空阅读_V1.1  入口：http://mr1694245841257.uznmvev.cn/ox/index.html?mid=CS5WX5RSP
+星空阅读_V1.1  入口：http://mr1694245841257.uznmvev.cn/user/index.html?mid=CS5WX5RSP
 抓包http://u.cocozx.cn/api/ox/info取出un token参数
 export xktoken=un@token
 多账号用'===='隔开 例 账号1====账号2
 cron：23 7-23/2 * * *
 """
 
-max_concurrency = 1  # 并发线程数
+# ox=星空   coin=元宝  user=花花
+
 money_Withdrawal = 1  # 提现开关 1开启 0关闭
+max_concurrency = 1  # 并发线程数
 # key = ""  # key为企业微信webhook机器人后面的 key
 
 # 检测文章列表
@@ -37,7 +39,7 @@ def process_account(account, index):
 
     print(f"\n=======开始执行账号{index}=======")
 
-    url = "http://u.cocozx.cn/api/ox/info"
+    url = "http://u.cocozx.cn/api/user/info"
 
     headers = {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292d) NetType/WIFI Language/zh_CN",
@@ -57,7 +59,7 @@ def process_account(account, index):
         moneyCurrent = response['result']['moneyCurrent']
         dayCount = response['result']['dayCount']
         print(f"[{uid}]---元子余额:{moneyCurrent}\n今日有效阅读------{dayCount}篇")
-        url = "http://u.cocozx.cn/api/ox/getReadHost"
+        url = "http://u.cocozx.cn/api/user/getReadHost"
         response = requests.post(url, json=data, headers=headers).json()
         if response['code'] == 0:
             host = response.get('result').get('host')
@@ -66,7 +68,7 @@ def process_account(account, index):
             print(f"{'-' * 40}")
 
             for i in range(30):
-                url = "http://u.cocozx.cn/api/ox/read"
+                url = "http://u.cocozx.cn/api/user/read"
                 response = requests.post(url, json=data, headers=headers).json()
                 if response['code'] == 0:
                     status = response.get('result').get('status')
@@ -82,7 +84,7 @@ def process_account(account, index):
                             url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
                             messages = [
-                                f"星空阅读 账号{index}-出现检测文章！！！{four_digit_number}\n{link}\n请在60s内点击链接完成阅读",
+                                f"花花阅读 账号{index}-出现检测文章！！！{four_digit_number}\n{link}\n请在60s内点击链接完成阅读",
                             ]
 
                             for message in messages:
@@ -99,7 +101,7 @@ def process_account(account, index):
                                 for item in range(60):
                                     print(f'等待过检测文章还剩-{59-item}秒')
                                     time.sleep(1)
-                                url = "http://u.cocozx.cn/api/ox/submit"
+                                url = "http://u.cocozx.cn/api/user/submit"
                                 response = requests.post(url, json=data, headers=headers).json()
 
                                 if response.get('code') == 0:
@@ -121,7 +123,7 @@ def process_account(account, index):
                             sleep = random.randint(9, 11)
                             print(f"本次模拟阅读{sleep}秒")
                             time.sleep(sleep)
-                            url = "http://u.cocozx.cn/api/ox/submit"
+                            url = "http://u.cocozx.cn/api/user/submit"
                             response = requests.post(url, json=data, headers=headers).json()
 
                             if response.get('code') == 0:
@@ -151,7 +153,7 @@ def process_account(account, index):
                     break
 
             if money_Withdrawal == 1:
-                url = "http://u.cocozx.cn/api/ox/info"
+                url = "http://u.cocozx.cn/api/user/info"
                 response = requests.post(url, json=data, headers=headers).json()
                 if response['code'] == 0:
                     txm = 0
@@ -167,7 +169,7 @@ def process_account(account, index):
                         txm = 50000
                     else:
                         txm = 100000
-                    url = "http://u.cocozx.cn/api/ox/wdmoney"
+                    url = "http://u.cocozx.cn/api/user/wdmoney"
                     data = {"val": txm, "un": un, "token": token, "pageSize": 20}
                     response = requests.post(url, json=data, headers=headers).json()
                     print(f"提现结果:{response}")
