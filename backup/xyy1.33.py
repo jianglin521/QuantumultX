@@ -1,35 +1,15 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
-小阅阅_V1.3   优化代码 支持并发请求
+小阅阅_V1.33
 入口：https://wi53263.nnju.top:10258/yunonline/v1/auth/a736aa79132badffc48e4b380f21c7ac?codeurl=wi53263.nnju.top:10258&codeuserid=2&time=1693450574
 抓包搜索关键词ysm_uid 取出ysm_uid的值即可
 
 export ysm_uid=xxxxxxx
-
 多账号用'===='隔开 例 账号1====账号2
-
-
-key为企业微信webhook机器人后面的 key
-
 """
-money_Withdrawal = 0  # 提现开关 1开启 0关闭
-key = ""  # 内置key 必填！！！
-num_of_threads = 4  # 设置要运行的线程数
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+money_Withdrawal = 1  # 提现开关 1开启 0关闭
+max_concurrency = 1  # 设置要运行的线程数
+# key = ""  # 内置key 必填！！！ key为企业微信webhook机器人后面的 key
 
 import json
 import os
@@ -37,44 +17,23 @@ import random
 import re
 import threading
 import time
+from multiprocessing import Pool
+from multiprocessing.pool import ThreadPool
 from urllib.parse import urlparse, parse_qs
 import requests
+from dotenv import load_dotenv
 
-from threading import Lock
-
-
-
-
-
+# 加载环境变量
+load_dotenv(dotenv_path='.env.local', verbose=True)
+key = os.getenv('wxkey') # 企业微信key
 
 
+lock = threading.Lock()
 
-response = requests.get('https://netcut.cn/p/e9a1ac26ab3e543b')
-note_content_list = re.findall(r'"note_content":"(.*?)"', response.text)
-formatted_note_content_list = [note.replace('\\n', '\n').replace('\\/', '/') for note in note_content_list]
-for note in formatted_note_content_list:
-    print(note)
-
-accounts = os.getenv('ysm_uid')
-
-if accounts is None:
-    print('你没有填入ysm_uid，咋运行？')
-    exit()
-else:
-    accounts_list = os.environ.get('ysm_uid').split('====')
-    num_of_accounts = len(accounts_list)
-    print(f"获取到 {num_of_accounts} 个账号")
-
-output_lock = Lock()
-
-
-def process_account(account, i):
+def process_account(account, index):
     values = account.split('@')
     xyy_uid = values[0]
-
-    with output_lock:
-        print(f"\n=======开始执行账号{i}=======")
-
+    print(f"\n=======开始执行账号{index}=======")
     print(f"unionid:{xyy_uid}")
     current_timestamp = int(time.time() * 1000)
 
@@ -96,11 +55,8 @@ def process_account(account, i):
         day_read = response['data']['day_read']
         last_gold = response['data']['last_gold']
         remain_read = response['data']['remain_read']
-
-        with output_lock:
-            print(f'当前金币:{last_gold}\n今日阅读文章:{day_read} 剩余:{remain_read}')
-            print(f"{'=' * 18}开始阅读文章{'=' * 18}")
-
+        print(f'当前金币:{last_gold}\n今日阅读文章:{day_read} 剩余:{remain_read}')
+        print(f"{'=' * 18}开始阅读文章{'=' * 18}")
         for i in range(33):
             checkDict = [
                 'MzkxNTE3MzQ4MQ==',
@@ -150,7 +106,11 @@ def process_account(account, i):
                     response = requests.get(url, headers=headers, params=params, timeout=7).json()
                 if response['errcode'] == 0:
                     link = response['data']['link'] + "?/"
-                    response = requests.get(url=link, headers=headers).text
+                    headers_link = {
+                        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
+                        "Cookie": f"ejectCode=1; ysm_uid={xyy_uid}"
+                    }
+                    response = requests.get(url=link, headers=headers_link).text
                     pattern = r'<meta\s+property="og:url"\s+content="([^"]+)"\s*/>'
                     matches = re.search(pattern, response)
 
@@ -160,19 +120,16 @@ def process_account(account, i):
 
                         biz = og_url.split('__biz=')[1].split('&')[0]
                         mid = og_url.split('&mid=')[1].split('&')[0]
-
-                        with output_lock:
-                            print(f"获取文章成功---{mid} 来源[{biz}]")
-
+                        print(f"获取文章成功---{mid} 来源[{biz}]")
                         sleep = random.randint(8, 9)
                         if biz in checkDict:
-                            with output_lock:
-                                print(f"发现目标[{biz}] 疑似检测文章！！！")
+                            four_digit_number = random.randint(1000, 9999)
+                            print(f"发现目标[{biz}] 疑似检测文章！！！")
                             link = og_url
                             url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
                             messages = [
-                                f"出现检测文章！！！\n{link}\n请在60s内点击链接完成阅读",
+                                f"小阅阅 账号{index}-出现检测文章！！！{four_digit_number}\n{link}\n请在60s内点击链接完成阅读",
                             ]
 
                             for message in messages:
@@ -182,11 +139,13 @@ def process_account(account, i):
                                         "content": message
                                     }
                                 }
-                                headers = {'Content-Type': 'application/json'}
-                                response = requests.post(url, headers=headers, data=json.dumps(data))
-                                with output_lock:
-                                    print("已将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
-                                time.sleep(60)
+                                headers_bot = {'Content-Type': 'application/json'}
+                                response = requests.post(url, headers=headers_bot, data=json.dumps(data))
+                                print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
+                                # time.sleep(60)
+                                for item in range(60):
+                                    print(f'等待过检测文章还剩-{59-item}秒')
+                                    time.sleep(1)
                                 url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
                                 params = {
                                     "uk": uk,
@@ -200,16 +159,13 @@ def process_account(account, i):
                                     response = requests.get(url, headers=headers, params=params, timeout=7).json()
                                 if response['errcode'] == 0:
                                     gold = response['data']['gold']
-                                    with output_lock:
-                                        print(f"第{i + 1}次阅读检测文章成功---获得金币[{gold}]")
-                                        print(f"{'-' * 30}")
+                                    print(f"第{i + 1}次阅读检测文章成功---获得金币[{gold}]")
+                                    print(f"{'-' * 30}")
                                 else:
-                                    with output_lock:
-                                        print(f"过检测失败，请尝试重新运行")
+                                    print(f"过检测失败，请尝试重新运行")
                                     exit()
                         else:
-                            with output_lock:
-                                print(f"本次模拟阅读{sleep}秒")
+                            print(f"本次模拟阅读{sleep}秒")
                             time.sleep(sleep)
                             url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
                             params = {
@@ -224,35 +180,28 @@ def process_account(account, i):
                                 response = requests.get(url, headers=headers, params=params, timeout=7).json()
                             if response['errcode'] == 0:
                                 gold = response['data']['gold']
-                                with output_lock:
-                                    print(f"第{i + 1}次阅读文章成功---获得金币[{gold}]")
-                                    print(f"{'-' * 30}")
+                                print(f"第{i + 1}次阅读文章成功---获得金币[{gold}]")
+                                print(f"{'-' * 30}")
                             else:
-                                with output_lock:
-                                    print(f"阅读文章失败{response}")
+                                print(f"阅读文章失败{response}")
                                 break
                     else:
-                        with output_lock:
-                            print("未找到link")
+                        print("未找到link")
 
                 elif response['errcode'] == 405:
-                    with output_lock:
-                        print('阅读重复，重新尝试....')
-                        print(f"{'-' * 30}")
+                    print('阅读重复，重新尝试....')
+                    print(f"{'-' * 30}")
                     time.sleep(3)
                 elif response['errcode'] == 407:
-                    with output_lock:
-                        print(f'{response}')
+                    print(f'{response}')
                     break
 
             else:
-                with output_lock:
-                    print(f"获取阅读文章失败{response}")
+                print(f"获取阅读文章失败{response}")
                 break
 
         if money_Withdrawal == 1:
-            with output_lock:
-                print(f"{'=' * 18}开始提现{'=' * 18}")
+            print(f"{'=' * 18}开始提现{'=' * 18}")
             url = "http://1693461882.sethlee.top/?cate=0"
 
             response = requests.get(url, headers=headers).text
@@ -278,8 +227,7 @@ def process_account(account, i):
                 "gold": gold,
             }
             response = requests.post(url, headers=headers, data=data).json()
-            with output_lock:
-                print(f"当前可提现{gold}")
+            print(f"当前可提现{gold}")
 
             url = "http://1693462663.sethlee.top/yunonline/v1/withdraw"
             data = {
@@ -291,26 +239,27 @@ def process_account(account, i):
                 "pname": ""
             }
             response = requests.post(url, headers=headers, data=data)
-            with output_lock:
-                print(response.json())
+            print(response.json())
         elif money_Withdrawal == 0:
-            with output_lock:
-                print(f"{'=' * 18}{'=' * 18}")
-                print(f"不执行提现")
+            print(f"{'=' * 18}{'=' * 18}")
+            print(f"不执行提现")
 
     else:
-        with output_lock:
-            print(f"获取用户信息失败")
+        print(f"获取用户信息失败")
         exit()
 
 
-threads = []
-
-for i, account in enumerate(accounts_list, start=1):
-    thread = threading.Thread(target=process_account, args=(account, i))
-    threads.append(thread)
-
-for thread in threads:
-    thread.start()
-for thread in threads:
-    thread.join()
+if __name__ == "__main__":
+    accounts = os.getenv('ysm_uid')
+    # response = requests.get('https://gitee.com/shallow-a/qim9898/raw/master/label.txt').text
+    # print(response)
+    if accounts is None:
+        print('你没有填入ysm_uid，咋运行？')
+        exit()
+    else:
+        accounts_list = os.environ.get('ysm_uid').split('====')
+        num_of_accounts = len(accounts_list)
+        print(f"获取到 {num_of_accounts} 个账号")
+        with Pool(processes=num_of_accounts) as pool:
+            thread_pool = ThreadPool(max_concurrency)
+            thread_pool.starmap(process_account, [(account, i) for i, account in enumerate(accounts_list, start=1)])

@@ -1,11 +1,12 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
-小阅阅_V1.32
+小阅阅_V1.41
 入口：https://wi53263.nnju.top:10258/yunonline/v1/auth/a736aa79132badffc48e4b380f21c7ac?codeurl=wi53263.nnju.top:10258&codeuserid=2&time=1693450574
-抓包搜索关键词ysm_uid 取出ysm_uid的值即可
+抓包搜索关键词ysm_uid跟ysmuid 取出ysm_uid跟ysmuid的值即可 用@连接
 
-export ysm_uid=xxxxxxx
+export ysm_uid=xxxxxxx@xxxxxx
 多账号用'===='隔开 例 账号1====账号2
+export ysm_uid=xxxxxxx@xxxxxx====xxxxxxx@xxxxxx
 """
 money_Withdrawal = 1  # 提现开关 1开启 0关闭
 max_concurrency = 1  # 设置要运行的线程数
@@ -20,6 +21,7 @@ import time
 from multiprocessing import Pool
 from multiprocessing.pool import ThreadPool
 from urllib.parse import urlparse, parse_qs
+from requests.exceptions import ConnectionError, Timeout
 import requests
 
 from dotenv import load_dotenv
@@ -28,11 +30,12 @@ load_dotenv(dotenv_path='.env.local', verbose=True)
 
 key = os.getenv('wxkey') # 企业微信key
 lock = threading.Lock()
+max_retries = 3
 
-def process_account(account, i):
+def process_account(account, index):
     values = account.split('@')
-    xyy_uid = values[0]
-    print(f"\n=======开始执行账号{i}=======")
+    xyy_uid,ysmuid = values[0],values[1]
+    print(f"\n=======开始执行账号{index}=======")
     print(f"unionid:{xyy_uid}")
     current_timestamp = int(time.time() * 1000)
 
@@ -74,42 +77,72 @@ def process_account(account, i):
             ]
             url = "http://1693441346.pgvv.top/yunonline/v1/wtmpdomain"
             headers = {
-                "Host": "nsr.zsf2023e458.cloud",
-                "Origin": "https://b1694491023-1304258503.cos.ap-beijing.myqcloud.com",
+                "Host": '1693441346.pgvv.top',
+                "Accept": 'application/json, text/javascript, */*; q=0.01',
                 "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
-                "Cookie": f"ejectCode=1; ysm_uid={xyy_uid}"
+                'X-Requested-With': 'XMLHttpRequest',
+                'Referer': 'http://1693441346.pgvv.top/',
+                'Accept-Encoding': 'gzip, deflate',
+                'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Cookie': f'ysm_uid={xyy_uid}; ysmuid={ysmuid}; ejectCode=1'
             }
 
             data = {
                 "unionid": xyy_uid
             }
-
-            try:
-                response = requests.post(url, headers=headers, data=data, timeout=7).json()
-            except requests.Timeout:
-                print("请求超时，尝试重新发送请求...")
-                response = requests.post(url, headers=headers, data=data, timeout=7).json()
-
+            for retry in range(max_retries):
+                try:
+                    response = requests.post(url, headers=headers, data=data, timeout=7).json()
+                    break
+                except (ConnectionError, Timeout):
+                    if retry < max_retries - 1:
+                        continue
+                    else:
+                        print("异常退出")
+                        break
+                except Exception as e:
+                    print(e)
+                    print("状态1异常，尝试重新发送请求...")
+                    response = requests.post(url, headers=headers, data=data, timeout=7).json()
             if response['errcode'] == 0:
                 ukurl = response['data']['domain']
                 parsed_url = urlparse(ukurl)
+                domain = parsed_url.scheme + '://' + parsed_url.netloc
                 query_params = parse_qs(parsed_url.query)
                 uk = query_params.get('uk', [])[0] if 'uk' in query_params else None
                 time.sleep(1)
                 url = "https://nsr.zsf2023e458.cloud/yunonline/v1/do_read"
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
+                    "Origin": f"{domain}",
+                    'Sec-Fetch-Site': 'cross-site',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "Accept-Encoding": "gzip, deflate, br"
+                }
                 params = {
                     "uk": uk
                 }
-                try:
-                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
-                except requests.Timeout:
-                    print("请求超时，尝试重新发送请求...")
-                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                for retry in range(max_retries):
+                    try:
+                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                        break
+                    except (ConnectionError, Timeout):
+                        if retry < max_retries - 1:
+                            continue
+                        else:
+                            print("异常退出")
+                            break
+                    except Exception as e:
+                        print(e)
+                        print("状态2异常，尝试重新发送请求...")
+                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
                 if response['errcode'] == 0:
                     link = response['data']['link'] + "?/"
                     headers_link = {
                         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
-                        "Cookie": f"ejectCode=1; ysm_uid={xyy_uid}"
+                        'Cookie': f'ysm_uid={xyy_uid}; ysmuid={ysmuid}; ejectCode=1'
                     }
                     response = requests.get(url=link, headers=headers_link).text
                     pattern = r'<meta\s+property="og:url"\s+content="([^"]+)"\s*/>'
@@ -124,12 +157,13 @@ def process_account(account, i):
                         print(f"获取文章成功---{mid} 来源[{biz}]")
                         sleep = random.randint(8, 9)
                         if biz in checkDict:
+                            four_digit_number = random.randint(1000, 9999)
                             print(f"发现目标[{biz}] 疑似检测文章！！！")
                             link = og_url
                             url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
                             messages = [
-                                f"小阅阅 出现检测文章！！！\n{link}\n请在60s内点击链接完成阅读",
+                                f"小阅阅 账号{index}-出现检测文章！！！{four_digit_number}\n{link}\n请在60s内点击链接完成阅读",
                             ]
 
                             for message in messages:
@@ -142,18 +176,40 @@ def process_account(account, i):
                                 headers_bot = {'Content-Type': 'application/json'}
                                 response = requests.post(url, headers=headers_bot, data=json.dumps(data))
                                 print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
-                                time.sleep(60)
+                                # time.sleep(60)
+                                for item in range(60):
+                                    print(f'等待过检测文章还剩-{59-item}秒')
+                                    time.sleep(1)
                                 url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
+                                headers = {
+                                    'Host': 'nsr.zsf2023e458.cloud',
+                                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                                    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
+                                    "Origin": f"{domain}",
+                                    'Sec-Fetch-Site': 'cross-site',
+                                    'Sec-Fetch-Mode': 'cors',
+                                    'Sec-Fetch-Dest': 'empty',
+                                    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                                    "Accept-Encoding": "gzip, deflate, br"
+                                }
                                 params = {
                                     "uk": uk,
                                     "time": sleep,
                                     "timestamp": current_timestamp
                                 }
-                                try:
-                                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
-                                except requests.Timeout:
-                                    print("请求超时，尝试重新发送请求...")
-                                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                                for retry in range(max_retries):
+                                    try:
+                                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                                        break
+                                    except (ConnectionError, Timeout):
+                                        if retry < max_retries - 1:
+                                            continue
+                                        else:
+                                            print("异常退出")
+                                            break
+                                    except Exception as e:
+                                        print('设置状态异常')
+                                        print(e)
                                 if response['errcode'] == 0:
                                     gold = response['data']['gold']
                                     print(f"第{i + 1}次阅读检测文章成功---获得金币[{gold}]")
@@ -165,16 +221,35 @@ def process_account(account, i):
                             print(f"本次模拟阅读{sleep}秒")
                             time.sleep(sleep)
                             url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
+                            headers = {
+                                'Host': 'nsr.zsf2023e458.cloud',
+                                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/WIFI Language/zh_CN",
+                                "Origin": f"{domain}",
+                                'Sec-Fetch-Site': 'cross-site',
+                                'Sec-Fetch-Mode': 'cors',
+                                'Sec-Fetch-Dest': 'empty',
+                                "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                                "Accept-Encoding": "gzip, deflate, br"
+                            }
                             params = {
                                 "uk": uk,
                                 "time": sleep,
                                 "timestamp": current_timestamp
                             }
-                            try:
-                                response = requests.get(url, headers=headers, params=params, timeout=7).json()
-                            except requests.Timeout:
-                                print("请求超时，尝试重新发送请求...")
-                                response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                            for retry in range(max_retries):
+                                try:
+                                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                                    break
+                                except (ConnectionError, Timeout):
+                                    if retry < max_retries - 1:
+                                        continue
+                                    else:
+                                        print("异常退出")
+                                        break
+                                except Exception as e:
+                                    print('设置状态异常')
+                                    print(e)
                             if response['errcode'] == 0:
                                 gold = response['data']['gold']
                                 print(f"第{i + 1}次阅读文章成功---获得金币[{gold}]")
@@ -198,14 +273,29 @@ def process_account(account, i):
                 break
 
         if money_Withdrawal == 1:
+            
             print(f"{'=' * 18}开始提现{'=' * 18}")
             url = "http://1693461882.sethlee.top/?cate=0"
+            headers = {
+                'Host': '1693461882.sethlee.top',
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.42(0x18002a25) NetType/WIFI Language/zh_CN",
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'X-Requested-With': 'com.tencent.mm',
+                'Referer': url,
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                'Cookie': f'ysm_uid={xyy_uid}; ysmuid={ysmuid}; ejectCode=1'
+            }
 
             response = requests.get(url, headers=headers).text
-            regex = r'request_id=([^\'"\s&]+)'
-            matches = re.search(regex, response)
-
-            request_id = matches.group(1) if matches else None
+            res1 = re.sub('\s', '', response)
+            exchangeUrl = re.findall('"target="_blank"href="(.*?)">提现<', res1)
+            eurl = exchangeUrl[0]
+            query_dict = parse_qs(urlparse(exchangeUrl[0]).query)
+            unionid = query_dict.get('unionid', [''])[0]
+            request_id = query_dict.get('request_id', [''])[0]
+            b = urlparse(eurl)
+            host=b.netloc
 
             url = 'http://1693441346.pgvv.top/yunonline/v1/gold'
             params = {
@@ -218,8 +308,20 @@ def process_account(account, i):
                 gold = int(int(last_gold) / 1000) * 1000
 
             url = "http://1693462663.sethlee.top/yunonline/v1/user_gold"
+            headers = {
+                'Host': host,
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'X-Requested-With': 'XMLHttpRequest',
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.42(0x18002a25) NetType/WIFI Language/zh_CN",
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Origin': f'http://{host}',
+                'Referer': eurl,
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                'Cookie': f'ysm_uid={xyy_uid}; ysmuid={ysmuid}; ejectCode=1'
+            }
             data = {
-                "unionid": xyy_uid,
+                "unionid": unionid,
                 "request_id": request_id,
                 "gold": gold,
             }
@@ -227,8 +329,21 @@ def process_account(account, i):
             print(f"当前可提现{gold}")
 
             url = "http://1693462663.sethlee.top/yunonline/v1/withdraw"
+            headers = {
+                'Host': host,
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'X-Requested-With': 'XMLHttpRequest',
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.42(0x18002a25) NetType/WIFI Language/zh_CN",
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Origin': f'http://{host}',
+                'Referer': eurl,
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                'Cookie': f'ysm_uid={xyy_uid}; ysmuid={ysmuid}; ejectCode=1'
+            }
+
             data = {
-                "unionid": xyy_uid,
+                "unionid": unionid,
                 "signid": request_id,
                 "ua": "2",
                 "ptype": "0",
@@ -240,7 +355,6 @@ def process_account(account, i):
         elif money_Withdrawal == 0:
             print(f"{'=' * 18}{'=' * 18}")
             print(f"不执行提现")
-
     else:
         print(f"获取用户信息失败")
         exit()
