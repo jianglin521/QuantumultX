@@ -7,8 +7,8 @@ export ydtoken=cookie
 cron：23 7-23/2 * * *
 """
 
-money_Withdrawal = 1  # 提现开关 1开启 0关闭
-max_concurrency = 2  # 并发线程数
+# money_Withdrawal = 1  # 提现开关 1开启 0关闭
+max_concurrency = 3  # 并发线程数
 # key = ""        #key为企业微信webhook机器人后面的 key
 
 import hashlib
@@ -17,6 +17,7 @@ import os
 import random
 import threading
 import time
+import datetime
 from multiprocessing import Pool
 from multiprocessing.pool import ThreadPool
 
@@ -70,7 +71,7 @@ def process_account(account, i):
         if response['code'] == 0:
             remain = response['data']['remain']
             read = response['data']['read']
-            print(f"ID:{p_value}-----钢镚余额:{remain}\n今日阅读量::{read}\n推广链接:{share_link}")
+            print(f"账号{i}-ID:{p_value}-----钢镚余额:{remain}\n今日阅读量::{read}\n推广链接:{share_link}")
         else:
             print(response['message'])
 
@@ -86,10 +87,10 @@ def process_account(account, i):
         url = "http://2477726.9o.10r8cvn6b1.cloud/read/task"
 
         try:
-            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+            response = requests.get(url, headers=headers, json=data, timeout=10).json()
         except requests.Timeout:
             print("请求超时，尝试重新发送请求...")
-            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+            response = requests.get(url, headers=headers, json=data, timeout=10).json()
         except Exception as e:
             print(e)
             print("状态异常，尝试重新发送请求...")
@@ -102,11 +103,11 @@ def process_account(account, i):
                 mid = response['data']['link'].split('&mid=')[1].split('&')[0]
                 biz = response['data']['link'].split('__biz=')[1].split('&')[0]
 
-                print(f"[{p_value}]获取文章成功---{mid} 来源[{biz}]")
+                # print(f"账号{i}-[{p_value}]获取文章成功---{mid} 来源[{biz}]")
 
                 if biz in biz_list:
                     four_digit_number = random.randint(1000, 9999)
-                    print(f"发现目标[{biz}] 疑似检测文章！！！")
+                    print(f"账号{i}-发现目标[{biz}] 疑似检测文章！！！")
                     link = response['data']['link']
                     url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
@@ -126,7 +127,7 @@ def process_account(account, i):
                         print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
                         # time.sleep(60)
                         for item in range(60):
-                            print(f'等待过检测文章还剩-{59-item}秒')
+                            print(f'账号{i}-等待过检测文章还剩-{59-item}秒')
                             time.sleep(1)
                         url = "http://2477726.9o.10r8cvn6b1.cloud/read/finish"
                         headers = {
@@ -154,7 +155,7 @@ def process_account(account, i):
                             break
                 else:
                     sleep = random.randint(8, 11)
-                    print(f"本次模拟阅读{sleep}秒")
+                    # print(f"账号{i}-本次模拟阅读{sleep}秒")
                     time.sleep(sleep)
                     url = "http://2477726.9o.10r8cvn6b1.cloud/read/finish"
                     headers = {
@@ -175,14 +176,16 @@ def process_account(account, i):
                         print(e)
                     if response['code'] == 0:
                         gain = response['data']['gain']
-                        print(f"第{j + 1}次阅读文章成功---获得钢镚[{gain}]")
+                        print(f"账号{i}-第{j + 1}次阅读文章成功---获得钢镚[{gain}]-{sleep}秒")
                         print(f"--------------------------------")
                     else:
                         print(f"阅读文章失败{response}")
             except KeyError:
                 print(f"获取文章失败,错误未知{response}")
                 break
-    if money_Withdrawal == 1:
+    
+    now = datetime.datetime.now()
+    if now.hour > 20:
         print(f"============开始微信提现============")
         url = "http://2477726.84.8agakd6cqn.cloud/withdraw/wechat"
 
@@ -193,9 +196,8 @@ def process_account(account, i):
             print(response['message'])
         else:
             print(f"错误未知{response}")
-    elif money_Withdrawal == 0:
+    else:
         print(f"{'-' * 30}\n不执行提现")
-
 
 if __name__ == "__main__":
     accounts = os.getenv('ydtoken')

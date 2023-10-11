@@ -6,6 +6,7 @@ import re
 import sys
 import os
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from dotenv import load_dotenv
@@ -28,7 +29,8 @@ chrome_options.add_argument('user-agent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_5
 
 try:
     if sys.platform == 'win32' or sys.platform == 'cygwin':
-        driver = webdriver.Chrome(options=chrome_options, executable_path=r'D:/driver/chromedriver.exe')
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+        # driver = webdriver.Chrome(options=chrome_options, executable_path=r'D:/driver/chromedriver.exe')
     else:
         driver = webdriver.Chrome(options=chrome_options, executable_path=r'./chromedriver')
 except:

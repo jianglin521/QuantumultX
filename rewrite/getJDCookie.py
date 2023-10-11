@@ -18,6 +18,7 @@ print('''
 ''')
 import datetime
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import json, os, sys
@@ -42,7 +43,8 @@ def exitWait():
     exit(0)
 try:
     if sys.platform == 'win32' or sys.platform == 'cygwin':
-        driver = webdriver.Chrome(options=chrome_options, executable_path=r'D:/driver/chromedriver.exe')
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+        # driver = webdriver.Chrome(options=chrome_options, executable_path=r'D:/driver/chromedriver.exe')
     else:
         driver = webdriver.Chrome(options=chrome_options, executable_path=r'./chromedriver')
     driver.set_window_size(375, 812)

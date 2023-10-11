@@ -8,8 +8,8 @@ export ysm_uid=xxxxxxx@xxxxxx
 多账号用'===='隔开 例 账号1====账号2
 export ysm_uid=xxxxxxx@xxxxxx====xxxxxxx@xxxxxx
 """
-money_Withdrawal = 1  # 提现开关 1开启 0关闭
-max_concurrency = 2  # 设置要运行的线程数
+# money_Withdrawal = 1  # 提现开关 1开启 0关闭
+max_concurrency = 3  # 设置要运行的线程数
 # key = ""  # 内置key 必填！！！ key为企业微信webhook机器人后面的 key
 
 import json
@@ -18,6 +18,7 @@ import random
 import re
 import threading
 import time
+import datetime
 from multiprocessing import Pool
 from multiprocessing.pool import ThreadPool
 from urllib.parse import urlparse, parse_qs
@@ -154,11 +155,11 @@ def process_account(account, index):
 
                         biz = og_url.split('__biz=')[1].split('&')[0]
                         mid = og_url.split('&mid=')[1].split('&')[0]
-                        print(f"获取文章成功---{mid} 来源[{biz}]")
+                        # print(f"账号{index}-获取文章成功---{mid} 来源[{biz}]")
                         sleep = random.randint(8, 9)
                         if biz in checkDict:
                             four_digit_number = random.randint(1000, 9999)
-                            print(f"发现目标[{biz}] 疑似检测文章！！！")
+                            print(f"账号{index}-发现目标[{biz}] 疑似检测文章！！！")
                             link = og_url
                             url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + key
 
@@ -178,7 +179,7 @@ def process_account(account, index):
                                 print("以将该文章推送至微信请在60s内点击链接完成阅读--60s后继续运行")
                                 # time.sleep(60)
                                 for item in range(60):
-                                    print(f'等待过检测文章还剩-{59-item}秒')
+                                    print(f'账号{index}-等待过检测文章还剩-{59-item}秒')
                                     time.sleep(1)
                                 url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
                                 headers = {
@@ -218,7 +219,7 @@ def process_account(account, index):
                                     print(f"过检测失败，请尝试重新运行")
                                     exit()
                         else:
-                            print(f"本次模拟阅读{sleep}秒")
+                            # print(f"账号{index}-本次模拟阅读{sleep}秒")
                             time.sleep(sleep)
                             url = "https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold"
                             headers = {
@@ -252,7 +253,7 @@ def process_account(account, index):
                                     print(e)
                             if response['errcode'] == 0:
                                 gold = response['data']['gold']
-                                print(f"第{i + 1}次阅读文章成功---获得金币[{gold}]")
+                                print(f"账号{index}-第{i + 1}次阅读文章成功---获得金币[{gold}]-{sleep}秒")
                                 print(f"{'-' * 30}")
                             else:
                                 print(f"阅读文章失败{response}")
@@ -272,8 +273,8 @@ def process_account(account, index):
                 print(f"获取阅读文章失败{response}")
                 break
 
-        if money_Withdrawal == 1:
-            
+        now = datetime.datetime.now()
+        if now.hour > 20:    
             print(f"{'=' * 18}开始提现{'=' * 18}")
             url = "http://1693461882.sethlee.top/?cate=0"
             headers = {
@@ -352,7 +353,7 @@ def process_account(account, index):
             }
             response = requests.post(url, headers=headers, data=data)
             print(response.json())
-        elif money_Withdrawal == 0:
+        else:
             print(f"{'=' * 18}{'=' * 18}")
             print(f"不执行提现")
     else:
