@@ -1,6 +1,7 @@
 """
 @Qim出品 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
 钢镚阅读阅读_V1.65   入口：http://2477726.ulbn.sgzzlb.81rblqe6rl.cloud/?p=2477726
+http://2480895.qtivcc.wep845.wp8ottupoy5n.cloud/page?p=2480895#/auth
 阅读文章抓出cookie（找不到搜索gfsessionid关键词）
 export ydtoken=cookie
 多账号用'===='隔开 例 账号1====账号2
@@ -8,7 +9,7 @@ cron：23 7-23/2 * * *
 """
 
 # money_Withdrawal = 1  # 提现开关 1开启 0关闭
-max_concurrency = 3  # 并发线程数
+max_concurrency = 1  # 并发线程数
 # key = ""        #key为企业微信webhook机器人后面的 key
 
 import hashlib
@@ -60,10 +61,10 @@ def process_account(account, i):
 
 
         try:
-            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+            response = requests.get(url, headers=headers, json=data, timeout=15).json()
         except requests.Timeout:
             print("请求超时，尝试重新发送请求...")
-            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+            response = requests.get(url, headers=headers, json=data, timeout=15).json()
         except Exception as e:
             print('设置状态异常')
             print(e)
@@ -87,14 +88,14 @@ def process_account(account, i):
         url = "http://2477726.9o.10r8cvn6b1.cloud/read/task"
 
         try:
-            response = requests.get(url, headers=headers, json=data, timeout=10).json()
+            response = requests.get(url, headers=headers, json=data, timeout=15).json()
         except requests.Timeout:
             print("请求超时，尝试重新发送请求...")
-            response = requests.get(url, headers=headers, json=data, timeout=10).json()
+            response = requests.get(url, headers=headers, json=data, timeout=15).json()
         except Exception as e:
             print(e)
             print("状态异常，尝试重新发送请求...")
-            response = requests.get(url, headers=headers, json=data, timeout=7).json()
+            response = requests.get(url, headers=headers, json=data, timeout=15).json()
         if response['code'] == 1:
             print(response['message'])
             break
@@ -139,10 +140,10 @@ def process_account(account, i):
                             "sign": sign
                         }
                         try:
-                            response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                            response = requests.get(url, headers=headers, data=data, timeout=15).json()
                         except requests.Timeout:
                             print("请求超时，尝试重新发送请求...")
-                            response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                            response = requests.get(url, headers=headers, data=data, timeout=15).json()
                         except Exception as e:
                             print('设置状态异常')
                             print(e)
@@ -167,10 +168,10 @@ def process_account(account, i):
                         "sign": sign
                     }
                     try:
-                        response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                        response = requests.get(url, headers=headers, data=data, timeout=15).json()
                     except requests.Timeout:
                         print("请求超时，尝试重新发送请求...")
-                        response = requests.get(url, headers=headers, data=data, timeout=7).json()
+                        response = requests.get(url, headers=headers, data=data, timeout=15).json()
                     except Exception as e:
                         print('设置状态异常')
                         print(e)
@@ -185,7 +186,7 @@ def process_account(account, i):
                 break
     
     now = datetime.datetime.now()
-    if now.hour > 20:
+    if now.hour >= 18   :
         print(f"============开始微信提现============")
         url = "http://2477726.84.8agakd6cqn.cloud/withdraw/wechat"
 

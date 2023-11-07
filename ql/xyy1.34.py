@@ -93,7 +93,7 @@ def process_account(account, index):
             }
             for retry in range(max_retries):
                 try:
-                    response = requests.post(url, headers=headers, data=data, timeout=7).json()
+                    response = requests.post(url, headers=headers, data=data, timeout=15).json()
                     break
                 except (ConnectionError, Timeout):
                     if retry < max_retries - 1:
@@ -104,7 +104,7 @@ def process_account(account, index):
                 except Exception as e:
                     print(e)
                     print("状态1异常，尝试重新发送请求...")
-                    response = requests.post(url, headers=headers, data=data, timeout=7).json()
+                    response = requests.post(url, headers=headers, data=data, timeout=15).json()
             if response['errcode'] == 0:
                 ukurl = response['data']['domain']
                 parsed_url = urlparse(ukurl)
@@ -127,7 +127,7 @@ def process_account(account, index):
                 }
                 for retry in range(max_retries):
                     try:
-                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                        response = requests.get(url, headers=headers, params=params, timeout=15).json()
                         break
                     except (ConnectionError, Timeout):
                         if retry < max_retries - 1:
@@ -138,7 +138,7 @@ def process_account(account, index):
                     except Exception as e:
                         print(e)
                         print("状态2异常，尝试重新发送请求...")
-                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                        response = requests.get(url, headers=headers, params=params, timeout=15).json()
                 if response['errcode'] == 0:
                     link = response['data']['link'] + "?/"
                     headers_link = {
@@ -200,7 +200,7 @@ def process_account(account, index):
                                 }
                                 for retry in range(max_retries):
                                     try:
-                                        response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                                        response = requests.get(url, headers=headers, params=params, timeout=15).json()
                                         break
                                     except (ConnectionError, Timeout):
                                         if retry < max_retries - 1:
@@ -240,7 +240,7 @@ def process_account(account, index):
                             }
                             for retry in range(max_retries):
                                 try:
-                                    response = requests.get(url, headers=headers, params=params, timeout=7).json()
+                                    response = requests.get(url, headers=headers, params=params, timeout=15).json()
                                     break
                                 except (ConnectionError, Timeout):
                                     if retry < max_retries - 1:
@@ -274,7 +274,7 @@ def process_account(account, index):
                 break
 
         now = datetime.datetime.now()
-        if now.hour > 20:    
+        if now.hour >= 18:    
             print(f"{'=' * 18}开始提现{'=' * 18}")
             url = "http://1693461882.sethlee.top/?cate=0"
             headers = {
