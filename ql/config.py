@@ -21,7 +21,7 @@ invite_info = {'name':'','code':''}  # 仓库脚本无需理会，收费项目�
 yu_config = {
         'max_workers': 5,  # 线程数量设置 设置为5，即最多有5个任务同时进行
 
-        'txbz': 0.5,  # 设置提现标准 单位：元
+        'txbz': 1,  # 设置提现标准 单位：元
 
         'sendable': 1,  # 企业微信推送开关 1开0关
 
@@ -32,10 +32,10 @@ yu_config = {
         'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
         'yuck':[
-            {'name':'账号1','ck':'PHPSESSID=l2bq9qujb6mb63a4e4rp8qk4us'},
-            {'name':'账号2','ck':'PHPSESSID=b12oibfjson7c5sjrlscqfmtm9'},
-            {'name':'账号3','ck':'PHPSESSID=lrp1vm2e2s5jh9it3qk0j8qvau'},
-            {'name':'账号4','ck':'PHPSESSID=tmd4p6d6u50jjgjipuv6h767o6'},
+            {'name':'账号1','ck':'PHPSESSID=b7ffsk5mqrba52uano0dgvjdba'},
+            {'name':'账号2','ck':'PHPSESSID=udm6p2vgt50gcnka96fkjpp4oq'},
+            # {'name':'账号3','ck':'PHPSESSID=lrp1vm2e2s5jh9it3qk0j8qvau'},
+            # {'name':'账号4','ck':'PHPSESSID=tmd4p6d6u50jjgjipuv6h767o6'},
         ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
 
     }
@@ -43,7 +43,7 @@ yu_config = {
 
 """可乐设置"""
 kl_config={
-    'max_workers': 4,  # 线程数量设置,设置为5，即最多有5个任务同时进行
+    'max_workers': 5,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
     'txbz': 5000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
@@ -66,15 +66,15 @@ kl_config={
 
 """点点赚设置"""
 ddz_config={
-    'max_workers': 4,  # 线程数量设置,设置为5，即最多有5个任务同时进行
+    'max_workers': 5,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
-    'txbz': 5000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
+    'txbz': 10000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关,1为开，0为关开启后必须设置qwbotkey才能运行
 
     'pushable': 0,  # wxpusher推送开关,1为开，0为关,开启后必须设置pushconfig才能运行
 
-    'delay_time': 60,  # 并发延迟设置,设置为30即每隔30秒新增一个号做任务，直到数量达到max_workers
+    'delay_time': 30,  # 并发延迟设置,设置为30即每隔30秒新增一个号做任务，直到数量达到max_workers
 
     'whitelist':['账号1','账号2','账号3','账号4'], # 提现白名单设置,白名单中的账号自动提现，填入ck中的name,['name1','name2']。
 
@@ -116,8 +116,8 @@ czgm_config = {
         # {'name':'账号2','ck':'gfsessionid=o-0fIv70UF8z5NlS4As5c-eiqpZU'},
         # {'name':'账号3','ck':'gfsessionid=o-0fIv7nisvKpxJpd1h3WrWeOMgQ'},
         {'name':'账号4','ck':'gfsessionid=o-0fIv8MkoMRq9eqkp9YbP5rYyhk'},
-        {'name':'账号5','ck':'gfsessionid=o-0fIv7GaPu37DyHJWXK758eLX_g'},
-        {'name':'账号6','ck':'gfsessionid=o-0fIvzzst-YwnBGFmGZ8xyB-ITQ'}
+        # {'name':'账号5','ck':'gfsessionid=o-0fIv7GaPu37DyHJWXK758eLX_g'},
+        # {'name':'账号6','ck':'gfsessionid=o-0fIvzzst-YwnBGFmGZ8xyB-ITQ'}
      ], # ck设置，[{'name':'xxx','ck':'gfsessionid=xxx'},{'name':'xxx','ck':'gfsessionid=xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。ck是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
 }
 

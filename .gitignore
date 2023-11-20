@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+__pycache__/
 
 npm-debug.log*
 yarn-debug.log*
@@ -9,6 +10,7 @@ yarn-error.log*
 *.session
 *.log
 ck.txt
+u.txt
 
 # Editor directories and files
 .idea
