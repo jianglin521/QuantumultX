@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "node -r dotenv/config ./sngxpro/meituanV3.js dotenv_config_path=./.env.local",
-    "dt": "node -r dotenv/config ./sngxpro/dt.js dotenv_config_path=./.env.local",
+    "jetta": "node -r dotenv/config ./sngxpro/jetta.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "got": "^11.8.2",
     "iconv-lite": "^0.6.3",
     "md5": "^2.3.0",
+    "qs": "^6.11.2",
     "tough-cookie": "^4.0.0"
   }
 }
