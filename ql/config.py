@@ -21,7 +21,7 @@ invite_info = {'name':'','code':''}  # 仓库脚本无需理会，收费项目�
 yu_config = {
         'max_workers': 5,  # 线程数量设置 设置为5，即最多有5个任务同时进行
 
-        'txbz': 1,  # 设置提现标准 单位：元
+        'txbz': 0.5,  # 设置提现标准 单位：元
 
         'sendable': 1,  # 企业微信推送开关 1开0关
 
@@ -32,10 +32,10 @@ yu_config = {
         'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
         'yuck':[
-            {'name':'账号1','ck':'PHPSESSID=b7ffsk5mqrba52uano0dgvjdba'},
-            {'name':'账号2','ck':'PHPSESSID=udm6p2vgt50gcnka96fkjpp4oq'},
-            # {'name':'账号3','ck':'PHPSESSID=lrp1vm2e2s5jh9it3qk0j8qvau'},
-            # {'name':'账号4','ck':'PHPSESSID=tmd4p6d6u50jjgjipuv6h767o6'},
+            {'name':'账号1','ck':'PHPSESSID=0vi1pni8mi34fngqbm9rm8boji'},
+            {'name':'账号2','ck':'PHPSESSID=g8le3q4gbafi1rta8n0rcf8263'},
+            {'name':'账号3','ck':'PHPSESSID=0h9qf176e9l00an361ak8l2ub7'},
+            {'name':'账号4','ck':'PHPSESSID=nurjs9iam2nqti2trabkhk9o5d'},
         ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
 
     }
@@ -68,7 +68,7 @@ kl_config={
 ddz_config={
     'max_workers': 5,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
-    'txbz': 10000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
+    'txbz': 5000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关,1为开，0为关开启后必须设置qwbotkey才能运行
 
@@ -83,8 +83,8 @@ ddz_config={
     'zfb_name': '', #支付宝名字
 
     'ddzck':[
-        {'name':'账号1','PHPSESSID':'e8918fd7d3b86536a177f2e8322c1968'},
-        {'name':'账号2','PHPSESSID':'667124345ca2aeb9ba587c2b6b5a00b6'},
+        {'name':'账号1','PHPSESSID':'be8b5bd6171d7c082592724ec9e7edd1'},
+        {'name':'账号2','PHPSESSID':'6ae9fe5d8946be33079fd2bdc76ef18a'},
         {'name':'账号3','PHPSESSID':'579ef690cf696e505d6a2d6235ac48af'},
         {'name':'账号4','PHPSESSID':'708e6a4de4b27efc941e3a8f2ba4ad73'}
     ], # ck设置，优先从环境变量中获取，[{'name':'xxx','PHPSESSID':'xxx'},{'name':'xxx','PHPSESSID':'xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。PHPSESSID是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
@@ -131,7 +131,7 @@ mtz_config = {
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 
-    'pushable': 1,  # wxpusher推送开关 1开0关
+    'pushable': 0,  # wxpusher推送开关 1开0关
 
     'delay_time': 40,  # 并发延迟设置 设置为20即每隔20秒新增一个号做任务，直到数量达到max_workers
     
@@ -140,7 +140,6 @@ mtz_config = {
     'total_num': 19,  # 设置单轮任务最小数量"""设置为18即本轮数量小于18不继续阅读"""
 
     'mtzv2ck':'', #ck设置，建议填到环境变量或配置文件,多账号用&连接或创建多条变量。name=xxx;ck=share:xxxx&name=xxx;ck=share:xxxx;uid=UID_xxxx，微信和wxpusher群发不用填uid
-
 }
 """智慧元宝设置"""
 aio_config = {
