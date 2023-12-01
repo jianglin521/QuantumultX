@@ -21,7 +21,7 @@ invite_info = {'name':'','code':''}  # 仓库脚本无需理会，收费项目�
 yu_config = {
         'max_workers': 5,  # 线程数量设置 设置为5，即最多有5个任务同时进行
 
-        'txbz': 0.5,  # 设置提现标准 单位：元
+        'txbz': 1,  # 设置提现标准 单位：元
 
         'sendable': 1,  # 企业微信推送开关 1开0关
 
@@ -45,7 +45,7 @@ yu_config = {
 kl_config={
     'max_workers': 5,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
-    'txbz': 5000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
+    'txbz': 10000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关,1为开，0为关开启后必须设置qwbotkey才能运行
 
@@ -69,7 +69,7 @@ kl_config={
 ddz_config={
     'max_workers': 5,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
-    'txbz': 5000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
+    'txbz': 10000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关,1为开，0为关开启后必须设置qwbotkey才能运行
 
@@ -100,7 +100,7 @@ czgm_config = {
 
     'max_workers': 4,  # 线程数量设置,设置为5，即最多有5个任务同时进行
 
-    'txbz': 8000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
+    'txbz': 10000,  # 设置提现标准,不低于3000，平台3000起提,设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关,1为开，0为关开启后必须设置qwbotkey才能运行
 
@@ -114,9 +114,9 @@ czgm_config = {
 
     'czgmck':[
         # {'name':'账号1','ck':'gfsessionid=o-0fIvztYfY87ew1FWCwx8ajS6Vg'},
-        # {'name':'账号2','ck':'gfsessionid=o-0fIv70UF8z5NlS4As5c-eiqpZU'},
+        {'name':'账号2','ck':'gfsessionid=o-0fIv70UF8z5NlS4As5c-eiqpZU'},
         # {'name':'账号3','ck':'gfsessionid=o-0fIv7nisvKpxJpd1h3WrWeOMgQ'},
-        {'name':'账号4','ck':'gfsessionid=o-0fIv8MkoMRq9eqkp9YbP5rYyhk'},
+        # {'name':'账号4','ck':'gfsessionid=o-0fIv8MkoMRq9eqkp9YbP5rYyhk'},
         # {'name':'账号5','ck':'gfsessionid=o-0fIv7GaPu37DyHJWXK758eLX_g'},
         # {'name':'账号6','ck':'gfsessionid=o-0fIvzzst-YwnBGFmGZ8xyB-ITQ'}
      ], # ck设置，[{'name':'xxx','ck':'gfsessionid=xxx'},{'name':'xxx','ck':'gfsessionid=xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。ck是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
