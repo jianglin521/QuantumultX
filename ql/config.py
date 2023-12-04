@@ -37,7 +37,7 @@ yu_config = {
             {'name':'账号3','ck':'PHPSESSID=0h9qf176e9l00an361ak8l2ub7'},
             {'name':'账号4','ck':'PHPSESSID=nurjs9iam2nqti2trabkhk9o5d'},
         ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
-        'check_whitelist': ['鼓楼微文明','中国禁毒','漳州市龙文区妇幼保健院','委-海盐政协']
+        'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防']
     }
 """鱼儿设置完毕"""
 
@@ -61,7 +61,7 @@ kl_config={
         {'name':'账号3','ck':'PHPSESSID=to8epfaeg5f4ktst2hd18esaq0; udtauth3=8967cQBVPWiKl0xpUeR5%2F117FALvdSUIO3BGOdL%2FQrByTos8nRQjLFKf%2BfSjEHjYAgJAsHBBtokygU%2FQiZYn1ER7TYhdsbNStjgoB0tsq8%2BRgFySouuNPxc3ijsYYolt4MAtCl3O0tI%2FJZ4SosxqaCM3vl6aZra8wQDbAauFjQQ'},
         {'name':'账号4','ck':'PHPSESSID=kbpj7kas9r5pv2dc89rruh0pqg; udtauth3=ba70AsEbbq%2BcV34qotKHZbyDGgsWWPelOW%2FqxM90kgcwG0%2BUuycf7QqiSQ%2BDu9%2BGIdP2F0qFP20SrbYOphEsTJgKJODzJ1Kiud9chctNmHHk4LJMLYVRqyJlWm6Rrau4nICUdWHNwnU8I%2FupFiJTVGWkGCO%2BZDlEQ6RuL2P9%2Fxk'}
     ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
-    'check_whitelist': ['鼓楼微文明','中国禁毒','漳州市龙文区妇幼保健院','委-海盐政协']
+    'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防']
 }
 """可乐设置完毕"""
 
@@ -128,7 +128,7 @@ mtz_config = {
 
     'max_workers': 2,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
 
-    'txbz': 2000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
+    'txbz': 1000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 
