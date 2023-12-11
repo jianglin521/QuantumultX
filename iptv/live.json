@@ -1,0 +1,25 @@
+{
+  "lives": [
+    {
+      "name": "iptv",
+      "url": "http://43.138.29.231:7755/tvbox/iptv.m3u",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "playerType": 1
+    },
+    {
+      "name": "悠哉TV",
+      "url": "./悠哉TV.m3u",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "playerType": 1
+    },
+    {
+      "name": "yz.txt",
+      "url": "https://codeberg.org/youzai/yz/raw/branch/main/yz.txt",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "playerType": 1
+    }
+  ]
+}
