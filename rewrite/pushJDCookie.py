@@ -62,14 +62,14 @@ time.sleep(0.3)
 driver.find_element_by_xpath('//*[@id="password"]').send_keys(f'{password}')
 time.sleep(0.5)
 driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/form/div[3]/button').click()
-time.sleep(2)
+time.sleep(15)
 driver.get(f'{address}env')
 time.sleep(2)
 
 for item in ck:
     itemArr = item.split(' ')
     print(itemArr)
-    driver.find_element_by_xpath('//*[@id="root"]/div/section/div[2]/main/div/div[1]/div/div/span/div/div[3]/button').click()
+    driver.find_element_by_xpath('//*[@id="root"]/div/section/div/main/div/div[1]/div/div/span/div/div[3]/button').click()
 
     time.sleep(0.6)
     driver.find_element_by_xpath('//*[@id="env_modal_name"]').send_keys("JD_COOKIE")

@@ -80,10 +80,10 @@ kl_config={
     'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
     'klck':[
-        {'name':'账号1','ck':'PHPSESSID=rc4g9s9t1u6pcuiiushg33q8sr; udtauth3=04465NDAKoyPsen7SLiRl3lS%2BDh4%2FkWj%2BlbrLHMf5jMEjH7aguzzBMggTguFfy3cDnxs%2F4ihwWZvgGLR0QpVZxvGWbXsAtHl59nG%2BUCIedPxCX77nlxyOyhCevdnybI1cmXJpxexo3xezjipeI9o%2BRQJ%2BRs3TYYRTAPAEi4Khf4'},
+        # {'name':'账号1','ck':'PHPSESSID=rc4g9s9t1u6pcuiiushg33q8sr; udtauth3=04465NDAKoyPsen7SLiRl3lS%2BDh4%2FkWj%2BlbrLHMf5jMEjH7aguzzBMggTguFfy3cDnxs%2F4ihwWZvgGLR0QpVZxvGWbXsAtHl59nG%2BUCIedPxCX77nlxyOyhCevdnybI1cmXJpxexo3xezjipeI9o%2BRQJ%2BRs3TYYRTAPAEi4Khf4'},
         {'name':'账号2','ck':'PHPSESSID=6degs2jqnrhlhib2h7kdrcvnuf; udtauth3=a6d83RnuHBYL7nDszCcYfpSXowIUE%2FRH1vDdVc7ReitEPvOm0bSxVr2XqyXpv4g6mtBxa4cbsor7ahP5qJ%2FZ1sWHCQFdRRT2aqH8%2FBDdWKh6o9XQbPLtWHq3cLnEhT%2B6B6ky92WcK5Sex8wV303DAPMk9usgjDLX2n5YLMdOLSI'},
-        {'name':'账号3','ck':'PHPSESSID=c2o87mrjkq14a4kmfd66rrk08l; udtauth3=84f9v4RDuZwZcGUCOHl2y3uAfXXyaEFaY9mNl6J2lLQBoDWinwxvKYQwii71TLpGDA3albQwWU5lyipNL%2B4WIXvsxsgEclP11XoGDaK4vWhetTplNx6k474isbKNf7lY5L3c9VLGGeCoKSB%2F%2FJ0vLQf5jrdeEHZ6RkdgRCTGSTA'},
-        {'name':'账号4','ck':'PHPSESSID=f0k04ufm04r5l0m1ta6l7auimu; udtauth3=5298RUlzquoAiSJy%2FT64Bidep%2FC1OMc9eFOaOMCRBbvTFy6xswITg8wmfYsYd56VHyHod9szWCukFJwI4w1BuEpRcYO%2F2UImpOLs%2FZoIJLUkpPOEmhM3tNFwBAyHvb09HdORGBVsogF52AEXj9lAJti0VRu7cJMfgWX%2Fqzew%2Bk0'}
+        # {'name':'账号3','ck':'PHPSESSID=c2o87mrjkq14a4kmfd66rrk08l; udtauth3=84f9v4RDuZwZcGUCOHl2y3uAfXXyaEFaY9mNl6J2lLQBoDWinwxvKYQwii71TLpGDA3albQwWU5lyipNL%2B4WIXvsxsgEclP11XoGDaK4vWhetTplNx6k474isbKNf7lY5L3c9VLGGeCoKSB%2F%2FJ0vLQf5jrdeEHZ6RkdgRCTGSTA'},
+        # {'name':'账号4','ck':'PHPSESSID=f0k04ufm04r5l0m1ta6l7auimu; udtauth3=5298RUlzquoAiSJy%2FT64Bidep%2FC1OMc9eFOaOMCRBbvTFy6xswITg8wmfYsYd56VHyHod9szWCukFJwI4w1BuEpRcYO%2F2UImpOLs%2FZoIJLUkpPOEmhM3tNFwBAyHvb09HdORGBVsogF52AEXj9lAJti0VRu7cJMfgWX%2Fqzew%2Bk0'}
     ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
     'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防', '卓越集团', '宁夏禁毒']
 }
