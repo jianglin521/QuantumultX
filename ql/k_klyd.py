@@ -21,7 +21,7 @@ def check_environment(file_name):
             print("不符合要求: 处理器架构不是x86_64 aarch64 armv8 amd64")
 
 
-def check_so_file(filename,sys_info, cpu_info):
+def check_so_file(filename,sys_info, cpu_info):     
     if sys_info == 'windows':
         filename= os.path.splitext(filename)[0]+'.pyd'
     if sys_info == 'linux':

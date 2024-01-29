@@ -15,15 +15,8 @@
       "playerType": 1
     },
     {
-      "name": "yz本地",
-      "url": "./yz.txt",
-      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png",
-      "playerType": 1
-    },
-    {
-      "name": "yz.txt",
-      "url": "https://codeberg.org/youzai/yz/raw/branch/main/yz.txt",
+      "name": "月光宝盒",
+      "url": "./月光宝盒.txt",
       "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
       "playerType": 1

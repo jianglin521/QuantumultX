@@ -80,10 +80,10 @@ kl_config={
     'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
     'klck':[
-        # {'name':'账号1','ck':'PHPSESSID=rc4g9s9t1u6pcuiiushg33q8sr; udtauth3=04465NDAKoyPsen7SLiRl3lS%2BDh4%2FkWj%2BlbrLHMf5jMEjH7aguzzBMggTguFfy3cDnxs%2F4ihwWZvgGLR0QpVZxvGWbXsAtHl59nG%2BUCIedPxCX77nlxyOyhCevdnybI1cmXJpxexo3xezjipeI9o%2BRQJ%2BRs3TYYRTAPAEi4Khf4'},
-        {'name':'账号2','ck':'PHPSESSID=6degs2jqnrhlhib2h7kdrcvnuf; udtauth3=a6d83RnuHBYL7nDszCcYfpSXowIUE%2FRH1vDdVc7ReitEPvOm0bSxVr2XqyXpv4g6mtBxa4cbsor7ahP5qJ%2FZ1sWHCQFdRRT2aqH8%2FBDdWKh6o9XQbPLtWHq3cLnEhT%2B6B6ky92WcK5Sex8wV303DAPMk9usgjDLX2n5YLMdOLSI'},
-        # {'name':'账号3','ck':'PHPSESSID=c2o87mrjkq14a4kmfd66rrk08l; udtauth3=84f9v4RDuZwZcGUCOHl2y3uAfXXyaEFaY9mNl6J2lLQBoDWinwxvKYQwii71TLpGDA3albQwWU5lyipNL%2B4WIXvsxsgEclP11XoGDaK4vWhetTplNx6k474isbKNf7lY5L3c9VLGGeCoKSB%2F%2FJ0vLQf5jrdeEHZ6RkdgRCTGSTA'},
-        # {'name':'账号4','ck':'PHPSESSID=f0k04ufm04r5l0m1ta6l7auimu; udtauth3=5298RUlzquoAiSJy%2FT64Bidep%2FC1OMc9eFOaOMCRBbvTFy6xswITg8wmfYsYd56VHyHod9szWCukFJwI4w1BuEpRcYO%2F2UImpOLs%2FZoIJLUkpPOEmhM3tNFwBAyHvb09HdORGBVsogF52AEXj9lAJti0VRu7cJMfgWX%2Fqzew%2Bk0'}
+        # {'name':'账号1','ck':'PHPSESSID=rltmbubesrum0ui0fjih0gqo3o; udtauth3=59d9XBSzKotz8sXx9n%2Bf4kXc4qJbew54xoStkfNtv%2BQPUo4hyvhzhqR8d8xwYa9x%2FqAI0gZEgaEC%2F55%2BTTdBwJi1e5frfICpaVZvrJd3adQJOxAnEELQfgOcnlmPasGrlpl%2F%2Bl6AVBfHi5SLjK%2F2InxBP%2F44xIxstNfU5qqeZXs'},
+        {'name':'账号2','ck':'PHPSESSID=40k34t9kcmr8m90fdhbjlj1bbi; udtauth3=1f69a3qcIDaIpHAKqRjsMjQelswQ%2FM9PaXFIPSMDsobni0l4N8E2oe3%2Bmje76Ad3AYU9fxPrAuIMQBXMrTiJGlOdCV2KKNXaEnpCeixkoGfbfImTxyDlufF6dbq6Zw59x94%2BzUtbt07IGzSilCtfFj2ipTHICoDLcngbSfT7h8w'},
+        # {'name':'账号3','ck':'PHPSESSID=g80k16m5bcjq3mpv9321m1ivbg; udtauth3=585cqM%2BnjEaneBjHiwvRhRWkSuRdVJG%2BLJe7vwH%2BhgT%2BzIjEzzcHCbv2LckMiPV7lRfLiQ6CmuX524E%2FKPWRK%2B0UXtWr%2FSGQLro3c5EqgrLaHB0hRe0oY%2BxEPHzx2RGP3RIC2o2OBoSDzqYFXpTOFYytNEWHYmwZYtx0jej%2BM8w'},
+        {'name':'账号4','ck':'PHPSESSID=sdtdvfgbqcvn4tobr4h4lhe4gv; udtauth3=462ekxIt0fux8xxoqljcubv%2BZst0kQH5SnAkP8do9bEeSahu7b23zWfvHJso03h%2B2JLIzgkXMcUXe9jxTeNUlDugnQbSzZyBezBVFMLUyILhml%2FoHiqtlNvhyQv1UqK8Ba9VtnZNteAcJeMM7UPcUEnU7NGyAp7kE1K%2BW4iL4SY'}
     ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
     'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防', '卓越集团', '宁夏禁毒']
 }
@@ -108,8 +108,8 @@ ddz_config={
     'zfb_name': '', #支付宝名字
 
     'ddzck':[
-        {'name':'账号1','PHPSESSID':'420b8b0291044230af456c391dd4df57'},
-        {'name':'账号2','PHPSESSID':'087855a53d4b8430346332046d5bd0ee'},
+        {'name':'账号1','PHPSESSID':'e6361e41fb3fb04c0c35c0be37bccaff'},
+        # {'name':'账号2','PHPSESSID':'087855a53d4b8430346332046d5bd0ee'},
         # {'name':'账号3','PHPSESSID':'579ef690cf696e505d6a2d6235ac48af'},
         # {'name':'账号4','PHPSESSID':'708e6a4de4b27efc941e3a8f2ba4ad73'}
     ], # ck设置，优先从环境变量中获取，[{'name':'xxx','PHPSESSID':'xxx'},{'name':'xxx','PHPSESSID':'xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。PHPSESSID是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
@@ -150,9 +150,9 @@ czgm_config = {
 mtz_config = {
     'debug': 0,  # debug模式开关 1为开，打印调试日志；0为关，不打印
 
-    'max_workers': 2,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
+    'max_workers': 4,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
 
-    'txbz': 1000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
+    'txbz': 3000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 

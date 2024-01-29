@@ -2,7 +2,7 @@
 new Env('每天赚');
 cron: 6 6 6 6 6
 先运行脚本，有问题到群里问 http://t.me/xiaoymgroup
-"""
+"""    
 
 import platform
 import sys
@@ -10,10 +10,12 @@ import os
 import subprocess
 import shutil
 
+# 格式化token
+import mtz_token
+
 from dotenv import load_dotenv
 # 加载环境变量
 load_dotenv(dotenv_path='.env.local', verbose=True)
-
 
 def check_environment(file_name):
     python_info, os_info, cpu_info = sys.version_info, platform.system().lower(), platform.machine().lower() 
@@ -24,8 +26,8 @@ def check_environment(file_name):
     else:
         if not (python_info.minor in [10]):
             print("不符合要求: Python版本不是3.10")
-        if cpu_info not in ['x86_64', 'aarch64', 'armv8','amd64']:
-            print("不符合要求: 处理器架构不是x86_64 aarch64 armv8 amd64")
+        if cpu_info not in ['x86_64', 'aarch64', 'amd64']:
+            print("不符合要求: 处理器架构不是x86_64 aarch64 amd64")
 
 
 def check_so_file(filename,sys_info, cpu_info):
@@ -70,11 +72,12 @@ def download_so_file(filename, sys_info, cpu_info, main_url):
     # 执行命令并处理输出
     result = run_command(command)
     if result == 0:
-        print(f"下载完成：{filename},调用check_so_file funtion")
+        print(f"下载完成：{filename},调用check_so_file函数")
         # check_so_file(filename,sys_info,cpu_info)
          # 复制文件到 ./ql 目录
         shutil.copy(filename, './ql')
         check_so_file(os.path.join('./ql', filename), sys_info, cpu_info)
+
     else:        
         print(f"下载失败：{filename}")
             
