@@ -81,9 +81,11 @@ kl_config={
 
     'klck':[
         # {'name':'账号1','ck':'PHPSESSID=rltmbubesrum0ui0fjih0gqo3o; udtauth3=59d9XBSzKotz8sXx9n%2Bf4kXc4qJbew54xoStkfNtv%2BQPUo4hyvhzhqR8d8xwYa9x%2FqAI0gZEgaEC%2F55%2BTTdBwJi1e5frfICpaVZvrJd3adQJOxAnEELQfgOcnlmPasGrlpl%2F%2Bl6AVBfHi5SLjK%2F2InxBP%2F44xIxstNfU5qqeZXs'},
-        {'name':'账号2','ck':'PHPSESSID=40k34t9kcmr8m90fdhbjlj1bbi; udtauth3=1f69a3qcIDaIpHAKqRjsMjQelswQ%2FM9PaXFIPSMDsobni0l4N8E2oe3%2Bmje76Ad3AYU9fxPrAuIMQBXMrTiJGlOdCV2KKNXaEnpCeixkoGfbfImTxyDlufF6dbq6Zw59x94%2BzUtbt07IGzSilCtfFj2ipTHICoDLcngbSfT7h8w'},
+        # {'name':'账号2','ck':'PHPSESSID=40k34t9kcmr8m90fdhbjlj1bbi; udtauth3=1f69a3qcIDaIpHAKqRjsMjQelswQ%2FM9PaXFIPSMDsobni0l4N8E2oe3%2Bmje76Ad3AYU9fxPrAuIMQBXMrTiJGlOdCV2KKNXaEnpCeixkoGfbfImTxyDlufF6dbq6Zw59x94%2BzUtbt07IGzSilCtfFj2ipTHICoDLcngbSfT7h8w'},
         # {'name':'账号3','ck':'PHPSESSID=g80k16m5bcjq3mpv9321m1ivbg; udtauth3=585cqM%2BnjEaneBjHiwvRhRWkSuRdVJG%2BLJe7vwH%2BhgT%2BzIjEzzcHCbv2LckMiPV7lRfLiQ6CmuX524E%2FKPWRK%2B0UXtWr%2FSGQLro3c5EqgrLaHB0hRe0oY%2BxEPHzx2RGP3RIC2o2OBoSDzqYFXpTOFYytNEWHYmwZYtx0jej%2BM8w'},
-        {'name':'账号4','ck':'PHPSESSID=sdtdvfgbqcvn4tobr4h4lhe4gv; udtauth3=462ekxIt0fux8xxoqljcubv%2BZst0kQH5SnAkP8do9bEeSahu7b23zWfvHJso03h%2B2JLIzgkXMcUXe9jxTeNUlDugnQbSzZyBezBVFMLUyILhml%2FoHiqtlNvhyQv1UqK8Ba9VtnZNteAcJeMM7UPcUEnU7NGyAp7kE1K%2BW4iL4SY'}
+        # {'name':'账号4','ck':'PHPSESSID=sdtdvfgbqcvn4tobr4h4lhe4gv; udtauth3=462ekxIt0fux8xxoqljcubv%2BZst0kQH5SnAkP8do9bEeSahu7b23zWfvHJso03h%2B2JLIzgkXMcUXe9jxTeNUlDugnQbSzZyBezBVFMLUyILhml%2FoHiqtlNvhyQv1UqK8Ba9VtnZNteAcJeMM7UPcUEnU7NGyAp7kE1K%2BW4iL4SY'},
+        {'name':'账号5','ck':'PHPSESSID=1a2i8767nhm48lces1pnstjl9v; udtauth3=26b0E%2BMlHY0YzvJGeioTMrhek0OXQnmftius09ONEAEP4Rfr66mxvQZ7V%2FmfJY8Ow%2BzIE8BpMiRwdXyt%2BctMrfu7TBuD3gDQN1PPirAi7QCFt5ReaGNmbKVNWwGwcVoLrFtPKwBIk2zZ0uJ%2BiDiZugVo4UgJjjHeXZAFjFftt68'},
+        {'name':'账号6','ck':'PHPSESSID=f3b6erokqg63ga4qik30so0i66; udtauth3=2fabTlKq9%2BvbrN6QTf9c0heoclUfBnYgFC%2Fn%2BS9wLcjDljU3jlf7%2FFlWrOMRxaKEFjKxRY15iseVjJDRy5g8Jl4dWR%2BLEw0bX3bWlVc5N6DpJlopPCDaBo0VRaGOMr%2FP5NhSn94A%2FjlaygQCn7mZKD08ZGQ0S1eQvIy76Pn8OoI'}
     ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
     'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防', '卓越集团', '宁夏禁毒']
 }
@@ -152,7 +154,7 @@ mtz_config = {
 
     'max_workers': 4,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
 
-    'txbz': 3000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
+    'txbz': 1000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 
