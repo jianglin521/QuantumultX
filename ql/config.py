@@ -110,10 +110,10 @@ ddz_config={
     'zfb_name': '', #支付宝名字
 
     'ddzck':[
-        {'name':'账号1','PHPSESSID':'e6361e41fb3fb04c0c35c0be37bccaff'},
-        # {'name':'账号2','PHPSESSID':'087855a53d4b8430346332046d5bd0ee'},
-        # {'name':'账号3','PHPSESSID':'579ef690cf696e505d6a2d6235ac48af'},
-        # {'name':'账号4','PHPSESSID':'708e6a4de4b27efc941e3a8f2ba4ad73'}
+        {'name':'账号1','PHPSESSID':'e114bb233bfa0cd6e9cd40f9c10de140'},
+        {'name':'账号2','PHPSESSID':'37209bdb0ae0b0a6ef36d08d3955a4f2'},
+        {'name':'账号3','PHPSESSID':'d4a2e6ff09fa85a3bf29252c420197f8'},
+        {'name':'账号4','PHPSESSID':'a615287d89f349c6309f56a0cea61123'}
     ], # ck设置，优先从环境变量中获取，[{'name':'xxx','PHPSESSID':'xxx'},{'name':'xxx','PHPSESSID':'xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。PHPSESSID是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
 }
 """点点赚设置完毕"""
@@ -154,7 +154,7 @@ mtz_config = {
 
     'max_workers': 4,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
 
-    'txbz': 1000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
+    'txbz': 3000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 
