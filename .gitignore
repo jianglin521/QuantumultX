@@ -10,7 +10,7 @@ yarn-error.log*
 *.session
 *.log
 ck.txt
-u.txt
+ql/config.py
 
 # Editor directories and files
 .idea
