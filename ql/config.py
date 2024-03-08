@@ -56,10 +56,10 @@ yu_config = {
         'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
         'yuck':[
-            {'name':'账号1','ck':'PHPSESSID=edrn0om737fmockm74r7ksvsju'},
-            {'name':'账号2','ck':'PHPSESSID=1nhgreedngvkqbs2cdild3lo65'},
-            {'name':'账号3','ck':'PHPSESSID=5rrkr73ret4g41kqop3h6f0vt4'},
-            {'name':'账号4','ck':'PHPSESSID=6qn67ipem9g5glon4ms6b0v4jd'},
+            {'name':'账号1','ck':'PHPSESSID=e7852217b1ivc5h1r6u5sj29cb'},
+            {'name':'账号2','ck':'PHPSESSID=751ddglu8r2ncb7d4fm5t2fn6h'},
+            # {'name':'账号3','ck':'PHPSESSID=5rrkr73ret4g41kqop3h6f0vt4'},
+            # {'name':'账号4','ck':'PHPSESSID=6qn67ipem9g5glon4ms6b0v4jd'},
         ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
         'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防', '卓越集团', '宁夏禁毒']
     }
@@ -80,12 +80,12 @@ kl_config={
     'blacklist':[], # 提现黑名单设置,黑名单中的账号不自动提现，填入ck中的name,['name1','name2']。
 
     'klck':[
-        # {'name':'账号1','ck':'PHPSESSID=rltmbubesrum0ui0fjih0gqo3o; udtauth3=59d9XBSzKotz8sXx9n%2Bf4kXc4qJbew54xoStkfNtv%2BQPUo4hyvhzhqR8d8xwYa9x%2FqAI0gZEgaEC%2F55%2BTTdBwJi1e5frfICpaVZvrJd3adQJOxAnEELQfgOcnlmPasGrlpl%2F%2Bl6AVBfHi5SLjK%2F2InxBP%2F44xIxstNfU5qqeZXs'},
-        # {'name':'账号2','ck':'PHPSESSID=40k34t9kcmr8m90fdhbjlj1bbi; udtauth3=1f69a3qcIDaIpHAKqRjsMjQelswQ%2FM9PaXFIPSMDsobni0l4N8E2oe3%2Bmje76Ad3AYU9fxPrAuIMQBXMrTiJGlOdCV2KKNXaEnpCeixkoGfbfImTxyDlufF6dbq6Zw59x94%2BzUtbt07IGzSilCtfFj2ipTHICoDLcngbSfT7h8w'},
+        {'name':'账号1','ck':'PHPSESSID=ag0dghkafdovh9u3pr0qsjiug7; udtauth3=48cbVyXr8Ml%2BnCNGZN90ZS0h%2F%2FV8pgS1MqWJCl5rCOYQAOVML1dtxSbEyGhN8WYG4uRpsleLGrw8R0WSHaf6QRIinuJrQF0fLRjKJuJ4e%2FuT9J9LnuaaEB1l48Dg71N4lMSNZNqS%2FljPVadJcyK51uEq7lOLpYp%2FKOqeRNaYDYw'},
+        {'name':'账号2','ck':'PHPSESSID=ag0dghkafdovh9u3pr0qsjiug7; udtauth3=48cbVyXr8Ml%2BnCNGZN90ZS0h%2F%2FV8pgS1MqWJCl5rCOYQAOVML1dtxSbEyGhN8WYG4uRpsleLGrw8R0WSHaf6QRIinuJrQF0fLRjKJuJ4e%2FuT9J9LnuaaEB1l48Dg71N4lMSNZNqS%2FljPVadJcyK51uEq7lOLpYp%2FKOqeRNaYDYw'},
         # {'name':'账号3','ck':'PHPSESSID=g80k16m5bcjq3mpv9321m1ivbg; udtauth3=585cqM%2BnjEaneBjHiwvRhRWkSuRdVJG%2BLJe7vwH%2BhgT%2BzIjEzzcHCbv2LckMiPV7lRfLiQ6CmuX524E%2FKPWRK%2B0UXtWr%2FSGQLro3c5EqgrLaHB0hRe0oY%2BxEPHzx2RGP3RIC2o2OBoSDzqYFXpTOFYytNEWHYmwZYtx0jej%2BM8w'},
         # {'name':'账号4','ck':'PHPSESSID=sdtdvfgbqcvn4tobr4h4lhe4gv; udtauth3=462ekxIt0fux8xxoqljcubv%2BZst0kQH5SnAkP8do9bEeSahu7b23zWfvHJso03h%2B2JLIzgkXMcUXe9jxTeNUlDugnQbSzZyBezBVFMLUyILhml%2FoHiqtlNvhyQv1UqK8Ba9VtnZNteAcJeMM7UPcUEnU7NGyAp7kE1K%2BW4iL4SY'},
-        {'name':'账号5','ck':'PHPSESSID=1a2i8767nhm48lces1pnstjl9v; udtauth3=26b0E%2BMlHY0YzvJGeioTMrhek0OXQnmftius09ONEAEP4Rfr66mxvQZ7V%2FmfJY8Ow%2BzIE8BpMiRwdXyt%2BctMrfu7TBuD3gDQN1PPirAi7QCFt5ReaGNmbKVNWwGwcVoLrFtPKwBIk2zZ0uJ%2BiDiZugVo4UgJjjHeXZAFjFftt68'},
-        {'name':'账号6','ck':'PHPSESSID=f3b6erokqg63ga4qik30so0i66; udtauth3=2fabTlKq9%2BvbrN6QTf9c0heoclUfBnYgFC%2Fn%2BS9wLcjDljU3jlf7%2FFlWrOMRxaKEFjKxRY15iseVjJDRy5g8Jl4dWR%2BLEw0bX3bWlVc5N6DpJlopPCDaBo0VRaGOMr%2FP5NhSn94A%2FjlaygQCn7mZKD08ZGQ0S1eQvIy76Pn8OoI'}
+        # {'name':'账号5','ck':'PHPSESSID=1a2i8767nhm48lces1pnstjl9v; udtauth3=26b0E%2BMlHY0YzvJGeioTMrhek0OXQnmftius09ONEAEP4Rfr66mxvQZ7V%2FmfJY8Ow%2BzIE8BpMiRwdXyt%2BctMrfu7TBuD3gDQN1PPirAi7QCFt5ReaGNmbKVNWwGwcVoLrFtPKwBIk2zZ0uJ%2BiDiZugVo4UgJjjHeXZAFjFftt68'},
+        # {'name':'账号6','ck':'PHPSESSID=f3b6erokqg63ga4qik30so0i66; udtauth3=2fabTlKq9%2BvbrN6QTf9c0heoclUfBnYgFC%2Fn%2BS9wLcjDljU3jlf7%2FFlWrOMRxaKEFjKxRY15iseVjJDRy5g8Jl4dWR%2BLEw0bX3bWlVc5N6DpJlopPCDaBo0VRaGOMr%2FP5NhSn94A%2FjlaygQCn7mZKD08ZGQ0S1eQvIy76Pn8OoI'}
     ], # ck设置，优先从环境变量中获取，[{'name':'德华','ck':'抓包的ck值'},{'name':'彦祖','ck':'抓包的ck值','uid':'UID_xxx'}]name值随意，方便自己辨认即可。uid是wxpusher一对一通知专属设置，其它情况不要填
     'check_whitelist': ['中建二局','台州人大','漳州市龙文区妇幼保健院','贵州消防', '卓越集团', '宁夏禁毒']
 }
@@ -110,12 +110,13 @@ ddz_config={
     'zfb_name': '', #支付宝名字
 
     'ddzck':[
-        {'name':'账号1','PHPSESSID':'e114bb233bfa0cd6e9cd40f9c10de140'},
-        {'name':'账号2','PHPSESSID':'37209bdb0ae0b0a6ef36d08d3955a4f2'},
-        {'name':'账号3','PHPSESSID':'d4a2e6ff09fa85a3bf29252c420197f8'},
-        {'name':'账号4','PHPSESSID':'a615287d89f349c6309f56a0cea61123'}
-    ], # ck设置，优先从环境变量中获取，[{'name':'xxx','PHPSESSID':'xxx'},{'name':'xxx','PHPSESSID':'xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。PHPSESSID是抓包数据。uid是wxpusher一对一通知专属设置，其它情况不要填
+        # {'name':'账号1','ck':'user_openid=oiWmR6VW3XkYq61gcRF20fp12X28; uid=8872; PHPSESSID=23ff1d5523a8d6c6b662217760d2f841'},
+        {'name':'账号2','ck':'user_openid=oiWmR6W1qQPUEZUFqTmSez2kpSeE; uid=29496; PHPSESSID=c58b1f04be55dd255658a204e6844cc6'},
+        # {'name':'账号3','PHPSESSID':'d4a2e6ff09fa85a3bf29252c420197f8'},
+        {'name':'账号4','ck':'user_openid=oiWmR6VkX9MjiocBIa3AgnYA3WDE; uid=29499; PHPSESSID=1bcdeec86745505cd649476a327ca8f6'}
+    ], # ck设置，优先从环境变量中获取，[{'name':'xxx','ck':'xxx'},{'name':'xxx','ck':'xxx','uid':'UID_xxxxx'}]name值随意，方便自己辨认即可。抓包cookie所有值，填入ck。uid是wxpusher一对一通知专属设置，其它情况不要填
 }
+
 """点点赚设置完毕"""
 
 """钢镚设置"""
@@ -154,7 +155,7 @@ mtz_config = {
 
     'max_workers': 4,  # 因为没有服务器验证是否点击链接的机制，建议线程设置为2.线程数量设置 设置为5，即最多有5个任务同时进行
 
-    'txbz': 3000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
+    'txbz': 2000,  # 设置提现标准 不低于3000，平台标准为3000 设置为8000，即为8毛起提
 
     'sendable': 1,  # 企业微信推送开关 1开0关
 
