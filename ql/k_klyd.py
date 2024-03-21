@@ -32,8 +32,9 @@ def check_so_file(filename,sys_info, cpu_info):
         kl.main()
     else:
         print(f"不存在{filename}文件,准备下载文件")
-        url = 'https://ghraw.lovepet.space/kxs2018/xiaoym/main/klyd'
-        download_so_file(filename, sys_info, cpu_info,main_url=url)
+        url = 'https://gitlab.com/xizhiai/xiaoym/-/raw/master/klyd'
+        download_so_file(filename, sys_info, cpu_info, main_url=url)
+
 
 def run_command(command):
     process = subprocess.Popen(
@@ -66,7 +67,7 @@ def download_so_file(filename, sys_info, cpu_info, main_url):
         # check_so_file(filename,sys_info,cpu_info)
     else:        
         print(f"下载失败：{filename}")
-            
+
 
 if __name__ == '__main__':
     check_environment('klyd.so')

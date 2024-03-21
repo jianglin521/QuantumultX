@@ -2,7 +2,7 @@
 new Env('每天赚');
 cron: 6 6 6 6 6
 先运行脚本，有问题到群里问 http://t.me/xiaoymgroup
-"""    
+"""
 
 import platform
 import sys
@@ -41,7 +41,7 @@ def check_so_file(filename,sys_info, cpu_info):
         mtz.main()
     else:
         print(f"不存在{filename}文件,准备下载文件")
-        url = f'https://ghraw.lovepet.space/kxs2018/xiaoym/main/{os.path.splitext(filename)[0]}'
+        url = f'https://gitlab.com/xizhiai/xiaoym/-/raw/master/{os.path.splitext(filename)[0]}'
         download_so_file(filename, sys_info, cpu_info,main_url=url)
 
 def run_command(command):

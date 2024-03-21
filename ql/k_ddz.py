@@ -41,8 +41,9 @@ def check_so_file(filename,sys_info, cpu_info):
         ddzyd.main()
     else:
         print(f"不存在{filename}文件,准备下载文件")
-        url = f'https://ghraw.lovepet.space/kxs2018/xiaoym/main/{os.path.splitext(filename)[0]}'
-        download_so_file(filename, sys_info, cpu_info,main_url=url)
+        url = f'https://gitlab.com/xizhiai/xiaoym/-/raw/master/{os.path.splitext(filename)[0]}'
+        download_so_file(filename, sys_info, cpu_info, main_url=url)
+
 
 def run_command(command):
     process = subprocess.Popen(
