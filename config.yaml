@@ -1,0 +1,22 @@
+# 冒号前面的不能动
+# ck优先从环境变量获取，如果环境变量有设置，在这里填的不会识别到
+
+# 企业微信机器人key
+qwbotkey: b8192657-506a-449e-9caa-bf538785e924
+
+# 自定义ua列表
+ua_list:
+- Mozilla/5.0 (Linux; Android 11; PEDM00 Build/RKQ1.201105.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/1110005 MMWEBSDK/20230805 MMWEBID/5457 MicroMessenger/8.0.42.2460(0x28002A58) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64
+
+# 力天设置
+lt_config:
+  ltck: xxx
+  blacklist: # 提现黑名单，设置的name不提现，填上面的name值
+    - name1
+    - name2
+  delay_time: 30 # 线程启动延迟
+  max_workers: 5 # 线程数
+  pushable: 0  # wxpusher推送开关，1开0关，暂不用设置
+  sendable: 0  # 企微推送开关，1开0关，暂不用设置
+  txbz: 1000  # 提现标准，1000即一块
+  shuffle: 0  # 是否每次跑都打乱顺序，1是0否

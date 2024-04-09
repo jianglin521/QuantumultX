@@ -9,6 +9,7 @@ import sys
 import os
 import subprocess
 import importlib
+import shutil
 
 def check_environment(file_name):
     python_info, os_info, cpu_info = sys.version_info, platform.system().lower(), platform.machine().lower()
@@ -70,7 +71,10 @@ def download_so_file(filename, sys_info, cpu_info, main_url):
     result = run_command(command)
     if result == 0:
         print(f"下载完成：{filename},调用check_so_file函数")
-        check_so_file(filename, sys_info, cpu_info)
+        # check_so_file(filename,sys_info,cpu_info)
+        # 复制文件到 ./ql 目录
+        shutil.copy(f_name, './ql')
+        check_so_file(os.path.join('./ql', filename), sys_info, cpu_info)
     else:
         print(f"下载失败：{filename}")
 

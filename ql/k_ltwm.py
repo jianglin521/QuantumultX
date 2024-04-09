@@ -2,7 +2,8 @@
 
 """
 先运行脚本，有问题再到群里问 https://t.me/xiaoymgroup
-new Env('每天赚');
+new Env('力天微盟');
+cron 15-59/30 * * * *
 """
 import platform
 import sys
@@ -12,7 +13,7 @@ import importlib
 import shutil
 
 # 格式化token
-import mtz_token
+# import ltwmoken
 
 from dotenv import load_dotenv
 # 加载环境变量
@@ -68,10 +69,10 @@ def run_command(command):
 def download_so_file(filename, sys_info, cpu_info, main_url):
     if sys_info == 'windows':
         file_name = f'{filename}.{cpu_info}_{sys_info}.pyd'
-        f_name = filename +'.pyd'
+        f_name = filename + '.pyd'
     if sys_info == 'linux':
         file_name = f'{filename}.{cpu_info}_{sys_info}.so'
-        f_name = filename +'.so'
+        f_name = filename + '.so'
     url = main_url + '/' + file_name
     print(url)
     command = ['curl', '-#', '-o', f_name, url]
@@ -79,12 +80,12 @@ def download_so_file(filename, sys_info, cpu_info, main_url):
     if result == 0:
         print(f"下载完成：{filename},调用check_so_file函数")
         # check_so_file(filename,sys_info,cpu_info)
-         # 复制文件到 ./ql 目录
+        # 复制文件到 ./ql 目录
         shutil.copy(f_name, './ql')
-        check_so_file(os.path.join('./ql', filename), sys_info, cpu_info)
+        check_so_file(filename, sys_info, cpu_info)
     else:
         print(f"下载失败：{filename}")
 
 
 if __name__ == '__main__':
-    check_environment('mtz')
+    check_environment('ltwm')
