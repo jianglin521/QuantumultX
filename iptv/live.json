@@ -8,10 +8,16 @@
       "playerType": 1
     },
     {
-      "name": "悠哉TV",
-      "url": "./悠哉TV.m3u",
+      "name": "myIptv",
+      "url": "./myIptv.m3u",
       "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "playerType": 1
+    },
+    {
+      "name": "fanmingming",
+      "type": 0,
+      "url": "./fanmingming.m3u",
       "playerType": 1
     }
   ]

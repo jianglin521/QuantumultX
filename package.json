@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "node -r dotenv/config ./sngxpro/meituanV3.js dotenv_config_path=./.env.local",
-    "jetta": "node -r dotenv/config ./sngxpro/jetta.js dotenv_config_path=./.env.local",
+    "sigin": "node -r dotenv/config ./sngxpro/autoSignin.js dotenv_config_path=./.env.local",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
