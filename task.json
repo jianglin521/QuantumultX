@@ -3,6 +3,7 @@
   "description": "https://github.com/jianglin521/QuantumultX",
   "task": [
     "0 8 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
+    "0 8 * * * https://raw.githubusercontent.com/dompling/Script/master/10000/index.js , tag=中国电信",
     "10 20 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流派件提醒, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
     "50,52,54 23 * * * https://raw.githubusercontent.com/jianglin521/jd_actions/main/jd_unsubscribe.js, tag=取关京东店铺商品, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
    ] 
