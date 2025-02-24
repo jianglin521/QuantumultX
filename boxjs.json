@@ -145,13 +145,40 @@
       ]
     },
     {
+      "id": "10010Ck",
+      "name": "中国联通",
+      "keys": ["@YaYa_10010.cookie"],
+      "author": "@jianglin",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10010.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png"
+      ]
+    },
+    {
+      "id": "10000Ck",
+      "name": "中国电信",
+      "keys": ["@yy_10000.china_telecom_loginUrl"],
+      "settings": [
+        {
+          "id": "@yy_10000.china_telecom_loginUrl",
+          "name": "电信登录地址",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        }
+      ],
+      "author": "@jianglin",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10000.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/10000.png"
+      ]
+    },
+    {
       "id": "allCookie",
       "name": "allCookie",
       "keys": [
         "elmCookie",
-        "meituanCookie",
-        "yy_10000",
-        "YaYa_10010"
+        "meituanCookie"
       ],
       "icons": [
         "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
