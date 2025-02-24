@@ -163,6 +163,22 @@
       "script": "https://jianglin521.com/allCookie.js"
     },
     {
+      "id": "10010v4",
+      "name": "ChinaUnicom",
+      "keys": [
+        "yy_10000",
+        "YaYa_10010",
+        "cookie"
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
+        "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png"
+      ],
+      "author": "@jianglin",
+      "repo": "https://jianglin521.com/allCookie.js",
+      "script": "https://jianglin521.com/allCookie.js"
+    },
+    {
       "id": "PushBoxjsCookie",
       "name": "V2pCookie",
       "keys": [
