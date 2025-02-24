@@ -148,11 +148,10 @@
       "id": "allCookie",
       "name": "allCookie",
       "keys": [
-        "jzylCookie",
         "elmCookie",
-        "usercookie",
-        "txspCookie",
-        "meituanCookie"
+        "meituanCookie",
+        "yy_10000",
+        "YaYa_10010"
       ],
       "icons": [
         "https://raw.githubusercontent.com/jianglin521/QuantumultX/main/image/tom.png",
