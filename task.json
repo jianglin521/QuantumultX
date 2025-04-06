@@ -4,6 +4,7 @@
   "task": [
     "0 8 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js , tag=京豆变动通知 , img-url=https://qxzy.top/rules/QuantumultX/img/jd.png",
     "0 8 * * * https://raw.githubusercontent.com/dompling/Script/master/10000/index.js , tag=中国电信",
+    "5 21 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, tag=网上国网查询, img-url=https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png, enabled=true",
     "10 20 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流派件提醒, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
     "50,52,54 23 * * * https://raw.githubusercontent.com/jianglin521/jd_actions/main/jd_unsubscribe.js, tag=取关京东店铺商品, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true"
    ] 
