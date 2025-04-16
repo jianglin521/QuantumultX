@@ -39,6 +39,12 @@ class Cloud189Service {
                 if (responseBody.res_code === "ShareAuditWaiting") {
                     return responseBody;
                 }
+                if (responseBody.res_code === "FileAlreadyExists") {
+                    return {
+                        res_code: "FileAlreadyExists",
+                        res_msg: "文件已存在"
+                    }
+                }
                 logTaskEvent('请求天翼云盘接口失败:' + error.response.body);
             }else if (error instanceof got.TimeoutError) {
                 logTaskEvent('请求天翼云盘接口失败: 请求超时, 请检查是否能访问天翼云盘');
@@ -212,28 +218,15 @@ class Cloud189Service {
     }
 
     // 重命名文件
-    async renameFile(fileId, destFileName) {
-        try {
-            const response = await this.request('/api/open/file/renameFile.action', {
-                method: 'POST',
-                form: {
-                    fileId,
-                    destFileName
-                },
-            })
-            return response
-        }catch(error) {
-            if (error instanceof got.HTTPError) {
-                const responseBody = error.response.body;
-                if (responseBody.res_code === "FileAlreadyExists") {
-                    return {
-                        res_code: "FileAlreadyExists",
-                        res_msg: "文件已存在"
-                    }
-                }
-            }
-            throw error;
-        }
+    async renameFile(fileId, destFileName) { 
+        const response = await this.request('/api/open/file/renameFile.action', {
+            method: 'POST',
+            form: {
+                fileId,
+                destFileName
+            },
+        })
+        return response
     }
     // 获取家庭信息
     async getFamilyInfo() {

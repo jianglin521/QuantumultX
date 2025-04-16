@@ -4,7 +4,7 @@ class CacheManager {
         this.cache = new Map();
         this.ttl = ttl * 1000; // 转换为毫秒
         // 定期清理过期缓存
-        setInterval(() => this.cleanup(), this.ttl); // 每2分钟清理一次
+        // setInterval(() => this.cleanup(), this.ttl); // 每2分钟清理一次
     }
 
     set(key, value) {
@@ -18,10 +18,10 @@ class CacheManager {
         const data = this.cache.get(key);
         if (!data) return null;
         
-        if (Date.now() - data.timestamp > this.ttl) {
-            this.cache.delete(key);
-            return null;
-        }
+        // if (Date.now() - data.timestamp > this.ttl) {
+        //     this.cache.delete(key);
+        //     return null;
+        // }
         
         return data.value;
     }

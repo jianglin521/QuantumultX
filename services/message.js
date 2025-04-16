@@ -1,6 +1,7 @@
 const messageManager = require('./message/MessageManager');
 const ConfigService = require('./ConfigService');
 
+
 class MessageUtil {
     constructor() {
         this._init();

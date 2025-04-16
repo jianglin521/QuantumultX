@@ -25,7 +25,11 @@ class ConfigService {
         enable: false,
         proxyDomain: '',
         botToken: '',
-        chatId: ''
+        chatId: '',
+        bot: {
+          enable: false,
+          botToken: ''
+        }
       },
       wxpusher: {
         enable: false,
@@ -53,6 +57,11 @@ class ConfigService {
         enable: false,
         serverUrl: '',
         apiKey: ''
+      },
+      cloudSaver: {
+        baseUrl: '',
+        username: '',
+        password: ''
       }
     };
     this._init();

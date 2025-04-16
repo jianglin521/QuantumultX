@@ -5,6 +5,7 @@ const { logTaskEvent } = require('../utils/logUtils');
 
 class StrmService {
     constructor() {
+        this.enable = ConfigService.getConfigValue('strm.enable');
         this.baseDir = path.join(__dirname + '../../../strm');
         // 从环境变量获取 PUID 和 PGID，默认值设为 0
         this.puid = process.env.PUID || 0;
@@ -18,6 +19,10 @@ class StrmService {
      * @returns {Promise<Array>} - 返回生成的文件列表
      */
     async generate(task, files, overwrite = false) {
+        if (!this.enable){
+            logTaskEvent(`STRM生成未启用, 请启用后执行`);
+            return;
+        }
         logTaskEvent(`开始生成STRM文件, 总文件数: ${files.length}`);
         const results = [];
         let success = 0;
@@ -27,11 +32,19 @@ class StrmService {
             // 确保基础目录存在
             await fs.mkdir(this.baseDir, { recursive: true });
             // 设置基础目录权限
-            await fs.chown(this.baseDir, parseInt(this.puid), parseInt(this.pgid));
-            await fs.chmod(this.baseDir, 0o775);
+            if (process.getuid && process.getuid() === 0) {
+                await fs.chown(this.baseDir, parseInt(this.puid), parseInt(this.pgid));
+            }
+            await fs.chmod(this.baseDir, 0o777);
 
             // mediaSuffixs转为小写
             const mediaSuffixs = ConfigService.getConfigValue('task.mediaSuffix').split(';').map(suffix => suffix.toLowerCase())
+            let taskName = task.realFolderName.substring(task.realFolderName.indexOf('/') + 1)
+            // 去掉头尾/
+            taskName = taskName.replace(/^\/|\/$/g, '');
+            // 构建完整的目标目录路径
+            const targetDir = path.join(this.baseDir,task.account.localStrmPrefix, taskName);
+            overwrite && await this._deleteDirAllStrm(targetDir)
             for (const file of files) {
                 // 检查文件是否是媒体文件
                 if (!this._checkFileSuffix(file, mediaSuffixs)) {
@@ -39,20 +52,18 @@ class StrmService {
                     skipped++
                     continue;
                 }
-                const taskName = task.realFolderName.substring(task.realFolderName.indexOf('/') + 1)
+                
                 try {
                     const fileName = file.name;
                     const parsedPath = path.parse(fileName);
-                    const dirPath = parsedPath.dir;
                     const fileNameWithoutExt = parsedPath.name;
-                    
-                    // 构建完整的目标目录路径
-                    const targetDir = path.join(this.baseDir,task.account.localStrmPrefix, taskName, dirPath);
                     // 确保目标目录存在
                     await fs.mkdir(targetDir, { recursive: true });
                     // 设置目录权限
-                    await fs.chown(targetDir, parseInt(this.puid), parseInt(this.pgid));
-                    await fs.chmod(targetDir, 0o775);
+                    if (process.getuid && process.getuid() === 0) {
+                        await fs.chown(targetDir, parseInt(this.puid), parseInt(this.pgid));
+                    }
+                    await fs.chmod(targetDir, 0o777);
                     const strmPath = path.join(targetDir, `${fileNameWithoutExt}.strm`);
 
                     // 检查文件是否存在
@@ -68,11 +79,13 @@ class StrmService {
                     }
 
                     // 生成STRM文件内容
-                    const content = path.join(task.account.cloudStrmPrefix,taskName,fileName);
+                    const content = this._joinUrl(this._joinUrl(task.account.cloudStrmPrefix,taskName),fileName)
                     await fs.writeFile(strmPath, content, 'utf8');
                     // 设置文件权限
-                    await fs.chown(strmPath, parseInt(this.puid), parseInt(this.pgid));
-                    await fs.chmod(strmPath, 0o664);
+                    if (process.getuid && process.getuid() === 0) {
+                        await fs.chown(strmPath, parseInt(this.puid), parseInt(this.pgid));
+                    }
+                    await fs.chmod(strmPath, 0o777);
                     results.push({
                         originalFile: fileName,
                         strmFile: `${fileNameWithoutExt}.strm`,
@@ -127,6 +140,14 @@ class StrmService {
     async deleteDir(dirPath) {
         try {
             const targetDir = path.join(this.baseDir, dirPath);
+             // 检查目录是否存在
+             try {
+                await fs.access(targetDir);
+            } catch (err) {
+                // 目录不存在，直接返回
+                logTaskEvent(`STRM目录不存在，跳过删除: ${targetDir}`);
+                return;
+            }
             await fs.rm(targetDir, { recursive: true });
             logTaskEvent(`删除STRM目录成功: ${targetDir}`);
 
@@ -145,11 +166,42 @@ class StrmService {
             logTaskEvent(`删除STRM目录失败: ${error.message}`);
         }
     }
+    // 删除目录下的所有.strm文件
+    async _deleteDirAllStrm(dirPath) {
+        // 检查目录是否存在
+        try {
+            await fs.access(dirPath);
+        } catch (err) {
+            // 目录不存在，直接返回
+            logTaskEvent(`STRM目录不存在，跳过删除: ${dirPath}`);
+            return;
+        }
+        const files = await fs.readdir(dirPath);
+        await Promise.all(files.map(async file => {
+            const filePath = path.join(dirPath, file);
+            if (path.extname(filePath) === '.strm') {
+                try {
+                    await fs.unlink(filePath);
+                    logTaskEvent(`删除文件成功: ${filePath}`);
+                } catch (err) {
+                    logTaskEvent(`删除文件失败: ${err.message}`);
+                }
+            }
+        }));
+    }
     //检查文件是否是媒体文件
     _checkFileSuffix(file, mediaSuffixs) {
          // 获取文件后缀
          const fileExt = '.' + file.name.split('.').pop().toLowerCase();
          return mediaSuffixs.includes(fileExt)
+    }
+
+    _joinUrl(base, path) {
+        // 移除 base 末尾的斜杠（如果有）
+        base = base.replace(/\/$/, '');
+        // 移除 path 开头的斜杠（如果有）
+        path = path.replace(/^\//, '');
+        return `${base}/${path}`;
     }
 }
 
