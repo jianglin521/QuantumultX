@@ -62,7 +62,7 @@ time.sleep(0.3)
 driver.find_element_by_xpath('//*[@id="password"]').send_keys(f'{password}')
 time.sleep(0.5)
 driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/form/div[3]/button').click()
-time.sleep(15)
+time.sleep(5)
 driver.get(f'{address}env')
 time.sleep(2)
 
